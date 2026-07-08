@@ -12,6 +12,7 @@ End if
 //$vJ_wok_prefs.is_desc:=True
 ////$vJ_wok_prefs.is_splashes:=True
 //End use 
+
 // If (Startup in a new process) -> DO IT MANUALLY
-wok_splashes_display()
+//wok_splashes_display()
 

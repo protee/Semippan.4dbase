@@ -38,7 +38,7 @@ If (Not:C34(Is compiled mode:C492))
 	ARRAY TEXT:C222($aT_components; 0)
 	COMPONENT LIST:C1001($aT_components)
 	If (Find in array:C230($aT_components; "4DPop")>0)
-		EXECUTE METHOD:C1007("4DPop_launch")
+		Try(EXECUTE METHOD:C1007("4DPop_launch"))
 	End if 
 	
 	If (Find in array:C230($aT_components; "wod_DevTools")>0)

@@ -124,13 +124,9 @@ This structured yet flexible architecture allows Sēmippān to scale from a sing
   - `wqr_QuickReport` – A 4D legacy fork
   - `zen_Nucleus` – The Final Verse
 
-### Installation via Dependencies Manager (GitHub)
+### Installation (GitHub)
 
-1. In your 4D project, open the **Dependencies Manager** (`Project > Dependencies`).
-2. Click the `+` button and select **Add a dependency from a Git URL**.
-3. Enter the following Git URL: `protee/semippan`
-4. Choose the desired version (e.g., `main`, `latest`, or a specific release tag).
-5. Confirm the installation – the component will be automatically fetched from GitHub and linked to your project.
+Clone/download the project from the following Git URL: `protee/semippan.4dbase`. To try it with sample data, download SampleData.zip from the Releases page and unzip its contents into Data/.
 
 > **Note**: For team development, commit the dependency configuration file (`dependencies.json`) to your source control.
 
@@ -138,7 +134,7 @@ This structured yet flexible architecture allows Sēmippān to scale from a sing
 
 ## Part of the ogTools Suite
 
-Sēmippān is a flagship HDI within the comprehensive **ogTools suite**—an integrated development ecosystem for 4D. Other key components include:
+Sēmippān is a flagship HDI within the comprehensive **ogToolsSuite**—an integrated development ecosystem for 4D. Other key components include:
 
 | Icon | Component | Description |
 |------|-----------|-------------|

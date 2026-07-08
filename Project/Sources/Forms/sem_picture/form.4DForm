@@ -1,0 +1,261 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onDrop",
+		"onDataChange",
+		"onDragOver",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"og_picture": {
+					"type": "groupBox",
+					"top": 0,
+					"left": 0,
+					"width": 215,
+					"height": 100,
+					"sizingY": "fixed",
+					"stroke": "#666666",
+					"text": "Picture"
+				},
+				"vt_width": {
+					"type": "input",
+					"left": 49,
+					"top": 20,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_size",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte3": {
+					"type": "text",
+					"text": "Size %",
+					"top": 20,
+					"left": 6,
+					"width": 36,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_width1": {
+					"type": "input",
+					"left": 169,
+					"top": 20,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_br_default",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte1": {
+					"type": "text",
+					"text": "Default %",
+					"top": 20,
+					"left": 106,
+					"width": 56,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_width2": {
+					"type": "input",
+					"left": 169,
+					"top": 40,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_br_click",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte2": {
+					"type": "text",
+					"text": "Click %",
+					"top": 40,
+					"left": 106,
+					"width": 56,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_width3": {
+					"type": "input",
+					"left": 169,
+					"top": 60,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_br_over",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte4": {
+					"type": "text",
+					"text": "Over %",
+					"top": 60,
+					"left": 106,
+					"width": 56,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_width4": {
+					"type": "input",
+					"left": 169,
+					"top": 80,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_br_disabled",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte5": {
+					"type": "text",
+					"text": "Disabled %",
+					"top": 80,
+					"left": 106,
+					"width": 56,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_width5": {
+					"type": "input",
+					"left": 49,
+					"top": 40,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_angle",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte6": {
+					"type": "text",
+					"text": "Angle",
+					"top": 40,
+					"left": 6,
+					"width": 36,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_isBW": {
+					"type": "checkbox",
+					"top": 59,
+					"left": 6,
+					"width": 107,
+					"height": 15,
+					"dataSource": "Form:C1466.j_value.is_greyDisabled",
+					"text": "disabled is gray",
+					"stroke": "#808080",
+					"class": "Coche",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingY": "move",
+					"focusable": false,
+					"dataSourceTypeHint": "boolean"
+				},
+				"vt_isOffset": {
+					"type": "checkbox",
+					"top": 79,
+					"left": 6,
+					"width": 107,
+					"height": 15,
+					"dataSource": "Form:C1466.j_value.is_offsetClick",
+					"text": "offset on click",
+					"stroke": "#808080",
+					"class": "Coche",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingY": "move",
+					"focusable": false,
+					"dataSourceTypeHint": "boolean"
+				}
+			},
+			"entryOrder": [
+				"vt_width",
+				"vt_width5",
+				"vt_isBW",
+				"vt_isOffset",
+				"vt_width1",
+				"vt_width2",
+				"vt_width3",
+				"vt_width4"
+			]
+		}
+	],
+	"geometryStamp": 227,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

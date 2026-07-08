@@ -1,0 +1,361 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDragOver",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "KAVIYAM",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"sem_veda": {
+					"type": "subform",
+					"top": 0,
+					"left": 0,
+					"width": 820,
+					"height": 770,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_veda",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_veda.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"zen_KAVIYAM": {
+					"type": "subform",
+					"top": 2,
+					"left": 2,
+					"width": 260,
+					"height": 24,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_c4ES",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_KAVIYAM.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"Line": {
+					"type": "line",
+					"top": 5,
+					"left": 820,
+					"width": 0,
+					"height": 767,
+					"stroke": "#CFD8DC",
+					"sizingX": "move",
+					"sizingY": "grow"
+				},
+				"bt_left": {
+					"type": "pictureButton",
+					"top": 4,
+					"left": 311,
+					"width": 20,
+					"height": 20,
+					"tooltip": "Previous",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_untrigo.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "fixed",
+					"visibility": "visible",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[left arrow]",
+					"sizingX": "fixed"
+				},
+				"bt_right": {
+					"type": "pictureButton",
+					"top": 4,
+					"left": 331,
+					"width": 20,
+					"height": 20,
+					"tooltip": "Next",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_trigo.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "fixed",
+					"visibility": "visible",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[right arrow]",
+					"sizingX": "fixed"
+				},
+				"bt_down": {
+					"type": "pictureButton",
+					"top": 4,
+					"left": 291,
+					"width": 20,
+					"height": 20,
+					"tooltip": "Next Kaviyam",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_down.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "fixed",
+					"visibility": "visible",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[down arrow]",
+					"sizingX": "fixed"
+				},
+				"bt_up": {
+					"type": "pictureButton",
+					"top": 4,
+					"left": 271,
+					"width": 20,
+					"height": 20,
+					"tooltip": "Previous Kaviyam",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_up.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "fixed",
+					"visibility": "visible",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[up arrow]",
+					"sizingX": "fixed"
+				},
+				"bt_settings": {
+					"type": "pictureButton",
+					"top": 37,
+					"left": 0,
+					"width": 16,
+					"height": 16,
+					"tooltip": "Settings",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_settings0.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "s"
+				},
+				"sem_veda_prefs": {
+					"type": "subform",
+					"top": 37,
+					"left": 29,
+					"width": 226,
+					"height": 342,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_veda_prefs",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_veda_prefs.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"bt_save": {
+					"type": "pictureButton",
+					"top": 355,
+					"left": 255,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Save",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_save.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": true,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "s"
+				},
+				"bt_expand": {
+					"type": "pictureButton",
+					"top": 4,
+					"left": 771,
+					"width": 20,
+					"height": 20,
+					"tooltip": "Expand",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_expand.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "fixed",
+					"visibility": "visible",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": " ",
+					"sizingX": "move"
+				},
+				"bt_deselect": {
+					"type": "pictureButton",
+					"top": 4,
+					"left": 791,
+					"width": 20,
+					"height": 20,
+					"tooltip": "Deselect",
+					"rowCount": 4,
+					"picture": "/RESOURCES/widgets/btn_deselect.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "fixed",
+					"visibility": "visible",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "d",
+					"sizingX": "move"
+				},
+				"sem_cards": {
+					"type": "subform",
+					"top": 670,
+					"left": 0,
+					"width": 820,
+					"height": 100,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_cards",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_cards.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "grow",
+					"sizingY": "move"
+				},
+				"sem_sloka": {
+					"type": "subform",
+					"top": 0,
+					"left": 820,
+					"width": 280,
+					"height": 770,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_sloka",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_sloka.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "move",
+					"sizingY": "grow"
+				}
+			}
+		}
+	],
+	"geometryStamp": 2626,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"shared": true
+}

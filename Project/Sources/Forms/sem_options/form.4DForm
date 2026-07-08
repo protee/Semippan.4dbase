@@ -1,0 +1,122 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onDrop",
+		"onDataChange",
+		"onDragOver",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"og_options": {
+					"type": "groupBox",
+					"top": 0,
+					"left": 0,
+					"width": 265,
+					"height": 65,
+					"sizingY": "fixed",
+					"stroke": "#666666",
+					"text": "Options"
+				},
+				"vt_isBW": {
+					"type": "checkbox",
+					"top": 20,
+					"left": 133,
+					"width": 127,
+					"height": 16,
+					"dataSource": "Form:C1466.j_value.isSetShape",
+					"text": "force SET shape",
+					"stroke": "#808080",
+					"class": "Coche",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingY": "move",
+					"focusable": false,
+					"dataSourceTypeHint": "boolean",
+					"tooltip": "No overwrite of MEDIA shape"
+				},
+				"vt_isOffset": {
+					"type": "checkbox",
+					"top": 40,
+					"left": 133,
+					"width": 127,
+					"height": 16,
+					"dataSource": "Form:C1466.j_value.isSetColors",
+					"text": "force SET colors",
+					"stroke": "#808080",
+					"class": "Coche",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingY": "move",
+					"focusable": false,
+					"dataSourceTypeHint": "boolean",
+					"tooltip": "No overwrite of MEDIA colors"
+				},
+				"vt_isBW1": {
+					"type": "checkbox",
+					"top": 20,
+					"left": 6,
+					"width": 127,
+					"height": 16,
+					"dataSource": "Form:C1466.j_value.isExternalPath",
+					"text": "for external path",
+					"stroke": "#808080",
+					"class": "Coche",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingY": "move",
+					"focusable": false,
+					"dataSourceTypeHint": "boolean"
+				}
+			},
+			"entryOrder": [
+				"vt_isBW1",
+				"vt_isBW",
+				"vt_isOffset"
+			]
+		}
+	],
+	"geometryStamp": 338,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

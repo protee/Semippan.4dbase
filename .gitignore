@@ -1,0 +1,72 @@
+# Ignore invisible files/folders except .gitignore
+.*
+!.gitignore
+!.gitattributes
+
+#--------------------------------
+# Ignore data file
+#--------------------------------
+[dD][aA][tT][aA]/
+Data/
+*.4DD
+*.4DIndx
+*.4DIndy
+*.Match
+*.journal
+
+#--------------------------------
+# Ignore derived data
+#--------------------------------
+DerivedData/
+Project/DerivedData/
+
+# Libraries
+Libraries/
+
+#--------------------------------
+# Ignore settings & preferences
+#--------------------------------
+Preferences/
+!4DPop AppMaker.*
+
+Settings/
+!buildApp.4DSettings
+
+userPreferences.*/
+
+#--------------------------------
+# Ignore Trash
+#--------------------------------
+Project/Trash/
+
+#--------------------------------
+# Ignore backup
+#--------------------------------
+Backup/
+*.4BK
+backupHistory.json
+
+#--------------------------------
+# Miscellaneous
+#--------------------------------
+Logs
+build/
+
+# System files
+*__Orphan__*
+*symbols.txt
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+DEV/
+
+Components/
+
+#--------------------------------
+# Don't ignore .github workflow
+#--------------------------------
+
+!.github/
+!.github/**/.*
+.github/.DS_Store

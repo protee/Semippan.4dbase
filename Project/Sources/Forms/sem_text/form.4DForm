@@ -1,0 +1,259 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onDrop",
+		"onDataChange",
+		"onDragOver",
+		"onUnload",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"og_text": {
+					"type": "groupBox",
+					"top": 0,
+					"left": 0,
+					"width": 175,
+					"height": 100,
+					"sizingY": "fixed",
+					"stroke": "#666666",
+					"text": "Text"
+				},
+				"woc_text": {
+					"type": "subform",
+					"top": 44,
+					"left": 5,
+					"width": 24,
+					"height": 24,
+					"sizingY": "fixed",
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_colors",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_text.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"vt_width": {
+					"type": "input",
+					"left": 129,
+					"top": 44,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_size",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte3": {
+					"type": "text",
+					"text": "Size %",
+					"top": 45,
+					"left": 88,
+					"width": 36,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_width1": {
+					"type": "input",
+					"left": 129,
+					"top": 62,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_offsetX",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte1": {
+					"type": "text",
+					"text": "x %",
+					"top": 62,
+					"left": 106,
+					"width": 26,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"vt_width2": {
+					"type": "input",
+					"left": 129,
+					"top": 80,
+					"width": 40,
+					"height": 12,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.j_value.l_offsetY",
+					"sizingY": "move",
+					"textAlign": "center",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 10
+				},
+				"Texte2": {
+					"type": "text",
+					"text": "y %",
+					"top": 80,
+					"left": 106,
+					"width": 26,
+					"height": 13,
+					"stroke": "#696969",
+					"sizingY": "move",
+					"fontSize": 10
+				},
+				"pop_face": {
+					"type": "dropdown",
+					"top": 15,
+					"left": 5,
+					"width": 165,
+					"height": 20,
+					"dataSourceTypeHint": "integer",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"events": [
+						"onDataChange"
+					],
+					"focusable": false
+				},
+				"isBold": {
+					"type": "checkbox",
+					"top": 72,
+					"left": 5,
+					"width": 20,
+					"height": 20,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/bt_bold"
+					},
+					"shortcutKey": "b",
+					"shortcutAccel": true,
+					"class": "Field_Label",
+					"focusable": false,
+					"icon": "/RESOURCES/widgets/style/btn_bold.png",
+					"iconFrames": 4,
+					"style": "roundedBevel",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean"
+				},
+				"isUnderline": {
+					"type": "checkbox",
+					"top": 72,
+					"left": 49,
+					"width": 20,
+					"height": 20,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/bt_underline"
+					},
+					"shortcutKey": "u",
+					"shortcutAccel": true,
+					"class": "Field_Label",
+					"focusable": false,
+					"icon": "/RESOURCES/widgets/style/btn_underline.png",
+					"iconFrames": 4,
+					"style": "roundedBevel",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean"
+				},
+				"isItalic": {
+					"type": "checkbox",
+					"top": 72,
+					"left": 27,
+					"width": 20,
+					"height": 20,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/bt_italic"
+					},
+					"class": "Field_Label",
+					"focusable": false,
+					"icon": "/RESOURCES/widgets/style/btn_italic.png",
+					"iconFrames": 4,
+					"style": "roundedBevel",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean"
+				},
+				"isStrike": {
+					"type": "checkbox",
+					"top": 72,
+					"left": 71,
+					"width": 20,
+					"height": 20,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/bt_strike"
+					},
+					"class": "Field_Label",
+					"focusable": false,
+					"icon": "/RESOURCES/widgets/style/btn_strike.png",
+					"iconFrames": 4,
+					"style": "roundedBevel",
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean"
+				}
+			},
+			"entryOrder": [
+				"pop_face",
+				"woc_text",
+				"isBold",
+				"isUnderline",
+				"isItalic",
+				"isStrike",
+				"vt_width",
+				"vt_width1",
+				"vt_width2"
+			]
+		}
+	],
+	"geometryStamp": 213,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

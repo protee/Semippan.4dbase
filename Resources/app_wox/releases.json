@@ -1,0 +1,40 @@
+﻿{
+	"aj_versions": [
+		{
+			"t_version": "1.2.10",
+			"d_date": "2026-05-05",
+			"t_title": "New alColors",
+			"t_markdown": "<!--RNH_1.2.10-->\n<h5> <span class=\"badge badge-success\">1.2.10</span> <span class=\"badge badge-info\">Tuesday 5 May 2026</span> <span class=\"badge badge-light\">New alColors</span></h5><!--/RNH_1.2.10-->\n\n### ![version](./icons/icn_version.png) Added a Pack's favorite colors\n* Thanks in woc_Colours, to the new **woc_alColors** widget. You can add colors in the Pack Entity.\n* Thanks to new **woc_alColorsIdx** widget, then into Banks you choose a main \"Primary colors\" as the source of all the colors \"dcox\" chain: you change the main colors of a Bank in a snap !\n* When an index is not defined, the Primary colors is by default (Black&White).\n* The dcox chain is now : Primary colors, SETS_Template dcox, SETS dcox, MEDIA_Template dcox, MEDIA dcox -> to your asset colors.\n\n### DASHBOARD: default Shapes\n\n* Added for the default shape & Glyph into Sēmippān\n\t* for all Colors widgets used\n\t* for all colors used into Lists display \n\n"
+		},
+		{
+			"t_version": "1.2.00",
+			"d_date": "2026-03-25",
+			"t_title": "All new ogToolsSuite",
+			"t_markdown": "<!--RNH_1.2.00-->\n***\n<h5> <span class=\"badge badge-success\">1.2.00</span> <span class=\"badge badge-info\">Wednesday 25 March 2026</span> <span class=\"badge badge-light\">All new ogToolsSuite</span></h5><!--/RNH_1.2.00-->\n\n### full new stack ogToolsSuite\n* And corrected a bug in ZEN_ and SETS, REPORTS, DOCUMENTS link to UserUID."
+		},
+		{
+			"t_version": "1.1.05",
+			"d_date": "2026-02-03",
+			"t_title": "Some UI corrections",
+			"t_markdown": "<!--RNH_1.1.05-->\n***\n<h5> <span class=\"badge badge-success\">1.1.05</span> <span class=\"badge badge-info\">Tuesday 3 February 2026</span> <span class=\"badge badge-light\">Some UI corrections</span></h5><!--/RNH_1.1.05-->\n\n### ![update](./icons/icn_update.png) UI Corrections\n* PRODUCTS and PATHS explanations on posix paths.\n* BANKS better widget and help tip for menuBtn code generator\n* New wok, wox, wod\n\n\n"
+		},
+		{
+			"t_version": "1.1.04",
+			"d_date": "2026-01-27",
+			"t_title": "First release",
+			"t_markdown": "<!--RNH_1.1.04-->\n***\n<h5> <span class=\"badge badge-success\">1.1.04</span> <span class=\"badge badge-info\">Tuesday 27 January 2026</span> <span class=\"badge badge-light\">First release</span></h5><!--/RNH_1.1.04-->\n\n# ![version](./icons/icn_version.png) First release\n\n* Ready for distribution\n* Embedded an ogToolsSuite life time license for this software.\n\n"
+		},
+		{
+			"t_version": "1.1.03",
+			"d_date": "2026-01-22",
+			"t_title": "Candidate",
+			"t_markdown": "<!--RNH_1.1.03-->\n***\n<h5> <span class=\"badge badge-success\">1.1.03</span> <span class=\"badge badge-info\">Thursday 22 January 2026</span> <span class=\"badge badge-light\">Candidate</span></h5><!--/RNH_1.1.03-->\n\n### ![happy](./icons/icn_happy.png) Candidate Corrections and UI\n* New zen \"zen_record_top\" everywhere\n* new records layout (at top)\n* New waz_progress widget with start and end icons\n"
+		},
+		{
+			"t_version": "1.1.00",
+			"d_date": "2025-06-21",
+			"t_markdown": "<!--RNH_1.1.00-->\n***\n<h5> <span class=\"badge badge-success\">1.1.00</span> <span class=\"badge badge-info\">Saturday 21 June 2025</span> <span class=\"badge badge-light\">Beta</span></h5><!--/RNH_1.1.00-->\n\n### ![happy](./icons/icn_happy.png) Beta of this HDI\n* Rewritting or Oviyam part of Icon's generator\n* new architecture\n* using the new zen_Nucleus and ogTools components\n* all new component's set in this app !\n\n## Import from Oviyam \n* 26/05/2025 !!!\n",
+			"t_title": "Beta"
+		}
+	]
+}

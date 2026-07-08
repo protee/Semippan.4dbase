@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN"
+"http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+
+<xliff version="1.0">
+<file datatype="x-STR#" original="undefined" source-language="en" target-language="de">
+<header>
+<prop-group name="Xliff-Editor.4dbase">
+<prop prop-type="version">1.0</prop>
+</prop-group>
+</header>
+<body>
+<group resname="Field">
+<trans-unit id="AEFC5B4DB0724FBC916483C31106FCDC" resname="field_angle">
+<source>Angle</source>
+<target>Winkel</target>
+</trans-unit>
+<trans-unit id="A2FE4976F87A4132B5EAC3B57E873328" resname="field_app">
+<source>App</source>
+<target>App</target>
+</trans-unit>
+<trans-unit id="18CB65D7C8F840EC98B318A52F455213" resname="field_brightness">
+<source>Brightness</source>
+<target>Helligkeit</target>
+</trans-unit>
+<trans-unit id="17076D83FF544892956220B844779241" resname="field_color">
+<source>Color</source>
+<target>Farbe</target>
+</trans-unit>
+<trans-unit id="CB73E8304E114270B6907F507CC87774" resname="field_colors">
+<source>Colors</source>
+<target>Farben</target>
+</trans-unit>
+<trans-unit id="7E26BDCEECCD40D59228A398E801D5FB" resname="field_colors_in">
+<source>Colors in</source>
+<target>Farben in</target>
+</trans-unit>
+<trans-unit id="341E57E285D44A77A65B39061D384373" resname="field_colorsSVG">
+<source>Colors sVG</source>
+<target>Farben sVG</target>
+</trans-unit>
+<trans-unit id="B019FE79EEFD45A7B5B28A1CBD407FEF" resname="field_colorText">
+<source>Color text</source>
+<target>Farbiger Text</target>
+</trans-unit>
+<trans-unit id="81F11F62EE624EC08111D26A911F879B" resname="field_face">
+<source>Face</source>
+<target>Gesicht</target>
+</trans-unit>
+<trans-unit id="6DE020484F3E40AF96B28520D0194A4B" resname="field_familly">
+<source>Familly</source>
+<target>Familie</target>
+</trans-unit>
+<trans-unit id="2BE9C3702110473BB89DC0A0D7FF05AA" resname="field_fields">
+<source>Fields</source>
+<target>•Fields</target>
+</trans-unit>
+<trans-unit id="3232D0D903314C5397211CED70507B65" resname="field_fileName">
+<source>File name</source>
+<target>•File name</target>
+</trans-unit>
+<trans-unit id="1EF338CB2B4F49F6A99E13B194B89115" resname="field_fileStart">
+<source>File start</source>
+<target>•File start</target>
+</trans-unit>
+<trans-unit id="89AAF935D27D474EB93D3299A37FDE1A" resname="field_height">
+<source>Height</source>
+<target>•Height</target>
+</trans-unit>
+<trans-unit id="8E3DE4C6DB5F4BB6B9EA4DC984234AC8" resname="field_IDforeign">
+<source>ID foreign</source>
+<target>•ID foreign</target>
+</trans-unit>
+<trans-unit id="F86EC60FEA844510B1D832DBC26951E5" resname="field_imgColor">
+<source>Img color</source>
+<target>•Img color</target>
+</trans-unit>
+<trans-unit id="B12C031E2DFE43DA970D205026C652E2" resname="field_imgStroke">
+<source>Img stroke</source>
+<target>•Img stroke</target>
+</trans-unit>
+<trans-unit id="B948B8EF40B447818244AD75CA7372A8" resname="field_infos">
+<source>Infos</source>
+<target>•Infos</target>
+</trans-unit>
+<trans-unit id="F43BE48DFAEF4B329EA04D092A414710" resname="field_isActive">
+<source>Active</source>
+<target>•Active</target>
+</trans-unit>
+<trans-unit id="59D6A274B33D4785B5F402AFC82F3BA9" resname="field_isComponent">
+<source>Component</source>
+<target>•Component</target>
+</trans-unit>
+<trans-unit id="9EFEF1C740CF4F238025D60DBA4E0282" resname="field_isExternalPath">
+<source>External path</source>
+<target>•External path</target>
+</trans-unit>
+<trans-unit id="510B8D86FCB34B39902779D20AF922FF" resname="field_isForceIcon">
+<source>Force icon</source>
+<target>•Force icon</target>
+</trans-unit>
+<trans-unit id="940DB3C45F1D487FA0B91981FF80F57A" resname="field_isLinkedPicture">
+<source>Linked picture</source>
+<target>•Linked picture</target>
+</trans-unit>
+<trans-unit id="632D60B4067C48ECBED965D7ECAF7892" resname="field_isMyPath">
+<source>My path</source>
+<target>•My path</target>
+</trans-unit>
+<trans-unit id="9BE0B67E9B75493C95FCA0DF5703030B" resname="field_isRun">
+<source>Run</source>
+<target>•Run</target>
+</trans-unit>
+<trans-unit id="DE4EB1BD1F9C489F8C9507EB0F0401DC" resname="field_j_dcox">
+<source>J dcox</source>
+<target>•J dcox</target>
+</trans-unit>
+<trans-unit id="D7575D878ECD42BA82C4C5AED3B3460C" resname="field_j_favorites">
+<source>J favorites</source>
+<target>•J favorites</target>
+</trans-unit>
+<trans-unit id="C8A5ADF54961457BB8E1C2C95443C7AF" resname="field_j_menuBtn">
+<source>J menu btn</source>
+<target>•J menu btn</target>
+</trans-unit>
+<trans-unit id="60BDF6091DEE463484AD9FFFE74F941A" resname="field_j_metarect">
+<source>J metarect</source>
+<target>•J metarect</target>
+</trans-unit>
+<trans-unit id="B5D4A651A3314A49A0BB3C61A91B0E28" resname="field_j_options">
+<source>J options</source>
+<target>•J options</target>
+</trans-unit>
+<trans-unit id="AE630AADF4CC43E986E8C1ABBD0EA778" resname="field_j_picture">
+<source>J picture</source>
+<target>•J picture</target>
+</trans-unit>
+<trans-unit id="050EBCFA9DD044DFB9BB135B4825E6F2" resname="field_j_text">
+<source>J text</source>
+<target>•J text</target>
+</trans-unit>
+<trans-unit id="84AAC5E3D6D740FBBCF426F40E788410" resname="field_j_veda_prefs">
+<source>J veda prefs</source>
+<target>•J veda prefs</target>
+</trans-unit>
+<trans-unit id="8FF17F6347F14A26B1F3E640F133033F" resname="field_key">
+<source>Key</source>
+<target>•Key</target>
+</trans-unit>
+<trans-unit id="A088A60B122F4A6EB09A52E94E5A49DE" resname="field_label">
+<source>Label</source>
+<target>•Label</target>
+</trans-unit>
+<trans-unit id="01A2B9CF2E6D4B6F9FD81F73F1BDB849" resname="field_logo">
+<source>Logo</source>
+<target>•Logo</target>
+</trans-unit>
+<trans-unit id="0700B33EEFA14EBBBF860579891A7005" resname="field_mantra">
+<source>Mantra</source>
+<target>•Mantra</target>
+</trans-unit>
+<trans-unit id="A45F146465DE4740AA44D08619F41A01" resname="field_menuItem">
+<source>Menu item</source>
+<target>•Menu item</target>
+</trans-unit>
+<trans-unit id="B0CEF0A2986B48AABD1E4A0182A2C56C" resname="field_meta">
+<source>Meta</source>
+<target>Meta</target>
+</trans-unit>
+<trans-unit id="4601DD266BCF4DA3A214D54EF8D9EFB4" resname="field_mime">
+<source>Mime</source>
+<target>•Mime</target>
+</trans-unit>
+<trans-unit id="E7841E30A4F840EFBB841923EEBF222C" resname="field_order">
+<source>Order</source>
+<target>•Order</target>
+</trans-unit>
+<trans-unit id="0B76033CFFC746108E5D4E0D465843F6" resname="field_orderMode">
+<source>Order mode</source>
+<target>•Order mode</target>
+</trans-unit>
+<trans-unit id="95447410E40D4CB3B05DC5933297EF8E" resname="field_orderOffset">
+<source>Order offset</source>
+<target>•Order offset</target>
+</trans-unit>
+<trans-unit id="EE486D2B6E674AB59E379643557057A6" resname="field_path">
+<source>Path</source>
+<target>•Path</target>
+</trans-unit>
+<trans-unit id="957365715E8D4DC6BB1BF3A25C555B94" resname="field_picture">
+<source>Picture</source>
+<target>•Picture</target>
+</trans-unit>
+<trans-unit id="74E82BBCE89F4FBFAFCE69E44D49FBEE" resname="field_prefixCode">
+<source>Prefix code</source>
+<target>•Prefix code</target>
+</trans-unit>
+<trans-unit id="E215C431F5134E03B0D5616C8D35C5D4" resname="field_resolution">
+<source>Resolution</source>
+<target>•Resolution</target>
+</trans-unit>
+<trans-unit id="F7E0AD3ABA004B499CE48F5D5EF7057B" resname="field_shape">
+<source>Shape</source>
+<target>•Shape</target>
+</trans-unit>
+<trans-unit id="284D54043E2D446C9909EDCD6654BFC1" resname="field_size">
+<source>Size</source>
+<target>•Size</target>
+</trans-unit>
+<trans-unit id="31D877632579417AB23B8C0682D90292" resname="field_sourcePNG">
+<source>Source pNG</source>
+<target>•Source pNG</target>
+</trans-unit>
+<trans-unit id="864D51D080C349038EFCD32673B0547C" resname="field_state">
+<source>State</source>
+<target>•State</target>
+</trans-unit>
+<trans-unit id="F8082A6195464FB5B71565A41A6791AC" resname="field_stroke">
+<source>Stroke</source>
+<target>•Stroke</target>
+</trans-unit>
+<trans-unit id="45FAB160DF644C74AC1762534A10F509" resname="field_style">
+<source>Style</source>
+<target>•Style</target>
+</trans-unit>
+<trans-unit id="58D0543E4493438EB5B6F7BDE1ADD847" resname="field_subPath">
+<source>Sub path</source>
+<target>•Sub path</target>
+</trans-unit>
+<trans-unit id="28D6788E91DA4675A67D32E0A5F34ED4" resname="field_subtitle">
+<source>Subtitle</source>
+<target>•Subtitle</target>
+</trans-unit>
+<trans-unit id="FF91A10DF63A47658E8192586D842EB2" resname="field_tagline">
+<source>Tagline</source>
+<target>•Tagline</target>
+</trans-unit>
+<trans-unit id="DA5BF0C462EB4A849BD2E0BA30A14285" resname="field_targetPNG">
+<source>Target pNG</source>
+<target>•Target pNG</target>
+</trans-unit>
+<trans-unit id="81D646D49ED44299B0564F94FDF11E01" resname="field_text">
+<source>Text</source>
+<target>•Text</target>
+</trans-unit>
+<trans-unit id="B69A59D75BB749AE8951F7E59DC592CD" resname="field_title">
+<source>Title</source>
+<target>•Title</target>
+</trans-unit>
+<trans-unit id="516209A582274A60BA9D8C791596444E" resname="field_type">
+<source>Type</source>
+<target>•Type</target>
+</trans-unit>
+<trans-unit id="51BE18ED3F7842FD9E48D280251F5F13" resname="field_UID">
+<source>UID</source>
+<target>UID</target>
+</trans-unit>
+<trans-unit id="FC6EAB68F551426FAACF7E2941456958" resname="field_UIDbank">
+<source>UID bank</source>
+<target>•UID bank</target>
+</trans-unit>
+<trans-unit id="5E4A7F95AFC44F60A5163B318C356236" resname="field_UIDcategory">
+<source>UID category</source>
+<target>•UID category</target>
+</trans-unit>
+<trans-unit id="2DFE2111F02A4C2F80B6F3843E0DDB22" resname="field_UIDkavyam">
+<source>UID kavyam</source>
+<target>•UID kavyam</target>
+</trans-unit>
+<trans-unit id="EF62262BC0B244348B79A1568BF8DAF3" resname="field_UIDpack">
+<source>UID pack</source>
+<target>•UID pack</target>
+</trans-unit>
+<trans-unit id="4DCD43EA7CF44C2F91663602F63E8C5F" resname="field_UIDparent">
+<source>UID parent</source>
+<target>•UID parent</target>
+</trans-unit>
+<trans-unit id="E0FB1D01266A4CD2A4E08DB90B5EBC1D" resname="field_UIDpicture">
+<source>UID picture</source>
+<target>•UID picture</target>
+</trans-unit>
+<trans-unit id="35AB290F913241288B80A340C3038507" resname="field_UIDproduct">
+<source>UID product</source>
+<target>•UID product</target>
+</trans-unit>
+<trans-unit id="8BA2B46062004CDF83275DC8F5948191" resname="field_UIDtemplate">
+<source>UID template</source>
+<target>•UID template</target>
+</trans-unit>
+<trans-unit id="7A7E2FF59F5E4FF09812F75D47ACB210" resname="field_UIDtype">
+<source>UID type</source>
+<target>•UID type</target>
+</trans-unit>
+<trans-unit id="DE4C1C77DD0543018F9C53C7301507AF" resname="field_version">
+<source>Version</source>
+<target>•Version</target>
+</trans-unit>
+<trans-unit id="F25574ABBA2443D58E1B6EEBA4705FE6" resname="field_width">
+<source>Width</source>
+<target>•Width</target>
+</trans-unit>
+<trans-unit id="C8F140DCE31540E4835DCB06B733B1CA" resname="field_xxx">
+<source>Xxx</source>
+<target>•Xxx</target>
+</trans-unit>
+</group>
+</body>
+</file>
+</xliff>

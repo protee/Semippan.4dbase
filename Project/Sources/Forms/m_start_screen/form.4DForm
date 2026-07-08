@@ -1,0 +1,172 @@
+{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"menuBar": "Cosmospace",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onHeader",
+		"onPrintingBreak",
+		"onPrintingFooter",
+		"onDisplayDetail",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onCloseBox",
+		"onPrintingDetail",
+		"onUnload",
+		"onOpenDetail",
+		"onCloseDetail",
+		"onTimer",
+		"onAfterKeystroke"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Static Picture1": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 500,
+					"height": 244,
+					"picture": "/RESOURCES/pictures/home.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"ot_name": {
+					"type": "input",
+					"left": 10,
+					"top": 207,
+					"width": 125,
+					"height": 14,
+					"dataSource": "Form:C1466.j_app.t_name",
+					"enterable": false,
+					"fill": "transparent",
+					"textAlign": "left",
+					"fontSize": 12,
+					"borderStyle": "none",
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"ot_version": {
+					"type": "input",
+					"left": 10,
+					"top": 222,
+					"width": 125,
+					"height": 12,
+					"dataSource": "Form:C1466.j_app.t_version",
+					"enterable": false,
+					"fill": "transparent",
+					"textAlign": "left",
+					"fontSize": 12,
+					"borderStyle": "none",
+					"stroke": "#FFFFFF"
+				},
+				"btn_product": {
+					"type": "pictureButton",
+					"top": 29,
+					"left": 29,
+					"width": 64,
+					"height": 64,
+					"sizingY": "fixed",
+					"dataSource": "",
+					"action": "",
+					"shortcutKey": "",
+					"rowCount": 4,
+					"picture": "/RESOURCES/pictures/btnb_product.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"tooltip": "Home Menu – Right click Table's palette",
+					"sizingX": "fixed"
+				},
+				"btn_shortcut": {
+					"type": "pictureButton",
+					"top": 172,
+					"left": 10,
+					"width": 30,
+					"height": 30,
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/Sans titre"
+					},
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_menu.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "fixed",
+					"visibility": "visible"
+				},
+				"waz_zen": {
+					"type": "subform",
+					"top": 117,
+					"left": 298,
+					"width": 30,
+					"height": 30,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_button",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "none",
+					"method": "ObjectMethods/waz_zen.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "Vue 1",
+		"defaultView": "Vue 1",
+		"views": {
+			"Vue 1": {},
+			"Vue 2": {},
+			"Vue 3": {},
+			"Vue 4": {},
+			"Vue 5": {},
+			"Vue 6": {},
+			"Vue 7": {},
+			"Vue 8": {},
+			"Vue 9": {}
+		}
+	},
+	"geometryStamp": 1066,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}

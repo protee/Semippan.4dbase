@@ -1,0 +1,1893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Sēmippān" uuid="25D83DCE9ECB4EEFB91AED09AA84B8C9" collation_locale="fr">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="ZEN_SETS" uuid="81D8492F20EE46B0AE9D7BC1B18CE12B" id="1">
+		<field name="UID" uuid="2C15E477DBF84E83862C78DF466C2DB8" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="createdOn" uuid="BF181C589BCD432796CA1C168AFD213C" type="8" never_null="true" id="2"/>
+		<field name="expireOn" uuid="945E84ED580145909C61ED9DD95B0AC2" type="8" never_null="true" id="3"/>
+		<field name="tableNumber" uuid="5C2A6F6201904A5EBC8F6BFF1B22232D" type="4" never_null="true" id="4"/>
+		<field name="UIDuser" uuid="46A267A44B5F4F14865B9F485AFA709F" type="10" store_as_UUID="true" id="5"/>
+		<field name="name" uuid="C6FFC47037F64EEE81CAEBA5E34F1642" type="10" limiting_length="80" never_null="true" id="6"/>
+		<field name="content" uuid="5355681DE7EB4D8D9BF361B6596D6A70" type="18" never_null="true" id="7"/>
+		<field name="isShared" uuid="598E876EFFD646EBAA5057C24F179391" type="1" never_null="true" id="8"/>
+		<primary_key field_name="UID" field_uuid="2C15E477DBF84E83862C78DF466C2DB8"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="181" green="223" blue="149" alpha="255"/>
+				<coordinates left="690.4765625" top="927.984375" width="174.9765625" height="223.65234375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_REPORTS" uuid="B7873374BC3F4AD89EC2D8A09B6533F2" id="2" prevent_journaling="true">
+		<field name="UID" uuid="D7CD0695004B49A0A557C5FE8C1947E1" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="createdOn" uuid="D75CD5DE9B344B049DD44D994454C491" type="8" never_null="true" id="2"/>
+		<field name="expireOn" uuid="2D7B83D505824B07907DC0D339FCE801" type="8" never_null="true" id="3"/>
+		<field name="tableNumber" uuid="37270CD23F2D4786868FDE72B52E7792" type="4" never_null="true" id="4"/>
+		<field name="UIDuser" uuid="8A87E5805A524299A04C7C581174F004" type="10" store_as_UUID="true" id="5"/>
+		<field name="name" uuid="B26617AD5C5C4322891552145061D20A" type="10" limiting_length="80" never_null="true" id="6"/>
+		<field name="content" uuid="7AD8A9E91A9D423B92BDCFD9DEBA496F" type="18" never_null="true" id="7"/>
+		<field name="isShared" uuid="184F10349F0D44ABB24AD332014E2D51" type="1" never_null="true" id="8"/>
+		<field name="isCross" uuid="93648449C66542F596082B4F0E489598" type="1" never_null="true" id="9"/>
+		<primary_key field_name="UID" field_uuid="D7CD0695004B49A0A557C5FE8C1947E1"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="181" green="223" blue="149" alpha="255"/>
+				<coordinates left="689.1015625" top="1170.6953125" width="174.9765625" height="238.21875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_DOCUMENTS" uuid="7F1EF8410EC04DFC8DE324EB1AD249B5" id="3" prevent_journaling="true">
+		<field name="UID" uuid="BCEF5682AF9745ADB89001387643420B" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="createdOn" uuid="A6F50766D5894DEEA84FCAB8231FA78C" type="8" never_null="true" id="2"/>
+		<field name="expireOn" uuid="2517F3C56C8E4CB8B7EC07C072579B35" type="8" never_null="true" id="3"/>
+		<field name="tableNumber" uuid="427D6D1E58B8418594F88768A6CEE080" type="4" never_null="true" id="4"/>
+		<field name="UIDuser" uuid="9499BB8E98214E6D8761BB0405948209" type="10" store_as_UUID="true" id="5"/>
+		<field name="name" uuid="F23D8E9FEE5D4834A473173E16653382" type="10" limiting_length="80" never_null="true" id="6"/>
+		<field name="content" uuid="1F989C9D6BCA49D59343F6ECF7B68A97" type="21" blob_switch_size="2147483647" never_null="true" id="7"/>
+		<field name="isShared" uuid="95108EA91B26483B89E4034B26DB3018" type="1" never_null="true" id="8"/>
+		<field name="category" uuid="452D2168116745CDB33FA209DC37DAED" type="10" limiting_length="255" never_null="true" id="9"/>
+		<primary_key field_name="UID" field_uuid="BCEF5682AF9745ADB89001387643420B"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="181" green="223" blue="149" alpha="255"/>
+				<coordinates left="686.49609375" top="1429.359375" width="174.9765625" height="235.80078125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_TRANSLATIONS" uuid="AD607A4293154D0980E51E1607F76AD6" id="4">
+		<field name="UID" uuid="C067A58968094C31B3FCABBFF395DAF5" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="1">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="ts_UTC_Creation" uuid="D8E90104C0194C09AE74709BDA23B8C9" type="4" never_null="true" id="2"/>
+		<field name="resourceName" uuid="84F3863BE10C42F58D79E9A736DBCF17" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="resourceType" uuid="1751D0435F79429F9459D9D46541763C" type="4" never_null="true" id="4"/>
+		<field name="resourceSource" uuid="61274738285C447A96C884FE5CD1E160" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<field name="language1" uuid="C5E48F38216749809974AA0DFB6DE476" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="language2" uuid="5DA57FA5A9984B72BF1EF08A3DF5EEB1" type="10" limiting_length="255" never_null="true" id="7"/>
+		<field name="language3" uuid="AE4E0935D14A416F83D2A83122CF0FF3" type="10" limiting_length="255" never_null="true" id="8"/>
+		<field name="language4" uuid="3752B9EFB22E47BE94F0D9210269318B" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="language5" uuid="B64B06C20ED24239B55D0B20699EF398" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="category" uuid="B1D8AF0A23314E7798319CDF54F972FF" type="10" limiting_length="255" never_null="true" id="11"/>
+		<field name="isVerified" uuid="86DECCB7089A49C7BAD41B72D233C72D" type="1" never_null="true" id="12"/>
+		<primary_key field_name="UID" field_uuid="C067A58968094C31B3FCABBFF395DAF5"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="13">
+				<color red="226" green="158" blue="214" alpha="255"/>
+				<coordinates left="941.5689086914" top="1348.1371154785" width="167.56640625" height="326.703125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_POPUPS_LABELS" uuid="FB097E74514D45EE80DB000E72695446" id="5" prevent_journaling="true">
+		<field name="UID" uuid="5E3841B6F6EF4C5ABBE2EFE0597223BA" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="UIDpopup" uuid="8B69D7D2717948A1BC5E5365B590D772" type="10" store_as_UUID="true" id="2"/>
+		<field name="orderNum" uuid="D0904C415DCD4238A98BE25DC3975B29" type="4" autogenerate="true" never_null="true" id="3">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="isActive" uuid="33C8F3E6BBB3459BB76E1A252338F21F" type="1" never_null="true" id="4"/>
+		<field name="label" uuid="101D8F9719784D16BDC4E2DCB859E7A9" type="10" limiting_length="80" never_null="true" id="5"/>
+		<field name="labelType" uuid="68EB88EEEBFA401D995B9AD17D1106B4" type="4" never_null="true" id="6"/>
+		<field name="key" uuid="29833715F3694DA2BDA90BA7B9BB625E" type="10" limiting_length="35" never_null="true" id="7"/>
+		<field name="colors" uuid="38845376B10A4EE4B7489010FD55DA7B" type="4" never_null="true" id="8"/>
+		<field name="color" uuid="E92E948C473943A4981664A69726D23E" type="4" never_null="true" id="9"/>
+		<primary_key field_name="UID" field_uuid="5E3841B6F6EF4C5ABBE2EFE0597223BA"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="114" green="209" blue="221" alpha="255"/>
+				<coordinates left="1231.9765625" top="925.67578125" width="179.39453125" height="244.09375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_POPUPS" uuid="4EDFD20F4F534DFFA141BF06358FD44B" id="6" prevent_journaling="true">
+		<field name="UID" uuid="D02E7AF8E9094570888FFDFCA913FBDB" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="isTable_NC" uuid="CF652B0F1BFD498AAC456CC83DAC99DE" type="4" never_null="true" id="2"/>
+		<field name="tableNum" uuid="258A33156D5743F78D526BCC29807C30" type="4" never_null="true" id="3"/>
+		<field name="key" uuid="04E69B264F01450ABD6146B764937E0B" type="10" limiting_length="35" unique="true" autogenerate="true" never_null="true" id="4"/>
+		<field name="label" uuid="263B6EBA5CBF47888D5403CBF897F42B" type="10" limiting_length="80" never_null="true" id="5"/>
+		<field name="isDev" uuid="6BD7C53BD68A44D2BEB58246201E2BC9" type="1" never_null="true" id="6"/>
+		<field name="isPublished" uuid="09A31B5AC0594ACF987420DF5A895570" type="1" never_null="true" id="7"/>
+		<field name="labelType" uuid="8EABB60D9F1A4E70A483CA3B08EE073F" type="4" never_null="true" id="8"/>
+		<field name="btnPath" uuid="75D1FBFFEC2F4BABA23710C4BFB50E7C" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="isModeIcn" uuid="58F688B851A54309A1D60FC5D18AAA31" type="1" never_null="true" id="10"/>
+		<primary_key field_name="UID" field_uuid="D02E7AF8E9094570888FFDFCA913FBDB"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="12">
+				<color red="114" green="209" blue="221" alpha="255"/>
+				<coordinates left="1013.1286621094" top="925.0693206787" width="136.97912597656" height="300.88940429687"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="PATHS" uuid="D5781FF2B77441D9B0466BFEDBA10AE2" id="7" prevent_journaling="true">
+		<field name="UID" uuid="20860BA152AA45B5B9B67EBEB5F89EED" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="372E24BBCF124605AB552373A254779A" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="UIDproduct" uuid="62447E96DA704FDD8D9F07B16331F25E" type="10" store_as_UUID="true" id="3"/>
+		<field name="UIDpack" uuid="3A33A8F128D240FABF3FC8D4D96B04E2" type="10" store_as_UUID="true" id="4"/>
+		<field name="isActive" uuid="CD744B19456F4B2BA34EC11917DC2D51" type="1" never_null="true" id="5"/>
+		<field name="subPath" uuid="2C5F0D408782440FA82D989C4D24F17F" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="isForceIcon" uuid="DF9C8A3B2E6A4A6F94C03EBCA9435344" type="1" never_null="true" id="7"/>
+		<field name="isExternalPath" uuid="9771452CBF1D47E6BDD453E706D5A486" type="1" never_null="true" id="8"/>
+		<field name="label" uuid="A448CC205C7E487280606087C98B49F7" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="path" uuid="B2833A869E8E4935A5F41905C2C47A29" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="isMyPath" uuid="23C2229EE86849CC8F2F6E5245634ED3" type="1" never_null="true" id="11"/>
+		<primary_key field_name="UID" field_uuid="20860BA152AA45B5B9B67EBEB5F89EED"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="11">
+				<color red="226" green="158" blue="214" alpha="255"/>
+				<coordinates left="605.37109375" top="69.671875" width="144.02734375" height="292.63671875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="TEMPLATES" uuid="91FB4D138E264C7B848C11004EA24BA4" id="8" prevent_journaling="true">
+		<field name="UID" uuid="5609ACAC947A4FE49B3442B8B982E399" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="2DB1C151B7624EAD9A05CBFDD7665074" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="label" uuid="70B59DD118E9497EBC764624FFFAF867" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="isActive" uuid="B823E07CBE3E4E0B9B6A2FEEA60BC8B2" type="1" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="shape" uuid="947071AFB17C4185A8BEAC75EC2BB7F1" type="4" never_null="true" id="5"/>
+		<field name="stroke" uuid="B39AA6796BFF4E9CA1E74985D226C1DE" type="4" never_null="true" id="6"/>
+		<field name="colors_in" uuid="A3210B0512CB43CB97F3EACC18C6982D" type="4" never_null="true" id="7"/>
+		<field name="j_dcox" uuid="34C2D4ADAEC140A3A174075845756629" type="21" blob_switch_size="2147483647" id="8"/>
+		<field name="UIDpack" uuid="3D7F2F11EBA74FF281A68323EAEC1D7B" type="10" store_as_UUID="true" id="9"/>
+		<primary_key field_name="UID" field_uuid="5609ACAC947A4FE49B3442B8B982E399"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="10">
+				<color red="181" green="223" blue="149" alpha="255"/>
+				<coordinates left="1026.234375" top="441.18359375" width="157.22265625" height="256.8828125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_SCHEMAS" uuid="5464A77D047A43D299A5DAEA0DBA251A" id="9" prevent_journaling="true">
+		<field name="UID" uuid="29052586639448B9AE8029E045E7EC8F" type="4" unique="true" autosequence="true" autogenerate="true" never_null="true" id="1"/>
+		<field name="label" uuid="9CB771D2D36C4B1A80D18DEFF7B08557" type="10" limiting_length="80" never_null="true" id="2"/>
+		<field name="schema" uuid="B1B435C4BBEE4AEEBD811A60049F30A9" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="schema_id" uuid="A037E40841B74D68BB153EF45B72826A" type="10" limiting_length="255" autogenerate="true" never_null="true" id="4"/>
+		<field name="title" uuid="47B0F74BE1CA4DEE87BAEC63BBEF21C7" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="createdOn" uuid="ED8F2D8A800C4946A1962D76E3097A84" type="8" never_null="true" id="6"/>
+		<field name="description" uuid="BA9DB38D8AAC46C2855324A58B625101" type="10" never_null="true" id="7"/>
+		<field name="isPublished" uuid="B430EFD0BC0449E0839C85DFFAFDBCD5" type="1" never_null="true" id="8"/>
+		<primary_key field_name="UID" field_uuid="29052586639448B9AE8029E045E7EC8F"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="160" green="174" blue="158" alpha="255"/>
+				<coordinates left="1222.76171875" top="1350.9765625" width="155.92578125" height="223.3671875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_SCHEMAS_R" uuid="3EF998C208CC49F998B5FD191AD0FC8F" id="10">
+		<field name="UID" uuid="AC475AC42A824DEC86953703CA046ABD" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="UIDparent" uuid="DE39CCC0A2AB411AA9AA7F76D4940761" type="4" id="2"/>
+		<field name="order" uuid="F8A6FC59E87A4C7A8A7BAC6AA88C3E0D" type="4" never_null="true" id="3"/>
+		<field name="isActive" uuid="1F672349E37F4B1D81CEB6DADDF34CDE" type="1" never_null="true" id="4"/>
+		<field name="label" uuid="36E9426DA7724A4D9C453B9DA8793EBF" type="10" never_null="true" id="5"/>
+		<field name="face" uuid="9E3A047B332E4F9FB498C4FA6D74CF1B" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="style" uuid="B7DA56047F30497A9DEBCE9A704124B4" type="4" never_null="true" id="7"/>
+		<field name="color" uuid="B325964651224D9387D3A67CF9DAD368" type="4" never_null="true" id="8"/>
+		<field name="state" uuid="10B0C1016677444797C9F8149326C3A7" type="4" never_null="true" id="9"/>
+		<field name="UIDforeign" uuid="6C4AFA61668E4573A5EEBD34220D6AC6" type="4" id="10"/>
+		<field name="j_options" uuid="4359FD1B2CC24F5DB79725BEC63B06AB" type="21" blob_switch_size="2147483647" never_null="true" id="11"/>
+		<primary_key field_name="UID" field_uuid="AC475AC42A824DEC86953703CA046ABD"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="11">
+				<color red="160" green="174" blue="158" alpha="255"/>
+				<coordinates left="1450.05078125" top="1349.86328125" width="149.61328125" height="291.734375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="PACKS" uuid="A2EC80E07D19496A8E667FF87E98A846" id="11" prevent_journaling="true">
+		<field name="UID" uuid="5E481CB528634A989083941304DF655E" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="B8D2F74D1E8F4E82ADD3AED2BC1AC250" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="label" uuid="43510847D2124658A0EDB209C3A8AD6C" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="isActive" uuid="1D25E8DCFCC6474C81C7A0CD12CAAA37" type="1" never_null="true" id="4"/>
+		<field name="colors" uuid="502E57293CCE4DE89C8D0A5A94EB7F7A" type="4" never_null="true" id="5"/>
+		<field name="logo" uuid="3BA2349ADFE041B68672B7379AC95AC9" type="12" never_null="true" id="6"/>
+		<field name="infos" uuid="A4A06BE4F59F4D5FBE685A4E397FA7DD" type="10" never_null="true" id="7"/>
+		<field name="j_alColors" uuid="68F3BDACE41844BEBF1FFB7ED3EB4CDE" type="21" blob_switch_size="2147483647" id="8"/>
+		<primary_key field_name="UID" field_uuid="5E481CB528634A989083941304DF655E"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="181" green="145" blue="209" alpha="255"/>
+				<coordinates left="804.59375" top="72.17202758786" width="150.60546875" height="240.71875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="BANKS" uuid="74CDA4B7F5B74C9A892912E6A86EC065" id="12">
+		<field name="UID" uuid="E36F4289DCF14DC99641D4D40D9F5480" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="54FD64C56F644514B9BFDBD35A884355" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="UIDpack" uuid="B6F1E4BF4E574841B6851DC8876E3349" type="10" store_as_UUID="true" id="3"/>
+		<field name="label" uuid="0A1CA46E9BE74FA0A389D3CE80DA3E42" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="isActive" uuid="96F66C4621154FB99305C32B74ECDA4A" type="1" never_null="true" id="5"/>
+		<field name="infos" uuid="C11271F1F6EE4349A394677B0F2313DF" type="10" never_null="true" id="6"/>
+		<field name="subPath" uuid="04E60048930B48ACA0842D41D225393F" type="10" limiting_length="255" never_null="true" id="7"/>
+		<field name="orderMode" uuid="FC3638B592CC47AD8A38335C772324D8" type="4" never_null="true" id="8"/>
+		<field name="orderOffset" uuid="0CF77D3618F44DA185F954B0904EE539" type="4" never_null="true" id="9"/>
+		<field name="j_menuBtn" uuid="FA7FC024DC754A23A1825006667F08C9" type="21" blob_switch_size="2147483647" never_null="true" id="10"/>
+		<field name="UIDtemplate" uuid="CF23586A669D41AFBEBEFD8D50E95F0F" type="10" store_as_UUID="true" id="11"/>
+		<field name="colorsIdx" uuid="EC815AF119A34626AC6A02B801F3249E" type="4" never_null="true" id="12" hide_in_REST="true"/>
+		<primary_key field_name="UID" field_uuid="E36F4289DCF14DC99641D4D40D9F5480"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="13">
+				<color red="181" green="145" blue="209" alpha="255"/>
+				<coordinates left="1024.6599731445" top="73.6430969238" width="159.36877441406" height="334.11096191406"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="MEDIA" uuid="B4D0BF40E27A42FDA7FD8192260A51D7" id="13">
+		<field name="UID" uuid="E03A16C5FDC14611B59624772BAA2AF9" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="2C29D4945D1B4005B475786A048A6DFF" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="UIDbank" uuid="E746C1E46EB24FC9A5690A05818F8530" type="10" store_as_UUID="true" id="3"/>
+		<field name="UIDpicture" uuid="5AFE8A7FED68411A9C1ADC1C4E1292CD" type="10" store_as_UUID="true" id="4"/>
+		<field name="order" uuid="57D10A8D3D414D5D8DA5A1FF17AF7BAF" type="4" never_null="true" id="5"/>
+		<field name="infos" uuid="EA2174863E8E404C9F7582483F3AAB9E" type="10" never_null="true" id="6"/>
+		<field name="isActive" uuid="A1E09103146B48118F5974FDDF06F011" type="1" never_null="true" id="7"/>
+		<field name="UIDtemplate" uuid="75C63995E71B49EDBEB6F6C8C0C1E75F" type="10" store_as_UUID="true" id="8"/>
+		<field name="fileName" uuid="62441CC7C1AB4320998228C3C3639938" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="menuItem" uuid="FE3E2483CFCC4687A0B9813FD25A90EF" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="text" uuid="123E2F26F17F4970A0516F293BB2F749" type="10" limiting_length="255" never_null="true" id="11"/>
+		<field name="colorText" uuid="94EAFB6C9462426CB24400CF7F6E20A5" type="4" never_null="true" id="12"/>
+		<field name="shape" uuid="CD4053C669F743E181734C8A8E7BEE45" type="4" never_null="true" id="13"/>
+		<field name="angle" uuid="195CF8A95B9D4596B303F2D5A3304FA4" type="4" never_null="true" id="14"/>
+		<field name="size" uuid="67272AF0D39C4BC68E3991AB2E0C8C9A" type="4" never_null="true" id="15"/>
+		<field name="brightness" uuid="FA4F38F99D8C4051901BC7A9A8220ABC" type="4" never_null="true" id="16"/>
+		<field name="j_metarect" uuid="821257D6FE3242C09E03A7D36988C795" type="21" blob_switch_size="2147483647" id="17"/>
+		<field name="picture" uuid="E2884270197645C3A781129FF06B0BF1" type="12" never_null="true" id="18"/>
+		<field name="isLinkedPicture" uuid="1EDE3FAC4749452E9AEBFAE31A3B8763" type="1" never_null="true" id="19"/>
+		<field name="j_dcox" uuid="D2DC588539224B47ABC6CB39593DFFD6" type="21" blob_switch_size="2147483647" id="20"/>
+		<field name="colorsSVG" uuid="B20D16BD39734C2CBE2DAF77278162FF" type="4" never_null="true" id="21"/>
+		<field name="sourcePNG" uuid="A0CACB47638B4127AA83FD1DAA886A59" type="4" never_null="true" id="22"/>
+		<field name="targetPNG" uuid="5056FB9BAE654278B56CBF488DCC91A2" type="4" never_null="true" id="23"/>
+		<primary_key field_name="UID" field_uuid="E03A16C5FDC14611B59624772BAA2AF9"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="24">
+				<color red="226" green="158" blue="214" alpha="255"/>
+				<coordinates left="1443.0154418945" top="74.4595031738" width="159.36877441406" height="565.86486816406"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="SETS" uuid="C02BF70189484EE9927DFC52FB28CA7C" id="14">
+		<field name="UID" uuid="1AD81D7EDCAC4A6EB15A2751A7532519" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="0DE78093AF4A4AF180F8E48157EC2612" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="UIDbank" uuid="24AE57B3772340E2B7E69CE2ABDF5951" type="10" store_as_UUID="true" id="3"/>
+		<field name="fileStart" uuid="C2D026655A0B4F4389C82258C551D304" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="isActive" uuid="98601D5F2BF74DFBA146CF9A49C9ACAA" type="1" never_null="true" id="5"/>
+		<field name="subPath" uuid="74BCF112607346369047AA713F7E1E64" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="UIDtemplate" uuid="4751325E2AF547E1AA819A0DCFE65C44" type="10" store_as_UUID="true" id="7"/>
+		<field name="type" uuid="1369ED88A3B1481198D92C7B29892B8C" type="4" never_null="true" id="8"/>
+		<field name="width" uuid="DF399A0EC358441581BF9153305AC4A5" type="4" never_null="true" id="9"/>
+		<field name="height" uuid="017AEE43CF5A442EB7FB897CCE455DB4" type="4" never_null="true" id="10"/>
+		<field name="size" uuid="60B101B3C5874B89ABDEC873313042A9" type="4" never_null="true" id="11"/>
+		<field name="mime" uuid="FA9061822A194606BF0250D425A8C7BC" type="4" never_null="true" id="12"/>
+		<field name="shape" uuid="F6B98F5C77B4406C97F909AFB9B90629" type="4" never_null="true" id="13"/>
+		<field name="stroke" uuid="917A995D9A4F4361BC1195A208DF18D2" type="4" never_null="true" id="14"/>
+		<field name="xxx" uuid="74156FCCB3934E74A6E4ED70077C8C2D" type="21" blob_switch_size="2147483647" id="15"/>
+		<field name="j_metarect" uuid="0FFE50DAA3F643308693BC85C44F0AE8" type="21" blob_switch_size="2147483647" id="16"/>
+		<field name="j_picture" uuid="A237851463B146CF904531591BCBD3C4" type="21" blob_switch_size="2147483647" id="17"/>
+		<field name="j_text" uuid="ED8C01996BEA44F0A5FDCD04A6D8EF46" type="21" blob_switch_size="2147483647" id="18"/>
+		<field name="j_options" uuid="1AE7F5524B04406FBA2CFFDBF4D3D30C" type="21" blob_switch_size="2147483647" id="19"/>
+		<field name="j_dcox" uuid="1484BF220829456ABD831AF9E8C75C29" type="21" blob_switch_size="2147483647" id="20"/>
+		<primary_key field_name="UID" field_uuid="1AD81D7EDCAC4A6EB15A2751A7532519"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="20">
+				<color red="181" green="145" blue="209" alpha="255"/>
+				<coordinates left="1237.7029418945" top="176.4712219238" width="168.56799316406" height="480.81408691406"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="PICTURES" uuid="A73982094C3B4EEB82C00645D967536E" id="15">
+		<field name="UID" uuid="5FD8B5D87E3243D096AA4F799EA0A0D6" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="D56CB119829D42FD93BC84B63D43C283" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="UIDcategory" uuid="DFBFA4A7901F42BDB48714E534A01B9A" type="10" store_as_UUID="true" id="3"/>
+		<field name="label" uuid="7D87B820A2794041B35BADC646907901" type="10" never_null="true" id="4"/>
+		<field name="infos" uuid="AE233FAAB18D4EACB5DD29E0FA3C539C" type="10" never_null="true" id="5"/>
+		<field name="picture" uuid="3E404B35A9F344819DC3D4313341A85A" type="12" never_null="true" id="6"/>
+		<field name="width" uuid="9D7ADB76A7494F8EB09C61D78CC03F77" type="4" never_null="true" id="7"/>
+		<field name="height" uuid="662A75CE6CA144FB9440A5B5A5B18229" type="4" never_null="true" id="8"/>
+		<field name="resolution" uuid="8F8371D14F5641D7B05957D977E1FB36" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="familly" uuid="E2674C119512439F8978D2B41AF18BBD" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="imgColor" uuid="087DC900AAB24FB3ABC831DE15AAD5DA" type="4" never_null="true" id="11"/>
+		<field name="imgStroke" uuid="B7D6DE553B4D4291AAC8E26E14A6147D" type="4" never_null="true" id="12"/>
+		<field name="isActive" uuid="B0DFA40E054B4A41BEACCF8EAD8BE4BE" type="1" never_null="true" id="13"/>
+		<primary_key field_name="UID" field_uuid="5FD8B5D87E3243D096AA4F799EA0A0D6"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="14">
+				<color red="186" green="170" blue="158" alpha="255"/>
+				<coordinates left="1654.8865356445" top="75.5805969238" width="159.36877441406" height="341.84924316406"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="CATEGORIES" uuid="E5230A87FF76428EA954807DB62E5826" id="16">
+		<field name="UID" uuid="5895682068344EA4BCC263A1761B6D69" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="CA8DC3119A414504BBA9C1630A331560" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="label" uuid="D6306A83FFDD4F309665C02660D25A95" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="isActive" uuid="017E8E9F091B46D4813DC3BC54D7D408" type="1" never_null="true" id="4"/>
+		<field name="colors" uuid="A15218A1822742E4895024180B97F8E2" type="4" never_null="true" id="5"/>
+		<field name="logo" uuid="CE0E8FDBEC58404C94FECA4027769ACA" type="12" never_null="true" id="6"/>
+		<field name="infos" uuid="C3B00BAA56F748E4B98E8EBB961FE8C2" type="10" never_null="true" id="7"/>
+		<field name="key" uuid="FD26216300AF4EB6B9977A26468527F3" type="10" limiting_length="255" never_null="true" id="8"/>
+		<primary_key field_name="UID" field_uuid="5895682068344EA4BCC263A1761B6D69"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="181" green="223" blue="149" alpha="255"/>
+				<coordinates left="1868.8474731445" top="76.8501281738" width="135.40393066406" height="233.50549316406"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="KAVIYAM" uuid="449E2FCCC78243BDB490602C93B5B264" id="17" prevent_journaling="true">
+		<field name="UID" uuid="2ACA1C025A32438F8B4410CE3BC4F389" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="A5C5A55D86624D18B3DADB9D325C824A" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="label" uuid="DDF79B176C6B40AF968CBBA2727AFF9A" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="tag" uuid="1CBB3212C898475F873A6D33744A7AFE" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="subtitle" uuid="36B343B0BE214BA0AD1D39B76FFAF851" type="10" limiting_length="255" id="5"/>
+		<field name="mantra" uuid="93189F89C9F94167A52DE8DDB05AC3A4" type="10" limiting_length="255" id="6"/>
+		<field name="tagline" uuid="8A9A4F6602E342B29DB3A3F0174ECE17" type="10" limiting_length="255" id="7"/>
+		<field name="infos" uuid="7607CD2BC0D146F7B4106DC36B8280C4" type="10" never_null="true" id="8"/>
+		<field name="isActive" uuid="DDA5A826A72840B99FAC52DC73E7D462" type="1" never_null="true" id="9"/>
+		<field name="colors" uuid="A581B5173D64473D9AF15FE22CE0989F" type="4" never_null="true" id="10"/>
+		<field name="logo" uuid="A3B0B0C4781C4A42A7C1D10495A4E6AE" type="12" never_null="true" id="11"/>
+		<field name="j_veda_prefs" uuid="FFDDEC49D8EA4FEDA0C9C867F024F44F" type="21" blob_switch_size="2147483647" id="12"/>
+		<field name="isRun" uuid="5403A44DCE074E98BD0A038EF760B6B5" type="1" never_null="true" id="13"/>
+		<primary_key field_name="UID" field_uuid="2ACA1C025A32438F8B4410CE3BC4F389"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="15">
+				<color red="237" green="211" blue="181" alpha="255"/>
+				<coordinates left="37.58203125" top="75.54296875" width="131.80859375" height="370.71484375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="SLOKAS" uuid="28E3F1836E4747BC825B2056B25FA96B" id="18" prevent_journaling="true">
+		<field name="UID" uuid="9C49A80BDA0F46B0AADEA1DB1F68B83E" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="BA74DABEF8E04829B4CC4BBEBE393B98" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="UIDproduct" uuid="774CF1879A824E779ED26E29B5132A56" type="10" store_as_UUID="true" id="3"/>
+		<field name="UIDkaviyam" uuid="4E34D7B165EB48A4A211999963B77BA1" type="10" store_as_UUID="true" id="4"/>
+		<field name="order" uuid="8697CA0EBB4241A090D363057831FB2D" type="4" never_null="true" id="5"/>
+		<field name="label" uuid="D151988D92BD4B439257945E98215E0B" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="colors" uuid="C70EA8C92AC24A44B13ED8AB1B9C59D3" type="4" never_null="true" id="7"/>
+		<field name="logo" uuid="0BD529CA689546CA9005E7052C48BEEE" type="12" never_null="true" id="8"/>
+		<primary_key field_name="UID" field_uuid="9C49A80BDA0F46B0AADEA1DB1F68B83E"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="237" green="211" blue="181" alpha="255"/>
+				<coordinates left="223.03515625" top="75.04296875" width="120" height="234.05859375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_COUNTRIES" uuid="CCE1A51175E04C0D9AD1D94D26CF651F" id="19">
+		<field name="UID" uuid="1E4902D53D05411C9A8F1187C9A9EFC0" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="name" uuid="BFBC48D3D3DA47F5A5CF9FFE86A1910F" type="10" limiting_length="255" never_null="true" id="2">
+			<field_extra>
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cspthree\c0\c0\c0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs22 \cf2 \ulnone FR\
+EN\
+ES\
+DE}]]></comment>
+				<comment format="text"><![CDATA[FR
+EN
+ES
+DE]]></comment>
+			</field_extra>
+		</field>
+		<field name="phoneCode" uuid="AD86584309E0425F9240D902BD7B5E1D" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="isSepaZone" uuid="76535294B1064F54874A1BE7CAE56DB7" type="1" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="ISO2" uuid="D3782040305A4D5FB8EC1F4E6CEC3980" type="10" limiting_length="2" never_null="true" id="5">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="ISO3" uuid="6D43E8C69FB94B11BB40E11337F03090" type="10" limiting_length="3" never_null="true" id="6">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="iso_3166_2" uuid="69099DB711F6415B932F31CCE722F542" type="10" limiting_length="20" never_null="true" id="7"/>
+		<field name="region" uuid="E47E2057F35646B5A6BC1C3385F07BB0" type="10" limiting_length="20" never_null="true" id="8"/>
+		<field name="subRegion" uuid="A29752ABD3904A93AE942B8366F4739B" type="10" limiting_length="255" never_null="true" id="9">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="intermediateRegion" uuid="B8CCA2E9BF984ADAAAEAA07C99136F7D" type="10" limiting_length="50" never_null="true" id="10">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="regionCode" uuid="1A5D75F66F7D428C9EBB95F3976B0AA6" type="10" limiting_length="15" never_null="true" id="11">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="subRegionCode" uuid="32CDCCE9A2BB4159831CFF0A6FBBAB22" type="10" limiting_length="15" never_null="true" id="12"/>
+		<field name="intermediateRegionCode" uuid="A665C3CE2072450DBFE0E31EF66C07C0" type="10" limiting_length="15" never_null="true" id="13"/>
+		<primary_key field_name="UID" field_uuid="1E4902D53D05411C9A8F1187C9A9EFC0"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="13">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="1533.9471130371" top="935.710357666" width="190.19039916993" height="331.05798339844"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_STATES" uuid="8B071BB958974175A0DF8F170CCF40DC" id="20">
+		<field name="UID" uuid="95B3EC5061AA432D951F466F0FECE73F" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="stateName" uuid="805D2CC970DE4238B0A21E9754E2AA86" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="code" uuid="306EDA9B544E46418946D2AA8AD9F4DD" type="10" limiting_length="15" never_null="true" id="3"/>
+		<field name="UIDcountry" uuid="1C3EE25D941D4C58A864905F0B0C2488" type="10" store_as_UUID="true" id="4">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="stateCode" uuid="066D40F6F64443DF9073E93A7C9D94EF" type="10" limiting_length="15" never_null="true" id="5"/>
+		<primary_key field_name="UID" field_uuid="95B3EC5061AA432D951F466F0FECE73F"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="5">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="1793.9571533203" top="940.1422576905" width="127.87890625" height="160.53125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_AREA_CODES" uuid="3DC7F5CC11E04E9EBA7F7605CF68A3EB" id="21" prevent_journaling="true">
+		<field name="UID" uuid="21AF40F429E2457080433EF115A2F32A" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="areaCode" uuid="D26415E95CED4C3B901EACA00C9FBCBD" type="10" limiting_length="30" never_null="true" id="2"/>
+		<field name="UIDstate" uuid="B4774B18158F46049CA9901D077C6E25" type="10" store_as_UUID="true" id="3">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<primary_key field_name="UID" field_uuid="21AF40F429E2457080433EF115A2F32A"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="2002.7079315186" top="1188.0912322998" width="150.59509277343" height="119.28759765625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_COUNTIES" uuid="BD4BDB484E2240778A3D6C720D48548B" id="22" prevent_journaling="true">
+		<field name="UID" uuid="41887BC3FD6B441D939A35C4C84BE366" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="UIDstate" uuid="BC86EAD3290E4BA9BC52F5CA6AAD41CF" type="10" store_as_UUID="true" id="2">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="code" uuid="F4453F071DEA485D9E076579FAAB3479" type="10" limiting_length="15" never_null="true" id="3"/>
+		<field name="fpCode" uuid="E77723D964ED4DE2B1D026C79D221615" type="10" limiting_length="15" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="gnisCode" uuid="4B43E4C8AE8B4164849FD5E31A5AA4E7" type="10" limiting_length="15" never_null="true" id="5">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="nameShort" uuid="D94068BC1ACD4BD996782AE5D0BA7EEB" type="10" limiting_length="255" never_null="true" id="6">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="name" uuid="4793505FAA2342ACA4A77275CB1EE73D" type="10" limiting_length="255" never_null="true" id="7">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="year" uuid="EBE82F3B3C5841D58813E252F1F1C959" type="4" never_null="true" id="8">
+			<field_extra multi_line="false"/>
+		</field>
+		<primary_key field_name="UID" field_uuid="41887BC3FD6B441D939A35C4C84BE366"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="2000.5931243897" top="941.1528320312" width="155.84005737305" height="223.23022460938"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_TIMEZONES" uuid="4D4C49C246464B6289D12BE43143336F" id="23" prevent_journaling="true">
+		<field name="UID" uuid="CE0AAD4DCA61443E8DA6A05EAA598AAD" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="value" uuid="AB6FCA8D384A4CD5B5F61E3B8EA87AF0" type="10" limiting_length="80" never_null="true" id="2">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="abbr" uuid="A574B44B2BD947DC9646943274906904" type="10" limiting_length="5" never_null="true" id="3"/>
+		<field name="offset" uuid="BC7300DF6EAC4206AE175B448D152AF2" type="6" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="isdst" uuid="E289DD2995E647BF8914866FB7173074" type="1" never_null="true" id="5">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="text" uuid="F51308123EF4433596601C5F4BF65CA2" type="10" limiting_length="255" never_null="true" id="6">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="utc" uuid="9764E9045508414FB1CA82131D1128CA" type="21" blob_switch_size="2147483647" never_null="true" id="7">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="timezone" uuid="F4F1499E77424DA68F2CEED65EAAC0FF" type="6" never_null="true" id="8"/>
+		<primary_key field_name="UID" field_uuid="CE0AAD4DCA61443E8DA6A05EAA598AAD"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="2245.2259368897" top="940.8012695312" width="155.84005737305" height="249.34741210938"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_FORMS" uuid="DA31BE9DA9C74758BE6A85457C084D21" id="24">
+		<field name="UID" uuid="5188A835F504498E9E129DED226B0C6C" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="entity" uuid="04C88747C64B4A5A816289862C5E598D" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="dbKey" uuid="FFDB3C0393884D62A9C068CFEDDEF8C7" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="title" uuid="64D92AF05B11418FB543B90B62B46A1E" type="10" limiting_length="255" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="isPopup" uuid="717C823A125A4987BBC3DC37D806BC7F" type="1" never_null="true" id="5">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="formClass" uuid="618B9E4E84274096BE4047612E4D70E5" type="10" limiting_length="255" never_null="true" id="6">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="formHeader" uuid="195D4B865C8A497A96750F74BABE0881" type="10" never_null="true" id="7">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="formFooter" uuid="EC54BE1CF80C4B1E90D037DB7B01E0A1" type="10" never_null="true" id="8"/>
+		<field name="dbScheme" uuid="0BBEDDD92C2B4A17990B07148E0DA62D" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="isPublished" uuid="2DC5431AE11640D488B1EA9D3661EADC" type="1" never_null="true" id="10"/>
+		<primary_key field_name="UID" field_uuid="5188A835F504498E9E129DED226B0C6C"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="10">
+				<color red="160" green="174" blue="158" alpha="255"/>
+				<coordinates left="1650.3046875" top="1353.03515625" width="144.3046875" height="266.21484375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_FIELDS" uuid="AD5F50B0B4AB4F3AA904C4952FB837AA" id="25">
+		<field name="UID" uuid="FCC3950244BF41CBBC309EE206A33E1D" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="fType" uuid="E12BDECAB11E4C6B8EFBAF9B8FDE691E" type="10" limiting_length="50" never_null="true" id="2"/>
+		<field name="label" uuid="FDE07DD74D4740779979F236DF086CA8" type="10" limiting_length="100" never_null="true" id="3">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="isRequired" uuid="41C5035B4911482A8F3564D6D9AB7DAD" type="1" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="orderNum" uuid="9D50DFD0130246EDADB6B2E64983009B" type="4" never_null="true" id="5">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="collection" uuid="F1578348EE9D4ED09402A0209F9293F0" type="10" limiting_length="100" never_null="true" id="6">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="xPath" uuid="F18EA07DE5D44EF0A363D449C7A09A70" type="10" limiting_length="255" never_null="true" id="7">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="htmlClass" uuid="955DCD7BD4CB41A485A1B716554E6FCD" type="10" limiting_length="255" never_null="true" id="8">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="htmlStyle" uuid="575909A330E54960919A52CF854F6CFA" type="10" limiting_length="255" never_null="true" id="9">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="functionTrigger" uuid="8E6754BB4BF14101A0C75A3D3B736685" type="10" limiting_length="255" never_null="true" id="10">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="fTooltip" uuid="52FACEDF609D40B89B088CC490DB3FA8" type="10" never_null="true" id="11">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="fError" uuid="2B97805891BE422D9AC7723A90135990" type="10" never_null="true" id="12">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="UIDform" uuid="8DE8C2046AFD402E85B0B297FF6714E6" type="10" store_as_UUID="true" id="13"/>
+		<field name="isReadOnly" uuid="08FD0F14082E4FC29FEB6B87A7E20122" type="1" never_null="true" id="14"/>
+		<field name="group" uuid="396617063A3B4D33B0975F4D4F985785" type="10" limiting_length="50" never_null="true" id="15"/>
+		<primary_key field_name="UID" field_uuid="FCC3950244BF41CBBC309EE206A33E1D"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="16">
+				<color red="160" green="174" blue="158" alpha="255"/>
+				<coordinates left="1845.375" top="1354.04296875" width="137.73046875" height="389.76953125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_ROUTES" uuid="73BB44B996A1405BAE0FD8F8444D2E31" id="26" prevent_journaling="true">
+		<field name="UID" uuid="1E99953CD7204A60828F48C8866291F0" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="isActive" uuid="1F4A4BD76186404D8D62532BE9502377" type="1" never_null="true" id="2"/>
+		<field name="d4Method" uuid="C635D2F1069840AE90A6E7D6ADFC4A5A" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="category" uuid="34739C3BEDC244ECB80BF80D0798820C" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="method" uuid="7ADAC88898F04B75B463E170D3085F5F" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="xPath" uuid="2AD6451C10084F34BFA7A0CF1A46E147" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="ipAllowed" uuid="A46B028B2B2C47FF8E8FF92A27893FB6" type="21" autogenerate="true" blob_switch_size="2147483647" never_null="true" id="7">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="credentials" uuid="5FF7FE076EDA40BC923EA8AB7A3221AF" type="21" blob_switch_size="2147483647" never_null="true" id="8"/>
+		<field name="comments" uuid="722671C519884362B1234883B2E5691E" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="UIDendpoint" uuid="11E23D65F4344BA4B6676DF754A282E3" type="10" store_as_UUID="true" id="10"/>
+		<field name="createdOn" uuid="6159CC17373348789273FB3B6635E4AF" type="8" never_null="true" id="11"/>
+		<primary_key field_name="UID" field_uuid="1E99953CD7204A60828F48C8866291F0"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="11">
+				<color red="160" green="174" blue="158" alpha="255"/>
+				<coordinates left="2251.0812530518" top="1353.40625" width="151.77890014648" height="286.46406555176"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_ENDPOINTS" uuid="A175FD0F82CF4A18A5F203E38116832D" id="27" prevent_journaling="true">
+		<field name="UID" uuid="9BD50E6057F34E03BB6B1A8CBBEE05DC" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="label" uuid="4E7FA9CBA4B549389F72BA9FE67A77C7" type="10" limiting_length="80" never_null="true" id="2"/>
+		<field name="apiName" uuid="C48B5022AA914A24A91442A2C4F4BD8C" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="apiVersion" uuid="5A40BA7DC03B413DB47DB34447842F28" type="10" limiting_length="255" autogenerate="true" never_null="true" id="4"/>
+		<field name="apiRoot" uuid="12F4354C6FE24857A626F6B535C31B66" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="createdOn" uuid="AD5A94CAA728474E94390BEF7CB545C5" type="8" never_null="true" id="6"/>
+		<field name="comments" uuid="5A3F8225F3B04328BB17A10D81B378E6" type="10" never_null="true" id="7"/>
+		<field name="isPublished" uuid="03B8445B65E144D9BA695B9C97C2EB17" type="1" never_null="true" id="8"/>
+		<primary_key field_name="UID" field_uuid="9BD50E6057F34E03BB6B1A8CBBEE05DC"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="160" green="174" blue="158" alpha="255"/>
+				<coordinates left="2032.08203125" top="1353.10546875" width="155.92578125" height="223.3671875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_USERS_SETTINGS" uuid="9323E37D41AE46CC82B020CD198E662D" id="28">
+		<field name="UID" uuid="82ECFDBB57274DDB9D4706750837B63B" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="meta" uuid="4607B2B67B0C49E3A01B56A13FCFB665" type="21" blob_switch_size="2147483647" never_null="true" id="2">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="UIDuser" uuid="7E73346679094C27A25CEF2F42200CA4" type="10" store_as_UUID="true" id="3"/>
+		<field name="settings" uuid="982DA15D688243B8BC003CF1A8ED4A75" type="10" never_null="true" id="4"/>
+		<field name="view" uuid="A01A415ABBB54375B18B84D8909849E8" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="profile" uuid="DB917C0B1B564AD598DF13559C57760B" type="10" limiting_length="35" never_null="true" id="6"/>
+		<field name="tableNumber" uuid="87B10EE7001747018A7FAD93C2D7A257" type="4" never_null="true" id="7"/>
+		<primary_key field_name="UID" field_uuid="82ECFDBB57274DDB9D4706750837B63B"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="224" green="234" blue="104" alpha="255"/>
+				<coordinates left="449.22088623047" top="928.7696838379" width="177" height="220.25390625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_DASHBOARD" uuid="CC8F49114FC54A6C865E7BE129362A4F" id="29" prevent_journaling="true">
+		<field name="UID" uuid="E62485CD49B64132A64988DF0DF38D8A" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1"/>
+		<field name="meta" uuid="FD3423AEBF4A416698BFB9AE2F71DE1A" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="programName" uuid="A19378221E0B4B309974B4805FD80DD3" type="10" limiting_length="35" never_null="true" id="3"/>
+		<field name="version" uuid="C08BF2C6D46B41C59F0586CCDE490199" type="10" limiting_length="10" never_null="true" id="4"/>
+		<field name="version_previous" uuid="F7CB371FA1684CC281171B0C15662D4C" type="10" limiting_length="10" never_null="true" id="5">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="isLockOptimistic" uuid="7FB1781B950948E6B237136FAAFDADBB" type="1" never_null="true" id="6"/>
+		<field name="patterns" uuid="95817AADFA794A26A636F37C0CBBA9CF" type="21" blob_switch_size="2147483647" never_null="true" id="7"/>
+		<field name="colors" uuid="51DC861FD8574F6BB73B49F6655885AF" type="21" blob_switch_size="2147483647" never_null="true" id="8"/>
+		<field name="j_IOs" uuid="F1EA50C4FB8D4A9BA2EF06A69C592E11" type="21" blob_switch_size="2147483647" never_null="true" id="9"/>
+		<field name="driveBoxes" uuid="CD9448F5762A490BB9B495865243F548" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="settings" uuid="CE5E81932EED4A0B8D8E2429BD11B783" type="21" blob_switch_size="2147483647" never_null="true" id="11"/>
+		<field name="j_biz" uuid="0EDB11A0629C4377880A26C7620C75D8" type="21" blob_switch_size="2147483647" id="12"/>
+		<primary_key field_name="UID" field_uuid="E62485CD49B64132A64988DF0DF38D8A"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="13">
+				<color red="224" green="234" blue="104" alpha="255"/>
+				<coordinates left="19.6015625" top="928.83984375" width="160.39344787598" height="318.91996765137"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_USERS" uuid="1B340E2C2C6E4AE9806FC96123195C56" id="30" prevent_journaling="true">
+		<field name="UID" uuid="6068166EA7A64897949C1C1B9DF8602A" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="meta" uuid="C72CD45EECD9433484A4F3F89DB92725" type="21" blob_switch_size="2147483647" never_null="true" id="2">
+			<field_extra>
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cspthree\c0\c0\c0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs22 \cf2 \ulnone User\
+TimeStamp}]]></comment>
+				<comment format="text"><![CDATA[User
+TimeStamp]]></comment>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="userName" uuid="8878146D474E496CB7922322F9F27495" type="10" limiting_length="35" never_null="true" id="3"/>
+		<field name="firstName" uuid="6123C61D316E4E78A2CFDCE4FEAB41E6" type="10" limiting_length="255" never_null="true" id="4">
+			<field_extra>
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cspthree\c0\c0\c0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs22 \cf2 \ulnone password (Hashed)\
+validity date\
+password frequency}]]></comment>
+				<comment format="text"><![CDATA[password (Hashed)
+validity date
+password frequency]]></comment>
+			</field_extra>
+		</field>
+		<field name="lastName" uuid="69B32B11AC3F4062B91DB589DAFF724E" type="10" limiting_length="35" never_null="true" id="5"/>
+		<field name="profile" uuid="F6272759A4EE4DE28C6F20BC0D7D1FEC" type="10" limiting_length="35" never_null="true" id="6"/>
+		<field name="userNumber" uuid="D79F20B7396A4642955CB4D58C02F546" type="4" never_null="true" id="7">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="isActive" uuid="24F6A6B591A94751A2038E0C79E306C0" type="1" never_null="true" id="8">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="previousPasswords" uuid="EC35753B8AB445559F10B5B81E60A15C" type="21" blob_switch_size="2147483647" never_null="true" id="9">
+			<field_extra>
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cspthree\c0\c0\c0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0\fs22 \cf2 \ulnone timestamp\
+password (hashed)}]]></comment>
+				<comment format="text"><![CDATA[timestamp
+password (hashed)]]></comment>
+			</field_extra>
+		</field>
+		<field name="password" uuid="32064D5D24634C77A0B1045708BF86AA" type="10" never_null="true" id="10"/>
+		<field name="isVersion" uuid="339E3EDF2E854765B5F37A5B8308FC2E" type="1" never_null="true" id="11"/>
+		<field name="version" uuid="498712C6909146ADA9DB1D1FA4AAA09D" type="10" limiting_length="255" never_null="true" id="12"/>
+		<field name="versionLast" uuid="0DD14175500A4EABA6F79DB11DD5C603" type="10" limiting_length="255" never_null="true" id="13"/>
+		<field name="validityDate" uuid="0A900C253FD34C88825914393ECFF056" type="10" limiting_length="20" never_null="true" id="14"/>
+		<field name="validityDays" uuid="F6BCF3C811A54ED7960834CE420CEB3E" type="4" never_null="true" id="15"/>
+		<field name="UIDcountry" uuid="FB6FF95DC3AD44C390BB29CFB758B019" type="10" store_as_UUID="true" never_null="true" id="16"/>
+		<field name="zipCode" uuid="8538AAF4F8114715AA75D7020C7485E9" type="10" limiting_length="10" never_null="true" id="17"/>
+		<field name="UIDgroup" uuid="21D59FAAB8544B77B2F2FEDDFCA143C0" type="10" store_as_UUID="true" id="18"/>
+		<field name="userSettings" uuid="4A206750F05D4C049E2969405DBBE95B" type="21" blob_switch_size="2147483647" never_null="true" id="19"/>
+		<primary_key field_name="UID" field_uuid="6068166EA7A64897949C1C1B9DF8602A"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="25">
+				<color red="224" green="234" blue="104" alpha="255"/>
+				<coordinates left="228.03161621094" top="925.2213439941" width="164.26789855957" height="586.54876708985"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="YIN_YANG" uuid="5574564B4AB94F76A79EC6E6CF34A57D" id="31" prevent_journaling="true">
+		<field name="UID" uuid="0ED7721231304E9BA4AF296C06793DED" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="78B0F253ED664DB79DA25D4897DC53CF" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="label" uuid="852B419647DE43368B2B264BD6AEA1B0" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="fields" uuid="12B696D5A63B48E78A0274410D411F3E" type="21" blob_switch_size="2147483647" id="4"/>
+		<primary_key field_name="UID" field_uuid="0ED7721231304E9BA4AF296C06793DED"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="42.0859375" top="501.5390625" width="120" height="185.390625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="TYPES" uuid="8B408EFE185B4D5795C05228CA8CAC24" id="32" prevent_journaling="true">
+		<field name="UID" uuid="7647BF15BF58477FA40667667C6D7FA3" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="UIDparent" uuid="A5429BE5BA964A6FA7E5E4FD41C25C9F" type="10" store_as_UUID="true" id="2"/>
+		<field name="order" uuid="8F2AC2FF55A745B488315D1020541086" type="4" never_null="true" id="3"/>
+		<field name="isActive" uuid="6BAF93BEC7E04FA98D8DC2AFE69EB588" type="1" never_null="true" id="4"/>
+		<field name="label" uuid="EBB7663D406A43EEA10FC63B74682204" type="10" never_null="true" id="5"/>
+		<field name="face" uuid="8E76461B45284A67B3E17BF878591549" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="style" uuid="EE20A64459F94C0A85373ED2BCF5FF15" type="4" never_null="true" id="7"/>
+		<field name="color" uuid="E0AADFD077104A0B9CBF73D7F059A612" type="4" never_null="true" id="8"/>
+		<field name="state" uuid="E6193E0EABF44893A0AC982D7DED35EC" type="4" never_null="true" id="9"/>
+		<field name="IDforeign" uuid="0A5F573104564912A1D85CD76F0C01D6" type="4" never_null="true" id="10"/>
+		<field name="meta" uuid="12E2E61F6D014D2299D8AF655EB33E6B" type="21" blob_switch_size="2147483647" id="11"/>
+		<primary_key field_name="UID" field_uuid="7647BF15BF58477FA40667667C6D7FA3"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="11">
+				<color red="181" green="223" blue="149" alpha="255"/>
+				<coordinates left="605.66015625" top="416.1875" width="135.67578125" height="290.8515625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="PRODUCTS" uuid="869B5023B29F429B80F1F203C5CC288F" id="33" prevent_journaling="true">
+		<field name="UID" uuid="674957F3B3654A329DAAF8BCC87C4197" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="76560072C26E4862911701606A382A42" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="label" uuid="B3857C07E35C4F068B167A5D47F8F700" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="isActive" uuid="CFE4576A525440669AA5F6FE997FC0A3" type="1" never_null="true" id="4"/>
+		<field name="colors" uuid="FB78A39638994DD092A7E99EC6CF138B" type="4" never_null="true" id="5"/>
+		<field name="logo" uuid="05F0C61FC91B4EE1B291A7826979E78A" type="12" never_null="true" id="6"/>
+		<field name="infos" uuid="72127F35DB234BFA9E5469E5B26F5876" type="10" never_null="true" id="7"/>
+		<field name="app" uuid="2EBAE954BD6148018F005B2BE7A4E54C" type="10" limiting_length="10" never_null="true" id="8">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="prefixCode" uuid="1BC42198571946FD8CF98E7085190D56" type="10" limiting_length="5" never_null="true" id="9"/>
+		<field name="version" uuid="E8FAC0BF55F0490B968826F16BF76E9A" type="10" limiting_length="7" never_null="true" id="10"/>
+		<field name="path" uuid="DE21DC49214D47FCA8BCD122E37F3721" type="10" limiting_length="255" never_null="true" id="11"/>
+		<field name="isMyPath" uuid="10BEC41B4FAA4170AD33DBC325E7087A" type="1" never_null="true" id="12"/>
+		<field name="isComponent" uuid="2B8B1E60C49948C7BEB6B0DAD76B3489" type="1" never_null="true" id="13"/>
+		<field name="UIDtype" uuid="46B49441D0C0467B8C934FEA61B83124" type="10" store_as_UUID="true" id="14"/>
+		<field name="title" uuid="440D286B2CD54073BBD4295F52009E85" type="10" limiting_length="255" never_null="true" id="15"/>
+		<field name="subtitle" uuid="0F49B73BFD4445608F237268FAF77459" type="10" limiting_length="255" never_null="true" id="16"/>
+		<field name="mantra" uuid="EBD70D79D254445F98DBB05905C3D5B8" type="10" limiting_length="255" never_null="true" id="17"/>
+		<field name="tagline" uuid="7D364D69672643B09839C430225F36B7" type="10" limiting_length="255" never_null="true" id="18"/>
+		<field name="j_colorsGrid" uuid="D69FACB3168847EB92B930369BCD2476" type="21" blob_switch_size="2147483647" id="19"/>
+		<field name="isGithub" uuid="DD2D71D8866D464689785A40D48C8EB6" type="1" never_null="true" id="20"/>
+		<primary_key field_name="UID" field_uuid="674957F3B3654A329DAAF8BCC87C4197"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="21">
+				<color red="226" green="158" blue="214" alpha="255"/>
+				<coordinates left="404.1015625" top="72.31265258786" width="145.49609375" height="490.88671875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="ZEN_GROUPS" uuid="59551B5FE3794C43B8822D86BCF54FCF" id="34">
+		<field name="UID" uuid="4E13DD139EFE42DFA78B52483B3AB017" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="A2821AA9604D46B39B3EE24F63FA6314" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="label" uuid="4FF73BCDDD0E42FA943308003F186127" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="colors" uuid="E5D20377A5FE41DAB6233A3FF2ADDE6B" type="4" never_null="true" id="4"/>
+		<field name="isDeveloper" uuid="AB0F3FE97D444926BDBE7DBB81029371" type="1" never_null="true" id="5"/>
+		<field name="isAdministrator" uuid="5A6700A7FD6348089D2F3DE9BFB1D708" type="1" never_null="true" id="6"/>
+		<field name="isTouchy" uuid="2E11644007B2485F906B76FFDD808708" type="1" never_null="true" id="7"/>
+		<field name="isLocked" uuid="191988A89E924C799761E68519DE0AF5" type="1" never_null="true" id="8"/>
+		<field name="isStatistics" uuid="86CD348747294799AFA72DC9EA1B059E" type="1" never_null="true" id="9"/>
+		<field name="isExports" uuid="57E7CFEB583349EF83AA7C8C2E31B44C" type="1" never_null="true" id="10"/>
+		<field name="isPrints" uuid="318B6F9D31C14C45811F4CB17A042954" type="1" never_null="true" id="11"/>
+		<field name="isPopups" uuid="55EF4230A1A148C4B7402AAEB906AF62" type="1" never_null="true" id="12"/>
+		<field name="tables" uuid="5AD923CEFAEF45C5A701D23171D62F9E" type="21" blob_switch_size="2147483647" never_null="true" id="13"/>
+		<field name="isActive" uuid="5AFC5843B72B42C9A415D90C4AB2B8B0" type="1" never_null="true" id="14"/>
+		<primary_key field_name="UID" field_uuid="4E13DD139EFE42DFA78B52483B3AB017"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="14">
+				<color red="224" green="234" blue="104" alpha="255"/>
+				<coordinates left="448.5115356445" top="1182.1484375" width="177.78674316406" height="348.73596191406"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="WOD_TRANSLATIONS" uuid="E4999CA30AAD4CFB87DC4D32B3CE0F9B" id="35" prevent_journaling="true">
+		<field name="UID" uuid="B315E06DFBF14439B9898D0E05747F25" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="6D6E49463A1745CD9E979997DDEDB14C" type="21" blob_switch_size="2147483647" never_null="true" id="2"/>
+		<field name="resourceName" uuid="B468166D015847F9A4AD26E314C5965B" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="resourceType" uuid="CFD9E4ECF2B24FCF9F24E1D1769AD5A8" type="4" never_null="true" id="4"/>
+		<field name="j_languages" uuid="92CCD9094ACD456CA387FBB06E208D6E" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<field name="isVerified" uuid="49626E327B0B437E83AF170A512F044B" type="1" never_null="true" id="6"/>
+		<primary_key field_name="UID" field_uuid="B315E06DFBF14439B9898D0E05747F25"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="181" green="145" blue="209" alpha="255"/>
+				<coordinates left="20.53515625" top="1353.76953125" width="165.15625" height="188.24609375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="COMBINATIONS" uuid="778775B72A7B4BDDB384C46967C1ECEF" id="36" prevent_journaling="true">
+		<field name="UID" uuid="51AD3CEC02994268B00539ADA5EDF77B" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="meta" uuid="A55614B834124133ADA89AB3805E175A" type="21" blob_switch_size="2147483647" id="2"/>
+		<field name="label" uuid="6FE94F8FBDE641AD89AB46529F204554" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="j_cmb" uuid="1505492CD29A435C8C37A6847DF08F74" type="21" blob_switch_size="2147483647" id="4"/>
+		<field name="isActive" uuid="4AA0C3B19401403B8CB20BC24106ECA0" type="1" never_null="true" id="5"/>
+		<field name="infos" uuid="3DA4CCCDBA2F4959B893AF5B1C466F30" type="10" never_null="true" id="6"/>
+		<field name="colors" uuid="356414AB374446629BD23798EEC358AA" type="4" never_null="true" id="7"/>
+		<primary_key field_name="UID" field_uuid="51AD3CEC02994268B00539ADA5EDF77B"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="7">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="809.140625" top="450.40234375" width="143.36328125" height="208.9453125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="C89A7560AF834157B602E0761FCFEA4B" name_Nto1="ZEN_POPUPS_LABELS_ZEN_POPUPS" name_1toN="ZEN_POPUPS_ZEN_POPUPS_LABELS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="8B69D7D2717948A1BC5E5365B590D772" name="UIDpopup">
+				<table_ref uuid="FB097E74514D45EE80DB000E72695446" name="ZEN_POPUPS_LABELS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="D02E7AF8E9094570888FFDFCA913FBDB" name="UID">
+				<table_ref uuid="4EDFD20F4F534DFFA141BF06358FD44B" name="ZEN_POPUPS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="AFB45A7B6D964B83BDA4EC33E521E83B" name_Nto1="ZEN_SCHEMAS_R_ZEN_SCHEMAS" name_1toN="ZEN_SCHEMAS_ZEN_SCHEMAS_R" state="1">
+		<related_field kind="source">
+			<field_ref uuid="6C4AFA61668E4573A5EEBD34220D6AC6" name="UIDforeign">
+				<table_ref uuid="3EF998C208CC49F998B5FD191AD0FC8F" name="ZEN_SCHEMAS_R"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="29052586639448B9AE8029E045E7EC8F" name="UID">
+				<table_ref uuid="5464A77D047A43D299A5DAEA0DBA251A" name="ZEN_SCHEMAS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="1CE95222146D4DEAABF24898598B8C7B" name_Nto1="myParent" name_1toN="myChildren" state="1">
+		<related_field kind="source">
+			<field_ref uuid="DE39CCC0A2AB411AA9AA7F76D4940761" name="UIDparent">
+				<table_ref uuid="3EF998C208CC49F998B5FD191AD0FC8F" name="ZEN_SCHEMAS_R"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="AC475AC42A824DEC86953703CA046ABD" name="UID">
+				<table_ref uuid="3EF998C208CC49F998B5FD191AD0FC8F" name="ZEN_SCHEMAS_R"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="1402C4BF695847CCB8322DEE61D74718" name_Nto1="ZEN_ROUTES_ZEN_ENDPOINTS" name_1toN="ZEN_ENDPOINTS_ZEN_ROUTES" state="1">
+		<related_field kind="source">
+			<field_ref uuid="11E23D65F4344BA4B6676DF754A282E3" name="UIDendpoint">
+				<table_ref uuid="73BB44B996A1405BAE0FD8F8444D2E31" name="ZEN_ROUTES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9BD50E6057F34E03BB6B1A8CBBEE05DC" name="UID">
+				<table_ref uuid="A175FD0F82CF4A18A5F203E38116832D" name="ZEN_ENDPOINTS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B0BBFB405CBA4426B38502FBDD4B4545" name_Nto1="ZEN_FIELDS_ZEN_FORMS" name_1toN="ZEN_FORMS_ZEN_FIELDS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="8DE8C2046AFD402E85B0B297FF6714E6" name="UIDform">
+				<table_ref uuid="AD5F50B0B4AB4F3AA904C4952FB837AA" name="ZEN_FIELDS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5188A835F504498E9E129DED226B0C6C" name="UID">
+				<table_ref uuid="DA31BE9DA9C74758BE6A85457C084D21" name="ZEN_FORMS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="76364F9BB6704740BD21C18BA38871A8" name_Nto1="ZEN_STATES_ZEN_COUNTRIES" name_1toN="ZEN_COUNTRIES_ZEN_STATES" state="1">
+		<related_field kind="source">
+			<field_ref uuid="1C3EE25D941D4C58A864905F0B0C2488" name="UIDcountry">
+				<table_ref uuid="8B071BB958974175A0DF8F170CCF40DC" name="ZEN_STATES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="1E4902D53D05411C9A8F1187C9A9EFC0" name="UID">
+				<table_ref uuid="CCE1A51175E04C0D9AD1D94D26CF651F" name="ZEN_COUNTRIES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="C5689C2A70AE4460A6E990250E78E9A4" name_Nto1="ZEN_COUNTIES_ZEN_STATES" name_1toN="ZEN_STATES_ZEN_COUNTIES" state="1">
+		<related_field kind="source">
+			<field_ref uuid="BC86EAD3290E4BA9BC52F5CA6AAD41CF" name="UIDstate">
+				<table_ref uuid="BD4BDB484E2240778A3D6C720D48548B" name="ZEN_COUNTIES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="95B3EC5061AA432D951F466F0FECE73F" name="UID">
+				<table_ref uuid="8B071BB958974175A0DF8F170CCF40DC" name="ZEN_STATES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="F97B8DEDBEF54304965DE857E772FC53" name_Nto1="ZEN_AREA_CODES_ZEN_STATES" name_1toN="ZEN_STATES_ZEN_AREA_CODES" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B4774B18158F46049CA9901D077C6E25" name="UIDstate">
+				<table_ref uuid="3DC7F5CC11E04E9EBA7F7605CF68A3EB" name="ZEN_AREA_CODES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="95B3EC5061AA432D951F466F0FECE73F" name="UID">
+				<table_ref uuid="8B071BB958974175A0DF8F170CCF40DC" name="ZEN_STATES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="DBAD3BB2F61E43C9A21AAC2183876A94" name_Nto1="BANKS_PACKS" name_1toN="PACKS_BANKS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B6F1E4BF4E574841B6851DC8876E3349" name="UIDpack">
+				<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5E481CB528634A989083941304DF655E" name="UID">
+				<table_ref uuid="A2EC80E07D19496A8E667FF87E98A846" name="PACKS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="12274544140C43F9972CEB7227C07841" name_Nto1="MEDIA_BANKS" name_1toN="BANKS_MEDIA" state="1">
+		<related_field kind="source">
+			<field_ref uuid="E746C1E46EB24FC9A5690A05818F8530" name="UIDbank">
+				<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="E36F4289DCF14DC99641D4D40D9F5480" name="UID">
+				<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="AE339223EBBF45798736270B10E1C254" name_Nto1="SETS_BANKS" name_1toN="BANKS_SETS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="24AE57B3772340E2B7E69CE2ABDF5951" name="UIDbank">
+				<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="E36F4289DCF14DC99641D4D40D9F5480" name="UID">
+				<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="AC588E9E37A34681A2932B51420794C4" name_Nto1="MEDIA_PICTURES" name_1toN="PICTURES_MEDIA" state="1">
+		<related_field kind="source">
+			<field_ref uuid="5AFE8A7FED68411A9C1ADC1C4E1292CD" name="UIDpicture">
+				<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5FD8B5D87E3243D096AA4F799EA0A0D6" name="UID">
+				<table_ref uuid="A73982094C3B4EEB82C00645D967536E" name="PICTURES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="3DF740862D0F4D33A7BC328A750E6E77" name_Nto1="PICTURES_CATEGORIES" name_1toN="CATEGORIES_PICTURES" state="1">
+		<related_field kind="source">
+			<field_ref uuid="DFBFA4A7901F42BDB48714E534A01B9A" name="UIDcategory">
+				<table_ref uuid="A73982094C3B4EEB82C00645D967536E" name="PICTURES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5895682068344EA4BCC263A1761B6D69" name="UID">
+				<table_ref uuid="E5230A87FF76428EA954807DB62E5826" name="CATEGORIES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="384532BD90D3410690E1E63B5C50F435" name_Nto1="myParent" name_1toN="myChildren" state="1">
+		<related_field kind="source">
+			<field_ref uuid="A5429BE5BA964A6FA7E5E4FD41C25C9F" name="UIDparent">
+				<table_ref uuid="8B408EFE185B4D5795C05228CA8CAC24" name="TYPES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="7647BF15BF58477FA40667667C6D7FA3" name="UID">
+				<table_ref uuid="8B408EFE185B4D5795C05228CA8CAC24" name="TYPES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="8CCA1C20CBBF4AFF884ED4D17A1EEAC6" name_Nto1="PRODUCTS_TYPES" name_1toN="TYPES_PRODUCTS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="46B49441D0C0467B8C934FEA61B83124" name="UIDtype">
+				<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="7647BF15BF58477FA40667667C6D7FA3" name="UID">
+				<table_ref uuid="8B408EFE185B4D5795C05228CA8CAC24" name="TYPES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="CFB12B03F91747CC803E2586963EC5A3" name_Nto1="PATHS_PACKS" name_1toN="PACKS_PATHS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="3A33A8F128D240FABF3FC8D4D96B04E2" name="UIDpack">
+				<table_ref uuid="D5781FF2B77441D9B0466BFEDBA10AE2" name="PATHS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5E481CB528634A989083941304DF655E" name="UID">
+				<table_ref uuid="A2EC80E07D19496A8E667FF87E98A846" name="PACKS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="04AE267AE5A74D97AE36350E2805B227" name_Nto1="PATHS_PRODUCTS" name_1toN="PRODUCTS_PATHS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="62447E96DA704FDD8D9F07B16331F25E" name="UIDproduct">
+				<table_ref uuid="D5781FF2B77441D9B0466BFEDBA10AE2" name="PATHS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="674957F3B3654A329DAAF8BCC87C4197" name="UID">
+				<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="F926228DF88046F486AE23194A1E4942" name_Nto1="TEMPLATES_PACKS" name_1toN="PACKS_TEMPLATES" state="1">
+		<related_field kind="source">
+			<field_ref uuid="3D7F2F11EBA74FF281A68323EAEC1D7B" name="UIDpack">
+				<table_ref uuid="91FB4D138E264C7B848C11004EA24BA4" name="TEMPLATES"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5E481CB528634A989083941304DF655E" name="UID">
+				<table_ref uuid="A2EC80E07D19496A8E667FF87E98A846" name="PACKS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B24AE90B5AE04FB1B79B017B58EF80FC" name_Nto1="MEDIA_TEMPLATES" name_1toN="TEMPLATES_MEDIA" state="1">
+		<related_field kind="source">
+			<field_ref uuid="75C63995E71B49EDBEB6F6C8C0C1E75F" name="UIDtemplate">
+				<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5609ACAC947A4FE49B3442B8B982E399" name="UID">
+				<table_ref uuid="91FB4D138E264C7B848C11004EA24BA4" name="TEMPLATES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B28BF0EE6E93456CB55D49335433A202" name_Nto1="SETS_TEMPLATES" name_1toN="TEMPLATES_SETS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="4751325E2AF547E1AA819A0DCFE65C44" name="UIDtemplate">
+				<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5609ACAC947A4FE49B3442B8B982E399" name="UID">
+				<table_ref uuid="91FB4D138E264C7B848C11004EA24BA4" name="TEMPLATES"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="D78E87D5B3E444F7AA978E4505404361" name_Nto1="ZEN_USERS_ZEN_GROUPS" name_1toN="ZEN_GROUPS_ZEN_USERS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="21D59FAAB8544B77B2F2FEDDFCA143C0" name="UIDgroup">
+				<table_ref uuid="1B340E2C2C6E4AE9806FC96123195C56" name="ZEN_USERS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="4E13DD139EFE42DFA78B52483B3AB017" name="UID">
+				<table_ref uuid="59551B5FE3794C43B8822D86BCF54FCF" name="ZEN_GROUPS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B2F16573E6FE412589DB39C45E99BE29" name_Nto1="ZEN_USERS_ZEN_USERS" name_1toN="ZEN_USERS_SETTINGS_ZEN_USERS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="7E73346679094C27A25CEF2F42200CA4" name="UIDuser">
+				<table_ref uuid="9323E37D41AE46CC82B020CD198E662D" name="ZEN_USERS_SETTINGS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="6068166EA7A64897949C1C1B9DF8602A" name="UID">
+				<table_ref uuid="1B340E2C2C6E4AE9806FC96123195C56" name="ZEN_USERS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="80ECAD9EECDF43508183A06BB24F3153" name_Nto1="SLOKAS_PRODUCTS" name_1toN="PRODUCTS_SLOKAS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="774CF1879A824E779ED26E29B5132A56" name="UIDproduct">
+				<table_ref uuid="28E3F1836E4747BC825B2056B25FA96B" name="SLOKAS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="674957F3B3654A329DAAF8BCC87C4197" name="UID">
+				<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="8C66B525BD7141A1B4AD2F0EB8CB86B2" name_Nto1="SLOKAS_KAVIYAM" name_1toN="KAVIYAM_SLOKAS" state="1">
+		<related_field kind="source">
+			<field_ref uuid="4E34D7B165EB48A4A211999963B77BA1" name="UIDkaviyam">
+				<table_ref uuid="28E3F1836E4747BC825B2056B25FA96B" name="SLOKAS"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="2ACA1C025A32438F8B4410CE3BC4F389" name="UID">
+				<table_ref uuid="449E2FCCC78243BDB490602C93B5B264" name="KAVIYAM"/>
+			</field_ref>
+		</related_field>
+		<relation_extra>
+			<editor_relation_info>
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="024E9787A8A44C12BE580E63C4C65A6F" type="7">
+		<field_ref uuid="62447E96DA704FDD8D9F07B16331F25E" name="UIDproduct">
+			<table_ref uuid="D5781FF2B77441D9B0466BFEDBA10AE2" name="PATHS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="02851AF6217140DD9A160D155FFB0032" type="7">
+		<field_ref uuid="7E73346679094C27A25CEF2F42200CA4" name="UIDuser">
+			<table_ref uuid="9323E37D41AE46CC82B020CD198E662D" name="ZEN_USERS_SETTINGS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="040EA43AF7C54DBCB38932B3D2414F35" type="7">
+		<field_ref uuid="AC475AC42A824DEC86953703CA046ABD" name="UID">
+			<table_ref uuid="3EF998C208CC49F998B5FD191AD0FC8F" name="ZEN_SCHEMAS_R"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="04F5667CE5F34CAB88391C79CD4DEFED" type="7">
+		<field_ref uuid="E36F4289DCF14DC99641D4D40D9F5480" name="UID">
+			<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="095F0BDD81BA41D282C1F87E0D7EA36B" type="7">
+		<field_ref uuid="A5429BE5BA964A6FA7E5E4FD41C25C9F" name="UIDparent">
+			<table_ref uuid="8B408EFE185B4D5795C05228CA8CAC24" name="TYPES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="0EDCE06DD3554FCDB2D6325703F17DFF" type="7">
+		<field_ref uuid="D02E7AF8E9094570888FFDFCA913FBDB" name="UID">
+			<table_ref uuid="4EDFD20F4F534DFFA141BF06358FD44B" name="ZEN_POPUPS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1151C07DF53D4A0BBD7BAC85D4C14D16" type="7">
+		<field_ref uuid="017E8E9F091B46D4813DC3BC54D7D408" name="isActive">
+			<table_ref uuid="E5230A87FF76428EA954807DB62E5826" name="CATEGORIES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1183B257E1D6463F86249F4D66A4A2D4" type="7">
+		<field_ref uuid="DDA5A826A72840B99FAC52DC73E7D462" name="isActive">
+			<table_ref uuid="449E2FCCC78243BDB490602C93B5B264" name="KAVIYAM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="15D947679896471884C4ED322DE3DAD0" type="7">
+		<field_ref uuid="CFD9E4ECF2B24FCF9F24E1D1769AD5A8" name="resourceType">
+			<table_ref uuid="E4999CA30AAD4CFB87DC4D32B3CE0F9B" name="WOD_TRANSLATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1AD0A3CE87884877B508E72AD8BDFA05" type="7">
+		<field_ref uuid="B3857C07E35C4F068B167A5D47F8F700" name="label">
+			<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1E8F0A94672542DB916093BF87D03D9A" type="3">
+		<field_ref uuid="B8D2F74D1E8F4E82ADD3AED2BC1AC250" name="meta">
+			<table_ref uuid="A2EC80E07D19496A8E667FF87E98A846" name="PACKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="22635F39CF8C43EE9981C4DEE4A2AE23" type="7">
+		<field_ref uuid="6FE94F8FBDE641AD89AB46529F204554" name="label">
+			<table_ref uuid="778775B72A7B4BDDB384C46967C1ECEF" name="COMBINATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="23BAB865E7BB4427B9A4560B5DAE1CF1" type="1">
+		<field_ref uuid="E62485CD49B64132A64988DF0DF38D8A" name="UID">
+			<table_ref uuid="CC8F49114FC54A6C865E7BE129362A4F" name="ZEN_DASHBOARD"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="278FB5A8ADAC409E936CB372058B99A8" type="7">
+		<field_ref uuid="46B49441D0C0467B8C934FEA61B83124" name="UIDtype">
+			<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="291AA97E0CF84774A32CCED0B66E0EE0" type="1">
+		<field_ref uuid="FCC3950244BF41CBBC309EE206A33E1D" name="UID">
+			<table_ref uuid="AD5F50B0B4AB4F3AA904C4952FB837AA" name="ZEN_FIELDS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="2A89975A47E54521AA5A1EA89C5BF416" type="7">
+		<field_ref uuid="21D59FAAB8544B77B2F2FEDDFCA143C0" name="UIDgroup">
+			<table_ref uuid="1B340E2C2C6E4AE9806FC96123195C56" name="ZEN_USERS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="2BE543B063F740A2B3BEDD1C02AE8DFF" type="3">
+		<field_ref uuid="A5C5A55D86624D18B3DADB9D325C824A" name="meta">
+			<table_ref uuid="449E2FCCC78243BDB490602C93B5B264" name="KAVIYAM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="2D5B3F01CCC043469F44E321C39BA237" type="7">
+		<field_ref uuid="A6F50766D5894DEEA84FCAB8231FA78C" name="createdOn">
+			<table_ref uuid="7F1EF8410EC04DFC8DE324EB1AD249B5" name="ZEN_DOCUMENTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="2EEF53D72D6340F4B0A46A519D87E3E3" type="3">
+		<field_ref uuid="76560072C26E4862911701606A382A42" name="meta">
+			<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="3520D89B7A6B4E8CAA2DC4A67211EE47" type="7">
+		<field_ref uuid="7647BF15BF58477FA40667667C6D7FA3" name="UID">
+			<table_ref uuid="8B408EFE185B4D5795C05228CA8CAC24" name="TYPES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="361FF1836B734EFB94166320BC6A602E" type="7">
+		<field_ref uuid="B4774B18158F46049CA9901D077C6E25" name="UIDstate">
+			<table_ref uuid="3DC7F5CC11E04E9EBA7F7605CF68A3EB" name="ZEN_AREA_CODES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="36275671E78C497DAC2C6E290ED416BA" type="7">
+		<field_ref uuid="852B419647DE43368B2B264BD6AEA1B0" name="label">
+			<table_ref uuid="5574564B4AB94F76A79EC6E6CF34A57D" name="YIN_YANG"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="39835C920295431FBC313EA2515717EE" type="7">
+		<field_ref uuid="1D25E8DCFCC6474C81C7A0CD12CAAA37" name="isActive">
+			<table_ref uuid="A2EC80E07D19496A8E667FF87E98A846" name="PACKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3BECC1F7BE134C0A892677FF6BA70CFD" type="7">
+		<field_ref uuid="29833715F3694DA2BDA90BA7B9BB625E" name="key">
+			<table_ref uuid="FB097E74514D45EE80DB000E72695446" name="ZEN_POPUPS_LABELS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3C7B642E68F3481A8DF831217E096612" type="3">
+		<field_ref uuid="A2821AA9604D46B39B3EE24F63FA6314" name="meta">
+			<table_ref uuid="59551B5FE3794C43B8822D86BCF54FCF" name="ZEN_GROUPS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3E27E74AEACB480EBB2CA30CBAC6792C" type="7">
+		<field_ref uuid="D75CD5DE9B344B049DD44D994454C491" name="createdOn">
+			<table_ref uuid="B7873374BC3F4AD89EC2D8A09B6533F2" name="ZEN_REPORTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="426E4E1D4BB448A3A275023E2E03C11A" type="7">
+		<field_ref uuid="5AFE8A7FED68411A9C1ADC1C4E1292CD" name="UIDpicture">
+			<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="451A079BD93F440C854A4319E4ECC115" type="7">
+		<field_ref uuid="2ACA1C025A32438F8B4410CE3BC4F389" name="UID">
+			<table_ref uuid="449E2FCCC78243BDB490602C93B5B264" name="KAVIYAM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="48590899EF964BC88A85689C5F697EA5" type="1">
+		<field_ref uuid="6068166EA7A64897949C1C1B9DF8602A" name="UID">
+			<table_ref uuid="1B340E2C2C6E4AE9806FC96123195C56" name="ZEN_USERS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="490C2D1249144BF7865C04A9B48C978F" type="7">
+		<field_ref uuid="75C63995E71B49EDBEB6F6C8C0C1E75F" name="UIDtemplate">
+			<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="564C659D3DB74EB39983F7778DBB88C8" type="1">
+		<field_ref uuid="1E99953CD7204A60828F48C8866291F0" name="UID">
+			<table_ref uuid="73BB44B996A1405BAE0FD8F8444D2E31" name="ZEN_ROUTES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="56AD6DE4C3414F9FBAEC73D6EE9FD352" type="3">
+		<field_ref uuid="A55614B834124133ADA89AB3805E175A" name="meta">
+			<table_ref uuid="778775B72A7B4BDDB384C46967C1ECEF" name="COMBINATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5888E07A46E84D13BAFD4744B4CA6A0B" type="7">
+		<field_ref uuid="3D7F2F11EBA74FF281A68323EAEC1D7B" name="UIDpack">
+			<table_ref uuid="91FB4D138E264C7B848C11004EA24BA4" name="TEMPLATES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5AED38D146204CD8A7EF1E32CC77D652" type="7">
+		<field_ref uuid="5188A835F504498E9E129DED226B0C6C" name="UID">
+			<table_ref uuid="DA31BE9DA9C74758BE6A85457C084D21" name="ZEN_FORMS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5B118A7764A34D4AA57BB364229FAB86" type="7">
+		<field_ref uuid="5609ACAC947A4FE49B3442B8B982E399" name="UID">
+			<table_ref uuid="91FB4D138E264C7B848C11004EA24BA4" name="TEMPLATES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5BE3A076CD534B348024861DA7EDC364" type="7">
+		<field_ref uuid="6C4AFA61668E4573A5EEBD34220D6AC6" name="UIDforeign">
+			<table_ref uuid="3EF998C208CC49F998B5FD191AD0FC8F" name="ZEN_SCHEMAS_R"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5F1C10F4A3A34F6C9EFFAEF35429F722" type="7">
+		<field_ref uuid="96F66C4621154FB99305C32B74ECDA4A" name="isActive">
+			<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5FD46D88D14F4F73987EB086CDABFE75" type="7">
+		<field_ref uuid="04E69B264F01450ABD6146B764937E0B" name="key">
+			<table_ref uuid="4EDFD20F4F534DFFA141BF06358FD44B" name="ZEN_POPUPS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="61971FBAD1C44F3396D40E06A7DBE947" type="3">
+		<field_ref uuid="D56CB119829D42FD93BC84B63D43C283" name="meta">
+			<table_ref uuid="A73982094C3B4EEB82C00645D967536E" name="PICTURES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="62186448719843F1862AC559FF1502B8" type="7">
+		<field_ref uuid="4E13DD139EFE42DFA78B52483B3AB017" name="UID">
+			<table_ref uuid="59551B5FE3794C43B8822D86BCF54FCF" name="ZEN_GROUPS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6275C2C35A2E426CBBFA909DD25F14D4" type="7">
+		<field_ref uuid="8B69D7D2717948A1BC5E5365B590D772" name="UIDpopup">
+			<table_ref uuid="FB097E74514D45EE80DB000E72695446" name="ZEN_POPUPS_LABELS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="62813AAC0363427CB9A9D37B788D1DB8" type="7">
+		<field_ref uuid="82ECFDBB57274DDB9D4706750837B63B" name="UID">
+			<table_ref uuid="9323E37D41AE46CC82B020CD198E662D" name="ZEN_USERS_SETTINGS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="648A73CF6A1D48A3B1232FA3AFD44AC5" type="7">
+		<field_ref uuid="B468166D015847F9A4AD26E314C5965B" name="resourceName">
+			<table_ref uuid="E4999CA30AAD4CFB87DC4D32B3CE0F9B" name="WOD_TRANSLATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="64D82C83524A4004B2EB9527E2F2D7DD" type="7">
+		<field_ref uuid="29052586639448B9AE8029E045E7EC8F" name="UID">
+			<table_ref uuid="5464A77D047A43D299A5DAEA0DBA251A" name="ZEN_SCHEMAS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="66ECAEEA5338464583D6D1FD5E06E518" type="7">
+		<field_ref uuid="20860BA152AA45B5B9B67EBEB5F89EED" name="UID">
+			<table_ref uuid="D5781FF2B77441D9B0466BFEDBA10AE2" name="PATHS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="687BB9636A974324977317915B64941D" type="7">
+		<field_ref uuid="8878146D474E496CB7922322F9F27495" name="userName">
+			<table_ref uuid="1B340E2C2C6E4AE9806FC96123195C56" name="ZEN_USERS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="70E05062F51944889DD882C9DA84271E" type="3">
+		<field_ref uuid="CA8DC3119A414504BBA9C1630A331560" name="meta">
+			<table_ref uuid="E5230A87FF76428EA954807DB62E5826" name="CATEGORIES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="72869F7C4C3A4F61AEE98544C1D5B972" type="7">
+		<field_ref uuid="D6306A83FFDD4F309665C02660D25A95" name="label">
+			<table_ref uuid="E5230A87FF76428EA954807DB62E5826" name="CATEGORIES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="73E0AFACD80D43ED9D231FBB8F8DB819" type="3">
+		<field_ref uuid="C72CD45EECD9433484A4F3F89DB92725" name="meta">
+			<table_ref uuid="1B340E2C2C6E4AE9806FC96123195C56" name="ZEN_USERS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="75C9772549EB4652942FB1F7ADD5582F" type="7">
+		<field_ref uuid="0ED7721231304E9BA4AF296C06793DED" name="UID">
+			<table_ref uuid="5574564B4AB94F76A79EC6E6CF34A57D" name="YIN_YANG"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="786A16BBC6034D5F9049082276954FC6" type="3">
+		<field_ref uuid="372E24BBCF124605AB552373A254779A" name="meta">
+			<table_ref uuid="D5781FF2B77441D9B0466BFEDBA10AE2" name="PATHS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="79F648AE0B2B470AA3AEF7BB14DB7636" type="7">
+		<field_ref uuid="D7CD0695004B49A0A557C5FE8C1947E1" name="UID">
+			<table_ref uuid="B7873374BC3F4AD89EC2D8A09B6533F2" name="ZEN_REPORTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="7A7550F4BC304DD3BD7DDA1A44B224D2" type="3">
+		<field_ref uuid="12E2E61F6D014D2299D8AF655EB33E6B" name="meta">
+			<table_ref uuid="8B408EFE185B4D5795C05228CA8CAC24" name="TYPES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="7CEBA845283945E68CF9B1F42D8D68CD" type="1">
+		<field_ref uuid="E03A16C5FDC14611B59624772BAA2AF9" name="UID">
+			<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="818D1148052B4BC4BA485A511874DAC4" type="7">
+		<field_ref uuid="1C3EE25D941D4C58A864905F0B0C2488" name="UIDcountry">
+			<table_ref uuid="8B071BB958974175A0DF8F170CCF40DC" name="ZEN_STATES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="829FB390EA6F41BFB253382C04D1EF49" type="7">
+		<field_ref uuid="8DE8C2046AFD402E85B0B297FF6714E6" name="UIDform">
+			<table_ref uuid="AD5F50B0B4AB4F3AA904C4952FB837AA" name="ZEN_FIELDS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="8B6A3C795C9C4A6E87FDC3D32FDC6704" type="1">
+		<field_ref uuid="CE0AAD4DCA61443E8DA6A05EAA598AAD" name="UID">
+			<table_ref uuid="4D4C49C246464B6289D12BE43143336F" name="ZEN_TIMEZONES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8B753C7FB1F243E19BE35B384429A86E" type="7">
+		<field_ref uuid="CFE4576A525440669AA5F6FE997FC0A3" name="isActive">
+			<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="932DAD867F104C2FA088456F1B22E4F4" type="7">
+		<field_ref uuid="24F6A6B591A94751A2038E0C79E306C0" name="isActive">
+			<table_ref uuid="1B340E2C2C6E4AE9806FC96123195C56" name="ZEN_USERS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="9D0AC92D51E74AAA890C66EFBB148C14" type="7">
+		<field_ref uuid="98601D5F2BF74DFBA146CF9A49C9ACAA" name="isActive">
+			<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="9E208E2FE6384FB686992EB13EDE5E0B" type="7">
+		<field_ref uuid="5E481CB528634A989083941304DF655E" name="UID">
+			<table_ref uuid="A2EC80E07D19496A8E667FF87E98A846" name="PACKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A08113CE3CED48B59F8A7370EE76AF72" type="7">
+		<field_ref uuid="51AD3CEC02994268B00539ADA5EDF77B" name="UID">
+			<table_ref uuid="778775B72A7B4BDDB384C46967C1ECEF" name="COMBINATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A1241933E073461CB83139AE53179B63" type="7">
+		<field_ref uuid="5895682068344EA4BCC263A1761B6D69" name="UID">
+			<table_ref uuid="E5230A87FF76428EA954807DB62E5826" name="CATEGORIES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A4F318B7F388467DB6493A98106582FA" type="1">
+		<field_ref uuid="21AF40F429E2457080433EF115A2F32A" name="UID">
+			<table_ref uuid="3DC7F5CC11E04E9EBA7F7605CF68A3EB" name="ZEN_AREA_CODES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A52EBDE7F6814A15AC8C61C5A537C3D5" type="3">
+		<field_ref uuid="6D6E49463A1745CD9E979997DDEDB14C" name="meta">
+			<table_ref uuid="E4999CA30AAD4CFB87DC4D32B3CE0F9B" name="WOD_TRANSLATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A55127BAA4EA4F728FF83E27CDE3730A" type="7">
+		<field_ref uuid="5E3841B6F6EF4C5ABBE2EFE0597223BA" name="UID">
+			<table_ref uuid="FB097E74514D45EE80DB000E72695446" name="ZEN_POPUPS_LABELS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A82D5FB0F1844DFC85B7082FAD7DF2F0" type="7">
+		<field_ref uuid="2C15E477DBF84E83862C78DF466C2DB8" name="UID">
+			<table_ref uuid="81D8492F20EE46B0AE9D7BC1B18CE12B" name="ZEN_SETS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A8389E3804DB484088EAC2F41FAD3AD3" type="7">
+		<field_ref uuid="8697CA0EBB4241A090D363057831FB2D" name="order">
+			<table_ref uuid="28E3F1836E4747BC825B2056B25FA96B" name="SLOKAS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="AB08B73EC4BD409991256B740D0B6A91" type="7">
+		<field_ref uuid="B315E06DFBF14439B9898D0E05747F25" name="UID">
+			<table_ref uuid="E4999CA30AAD4CFB87DC4D32B3CE0F9B" name="WOD_TRANSLATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="AC954F492D154AC69EA4919DAB0912A8" type="3">
+		<field_ref uuid="2C29D4945D1B4005B475786A048A6DFF" name="meta">
+			<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="AED75AF14E89429397A40E8C4A1F55EB" type="7">
+		<field_ref uuid="11E23D65F4344BA4B6676DF754A282E3" name="UIDendpoint">
+			<table_ref uuid="73BB44B996A1405BAE0FD8F8444D2E31" name="ZEN_ROUTES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B0337959B40640709576841FF6B43B01" type="7">
+		<field_ref uuid="43510847D2124658A0EDB209C3A8AD6C" name="label">
+			<table_ref uuid="A2EC80E07D19496A8E667FF87E98A846" name="PACKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B1C7D1768DE64AB599C5A7633FD3ABA7" type="7">
+		<field_ref uuid="7D87B820A2794041B35BADC646907901" name="label">
+			<table_ref uuid="A73982094C3B4EEB82C00645D967536E" name="PICTURES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B1D48FE4189D42A29F740E06F0D0CAE8" type="7">
+		<field_ref uuid="B0DFA40E054B4A41BEACCF8EAD8BE4BE" name="isActive">
+			<table_ref uuid="A73982094C3B4EEB82C00645D967536E" name="PICTURES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="B2B5F379F952452CBD03438660E2A4B9" type="7">
+		<field_ref uuid="C067A58968094C31B3FCABBFF395DAF5" name="UID">
+			<table_ref uuid="AD607A4293154D0980E51E1607F76AD6" name="ZEN_TRANSLATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B2CDCDBB781745A2AFA517802712FCD8" type="7">
+		<field_ref uuid="C2D026655A0B4F4389C82258C551D304" name="fileStart">
+			<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B9012E41B7DD40BAB8595B80770B2A1D" type="7">
+		<field_ref uuid="DE39CCC0A2AB411AA9AA7F76D4940761" name="UIDparent">
+			<table_ref uuid="3EF998C208CC49F998B5FD191AD0FC8F" name="ZEN_SCHEMAS_R"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B9D8302F9E3041779A57B74A4024B01C" type="3">
+		<field_ref uuid="BA74DABEF8E04829B4CC4BBEBE393B98" name="meta">
+			<table_ref uuid="28E3F1836E4747BC825B2056B25FA96B" name="SLOKAS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BA45C7C88E13483B945A572D1E98EB3A" type="3">
+		<field_ref uuid="0DE78093AF4A4AF180F8E48157EC2612" name="meta">
+			<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BDE3F567A65442D29920C7CA11E95AB3" type="7">
+		<field_ref uuid="4FF73BCDDD0E42FA943308003F186127" name="label">
+			<table_ref uuid="59551B5FE3794C43B8822D86BCF54FCF" name="ZEN_GROUPS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BF386C2BE4674D1587295765D84562E1" type="7">
+		<field_ref uuid="DDF79B176C6B40AF968CBBA2727AFF9A" name="label">
+			<table_ref uuid="449E2FCCC78243BDB490602C93B5B264" name="KAVIYAM"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BFB94E10D25D4723B6C5EF2C3F6BC950" type="7">
+		<field_ref uuid="57D10A8D3D414D5D8DA5A1FF17AF7BAF" name="order">
+			<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C13921D50D3049D692608174D5C02A84" type="3">
+		<field_ref uuid="4607B2B67B0C49E3A01B56A13FCFB665" name="meta">
+			<table_ref uuid="9323E37D41AE46CC82B020CD198E662D" name="ZEN_USERS_SETTINGS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="CD315BE4A2E247DA9BC9646874BCA788" type="7">
+		<field_ref uuid="95B3EC5061AA432D951F466F0FECE73F" name="UID">
+			<table_ref uuid="8B071BB958974175A0DF8F170CCF40DC" name="ZEN_STATES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="CEFF9A319890464AB924F38ECA169ABB" type="7">
+		<field_ref uuid="3A33A8F128D240FABF3FC8D4D96B04E2" name="UIDpack">
+			<table_ref uuid="D5781FF2B77441D9B0466BFEDBA10AE2" name="PATHS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="CF8783EFE76345D9B15602FB9EB2F83D" type="7">
+		<field_ref uuid="BCEF5682AF9745ADB89001387643420B" name="UID">
+			<table_ref uuid="7F1EF8410EC04DFC8DE324EB1AD249B5" name="ZEN_DOCUMENTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D25B52736A8F43DE946AE8A3C63D6E5C" type="7">
+		<field_ref uuid="BC86EAD3290E4BA9BC52F5CA6AAD41CF" name="UIDstate">
+			<table_ref uuid="BD4BDB484E2240778A3D6C720D48548B" name="ZEN_COUNTIES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D63AE047A4D546D88AF77FE843214D7D" type="7">
+		<field_ref uuid="5AFC5843B72B42C9A415D90C4AB2B8B0" name="isActive">
+			<table_ref uuid="59551B5FE3794C43B8822D86BCF54FCF" name="ZEN_GROUPS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="D6AF183994BC45D4B48BA6A4440EE7C0" type="7">
+		<field_ref uuid="674957F3B3654A329DAAF8BCC87C4197" name="UID">
+			<table_ref uuid="869B5023B29F429B80F1F203C5CC288F" name="PRODUCTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="DB1C86BB52AA4DEC8E74D5C751FE42BC" type="7">
+		<field_ref uuid="4AA0C3B19401403B8CB20BC24106ECA0" name="isActive">
+			<table_ref uuid="778775B72A7B4BDDB384C46967C1ECEF" name="COMBINATIONS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E42D7850B49A4FEF847F38B2997AE9A3" type="7">
+		<field_ref uuid="70B59DD118E9497EBC764624FFFAF867" name="label">
+			<table_ref uuid="91FB4D138E264C7B848C11004EA24BA4" name="TEMPLATES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E56BA46CD5CB4AEA86F16871131DE8B8" type="7">
+		<field_ref uuid="4751325E2AF547E1AA819A0DCFE65C44" name="UIDtemplate">
+			<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E6E6F78D568E4270AB2F60CDE1FCB955" type="3">
+		<field_ref uuid="2DB1C151B7624EAD9A05CBFDD7665074" name="meta">
+			<table_ref uuid="91FB4D138E264C7B848C11004EA24BA4" name="TEMPLATES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="EB5F8C8971614CE383B3C1708C19BEF1" type="7">
+		<field_ref uuid="B6F1E4BF4E574841B6851DC8876E3349" name="UIDpack">
+			<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="ECFDADE298324B7B8A47613A46E4AF3F" type="7">
+		<field_ref uuid="9BD50E6057F34E03BB6B1A8CBBEE05DC" name="UID">
+			<table_ref uuid="A175FD0F82CF4A18A5F203E38116832D" name="ZEN_ENDPOINTS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="EE0736B30E534BCF872FE13F09D62B68" type="7">
+		<field_ref uuid="0A1CA46E9BE74FA0A389D3CE80DA3E42" name="label">
+			<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="EFABAB6CF62042A5AFD1AE93F3D3664E" type="7">
+		<field_ref uuid="5FD8B5D87E3243D096AA4F799EA0A0D6" name="UID">
+			<table_ref uuid="A73982094C3B4EEB82C00645D967536E" name="PICTURES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F04CD127757E4B5F8E02892604AD31DD" type="7">
+		<field_ref uuid="1E4902D53D05411C9A8F1187C9A9EFC0" name="UID">
+			<table_ref uuid="CCE1A51175E04C0D9AD1D94D26CF651F" name="ZEN_COUNTRIES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F22393258173446CB737D2186C2DE842" type="7">
+		<field_ref uuid="D0904C415DCD4238A98BE25DC3975B29" name="orderNum">
+			<table_ref uuid="FB097E74514D45EE80DB000E72695446" name="ZEN_POPUPS_LABELS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F28C99C25047442CBA6198749BD260A1" type="7">
+		<field_ref uuid="F8A6FC59E87A4C7A8A7BAC6AA88C3E0D" name="order">
+			<table_ref uuid="3EF998C208CC49F998B5FD191AD0FC8F" name="ZEN_SCHEMAS_R"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F31777D20F254BDFBDBEF9C6D66B4827" type="3">
+		<field_ref uuid="54FD64C56F644514B9BFDBD35A884355" name="meta">
+			<table_ref uuid="74CDA4B7F5B74C9A892912E6A86EC065" name="BANKS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F53B414CE29D4C77B4D658D0C0D26CCE" type="1">
+		<field_ref uuid="1AD81D7EDCAC4A6EB15A2751A7532519" name="UID">
+			<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F5B404FEC1264A5EA286E8410C725F5F" type="7">
+		<field_ref uuid="E746C1E46EB24FC9A5690A05818F8530" name="UIDbank">
+			<table_ref uuid="B4D0BF40E27A42FDA7FD8192260A51D7" name="MEDIA"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F644E69E5E3D4C0A88F04BE1D241193A" type="7">
+		<field_ref uuid="9C49A80BDA0F46B0AADEA1DB1F68B83E" name="UID">
+			<table_ref uuid="28E3F1836E4747BC825B2056B25FA96B" name="SLOKAS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F86CE713D279406493CBE85B3089B220" type="1">
+		<field_ref uuid="41887BC3FD6B441D939A35C4C84BE366" name="UID">
+			<table_ref uuid="BD4BDB484E2240778A3D6C720D48548B" name="ZEN_COUNTIES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FACD3EC8AF814DAA964C4E89D79460F1" type="7">
+		<field_ref uuid="24AE57B3772340E2B7E69CE2ABDF5951" name="UIDbank">
+			<table_ref uuid="C02BF70189484EE9927DFC52FB28CA7C" name="SETS"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FB47AE65B82F4A15B7C8F84E1D8CB550" type="7">
+		<field_ref uuid="DFBFA4A7901F42BDB48714E534A01B9A" name="UIDcategory">
+			<table_ref uuid="A73982094C3B4EEB82C00645D967536E" name="PICTURES"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FD080751B3154A9C83312A7FA21001F2" type="7">
+		<field_ref uuid="8F2AC2FF55A745B488315D1020541086" name="order">
+			<table_ref uuid="8B408EFE185B4D5795C05228CA8CAC24" name="TYPES"/>
+		</field_ref>
+	</index>
+	<base_extra package_name="multiplay" structure_file_name="multiplay" data_file_path=":multiplay.4DD">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

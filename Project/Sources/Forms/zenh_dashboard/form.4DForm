@@ -1,0 +1,251 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"text": "Colors",
+					"top": 165,
+					"left": 244,
+					"width": 213,
+					"height": 103
+				},
+				"sem_metarect": {
+					"type": "subform",
+					"top": 48,
+					"left": 241,
+					"width": 125,
+					"height": 100,
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_metarect",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_metarect.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"sem_output": {
+					"type": "subform",
+					"top": 48,
+					"left": 15,
+					"width": 215,
+					"height": 100,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_output",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_output.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"sem_picture": {
+					"type": "subform",
+					"top": 168,
+					"left": 15,
+					"width": 215,
+					"height": 100,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_picture",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_picture.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"sem_text": {
+					"type": "subform",
+					"top": 48,
+					"left": 377,
+					"width": 175,
+					"height": 100,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_text",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_text.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange",
+						"onUnload"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Default values",
+					"top": 13,
+					"left": 15,
+					"width": 451,
+					"height": 18
+				},
+				"woc_shape": {
+					"type": "subform",
+					"top": 188,
+					"left": 266,
+					"width": 30,
+					"height": 30,
+					"sizingY": "fixed",
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_shape",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_shape.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Glyph for widget",
+					"top": 194,
+					"left": 311,
+					"width": 131,
+					"height": 18
+				},
+				"woc_display_shape": {
+					"type": "subform",
+					"top": 228,
+					"left": 266,
+					"width": 30,
+					"height": 30,
+					"sizingY": "fixed",
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_shape",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_display_shape.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Glyph for display",
+					"top": 234,
+					"left": 311,
+					"width": 131,
+					"height": 18
+				},
+				"sem_4Dcorner": {
+					"type": "subform",
+					"top": 298,
+					"left": 15,
+					"width": 350,
+					"height": 100,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_file",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_4Dcorner.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"ot_github": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.j_biz.t_github",
+					"top": 411,
+					"left": 70,
+					"width": 295,
+					"height": 20,
+					"fontSize": 16,
+					"contextMenu": "none"
+				},
+				"Texte1": {
+					"type": "text",
+					"top": 414,
+					"left": 15,
+					"width": 49,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Github"
+				}
+			},
+			"entryOrder": [
+				"sem_metarect",
+				"sem_output",
+				"sem_picture",
+				"sem_text",
+				"woc_shape",
+				"woc_display_shape",
+				"sem_4Dcorner",
+				"ot_github"
+			]
+		}
+	],
+	"width": 660,
+	"height": 460,
+	"geometryStamp": 658,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm",
+	"shared": true
+}

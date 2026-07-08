@@ -1,0 +1,23 @@
+
+
+var $vL_event_code : Integer
+$vL_event_code:=Form event code:C388
+Case of 
+	: ($vL_event_code=On Load:K2:1)
+		var $vJ_widget : Object
+		$vJ_widget:=Self:C308->
+		$vJ_widget.t_tip:="TEMPLATES record"
+		$vJ_widget.t_table:="TEMPLATES"
+		$vJ_widget.is_list:=True:C214
+		$vJ_widget.t_view:="picker"
+		$vJ_widget.t_colors:=""
+		$vJ_widget.resize()
+		
+		
+	: ($vL_event_code=k_OnDataChange)
+		$vJ_widget:=Self:C308->
+		Form:C1466.fc._template_chgt($vJ_widget)
+		
+End case 
+
+

@@ -1,0 +1,277 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"LB": {
+					"type": "listbox",
+					"top": 10,
+					"left": 10,
+					"width": 425,
+					"height": 326,
+					"sizingX": "move",
+					"sizingY": "grow",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"selectionMode": "multiple",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.lb_selection",
+					"currentItemSource": "Form:C1466.lb_current",
+					"currentItemPositionSource": "Form:C1466.lb_position",
+					"selectedItemsSource": "Form:C1466.lb_selected",
+					"metaSource": "Form:C1466.fc.lb_meta_info(This:C1470)",
+					"hideSystemHighlight": false,
+					"headerHeight": "1em",
+					"rowHeight": "26px",
+					"columns": [
+						{
+							"name": "lb_module",
+							"width": 150,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "left",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDoubleClick",
+								"onDataChange",
+								"onBeforeDataEntry"
+							],
+							"header": {
+								"name": "lbh_module",
+								"text": "Module",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Pied2",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"dataSource": "This:C1470.t_module",
+							"enterable": false
+						},
+						{
+							"name": "lb_table_icn",
+							"width": 30,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "left",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDoubleClick",
+								"onDataChange",
+								"onBeforeDataEntry"
+							],
+							"header": {
+								"name": "lbh_table1",
+								"text": "Table",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Pied3",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"dataSource": "Form:C1466.fc.lb_get_table_icn(This:C1470)",
+							"enterable": false,
+							"dataSourceTypeHint": "picture",
+							"pictureFormat": "truncatedCenter",
+							"resizable": false
+						},
+						{
+							"name": "lb_table",
+							"width": 230,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "left",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDoubleClick",
+								"onDataChange",
+								"onBeforeDataEntry"
+							],
+							"header": {
+								"name": "lbh_table",
+								"text": "Table",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Pied1",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"dataSource": "This:C1470.t_table",
+							"enterable": false
+						}
+					]
+				},
+				"btn_import": {
+					"type": "pictureButton",
+					"top": 30,
+					"left": 448,
+					"width": 24,
+					"height": 24,
+					"sizingY": "fixed",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_import.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_relate": {
+					"type": "pictureButton",
+					"top": 120,
+					"left": 448,
+					"width": 24,
+					"height": 24,
+					"sizingY": "fixed",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_relate.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_clean": {
+					"type": "pictureButton",
+					"top": 310,
+					"left": 448,
+					"width": 24,
+					"height": 24,
+					"sizingY": "move",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_clean.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"btn_colors": {
+					"type": "pictureButton",
+					"top": 60,
+					"left": 448,
+					"width": 24,
+					"height": 24,
+					"sizingY": "fixed",
+					"rowCount": 4,
+					"picture": "/RESOURCES/tables/btn_templates.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"tooltip": "COLORS"
+				},
+				"btn_packs_colors": {
+					"type": "pictureButton",
+					"top": 90,
+					"left": 448,
+					"width": 24,
+					"height": 24,
+					"sizingY": "fixed",
+					"rowCount": 4,
+					"picture": "/RESOURCES/tables/btn_packs.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"tooltip": "PACKS_COLORS"
+				},
+				"btn_products_colors": {
+					"type": "pictureButton",
+					"top": 150,
+					"left": 448,
+					"width": 24,
+					"height": 24,
+					"sizingY": "fixed",
+					"rowCount": 4,
+					"picture": "/RESOURCES/tables/btn_products.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"tooltip": "SETS force product colors"
+				}
+			}
+		}
+	],
+	"geometryStamp": 409,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

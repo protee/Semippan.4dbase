@@ -1,0 +1,25 @@
+{
+	"version": 2120,
+	"dependencies": {
+		"zen_Nucleus": {
+			"github": "protee/zen_Nucleus",
+			"version": "latest"
+		},
+		"wos_SvgWidgets": {
+			"github": "protee/wos_SvgWidgets",
+			"version": "latest"
+		},
+		"wod_DevTools": {
+			"github": "protee/wod_DevTools",
+			"version": "latest"
+		},
+		"wom_Make": {
+			"github": "protee/wom_Make",
+			"version": "latest"
+		},
+		"4DPop": {
+			"github": "vdelachaux/4DPop",
+			"version": "latest"
+		}
+	}
+}

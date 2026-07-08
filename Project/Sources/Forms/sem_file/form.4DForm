@@ -1,0 +1,120 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDoubleClick",
+		"onDrop",
+		"onDataChange",
+		"onDragOver",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Zone de groupe2": {
+					"type": "groupBox",
+					"top": 0,
+					"left": 0,
+					"width": 350,
+					"height": 99,
+					"sizingY": "fixed",
+					"text": "POSIX – File"
+				},
+				"ot_file": {
+					"type": "input",
+					"top": 21,
+					"left": 9,
+					"width": 305,
+					"height": 68,
+					"dataSource": "",
+					"stroke": "#000000",
+					"class": "Champs_12",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"method": "ObjectMethods/ot_file.4dm",
+					"events": [
+						"onDrop",
+						"onDataChange",
+						"onDragOver"
+					]
+				},
+				"bt_exists": {
+					"type": "pictureButton",
+					"top": 19,
+					"left": 317,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Choose folder",
+					"rowCount": 4,
+					"picture": "/RESOURCES/metier/btn_PROD_exists0.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bt_show": {
+					"type": "pictureButton",
+					"top": 43,
+					"left": 317,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Show on disk",
+					"rowCount": 4,
+					"picture": "/RESOURCES/metier/btn_PROD_show.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"bt_ogBoxes": {
+					"type": "pictureButton",
+					"top": 67,
+					"left": 317,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/metier/btn_PROD_ogBoxes.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 186,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

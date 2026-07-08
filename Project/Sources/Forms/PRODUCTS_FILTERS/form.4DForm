@@ -1,0 +1,151 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDragOver",
+		"onCloseBox",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"group": {
+					"type": "groupBox",
+					"text": "Filters",
+					"top": 0,
+					"left": 0,
+					"width": 707,
+					"height": 56,
+					"sizingX": "grow",
+					"textAlign": "center"
+				},
+				"waz_isActive": {
+					"type": "subform",
+					"top": 26,
+					"left": 651,
+					"width": 40,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_isActive.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"focusable": false
+				},
+				"Texte3": {
+					"type": "text",
+					"top": 26,
+					"left": 601,
+					"width": 42,
+					"height": 16,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Active",
+					"sizingX": "fixed"
+				},
+				"wor_TYPES": {
+					"type": "subform",
+					"top": 18,
+					"left": 10,
+					"width": 464,
+					"height": 32,
+					"sizingY": "grow",
+					"dataSourceTypeHint": "object",
+					"detailForm": "wor_li_menu",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/wor_TYPES.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange",
+						"onUnload"
+					],
+					"sizingX": "grow",
+					"hideFocusRing": true,
+					"focusable": false
+				},
+				"waz_isGithub": {
+					"type": "subform",
+					"top": 26,
+					"left": 541,
+					"width": 40,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_isGithub.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"focusable": false
+				},
+				"Texte1": {
+					"type": "text",
+					"top": 26,
+					"left": 491,
+					"width": 42,
+					"height": 16,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Github",
+					"sizingX": "fixed"
+				}
+			}
+		}
+	],
+	"geometryStamp": 783,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"shared": true
+}

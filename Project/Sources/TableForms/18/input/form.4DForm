@@ -1,0 +1,311 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 10,
+	"bottomMargin": 5,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onCloseBox",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"text": "",
+					"top": 73,
+					"left": 16,
+					"width": 420,
+					"height": 103
+				},
+				"zen_products": {
+					"type": "subform",
+					"top": 50,
+					"left": 102,
+					"width": 334,
+					"height": 22,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_c4ES",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_products.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"Texte2": {
+					"type": "text",
+					"top": 53,
+					"left": 18,
+					"width": 79,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "PRODUCTS"
+				},
+				"zen_packs": {
+					"type": "subform",
+					"top": 20,
+					"left": 102,
+					"width": 334,
+					"height": 22,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_c4ES",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_packs.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"Texte1": {
+					"type": "text",
+					"top": 23,
+					"left": 18,
+					"width": 79,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "KAVIYAM"
+				},
+				"zen_record": {
+					"type": "subform",
+					"top": 299,
+					"left": 159,
+					"width": 340,
+					"height": 24,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_record",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_record.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"zen_meta": {
+					"type": "subform",
+					"top": 299,
+					"left": 10,
+					"width": 145,
+					"height": 24,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_meta",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_meta.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"dataSource": "",
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"Texte3": {
+					"type": "text",
+					"top": 91,
+					"left": 30,
+					"width": 39,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Label"
+				},
+				"xfield_logo": {
+					"type": "input",
+					"top": 91,
+					"left": 358,
+					"width": 64,
+					"height": 64,
+					"dataSource": "Form:C1466.c4E.SLOKAS_PRODUCTS.logo",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [],
+					"sizingX": "move",
+					"contextMenu": "none",
+					"enterable": false
+				},
+				"xfield_name": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.SLOKAS_PRODUCTS.label",
+					"top": 91,
+					"left": 74,
+					"width": 274,
+					"height": 17,
+					"enterable": false,
+					"contextMenu": "none",
+					"events": []
+				},
+				"_field_name": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.order",
+					"top": 21,
+					"left": 445,
+					"width": 60,
+					"height": 19,
+					"dataSourceTypeHint": "integer",
+					"enterable": false,
+					"fontSize": 16,
+					"textAlign": "center"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Order",
+					"top": 44,
+					"left": 444,
+					"width": 61,
+					"height": 16,
+					"sizingX": "move",
+					"textAlign": "center"
+				},
+				"Texte4": {
+					"type": "text",
+					"top": 216,
+					"left": 100,
+					"width": 39,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Label"
+				},
+				"woc_colors": {
+					"type": "subform",
+					"top": 214,
+					"left": 435,
+					"width": 56,
+					"height": 21,
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_colors",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_colors.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"field_name": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.label",
+					"top": 216,
+					"left": 144,
+					"width": 274,
+					"height": 17
+				},
+				"field_logo": {
+					"type": "input",
+					"top": 201,
+					"left": 18,
+					"width": 64,
+					"height": 64,
+					"dataSource": "Form:C1466.c4E.logo",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingX": "move",
+					"contextMenu": "none"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Colors used if no PRODUCT or if not MD:0",
+					"top": 240,
+					"left": 196,
+					"width": 295,
+					"height": 13,
+					"sizingX": "move",
+					"textAlign": "right",
+					"fontStyle": "italic",
+					"fontSize": 10
+				},
+				"btn_from_PRO": {
+					"type": "pictureButton",
+					"top": 184,
+					"left": 467,
+					"width": 24,
+					"height": 24,
+					"tooltip": "dcox from TEMPLATE",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_from.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "move"
+				}
+			}
+		}
+	],
+	"method": "method.4dm",
+	"geometryStamp": 775,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

@@ -1,0 +1,173 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDragOver",
+		"onCloseBox",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"group": {
+					"type": "groupBox",
+					"text": "Filters",
+					"top": 0,
+					"left": 0,
+					"width": 787,
+					"height": 88,
+					"sizingX": "grow",
+					"textAlign": "center"
+				},
+				"zen_categories": {
+					"type": "subform",
+					"top": 18,
+					"left": 10,
+					"width": 494,
+					"height": 62,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_c4ES",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_categories.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"waz_isSvg": {
+					"type": "subform",
+					"top": 62,
+					"left": 734,
+					"width": 40,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_isSvg.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Texte3": {
+					"type": "text",
+					"top": 61,
+					"left": 684,
+					"width": 42,
+					"height": 16,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "SVG"
+				},
+				"waz_imgStroke": {
+					"type": "subform",
+					"left": 514,
+					"top": 56,
+					"width": 160,
+					"height": 24,
+					"detailForm": "waz_menuBtn",
+					"borderStyle": "sunken",
+					"method": "ObjectMethods/waz_imgStroke.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange",
+						"onUnload"
+					]
+				},
+				"waz_imgColor": {
+					"type": "subform",
+					"left": 514,
+					"top": 18,
+					"width": 160,
+					"height": 24,
+					"detailForm": "waz_menuBtn",
+					"borderStyle": "sunken",
+					"method": "ObjectMethods/waz_imgColor.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange",
+						"onUnload"
+					]
+				},
+				"waz_isActive": {
+					"type": "subform",
+					"top": 26,
+					"left": 734,
+					"width": 40,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_isActive.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"Texte1": {
+					"type": "text",
+					"top": 25,
+					"left": 684,
+					"width": 42,
+					"height": 16,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Active"
+				}
+			}
+		}
+	],
+	"geometryStamp": 647,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"shared": true
+}

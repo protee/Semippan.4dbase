@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN"
+"http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+
+<xliff version="1.0">
+<file datatype="x-STR#" original="undefined" source-language="en" target-language="en">
+<header>
+<prop-group name="Xliff-Editor.4dbase">
+<prop prop-type="version">1.0</prop>
+</prop-group>
+</header>
+<body>
+<group resname="Table">
+<trans-unit id="3C02A5C642214733B71CC8804180EC2D" resname="table_BANKS">
+<source>BANKS</source>
+<target>BANKS</target>
+</trans-unit>
+<trans-unit id="838022B7BEC44DC4A2CB18F6A2E9BC40" resname="table_CATEGORIES">
+<source>CATEGORIES</source>
+<target>CATEGORIES</target>
+</trans-unit>
+<trans-unit id="6DDC2A8A66904123ACED9577657D46F1" resname="table_MEDIA">
+<source>MEDIA</source>
+<target>MEDIA</target>
+</trans-unit>
+<trans-unit id="FA9562F1AA2B4B3493399EC4BB8760F9" resname="table_PACKS">
+<source>PACKS</source>
+<target>PACKS</target>
+</trans-unit>
+<trans-unit id="2228616A801848C084979F42F08A3B26" resname="table_PATHS">
+<source>PATHS</source>
+<target>PATHS</target>
+</trans-unit>
+<trans-unit id="58DC9E900C1749D2A4CBF844EE874DD5" resname="table_PICTURES">
+<source>PICTURES</source>
+<target>PICTURES</target>
+</trans-unit>
+<trans-unit id="EC756279C46F41CFB6FB0F17E872DF37" resname="table_PRODUCTS">
+<source>PRODUCTS</source>
+<target>PRODUCTS</target>
+</trans-unit>
+<trans-unit id="F4825098FA5749DAAF5F38F86D0BD360" resname="table_SETS">
+<source>SETS</source>
+<target>SETS</target>
+</trans-unit>
+<trans-unit id="A5284BF6736C4E7C93D8C7F53AF9A673" resname="table_TEMPLATES">
+<source>TEMPLATES</source>
+<target>TEMPLATES</target>
+</trans-unit>
+<trans-unit id="7D0F5E17D8AC4D4BA6D819221903CDA0" resname="table_TYPES">
+<source>TYPES</source>
+<target>TYPES</target>
+</trans-unit>
+</group>
+</body>
+</file>
+</xliff>

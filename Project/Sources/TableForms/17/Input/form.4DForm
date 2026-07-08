@@ -1,0 +1,477 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 1050,
+	"windowMinHeight": 500,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDragOver",
+		"onCloseBox",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Texte3": {
+					"type": "text",
+					"top": 46,
+					"left": 30,
+					"width": 39,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Label"
+				},
+				"woc_colors": {
+					"type": "subform",
+					"top": 44,
+					"left": 318,
+					"width": 56,
+					"height": 21,
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_colors",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_colors.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"waz_banner": {
+					"type": "subform",
+					"top": 0,
+					"left": 690,
+					"width": 120,
+					"height": 70,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_banner",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_banner.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"focusable": false
+				},
+				"zen_record": {
+					"type": "subform",
+					"top": 5,
+					"left": 5,
+					"width": 340,
+					"height": 24,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_record_top",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_record.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"zen_meta": {
+					"type": "subform",
+					"top": 5,
+					"left": 355,
+					"width": 310,
+					"height": 24,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_meta_top",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_meta.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"dataSource": "",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"oat_tabs": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 72,
+					"left": 10,
+					"width": 813,
+					"height": 760,
+					"method": "ObjectMethods/oat_tabs.4dm",
+					"events": [
+						"onLoad",
+						"onClick"
+					],
+					"dataSourceTypeHint": "object",
+					"sizingY": "grow",
+					"sizingX": "grow"
+				},
+				"field_name": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.label",
+					"top": 46,
+					"left": 74,
+					"width": 234,
+					"height": 17
+				},
+				"zen_SLOKAS": {
+					"type": "subform",
+					"top": 5,
+					"left": 830,
+					"width": 241,
+					"height": 445,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_sublist",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_SLOKAS.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "move",
+					"sizingY": "grow"
+				},
+				"btn_adds": {
+					"type": "pictureButton",
+					"top": 212,
+					"left": 1046,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Add Orwells and Fragments from text",
+					"rowCount": 4,
+					"picture": "/RESOURCES/metier/btn_adds.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"sizingY": "fixed"
+				},
+				"btn_orwells": {
+					"type": "pictureButton",
+					"top": 236,
+					"left": 1046,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Add from existing Orwells",
+					"rowCount": 4,
+					"picture": "/RESOURCES/metier/btn_orwells_adds.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"sizingY": "fixed"
+				},
+				"sem_veda_prefs": {
+					"type": "subform",
+					"top": 490,
+					"left": 831,
+					"width": 226,
+					"height": 342,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_veda_prefs",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_veda_prefs.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"bt_animate": {
+					"type": "pictureButton",
+					"top": 463,
+					"left": 1047,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Animate",
+					"rowCount": 4,
+					"picture": "/RESOURCES/metier/btn_play.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingY": "move",
+					"sizingX": "move",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": ""
+				},
+				"bt_copy": {
+					"type": "pictureButton",
+					"top": 406,
+					"left": 1046,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Copy Product's text",
+					"rowCount": 4,
+					"picture": "/RESOURCES/metier/btn_copy.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Run at open",
+					"top": 467,
+					"left": 913,
+					"width": 91,
+					"height": 16,
+					"sizingX": "move",
+					"textAlign": "right",
+					"sizingY": "move"
+				},
+				"zen_isRun": {
+					"type": "subform",
+					"top": 467,
+					"left": 1012,
+					"width": 30,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_isRun.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "move",
+					"sizingY": "move"
+				}
+			},
+			"entryOrder": [
+				"field_name",
+				"woc_colors",
+				"zen_meta",
+				"zen_record",
+				"waz_banner",
+				"zen_SLOKAS",
+				"sem_veda_prefs",
+				"zen_isRun"
+			]
+		},
+		{
+			"objects": {
+				"sem_veda": {
+					"type": "subform",
+					"top": 106,
+					"left": 20,
+					"width": 790,
+					"height": 715,
+					"dataSourceTypeHint": "object",
+					"detailForm": "sem_veda",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_veda.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"field_name4": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.tag",
+					"top": 46,
+					"left": 454,
+					"width": 109,
+					"height": 17,
+					"sizingX": "grow"
+				},
+				"Texte6": {
+					"type": "text",
+					"top": 46,
+					"left": 400,
+					"width": 49,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Tag"
+				}
+			},
+			"entryOrder": [
+				"sem_veda",
+				"field_name4"
+			]
+		},
+		{
+			"objects": {
+				"field_infos": {
+					"type": "input",
+					"top": 206,
+					"left": 20,
+					"width": 779,
+					"height": 615,
+					"dataSource": "Form:C1466.c4E.infos",
+					"stroke": "#000E60",
+					"class": "Champs_12",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 16,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"field_name5": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.subtitle",
+					"top": 128,
+					"left": 74,
+					"width": 649,
+					"height": 17,
+					"sizingX": "grow"
+				},
+				"Texte7": {
+					"type": "text",
+					"top": 128,
+					"left": 20,
+					"width": 49,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Subtitle"
+				},
+				"field_name6": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.mantra",
+					"top": 153,
+					"left": 74,
+					"width": 649,
+					"height": 17,
+					"sizingX": "grow"
+				},
+				"Texte8": {
+					"type": "text",
+					"top": 153,
+					"left": 20,
+					"width": 49,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Mantra"
+				},
+				"field_name7": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.tagline",
+					"top": 178,
+					"left": 74,
+					"width": 649,
+					"height": 17,
+					"sizingX": "grow"
+				},
+				"Texte9": {
+					"type": "text",
+					"top": 178,
+					"left": 20,
+					"width": 49,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Tagline"
+				},
+				"field_logo": {
+					"type": "input",
+					"top": 95,
+					"left": 739,
+					"width": 64,
+					"height": 64,
+					"dataSource": "Form:C1466.c4E.logo",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingX": "move",
+					"contextMenu": "none"
+				}
+			}
+		}
+	],
+	"geometryStamp": 2213,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

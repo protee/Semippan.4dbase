@@ -1,0 +1,229 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 800,
+	"windowMinHeight": 400,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDragOver",
+		"onCloseBox",
+		"onUnload",
+		"onTimer",
+		"onAfterKeystroke",
+		"onResize",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {},
+			"entryOrder": []
+		},
+		{
+			"objects": {
+				"oO_cmbs": {
+					"type": "input",
+					"left": 438,
+					"top": 42,
+					"width": 227,
+					"height": 40,
+					"fill": "transparent",
+					"dataSourceTypeHint": "picture",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "proportionalCenter",
+					"borderStyle": "sunken",
+					"events": [],
+					"method": "ObjectMethods/oO_cmbs.4dm",
+					"sizingX": "grow",
+					"focusable": false,
+					"hideFocusRing": true
+				},
+				"woc_alColors": {
+					"type": "subform",
+					"top": 249,
+					"left": 10,
+					"width": 790,
+					"height": 170,
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_alColors",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_alColors.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"Texte3": {
+					"type": "text",
+					"top": 53,
+					"left": 10,
+					"width": 39,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Label"
+				},
+				"woc_colors": {
+					"type": "subform",
+					"top": 51,
+					"left": 370,
+					"width": 56,
+					"height": 21,
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_colors",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_colors.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					]
+				},
+				"waz_banner": {
+					"type": "subform",
+					"top": 0,
+					"left": 690,
+					"width": 120,
+					"height": 70,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_banner",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_banner.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "move",
+					"focusable": false
+				},
+				"zen_record": {
+					"type": "subform",
+					"top": 5,
+					"left": 5,
+					"width": 340,
+					"height": 24,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_record_top",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_record.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": false,
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"zen_meta": {
+					"type": "subform",
+					"top": 5,
+					"left": 355,
+					"width": 310,
+					"height": 24,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_meta_top",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_meta.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"dataSource": "",
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"field_name": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.label",
+					"top": 53,
+					"left": 54,
+					"width": 294,
+					"height": 17
+				},
+				"field_infos": {
+					"type": "input",
+					"top": 88,
+					"left": 10,
+					"width": 775,
+					"height": 145,
+					"dataSource": "Form:C1466.c4E.infos",
+					"stroke": "#000E60",
+					"class": "Champs_12",
+					"fill": "#FFFFFF",
+					"borderStyle": "sunken",
+					"contextMenu": "none",
+					"scrollbarVertical": "visible",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 16,
+					"sizingX": "grow",
+					"sizingY": "fixed"
+				}
+			},
+			"entryOrder": [
+				"field_name",
+				"field_infos",
+				"woc_alColors",
+				"zen_record",
+				"zen_meta",
+				"woc_colors",
+				"oO_cmbs",
+				"waz_banner"
+			]
+		},
+		{
+			"objects": {}
+		}
+	],
+	"geometryStamp": 2335,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

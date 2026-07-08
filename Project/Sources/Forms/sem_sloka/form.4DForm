@@ -1,0 +1,174 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"woc_card_bkg": {
+					"type": "subform",
+					"top": 0,
+					"left": 0,
+					"width": 280,
+					"height": 772,
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_pattern",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/woc_card_bkg.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"oo_home": {
+					"type": "input",
+					"top": 636,
+					"left": 0,
+					"width": 280,
+					"height": 136,
+					"dataSource": "",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"contextMenu": "none",
+					"sizingY": "fixed",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"hideFocusRing": true
+				},
+				"ot_product": {
+					"type": "input",
+					"dataSource": "",
+					"top": 138,
+					"left": 0,
+					"width": 280,
+					"height": 38,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"fontSize": 32,
+					"borderStyle": "none",
+					"fontWeight": "bold",
+					"enterable": false,
+					"textAlign": "center",
+					"sizingY": "fixed",
+					"hideFocusRing": true
+				},
+				"ot_description": {
+					"type": "input",
+					"dataSource": "",
+					"top": 189,
+					"left": 10,
+					"width": 260,
+					"height": 447,
+					"sizingX": "fixed",
+					"fill": "transparent",
+					"fontSize": 22,
+					"borderStyle": "none",
+					"enterable": false,
+					"textAlign": "center",
+					"sizingY": "fixed",
+					"contextMenu": "none",
+					"styledText": true,
+					"hideFocusRing": true
+				},
+				"oo_product": {
+					"type": "input",
+					"top": 10,
+					"left": 76,
+					"width": 128,
+					"height": 128,
+					"dataSource": "",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"dragging": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"contextMenu": "none",
+					"sizingY": "fixed",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"hideFocusRing": true
+				},
+				"waz_app": {
+					"type": "subform",
+					"top": 2,
+					"left": 2,
+					"width": 30,
+					"height": 30,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_button",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "none",
+					"method": "ObjectMethods/waz_app.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"visibility": "hidden"
+				}
+			}
+		}
+	],
+	"geometryStamp": 110,
+	"shared": true,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

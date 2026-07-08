@@ -1,18 +1,14 @@
-<div align="center">
+<img src="https://www.protee.org/images/Semippan/Semippan.png" alt="Sēmippān Logo" width="120" align="right">
 
-<!-- Header with left text and right logo -->
-<div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-  <div style="text-align: left;">
-    <strong style="font-size: 1.2em;">The Media Guardian.</strong><br>
-    <strong style="font-size: 1em;">Mantra:</strong> Design once, deploy everywhere, learn instantly.<br>
-    <strong style="font-size: 1em;">Tagline:</strong> The masterclass in 4D asset management.
-  </div>
-  <div>
-    <img src="https://www.protee.org/images/Semippan/Semippan.png" alt="Sēmippān Logo" width="120" style="border-radius: 12px;">
-  </div>
-</div>
+<strong style="font-size:1.2em">The Media Guardian.</strong><br>
+<strong>Mantra:</strong> Design once, deploy everywhere, learn instantly.<br>
+<strong>Tagline:</strong> The masterclass in 4D asset management.
+
+<br clear="both">
 
 <!-- Title and badges -->
+<div align="center">
+
 # Sēmippān – The Media Guardian
 
 [![4D HDI](https://img.shields.io/badge/4D-HDI-blue)](#)

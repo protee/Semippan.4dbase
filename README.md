@@ -19,7 +19,7 @@
 [![4D SRC](https://img.shields.io/badge/4D-SRC-blue)](#)
 [![License: Free](https://img.shields.io/badge/License-Free-brightgreen.svg)](#license)
 [![Platform: macOS & Windows](https://img.shields.io/badge/Platform-macOS%20%7C%20Windows-lightgrey)](#)
-[![4D v21 R2+](https://img.shields.io/badge/4D-v20%20R10%2B-brightgreen)](#)
+[![4D v21](https://img.shields.io/badge/4D-v21%2B-brightgreen)](#)
 
 </div>
 

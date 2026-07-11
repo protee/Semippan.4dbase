@@ -91,7 +91,7 @@ Function record_load_upd()
 	This:C1470.aj_D4corner:=$vC_aj_D4corner
 	This:C1470.D4corner_redraw()
 	
-	$cES_PRODUCTS:=ds:C1482.PRODUCTS.query("isGithub = :1"; True:C214)
+	$cES_PRODUCTS:=ds:C1482.PRODUCTS.query("isCorner = :1"; True:C214)
 	$cES_PRODUCTS:=$cES_PRODUCTS.orderBy("label")
 	Form:C1466.lb_selection:=$cES_PRODUCTS
 	

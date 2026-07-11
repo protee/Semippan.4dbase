@@ -23,7 +23,10 @@ Function _filters_events()
 Function init_search()->$vC_aj_filters : Collection  // Filter's description
 	$vC_aj_filters:=New collection:C1472
 	$vC_aj_filters.push(This:C1470._get_search_wor("wor_TYPES"; Table name:C256(->[TYPES:32])))
-	$vC_aj_filters.push(This:C1470._get_search_switch("waz_isGithub"))
+	$vC_aj_filters.push(This:C1470._get_search_switch("waz_isComponent"))
+	$vC_aj_filters.push(This:C1470._get_search_switch("waz_isCorner"))
+	$vC_aj_filters.push(This:C1470._get_search_switch("waz_isFree"))
+	$vC_aj_filters.push(This:C1470._get_search_switch("waz_isSRC"))
 	$vC_aj_filters.push(This:C1470._get_search_switch("waz_isActive"; True:C214))
 	//This.clear_search($vC_aj_filters)
 	
@@ -66,11 +69,33 @@ Function DO_filters($c4ES_selection_in : 4D:C1709.EntitySelection)->$c4ES_select
 					$c4ES_selection_temp:=$c4ES_selection_temp.and($cES_TYPES.TYPES_PRODUCTS)
 				End if 
 				
-			: ($vT_name="waz_isGithub")
+				
+			: ($vT_name="waz_isComponent")
 				$vL_value:=$vJ_filter.v_value
 				$is_filter:=($vL_value#2)
 				If ($is_filter)
-					$c4ES_selection_temp:=$c4ES_selection_temp.query("isGithub=:1"; ($vL_value=1))
+					$c4ES_selection_temp:=$c4ES_selection_temp.query("isComponent=:1"; ($vL_value=1))
+				End if 
+				
+			: ($vT_name="waz_isCorner")
+				$vL_value:=$vJ_filter.v_value
+				$is_filter:=($vL_value#2)
+				If ($is_filter)
+					$c4ES_selection_temp:=$c4ES_selection_temp.query("isCorner=:1"; ($vL_value=1))
+				End if 
+				
+			: ($vT_name="waz_isFree")
+				$vL_value:=$vJ_filter.v_value
+				$is_filter:=($vL_value#2)
+				If ($is_filter)
+					$c4ES_selection_temp:=$c4ES_selection_temp.query("isFree=:1"; ($vL_value=1))
+				End if 
+				
+			: ($vT_name="waz_isSRC")
+				$vL_value:=$vJ_filter.v_value
+				$is_filter:=($vL_value#2)
+				If ($is_filter)
+					$c4ES_selection_temp:=$c4ES_selection_temp.query("isSRC=:1"; ($vL_value=1))
 				End if 
 				
 			: ($vT_name="waz_isActive")

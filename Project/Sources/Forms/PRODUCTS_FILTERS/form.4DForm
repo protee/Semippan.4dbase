@@ -42,15 +42,15 @@
 					"text": "Filters",
 					"top": 0,
 					"left": 0,
-					"width": 707,
-					"height": 56,
+					"width": 1037,
+					"height": 62,
 					"sizingX": "grow",
 					"textAlign": "center"
 				},
 				"waz_isActive": {
 					"type": "subform",
-					"top": 26,
-					"left": 651,
+					"top": 28,
+					"left": 977,
 					"width": 40,
 					"height": 16,
 					"dataSourceTypeHint": "object",
@@ -70,8 +70,8 @@
 				},
 				"Texte3": {
 					"type": "text",
-					"top": 26,
-					"left": 601,
+					"top": 28,
+					"left": 927,
 					"width": 42,
 					"height": 16,
 					"fontFamily": "Tahoma",
@@ -84,7 +84,7 @@
 					"top": 18,
 					"left": 10,
 					"width": 464,
-					"height": 32,
+					"height": 37,
 					"sizingY": "grow",
 					"dataSourceTypeHint": "object",
 					"detailForm": "wor_li_menu",
@@ -103,10 +103,10 @@
 					"hideFocusRing": true,
 					"focusable": false
 				},
-				"waz_isGithub": {
+				"waz_isCorner": {
 					"type": "subform",
-					"top": 26,
-					"left": 541,
+					"top": 39,
+					"left": 691,
 					"width": 40,
 					"height": 16,
 					"dataSourceTypeHint": "object",
@@ -116,7 +116,7 @@
 					"selectionMode": "multiple",
 					"printFrame": "variable",
 					"borderStyle": "dotted",
-					"method": "ObjectMethods/waz_isGithub.4dm",
+					"method": "ObjectMethods/waz_isCorner.4dm",
 					"events": [
 						"onLoad",
 						"onDataChange"
@@ -126,19 +126,115 @@
 				},
 				"Texte1": {
 					"type": "text",
-					"top": 26,
-					"left": 491,
-					"width": 42,
+					"top": 39,
+					"left": 621,
+					"width": 62,
 					"height": 16,
 					"fontFamily": "Tahoma",
 					"fontSize": 13,
-					"text": "Github",
+					"text": "4D Corner",
+					"sizingX": "fixed"
+				},
+				"waz_isFree": {
+					"type": "subform",
+					"top": 18,
+					"left": 817,
+					"width": 40,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_isFree.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"focusable": false
+				},
+				"Texte2": {
+					"type": "text",
+					"top": 18,
+					"left": 777,
+					"width": 32,
+					"height": 16,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Free",
+					"sizingX": "fixed"
+				},
+				"waz_isSRC": {
+					"type": "subform",
+					"top": 39,
+					"left": 817,
+					"width": 40,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_isSRC.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"focusable": false
+				},
+				"Texte4": {
+					"type": "text",
+					"top": 39,
+					"left": 777,
+					"width": 32,
+					"height": 16,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "SRC",
+					"sizingX": "fixed"
+				},
+				"waz_isComponent": {
+					"type": "subform",
+					"top": 18,
+					"left": 691,
+					"width": 40,
+					"height": 16,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/waz_isComponent.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed",
+					"focusable": false
+				},
+				"Texte5": {
+					"type": "text",
+					"top": 18,
+					"left": 611,
+					"width": 72,
+					"height": 16,
+					"fontFamily": "Tahoma",
+					"fontSize": 13,
+					"text": "Component",
 					"sizingX": "fixed"
 				}
 			}
 		}
 	],
-	"geometryStamp": 783,
+	"geometryStamp": 948,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

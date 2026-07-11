@@ -316,8 +316,7 @@ Function do_copy()
 	var $vT_answer : Text
 	$vT_answer:=""
 	$cE_PRODUCTS:=Form:C1466.c4E
-	$vT_answer+="–––––––––––"+$cE_PRODUCTS.label+"–––––––––––––"+Char:C90(Carriage return:K15:38)
-	$vT_answer+=$cE_PRODUCTS.title+Char:C90(Carriage return:K15:38)
+	$vT_answer+=$cE_PRODUCTS.label+" – "+$cE_PRODUCTS.title+Char:C90(Carriage return:K15:38)
 	$vT_answer+=$cE_PRODUCTS.subtitle+Char:C90(Carriage return:K15:38)
 	$vT_answer+="Mantra: "+$cE_PRODUCTS.mantra+Char:C90(Carriage return:K15:38)
 	$vT_answer+="Tagline: "+$cE_PRODUCTS.tagline+Char:C90(Carriage return:K15:38)
@@ -331,7 +330,7 @@ Function do_copy1()
 	$vT_answer:=""
 	$cE_PRODUCTS:=Form:C1466.c4E
 	$vT_answer:=$cE_PRODUCTS.title
-	$vT_answer:=Replace string:C233($vT_answer; $cE_PRODUCTS.label+" – "; "")
+	//$vT_answer:=Replace string($vT_answer; $cE_PRODUCTS.label+" – "; "")
 	$vT_answer+=" – "+$cE_PRODUCTS.subtitle+Char:C90(Carriage return:K15:38)
 	$vT_answer+=$cE_PRODUCTS.mantra+Char:C90(Carriage return:K15:38)
 	$vT_answer+=$cE_PRODUCTS.tagline
@@ -345,7 +344,7 @@ Function do_copy2()
 	$vT_answer:=""
 	$cE_PRODUCTS:=Form:C1466.c4E
 	$vT_answer:=$cE_PRODUCTS.title
-	$vT_answer:=Replace string:C233($vT_answer; $cE_PRODUCTS.label+" – "; "")
+	//$vT_answer:=Replace string($vT_answer; $cE_PRODUCTS.label+" – "; "")
 	$vT_answer+=" – "+This:C1470._add_dot($cE_PRODUCTS.subtitle)
 	$vT_answer+=This:C1470._add_dot($cE_PRODUCTS.mantra)
 	$vT_answer+=This:C1470._add_dot($cE_PRODUCTS.tagline; True:C214)

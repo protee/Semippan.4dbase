@@ -82,10 +82,10 @@
 				},
 				"wor_TYPES": {
 					"type": "subform",
-					"top": 40,
-					"left": 388,
+					"top": 50,
+					"left": 389,
 					"width": 335,
-					"height": 64,
+					"height": 54,
 					"sizingY": "fixed",
 					"dataSourceTypeHint": "object",
 					"detailForm": "wor_li_menu",
@@ -370,21 +370,22 @@
 				},
 				"Text": {
 					"type": "text",
-					"text": "Github output",
-					"top": 9,
-					"left": 594,
-					"width": 91,
+					"text": "4D Corner",
+					"top": 25,
+					"left": 522,
+					"width": 71,
 					"height": 16,
 					"sizingX": "move",
 					"textAlign": "right",
-					"sizingY": "fixed"
+					"sizingY": "fixed",
+					"stroke": "#455A64"
 				},
-				"zen_isGithub": {
+				"zen_isCorner": {
 					"type": "subform",
-					"top": 9,
-					"left": 693,
-					"width": 30,
-					"height": 16,
+					"top": 26,
+					"left": 601,
+					"width": 24,
+					"height": 14,
 					"dataSourceTypeHint": "object",
 					"detailForm": "waz_switch",
 					"deletableInList": false,
@@ -392,13 +393,110 @@
 					"selectionMode": "multiple",
 					"printFrame": "variable",
 					"borderStyle": "dotted",
-					"method": "ObjectMethods/zen_isGithub.4dm",
+					"method": "ObjectMethods/zen_isCorner.4dm",
 					"events": [
 						"onLoad",
 						"onDataChange"
 					],
 					"sizingX": "move",
 					"sizingY": "fixed"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Free",
+					"top": 5,
+					"left": 645,
+					"width": 41,
+					"height": 16,
+					"sizingX": "move",
+					"textAlign": "right",
+					"sizingY": "fixed",
+					"stroke": "#455A64"
+				},
+				"zen_isCorner1": {
+					"type": "subform",
+					"top": 6,
+					"left": 694,
+					"width": 24,
+					"height": 14,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_isCorner1.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "move",
+					"sizingY": "fixed"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "SRC",
+					"top": 25,
+					"left": 645,
+					"width": 41,
+					"height": 16,
+					"sizingX": "move",
+					"textAlign": "right",
+					"sizingY": "fixed",
+					"stroke": "#455A64"
+				},
+				"zen_isCorner2": {
+					"type": "subform",
+					"top": 26,
+					"left": 694,
+					"width": 24,
+					"height": 14,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_isCorner2.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "move",
+					"sizingY": "fixed"
+				},
+				"zen_isComponent": {
+					"type": "subform",
+					"top": 6,
+					"left": 601,
+					"width": 24,
+					"height": 14,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_isComponent.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed"
+				},
+				"Texte5": {
+					"type": "text",
+					"top": 5,
+					"left": 514,
+					"width": 79,
+					"height": 14,
+					"stroke": "#455A64",
+					"class": "Geneva_10",
+					"text": "Component",
+					"textAlign": "right"
 				}
 			},
 			"entryOrder": [
@@ -413,7 +511,10 @@
 				"zen_record",
 				"waz_banner",
 				"wob_ogBoxes",
-				"zen_isGithub"
+				"zen_isCorner",
+				"zen_isCorner1",
+				"zen_isCorner2",
+				"zen_isComponent"
 			]
 		},
 		{
@@ -480,26 +581,6 @@
 					"stroke": "#666666",
 					"class": "Geneva_10",
 					"text": "Version"
-				},
-				"zen_isComponent": {
-					"type": "subform",
-					"top": 269,
-					"left": 260,
-					"width": 30,
-					"height": 16,
-					"dataSourceTypeHint": "object",
-					"detailForm": "waz_switch",
-					"deletableInList": false,
-					"doubleClickInRowAction": "editSubrecord",
-					"selectionMode": "multiple",
-					"printFrame": "variable",
-					"borderStyle": "dotted",
-					"method": "ObjectMethods/zen_isComponent.4dm",
-					"events": [
-						"onLoad",
-						"onDataChange"
-					],
-					"sizingX": "fixed"
 				},
 				"Zone de groupe2": {
 					"type": "groupBox",
@@ -613,16 +694,6 @@
 					"events": [
 						"onClick"
 					]
-				},
-				"Texte5": {
-					"type": "text",
-					"top": 269,
-					"left": 162,
-					"width": 89,
-					"height": 14,
-					"stroke": "#666666",
-					"class": "Geneva_10",
-					"text": "Component"
 				},
 				"bt_gnanam": {
 					"type": "pictureButton",
@@ -765,7 +836,6 @@
 				"field_name1",
 				"field_name2",
 				"field_name3",
-				"zen_isComponent",
 				"field_path",
 				"field_isMyPath",
 				"myPath",
@@ -868,7 +938,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2314,
+	"geometryStamp": 2433,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

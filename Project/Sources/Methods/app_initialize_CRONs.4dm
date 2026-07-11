@@ -46,7 +46,6 @@ End use
 
 // ***** CRON(s)
 // *
-
 $vJ_cron:=New shared object:C1526
 $vC_aj_crons.push($vJ_cron)
 Use ($vJ_cron)

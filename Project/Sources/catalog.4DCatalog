@@ -876,12 +876,14 @@ password (hashed)]]></comment>
 		<field name="mantra" uuid="EBD70D79D254445F98DBB05905C3D5B8" type="10" limiting_length="255" never_null="true" id="17"/>
 		<field name="tagline" uuid="7D364D69672643B09839C430225F36B7" type="10" limiting_length="255" never_null="true" id="18"/>
 		<field name="j_colorsGrid" uuid="D69FACB3168847EB92B930369BCD2476" type="21" blob_switch_size="2147483647" id="19"/>
-		<field name="isGithub" uuid="DD2D71D8866D464689785A40D48C8EB6" type="1" never_null="true" id="20"/>
+		<field name="isCorner" uuid="DD2D71D8866D464689785A40D48C8EB6" type="1" never_null="true" id="20"/>
+		<field name="isFree" uuid="71A1ADB09EC9430793CA888E0F0E2D10" type="1" id="21"/>
+		<field name="isSRC" uuid="B939CEA6FEC1404899D2125D8C290F00" type="1" id="22"/>
 		<primary_key field_name="UID" field_uuid="674957F3B3654A329DAAF8BCC87C4197"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="21">
+			<editor_table_info displayable_fields_count="24">
 				<color red="226" green="158" blue="214" alpha="255"/>
-				<coordinates left="404.1015625" top="72.31265258786" width="145.49609375" height="490.88671875"/>
+				<coordinates left="404.1015625" top="72.31265258786" width="145.49609375" height="546.78125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

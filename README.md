@@ -5,7 +5,7 @@
 
 [![4D HDI](https://img.shields.io/badge/4D-HDI-blue)](#)
 [![4D SRC](https://img.shields.io/badge/4D-SRC-blue)](#)
-[![4D v21](https://img.shields.io/badge/4D-v21%2B-brightgreen)](#)
+[![4D 21](https://img.shields.io/badge/4D-21%2B-brightgreen)](#)
 [![License: Free](https://img.shields.io/badge/License-Free-brightgreen.svg)](#license)
 [![Platform: macOS & Windows](https://img.shields.io/badge/Platform-macOS%20%7C%20Windows-lightgrey)](#)
 
@@ -107,7 +107,7 @@ This structured yet flexible architecture allows Sēmippān to scale from a sing
 ## Installation & Dependencies
 
 ### Prerequisites
-- **4D v21** or higher (for `4DPop` dependency).
+- **4D 21** or higher (for `4DPop` dependency).
 - An **ogTools Suite lifetime license** is embedded into Sēmippān.
 - The following ogTools components are required (and included in the suite):
   - `wok_Krolific` – Licensing, Simplified

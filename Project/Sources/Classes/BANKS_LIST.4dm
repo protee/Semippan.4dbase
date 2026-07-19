@@ -35,7 +35,7 @@ Function lb_meta_info($cE_banks : cs:C1710.BANKSEntity)->$vJ_meta : Object
 	$vJ_meta_cell:=New object:C1471
 	$vJ_meta.cell:=$vJ_meta_cell
 	$vT_column:=This:C1470.get_column("BANKS_PACKS.label")
-	This:C1470.meta_cell_colors($vJ_meta_cell; $vT_column; $vL_colors)
+	This:C1470.meta_colors($vJ_meta_cell; $vL_colors; $vT_column)
 	
 	
 Function lb_packs_label($cE_BANKS : cs:C1710.BANKSEntity)->$vT_answer : Text

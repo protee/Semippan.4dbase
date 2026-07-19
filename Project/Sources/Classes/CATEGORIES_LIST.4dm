@@ -26,7 +26,7 @@ Function lb_meta_info($c4E_entity : 4D:C1709.Entity)->$vJ_meta : Object
 	$vJ_meta_cell:=New object:C1471
 	$vJ_meta.cell:=$vJ_meta_cell
 	$vT_column:=This:C1470.get_column("key")
-	This:C1470.meta_cell_colors($vJ_meta_cell; $vT_column; $vL_colors)
+	This:C1470.meta_colors($vJ_meta_cell; $vL_colors; $vT_column)
 	
 	
 Function lb_picts_count($cE_categories : cs:C1710.CATEGORIESEntity)->$vL_count : Integer

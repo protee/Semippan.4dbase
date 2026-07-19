@@ -27,7 +27,7 @@ Function lb_initialize($vJ_data : Object; $is_local : Boolean)
 	//var $vJ_meta_cell : Object
 	//$vJ_meta_cell:=New object
 	//$vJ_meta.cell:=$vJ_meta_cell
-	//This.meta_cell_colors($vJ_meta_cell; "Column1"; $vL_colors_assPer)
+	//This.meta_colors($vJ_meta_cell; $vL_colors_assPer; "Column1")
 	
 	
 Function lb_packs_label($cE_PATHS : cs:C1710.PATHSEntity)->$vT_answer : Text

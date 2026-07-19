@@ -28,6 +28,6 @@ Function lb_meta_info($cE_KAVIYAM : cs:C1710.KAVIYAMEntity)->$vJ_meta : Object
 	var $vJ_meta_cell : Object
 	$vJ_meta_cell:=New object:C1471
 	$vJ_meta.cell:=$vJ_meta_cell
-	This:C1470.meta_cell_colors($vJ_meta_cell; "Column1"; $vL_colors)
+	This:C1470.meta_colors($vJ_meta_cell; $vL_colors; "Column1")
 	
 	

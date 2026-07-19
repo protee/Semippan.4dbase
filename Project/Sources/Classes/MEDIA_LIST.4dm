@@ -18,11 +18,11 @@ Function lb_meta_info($c4E_entity : 4D:C1709.Entity)->$vJ_meta : Object
 	var $vT_column : Text
 	$vJ_meta:=New object:C1471
 	$vL_colors:=$c4E_entity.colors
-	//This.meta_line_colors($vJ_meta; $vL_colors)  // For line
+	//This.meta_colors($vJ_meta; $vL_colors)  // For line
 	$vJ_meta_cell:=New object:C1471  // For cells
 	$vJ_meta.cell:=$vJ_meta_cell
 	$vT_column:=This:C1470.get_column("title")
-	This:C1470.meta_cell_colors($vJ_meta_cell; $vT_column; $vL_colors)
+	This:C1470.meta_colors($vJ_meta_cell; $vL_colors; $vT_column)
 	
 	
 Function lb_fileName($cE_MEDIA : cs:C1710.MEDIAEntity)->$vT_answer : Text

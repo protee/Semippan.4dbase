@@ -191,20 +191,26 @@ Function lb_meta_info($vJ_table : Object)->$vJ_meta : Object
 	$vJ_meta.cell:=$vJ_meta_cell
 	
 	$vL_colors:=$vJ_table.l_colors_module
-	This:C1470.meta_cell_colors($vJ_meta_cell; "lb_module"; $vL_colors)
+	This:C1470.meta_colors($vJ_meta_cell; $vL_colors; "lb_module")
 	$vL_colors:=$vJ_table.l_colors_table
-	This:C1470.meta_cell_colors($vJ_meta_cell; "lb_table"; $vL_colors)
+	This:C1470.meta_colors($vJ_meta_cell; $vL_colors; "lb_table")
 	
 	
-	
-Function meta_cell_colors($vJ_meta_cell : Object; $vT_column : Text; $vL_colors : Integer)
-	var $vJ_meta_cell_values : Object
+Function meta_colors($vJ_meta : Object; $vL_colors : Integer; $vT_column : Text)
 	var $vT_color_stroke; $vT_color_fill : Text
-	$vJ_meta_cell_values:=New object:C1471
-	$vJ_meta_cell[$vT_column]:=$vJ_meta_cell_values  // Issue => give the column name that can change
+	var $vJ_meta_values : Object
+	If ($vT_column#"")
+		$vJ_meta_values:=$vJ_meta[$vT_column]  // Issue => give the column name that can change
+		If ($vJ_meta_values=Null:C1517)
+			$vJ_meta_values:=New object:C1471
+			$vJ_meta[$vT_column]:=$vJ_meta_values  // Issue => give the column name that can change
+		End if 
+	Else 
+		$vJ_meta_values:=$vJ_meta
+	End if 
 	woc_sp_colors_to_html($vL_colors; ->$vT_color_stroke; ->$vT_color_fill; True:C214)
-	$vJ_meta_cell_values.stroke:=$vT_color_stroke
-	$vJ_meta_cell_values.fill:=$vT_color_fill
+	$vJ_meta_values.stroke:=$vT_color_stroke
+	$vJ_meta_values.fill:=$vT_color_fill
 	// *
 	// *****
 	

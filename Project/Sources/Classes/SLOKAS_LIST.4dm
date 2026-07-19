@@ -31,7 +31,7 @@ Function lb_meta_info($cE_SLOKAS : cs:C1710.SLOKASEntity)->$vJ_meta : Object
 	$vJ_meta_cell:=New object:C1471
 	$vJ_meta.cell:=$vJ_meta_cell
 	$vT_column:=This:C1470.get_column("SLOKAS_PRODUCTS.label")
-	This:C1470.meta_cell_colors($vJ_meta_cell; $vT_column; $vL_colors)
+	This:C1470.meta_colors($vJ_meta_cell; $vL_colors; $vT_column)
 	
 Function lb_label($cE_SLOKAS : cs:C1710.SLOKASEntity)->$vT_label : Text
 	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity

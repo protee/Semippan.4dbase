@@ -3,17 +3,17 @@ property _is_table_color; _is_infos; _is_dots : Boolean
 
 Class constructor
 	This:C1470._is_table_color:=False:C215
-	This:C1470._is_infos:=False:C215
+	This:C1470._is_infos:=True:C214
 	This:C1470._is_dots:=True:C214
 	
 	
 Function palette_do($is_record : Boolean)->$isOk : Boolean
 	var $cs_ZENH_INFOS : cs:C1710.ZENH_INFOS
 	If (Windows Ctrl down:C562) || (Macintosh control down:C544) || (Macintosh command down:C546) || (Right click:C712)
+		$cs_ZENH_INFOS:=cs:C1710.ZENH_INFOS.new($is_record)
+	Else 
 		$vJ_palette:=This:C1470.palette_get($is_record)
 		$isOk:=waz_io_palette($vJ_palette)
-	Else 
-		$cs_ZENH_INFOS:=cs:C1710.ZENH_INFOS.new($is_record)
 	End if 
 	
 	
@@ -36,6 +36,11 @@ Function _actions($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 			zen_table_open($vT_table)
 			
 	End case 
+	
+	
+Function _modules($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
+	$isOk:=True:C214
+	wox_sounds_play_confirm()
 	// *
 	// *****
 	
@@ -107,12 +112,12 @@ Function palette_build($vJ_palette : Object)
 		$vJ_extra_btn.t_icn_path:=$vt_path_icn+"infos"
 		$vJ_extra_btn.fu_method:=Formula:C1597($vJ_this._actions($1; $2))
 		
-		$vJ_extra_btn:=New object:C1471
-		$vC_aj_palette.push($vJ_extra_btn)
-		$vJ_extra_btn.t_label:="zenPop"
-		$vJ_extra_btn.t_menu:="zenPop"
-		$vJ_extra_btn.t_icn_path:=$vt_path_icn+"zen4DPop"
-		$vJ_extra_btn.fu_method:=Formula:C1597($vJ_this._actions($1; $2))
+		//$vJ_extra_btn:=New object
+		//$vC_aj_palette.push($vJ_extra_btn)
+		//$vJ_extra_btn.t_label:="zenPop"
+		//$vJ_extra_btn.t_menu:="zenPop"
+		//$vJ_extra_btn.t_icn_path:=$vt_path_icn+"zen4DPop"
+		//$vJ_extra_btn.fu_method:=Formula($vJ_this._actions($1; $2))
 	End if 
 	// *
 	// *****
@@ -136,13 +141,15 @@ Function _menu_modules($vC_aj_palette : Collection; $vt_path_icn : Text)
 	$is_noDots:=Not:C34(This:C1470._is_dots)
 	$vJ_prefs:=zen__storage_prefs
 	$vC_aj_TablesClass:=$vJ_prefs.aj_TablesClass
+	$vJ_this:=This:C1470
 	$idx:=0
 	For each ($vJ_module; $vC_aj_TablesClass)
 		//$vT_module:=$vJ_module.t_label
 		//$vL_color:=woc_sp_colors_to_s($vJ_module.l_colors)
-		$vJ_extra_btn:=New object:C1471
+		$vJ_extra_btn:=New object:C1471()
 		$vC_aj_palette.push($vJ_extra_btn)
-		$vJ_extra_btn.t_label:=$vJ_module.t_label
+		$vT_label:=$vJ_module.t_label
+		$vJ_extra_btn.t_label:=$vT_label
 		$vL_colors:=$vJ_module.l_colors
 		If ($is_noDots)
 			$vL_color:=woc_sp_colors_to_s($vJ_module.l_colors)
@@ -151,6 +158,8 @@ Function _menu_modules($vC_aj_palette : Collection; $vt_path_icn : Text)
 		$vJ_extra_btn.l_colors:=$vL_colors  // -> add circle and line
 		$vJ_extra_btn.r_font_size:=1.5
 		$vJ_extra_btn.l_font_style:=Bold:K14:2+Italic:K14:3
+		$vJ_extra_btn.t_menu:="MOD_"+$vT_label
+		$vJ_extra_btn.fu_method:=Formula:C1597($vJ_this._modules($1; $2))
 		$vL_table_colors:=This:C1470._is_table_color ? $vL_colors : 0
 		$vC_aj_tables:=$vJ_module.aj_tables
 		$vT_refMenu_sub:=This:C1470._menu_tables($vC_aj_palette; $vC_aj_tables; $vt_path_icn; $vL_table_colors)

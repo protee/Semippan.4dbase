@@ -103,7 +103,7 @@
 					"shortcutControl": false,
 					"shortcutShift": false,
 					"shortcutAlt": false,
-					"tooltip": "Home Menu – Right click Table's palette",
+					"tooltip": "Home Palette – Right click Menu",
 					"sizingX": "fixed"
 				},
 				"btn_shortcut": {

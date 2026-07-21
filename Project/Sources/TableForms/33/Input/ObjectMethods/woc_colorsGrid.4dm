@@ -1,5 +1,5 @@
 
-var $vJ_widget : Object
+var $vJ_widget; $vJ_value : Object
 
 var $vL_formEvent : Integer
 $vL_formEvent:=Form event code:C388

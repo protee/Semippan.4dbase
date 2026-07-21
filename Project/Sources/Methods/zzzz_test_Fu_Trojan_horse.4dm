@@ -6,7 +6,7 @@
 // Trojan horse
 
 //$c4Fu_component:=_wos_SvgWidgets(New object())
-var $c4Fu_trojan; $c4Fu_user : 4D:C1709.Function
+var $c4Fu_trojan : 4D:C1709.Function
 var $vJ_storage : Object
 $c4Fu_trojan:=_wok_Krolific()
 $vJ_storage:=$c4Fu_trojan.call(Null:C1517; "Storage").call()  // Firewall!

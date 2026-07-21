@@ -59,10 +59,10 @@ Function _get_menu_vC($is_record : Boolean)->$vC_menu : Collection
 	$vJ_prefs:=app__storage_prefs()
 	$vT_base_name:=$vJ_prefs.t_name
 	$vC_menu.push(This:C1470._menu_item(True:C214; "Tables"; "tables"; Formula:C1597($vJ_this._tables($1)); Formula:C1597($vJ_this._tables_menu($1; $2))))
-	$vC_menu.push(This:C1470._menu_item(True:C214; "Relations"; "relations"; Formula:C1597($vJ_this._relations())))
+	$vC_menu.push(This:C1470._menu_item(True:C214; "Relations"; "relations"; Formula:C1597($vJ_this._do_relations())))
 	$vC_menu.push(This:C1470._menu_item())
-	$vC_menu.push(This:C1470._menu_item(True:C214; "About "+$vT_base_name; "about"; Formula:C1597($vJ_this._z_about())))
-	$vC_menu.push(This:C1470._menu_item(True:C214; "Documentation"; "doc"; Formula:C1597($vJ_this._z_help())))
+	$vC_menu.push(This:C1470._menu_item(True:C214; "About "+$vT_base_name; "about"; Formula:C1597($vJ_this._do_about())))
+	$vC_menu.push(This:C1470._menu_item(True:C214; "Documentation"; "doc"; Formula:C1597($vJ_this._do_doc())))
 	$vC_menu.push(This:C1470._menu_item())
 	$vC_menu.push(This:C1470._menu_item(True:C214; "ogToolsSuite©"; "ogToolsSuite"; Formula:C1597($vJ_this._ogDevTools($1)); Formula:C1597($vJ_this._ogDevTools_menu($1; $2))))
 	
@@ -190,26 +190,12 @@ Function _do_license()
 	$vJ_wox_prefs.fu_license($vJ_prefs; $is_edit; $vT_version_last)
 	
 	
-Function _z_help()
-	var $vJ_params; $vJ_prefs : Object
-	var $vT_title : Text
-	$vJ_prefs:=app__storage_prefs()
-	$vT_title:=$vJ_prefs.t_name+" "+$vJ_prefs.t_version
-	$vJ_params:=New object:C1471
-	$vJ_params.t_root_path:="/RESOURCES/_HELP"
-	//$vJ_params.t_root_path:=h_server_get_resources+"_HELP"+Folder separator
-	$vJ_params.t_sub_path:=""
-	$vJ_params.t_root:="HELP : "+$vT_title
-	$vJ_params.t_title:=$vT_title+" ogBox - integrated help"
-	$vJ_params.t_process:="HELP"
-	$vJ_params.t_pref_name:="help"
-	$vJ_params.is_editing:=False:C215
-	$vJ_params.r_font_size_coef:=0.9
-	wob_open($vJ_params)
+Function _do_doc()
+	app_docBox_form()
 	
 	
-Function _relations()
-	zenh_relations_form()
+Function _do_relations()
+	app_relations_form()
 	// *
 	// *****
 	

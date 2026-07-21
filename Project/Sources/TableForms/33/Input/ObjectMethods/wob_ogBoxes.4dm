@@ -1,8 +1,6 @@
 
-var $vL_event_code; $vL_table : Integer
-var $vJ_widget; $vJ_table; $vJ_empty; $vJ_count : Object
-var $vP_table : Pointer
-var $vT_table : Text
+var $vL_event_code : Integer
+var $vJ_widget : Object
 $vL_event_code:=Form event code:C388
 Case of 
 	: ($vL_event_code=On Load:K2:1)

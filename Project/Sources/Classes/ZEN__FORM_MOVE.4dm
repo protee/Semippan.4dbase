@@ -83,13 +83,12 @@ Function form_move_worker($vJ_animate : Object; $vL_winRef : Integer)
 	
 	
 Function form_animate($vR_coef : Real)
-	var $is_trigo; $is_first : Boolean
+	var $is_first : Boolean
 	var $vL_left_from; $vL_top_from; $vL_form_x; $vL_form_y; $vL_left; $vL_top : Integer
 	var $vL_width; $vL_height : Integer
 	var $vJ_animate; $vJ_form_prefs : Object
 	
 	$vJ_animate:=This:C1470.j_animate
-	$is_trigo:=$vJ_animate.is_trigo
 	
 	$vJ_form_prefs:=Form:C1466.j_prefs
 	$vL_left_from:=$vJ_form_prefs.l_left_from

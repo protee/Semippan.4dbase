@@ -15,7 +15,7 @@ SET DATABASE PARAMETER:C642(Tips duration:K37:81; 12*60)  // in tick (12s) (edit
 // *
 var $isOk : Boolean
 var $vJ_prefs_wob; $vJ_wox_prefs; $vJ_screen; $vJ_screen_j_windows; $vJ_prefs_waz; $vJ_prefs_wor : Object
-var $vJ_prefs; $vJ_widget : Object
+var $vJ_prefs; $vJ_widget; $vJ_wok_prefs : Object
 var $c4Fo_prefs_zen : 4D:C1709.Folder
 
 wok_init()  // And wox

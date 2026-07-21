@@ -1,6 +1,5 @@
-//%attributes = {}
+//%attributes = {"lang":"en"}
 
-var $vJ_wok_prefs : Object
 
 If (wok__registered("wom").first()#Null:C1517)
 	EXECUTE METHOD:C1007("wom_configurate_vJ"; *; app__storage_prefs())

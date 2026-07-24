@@ -97,7 +97,8 @@
 					"switchBackWhenReleased": true,
 					"useLastFrameAsDisabled": true,
 					"events": [
-						"onClick"
+						"onClick",
+						"onMouseEnter"
 					],
 					"shortcutAccel": false,
 					"shortcutControl": false,

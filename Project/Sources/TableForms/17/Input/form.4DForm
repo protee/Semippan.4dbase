@@ -156,8 +156,8 @@
 					"type": "subform",
 					"top": 5,
 					"left": 830,
-					"width": 241,
-					"height": 445,
+					"width": 240,
+					"height": 405,
 					"dataSourceTypeHint": "object",
 					"detailForm": "zen_sublist",
 					"deletableInList": false,
@@ -177,7 +177,7 @@
 				"btn_adds": {
 					"type": "pictureButton",
 					"top": 212,
-					"left": 1046,
+					"left": 1045,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Add Orwells and Fragments from text",
@@ -195,7 +195,7 @@
 				"btn_orwells": {
 					"type": "pictureButton",
 					"top": 236,
-					"left": 1046,
+					"left": 1045,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Add from existing Orwells",
@@ -212,10 +212,10 @@
 				},
 				"sem_veda_prefs": {
 					"type": "subform",
-					"top": 490,
-					"left": 831,
-					"width": 226,
-					"height": 342,
+					"top": 450,
+					"left": 830,
+					"width": 240,
+					"height": 382,
 					"dataSourceTypeHint": "object",
 					"detailForm": "sem_veda_prefs",
 					"deletableInList": false,
@@ -234,8 +234,8 @@
 				},
 				"bt_animate": {
 					"type": "pictureButton",
-					"top": 463,
-					"left": 1047,
+					"top": 423,
+					"left": 1046,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Animate",
@@ -257,8 +257,8 @@
 				},
 				"bt_copy": {
 					"type": "pictureButton",
-					"top": 406,
-					"left": 1046,
+					"top": 366,
+					"left": 1045,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Copy Product's text",
@@ -276,8 +276,8 @@
 				"Text": {
 					"type": "text",
 					"text": "Run at open",
-					"top": 467,
-					"left": 913,
+					"top": 427,
+					"left": 912,
 					"width": 91,
 					"height": 16,
 					"sizingX": "move",
@@ -286,8 +286,8 @@
 				},
 				"zen_isRun": {
 					"type": "subform",
-					"top": 467,
-					"left": 1012,
+					"top": 427,
+					"left": 1011,
 					"width": 30,
 					"height": 16,
 					"dataSourceTypeHint": "object",
@@ -465,7 +465,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2213,
+	"geometryStamp": 2235,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -516,7 +516,7 @@ Function sloka_redraw()
 	var $cE_KAVIYAM : cs:C1710.KAVIYAMEntity
 	var $vJ_woc_card_bkg; $vJ_veda_prefs; $vJ_sem_sloka : Object
 	$vJ_sem_sloka:=OBJECT Get value:C1743("sem_sloka")
-	$vJ_woc_card_bkg.redraw()
+	//$vJ_woc_card_bkg.redraw()
 	$cE_KAVIYAM:=Form:C1466.cE_KAVIYAM
 	If ($cE_KAVIYAM#Null:C1517)
 		$vJ_veda_prefs:=$cE_KAVIYAM.j_veda_prefs

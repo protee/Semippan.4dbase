@@ -3,7 +3,7 @@
 	"dependencies": {
 		"zen_Nucleus": {
 			"github": "protee/zen_Nucleus",
-			"version": "latest"
+			"version": "~21.1.00"
 		},
 		"wos_SvgWidgets": {
 			"github": "protee/wos_SvgWidgets",

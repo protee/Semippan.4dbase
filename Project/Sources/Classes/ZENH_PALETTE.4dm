@@ -109,7 +109,10 @@ Function palette_get($is_record : Boolean)->$vJ_palette : Object
 	//$vJ_palette.l_centered:=-1  //
 	$vJ_palette.l_timer:=1
 	$vJ_palette.r_increment:=0.06
-	$vJ_palette.l_curve:=11  // Default 4
+	//$vL_curve:=wox_math_curve_idFromName("springPhysics")
+	//$vL_curve:=wox_math_curve_idFromName("elasticOut")
+	$vL_curve:=wox_math_curve_idFromName("circIn")
+	$vJ_palette.l_curve:=$vL_curve
 	//$vJ_palette.is_close:=False
 	// *
 	// *****

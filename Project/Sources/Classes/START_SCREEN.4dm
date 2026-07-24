@@ -31,6 +31,14 @@ Function form_events($vL_event_code : Integer)
 					
 			End case 
 			
+			//: ($vL_event_code=On Mouse Enter)
+			//Case of 
+			
+			//: ($vT_objectName="btn_product")
+			//$cs_ZENH_PALETTE:=cs.ZENH_PALETTE.new()
+			//$isOk:=$cs_ZENH_PALETTE.palette_do()
+			//End case 
+			
 	End case 
 	
 	

@@ -43,7 +43,7 @@ Function _initialize()
 	$vL_waz:=$vC_at_key.length
 	This:C1470._l_waz:=$vL_waz
 	$vC_at_key.push("wheel_stroke"; "links_stroke"; "links_dash")
-	$vC_at_key.push("links_opacity"; "horto_opacity"; "curve")
+	$vC_at_key.push("links_opacity"; "horto_opacity"; "curve"; "speed")
 	
 	$vC_at_key:=New collection:C1472()
 	This:C1470._at_key_is:=$vC_at_key

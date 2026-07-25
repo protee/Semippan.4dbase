@@ -214,8 +214,8 @@
 					"type": "subform",
 					"top": 37,
 					"left": 29,
-					"width": 226,
-					"height": 342,
+					"width": 240,
+					"height": 382,
 					"dataSourceTypeHint": "object",
 					"detailForm": "sem_veda_prefs",
 					"deletableInList": false,
@@ -348,7 +348,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2626,
+	"geometryStamp": 2639,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

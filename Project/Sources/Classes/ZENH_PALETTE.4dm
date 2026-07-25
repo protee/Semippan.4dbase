@@ -111,7 +111,7 @@ Function palette_get($is_record : Boolean)->$vJ_palette : Object
 	$vJ_palette.r_increment:=0.06
 	//$vL_curve:=wox_math_curve_idFromName("springPhysics")
 	//$vL_curve:=wox_math_curve_idFromName("elasticOut")
-	$vL_curve:=wox_math_curve_idFromName("circIn")
+	$vL_curve:=wox_math_curve_idFromName("expoIn")
 	$vJ_palette.l_curve:=$vL_curve
 	//$vJ_palette.is_close:=False
 	// *
@@ -122,7 +122,7 @@ Function palette_get($is_record : Boolean)->$vJ_palette : Object
 	$vJ_pattern:=New object:C1471
 	$vJ_palette.j_pattern:=$vJ_pattern
 	$vJ_pattern.l_pattern:=23
-	$vJ_pattern.l_colors:=0x3E3C  // 0x44136138  //0x908E
+	$vJ_pattern.l_colors:=0xAA004005  // [swo:4] – [swo:5]
 	$vJ_pattern.l_rxy:=18
 	$vJ_pattern.l_stroke:=4
 	$vJ_pattern.l_opacity:=85

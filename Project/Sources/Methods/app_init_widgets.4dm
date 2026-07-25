@@ -108,8 +108,11 @@ Use ($vJ_widgets)
 	$vJ_widget.r_radius:=0.25  // Radius based on width
 	$vJ_widget.r_increment:=0.05  // Increment On Timer
 	$vJ_widget.r_min:=0.7  // Coef [0.7-1]
-	$vJ_widget.l_curve:=6  // Coef curve
-	$vJ_widget.l_cards_curve:=10  // Cards curve
+	//$vL_curve:=wox_math_curve_idFromName("springPhysics")
+	//$vL_curve:=wox_math_curve_idFromName("elasticOut")
+	$vL_curve:=wox_math_curve_idFromName("expoIn")
+	$vJ_widget.l_curve:=$vL_curve
+	$vJ_widget.l_cards_curve:=$vL_curve
 	$vJ_widget.l_type:=0  // Icons ; Circle ; Rect
 	
 	

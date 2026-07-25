@@ -71,7 +71,9 @@ Function form_events()
 					This:C1470._is_init:=False:C215
 					$vJ_veda:=OBJECT Get value:C1743("sem_veda")
 					$vR_progress:=$vJ_veda.r_progress
-					$vR_step:=0.09
+					//$vR_step:=0.09
+					$cE_KAVIYAM:=Form:C1466.cE_KAVIYAM
+					$vR_step:=$cE_KAVIYAM.j_veda_prefs.l_speed/100  // From 0.01 to 0.09
 					$vR_progress+=$is_deploy ? $vR_step : -$vR_step
 					$is_end:=$is_deploy ? ($vR_progress>=1) : ($vR_progress<=0)
 					If ($is_end)

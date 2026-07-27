@@ -519,6 +519,28 @@
 		},
 		{
 			"objects": {
+				"sem_folder": {
+					"type": "subform",
+					"top": 300,
+					"left": 20,
+					"width": 350,
+					"height": 123,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_folder",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_folder.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
 				"Zone de groupe1": {
 					"type": "groupBox",
 					"top": 438,
@@ -582,52 +604,6 @@
 					"class": "Geneva_10",
 					"text": "Version"
 				},
-				"Zone de groupe2": {
-					"type": "groupBox",
-					"top": 300,
-					"left": 20,
-					"width": 350,
-					"height": 123,
-					"sizingY": "fixed",
-					"text": "Database folder – POSIX – Drag&Drop"
-				},
-				"field_path": {
-					"type": "input",
-					"top": 321,
-					"left": 29,
-					"width": 305,
-					"height": 92,
-					"dataSource": "Form:C1466.c4E.path",
-					"stroke": "#000000",
-					"class": "Champs_12",
-					"fill": "#FFFFFF",
-					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/field_path.4dm",
-					"events": [
-						"onDrop",
-						"onDataChange",
-						"onDragOver"
-					]
-				},
-				"btn_pathExist": {
-					"type": "pictureButton",
-					"top": 319,
-					"left": 337,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Choose folder",
-					"rowCount": 4,
-					"picture": "/RESOURCES/metier/btn_PROD_exists0.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					]
-				},
 				"field_isMyPath": {
 					"type": "checkbox",
 					"top": 300,
@@ -645,60 +621,10 @@
 					"focusable": false,
 					"dataSourceTypeHint": "boolean"
 				},
-				"myPath": {
-					"type": "input",
-					"top": 321,
-					"left": 29,
-					"width": 305,
-					"height": 92,
-					"stroke": "#800080",
-					"class": "Champs_12",
-					"focusable": false,
-					"fill": "#DDA0DD",
-					"borderStyle": "sunken",
-					"enterable": false,
-					"contextMenu": "none",
-					"method": "ObjectMethods/myPath.4dm",
-					"events": [
-						"onDrop",
-						"onDragOver"
-					]
-				},
-				"bt_show": {
-					"type": "pictureButton",
-					"top": 343,
-					"left": 337,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Show on disk",
-					"rowCount": 4,
-					"picture": "/RESOURCES/metier/btn_PROD_show.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					]
-				},
-				"bt_ogBoxes": {
-					"type": "pictureButton",
-					"top": 391,
-					"left": 337,
-					"width": 24,
-					"height": 24,
-					"rowCount": 4,
-					"picture": "/RESOURCES/metier/btn_PROD_ogBoxes.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					]
-				},
 				"bt_gnanam": {
 					"type": "pictureButton",
-					"top": 367,
-					"left": 337,
+					"top": 395,
+					"left": 342,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Open Gnânam",
@@ -830,18 +756,36 @@
 					],
 					"sizingX": "fixed",
 					"sizingY": "fixed"
+				},
+				"myPath": {
+					"type": "input",
+					"top": 315,
+					"left": 22,
+					"width": 347,
+					"height": 103,
+					"stroke": "#800080",
+					"class": "Champs_12",
+					"focusable": false,
+					"fill": "#DDA0DD",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDrop",
+						"onDragOver"
+					]
 				}
 			},
 			"entryOrder": [
 				"field_name1",
 				"field_name2",
 				"field_name3",
-				"field_path",
 				"field_isMyPath",
 				"myPath",
 				"zen_PATHS",
 				"woc_colorsGrid",
-				"field_infos"
+				"field_infos",
+				"sem_folder"
 			]
 		},
 		{
@@ -938,7 +882,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2433,
+	"geometryStamp": 2522,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

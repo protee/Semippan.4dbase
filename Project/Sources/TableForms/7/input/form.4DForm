@@ -182,135 +182,6 @@
 					"class": "Geneva_10",
 					"text": "Label"
 				},
-				"group1_ovw": {
-					"type": "groupBox",
-					"top": 258,
-					"left": 40,
-					"width": 349,
-					"height": 123,
-					"sizingY": "fixed",
-					"text": "Database folder – POSIX – Drag&Drop"
-				},
-				"field_path_ovw": {
-					"type": "input",
-					"top": 279,
-					"left": 49,
-					"width": 305,
-					"height": 92,
-					"dataSource": "Form:C1466.c4E.path",
-					"stroke": "#000000",
-					"class": "Champs_12",
-					"fill": "#FFFFFF",
-					"borderStyle": "sunken",
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/field_path_ovw.4dm",
-					"events": [
-						"onDrop",
-						"onDataChange",
-						"onDragOver"
-					]
-				},
-				"btn_pathExist_ovw": {
-					"type": "pictureButton",
-					"top": 277,
-					"left": 357,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Choose folder",
-					"rowCount": 4,
-					"picture": "/RESOURCES/metier/btn_PROD_exists0.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					]
-				},
-				"field_isMyPath_ovw": {
-					"type": "checkbox",
-					"top": 258,
-					"left": 273,
-					"width": 116,
-					"height": 15,
-					"dataSource": "Form:C1466.c4E.isMyPath",
-					"text": "path of Sēmippān",
-					"stroke": "#000000",
-					"class": "Champs_12_G",
-					"events": [
-						"onClick"
-					],
-					"fontSize": 10,
-					"focusable": false,
-					"dataSourceTypeHint": "boolean"
-				},
-				"myPath_ovw": {
-					"type": "input",
-					"top": 279,
-					"left": 49,
-					"width": 305,
-					"height": 92,
-					"stroke": "#800080",
-					"class": "Champs_12",
-					"focusable": false,
-					"fill": "#DDA0DD",
-					"borderStyle": "sunken",
-					"enterable": false,
-					"contextMenu": "none",
-					"method": "ObjectMethods/myPath_ovw.4dm",
-					"events": [
-						"onDrop",
-						"onDragOver"
-					]
-				},
-				"btn_show_ovw": {
-					"type": "pictureButton",
-					"top": 325,
-					"left": 357,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Show on disk",
-					"rowCount": 4,
-					"picture": "/RESOURCES/metier/btn_PROD_show.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					]
-				},
-				"btn_tools_ovw": {
-					"type": "pictureButton",
-					"top": 301,
-					"left": 357,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Create folder",
-					"rowCount": 4,
-					"picture": "/RESOURCES/metier/btn_PROD_tools.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					]
-				},
-				"btn_ogBoxes_ovw": {
-					"type": "pictureButton",
-					"top": 349,
-					"left": 357,
-					"width": 24,
-					"height": 24,
-					"rowCount": 4,
-					"picture": "/RESOURCES/metier/btn_PROD_ogBoxes.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					]
-				},
 				"field_name1": {
 					"type": "input",
 					"dataSource": "Form:C1466.c4E.subPath",
@@ -346,12 +217,69 @@
 					"dataSourceTypeHint": "boolean",
 					"focusable": false,
 					"fontWeight": "bold"
+				},
+				"sem_folder": {
+					"type": "subform",
+					"top": 260,
+					"left": 50,
+					"width": 350,
+					"height": 123,
+					"dataSourceTypeHint": "object",
+					"detailForm": "zen_folder",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sem_folder.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"focusable": true,
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"field_isMyPath_OVW": {
+					"type": "checkbox",
+					"top": 260,
+					"left": 283,
+					"width": 116,
+					"height": 15,
+					"dataSource": "Form:C1466.c4E.isMyPath",
+					"text": "path of Sēmippān",
+					"stroke": "#000000",
+					"class": "Champs_12_G",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 10,
+					"focusable": false,
+					"dataSourceTypeHint": "boolean"
+				},
+				"myPath": {
+					"type": "input",
+					"top": 275,
+					"left": 32,
+					"width": 367,
+					"height": 103,
+					"stroke": "#800080",
+					"class": "Champs_12",
+					"focusable": false,
+					"fill": "#DDA0DD",
+					"borderStyle": "sunken",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onDrop",
+						"onDragOver"
+					]
 				}
 			}
 		}
 	],
 	"method": "method.4dm",
-	"geometryStamp": 670,
+	"geometryStamp": 685,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

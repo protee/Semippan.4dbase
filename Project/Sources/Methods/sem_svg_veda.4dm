@@ -249,6 +249,8 @@ If ($cE_KAVIYAM#Null:C1517) && ($cES_SLOKAS#Null:C1517)
 					$vT_app:=$cE_PRODUCTS.app
 					$vC_links:=$vJ_links[$vT_app]
 					$vR_angle:=$vR_angle_start-($vR_angle_range*$idx_slokas/$vL_tt_sargah)
+					$vL_colors:=$cE_SLOKAS.colors
+					$vL_colors:=$vL_colors#0 ? $vL_colors : $cE_PRODUCTS.colors
 					
 					For ($idx; 0; $tt-1)  // $idx_slokas)
 						$cE_SLOKAS1:=$cES_SLOKAS[$idx]
@@ -263,9 +265,8 @@ If ($cE_KAVIYAM#Null:C1517) && ($cES_SLOKAS#Null:C1517)
 								//$vR_angle1:=$vR_angle_global-$vR_angle_step-($vR_angle_range*$idx/$vL_tt_sargah)
 								//$vR_angle:=$vR_angle_start-$vR_angle_diff
 								$vR_angle1:=$vR_angle_start-($vR_angle_range*$idx/$vL_tt_sargah)
-								//$vL_colors:=$cE_PRODUCTS1.colors
-								$vL_colors:=$cE_SLOKAS1.colors
-								$vL_colors:=$vL_colors#0 ? $vL_colors : $cE_PRODUCTS1.colors
+								//$vL_colors:=$cE_SLOKAS1.colors
+								//$vL_colors:=$vL_colors#0 ? $vL_colors : $cE_PRODUCTS1.colors
 								woc_sp_colors_to_svg($vL_colors; ->$vT_product_stroke; ->$vT_product_fill)
 								$vT_color:=$is_links_color_stroke ? $vT_product_stroke : $vT_product_fill
 								//$vT_svg_object:=woc_svg_circleArcTangent($vT_svg_root; $vL_center_x; $vL_center_y; $vL_aspects_lenght; $vR_angle1; $vR_angle; $vT_color; $vL_links_stroke; $vL_links_dash; $vL_arrow_size)

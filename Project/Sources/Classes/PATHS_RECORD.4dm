@@ -16,7 +16,7 @@ Function record_load_upd()
 	//$c4E.isActive:=True
 	////This.widgets_upd()
 	//End if 
-	This:C1470.activate_btns()
+	This:C1470.sem_folder_upd()
 	
 	
 	//Function widgets_upd()
@@ -77,22 +77,10 @@ Function form_events()
 		: ($vL_event_code=On Clicked:K2:4)
 			Case of 
 				: ($vT_objectName="field_isOVW")
-					This:C1470.activate_btns()
+					This:C1470.sem_folder_upd()
 					
 				: ($vT_objectName="field_isMyPath@")
-					This:C1470.activate_btns()
-					
-				: ($vT_objectName="btn_pathExist@")
-					This:C1470.pathExist()
-					
-				: ($vT_objectName="btn_show@")
-					This:C1470.show()
-					
-				: ($vT_objectName="btn_tools@")
-					This:C1470.tools()
-					
-				: ($vT_objectName="btn_ogBoxes@")
-					This:C1470.ogBoxes()
+					This:C1470.sem_folder_upd()
 					
 			End case 
 			
@@ -149,140 +137,36 @@ Function get_path_calculated()->$c4Fo_database : 4D:C1709.Folder
 	
 	
 	
-Function on_path_drop()->$vL_answer : Integer
-	var $c4Fo_root : 4D:C1709.Folder
-	var $vL_event_code : Integer
-	var $vT_path : Text
+Function sem_folder_upd()
+	var $isOk; $is_visible : Boolean
 	var $c4E : 4D:C1709.Entity
-	$vL_event_code:=Form event code:C388
-	
-	Case of 
-		: ($vL_event_code=On Drag Over:K2:13)
-			$vL_answer:=Num:C11(Not:C34(Form:C1466.is_editing))
-			
-		: ($vL_event_code=On Drop:K2:12)
-			$vT_path:=Get file from pasteboard:C976(1)
-			If ($vT_path#"")
-				$c4Fo_root:=Folder:C1567($vT_path; fk platform path:K87:2)
-				$c4E:=Form:C1466.c4E
-				$c4E.path:=$c4Fo_root.path
-				$c4E.isMyPath:=($c4Fo_root.path=Folder:C1567(fk database folder:K87:14).path)
-				This:C1470.activate_btns()
-			End if 
-	End case 
-	
-	
-Function activate_btns()
-	var $c4Fo_database : 4D:C1709.Folder
-	var $isOk; $is_exists; $is_visible : Boolean
-	var $vP_myPath; $vP_btn_exists : Pointer
-	var $c4E : 4D:C1709.Entity
+	var $vJ_sem_folder : Object
+	var $vT_sem_folder; $vT_myPath : Text
 	
 	$c4E:=Form:C1466.c4E
 	$is_visible:=$c4E.isExternalPath
+	$vT_sem_folder:="sem_folder"
+	$vT_myPath:="myPath"
 	OBJECT SET VISIBLE:C603(*; "@_ovw"; $is_visible)
+	OBJECT SET VISIBLE:C603(*; $vT_sem_folder; $is_visible)
+	OBJECT SET VISIBLE:C603(*; $vT_myPath; $is_visible)
 	If ($is_visible)
-		$vP_btn_exists:=OBJECT Get pointer:C1124(Object named:K67:5; "btn_pathExist_ovw")
 		$isOk:=Not:C34($c4E.isMyPath) && Form:C1466.is_editing
-		OBJECT SET ENABLED:C1123($vP_btn_exists->; $isOk)
-		OBJECT SET ENABLED:C1123(*; "btn_repair"; $isOk)
-		$vP_myPath:=OBJECT Get pointer:C1124(Object named:K67:5; "myPath_ovw")
-		OBJECT SET VISIBLE:C603($vP_myPath->; $c4E.isMyPath)
-		
-		$c4Fo_database:=This:C1470.get_path_calculated()
-		$is_exists:=$c4Fo_database#Null:C1517
-		OBJECT SET ENABLED:C1123(*; "btn_folderCreate_ovw"; $is_exists)
-		If ($is_exists)
-			$is_exists:=$c4Fo_database.exists
-			$vP_myPath->:=$c4Fo_database.path
-			OBJECT SET ENABLED:C1123(*; "btn_folderCreate_ovw"; Not:C34($is_exists))
-		End if 
-		x_btn_toggleSet($vP_btn_exists; Num:C11($is_exists))
+		$vJ_sem_folder:=OBJECT Get value:C1743("sem_folder")
+		$vJ_sem_folder.is_editing:=$isOk
+		$vJ_sem_folder.redraw()
+		OBJECT SET VISIBLE:C603(*; $vT_myPath; $c4E.isMyPath)
+		OBJECT SET VALUE:C1742($vT_myPath; Folder:C1567(fk database folder:K87:14).path)
 	End if 
 	
 	
-	
-Function pathExist()
+Function is_myPath_upd()
+	var $c4E : 4D:C1709.Entity
 	var $vT_path : Text
-	var $c4Fo_database : 4D:C1709.Folder
-	var $c4E : 4D:C1709.Entity
-	If (Form:C1466.is_editing)
-		$c4Fo_database:=This:C1470.get_path_calculated()
-		$vT_path:=$c4Fo_database#Null:C1517 ? $vT_path : ""
-		$vT_path:=Select folder:C670("Choose a project path"; $vT_path; Package open:K24:8)
-		If (OK=1)
-			$c4E:=Form:C1466.c4E
-			$c4E.path:=Folder:C1567($vT_path; fk platform path:K87:2).path
-			$c4E.isMyPath:=($c4E.path=(Folder:C1567(fk database folder:K87:14).path))
-		End if 
-		This:C1470.activate_btns()
-	End if 
-	
-	
-Function tools()
-	var $c4Fo_database : 4D:C1709.Folder
-	var $c4E : 4D:C1709.Entity
-	If (Form:C1466.is_editing)
-		$c4Fo_database:=This:C1470.get_path_calculated()
-		$c4E:=Form:C1466.c4E
-		If (Not:C34($c4E.isMyPath) && ($c4Fo_database#Null:C1517))
-			If (waz_io_confirm_popup("Try to repair Path ?"))
-				//$c4Fo_database:=x_path_root_adjust($c4Fo_database)
-				//If ($c4Fo_database#Null)
-				//This.activate_btns()
-				//End if 
-			End if 
-		End if 
-	End if 
-	
-Function folderCreate()
-	var $c4Fo_database : 4D:C1709.Folder
-	var $c4E : 4D:C1709.Entity
-	If (Form:C1466.is_editing)
-		$c4E:=Form:C1466.c4E
-		If ($c4E.isMyPath)
-			wox_sounds_play_beep()
-		Else 
-			$c4Fo_database:=This:C1470.get_path_calculated()
-			If ($c4Fo_database#Null:C1517)
-				If (waz_io_confirm_popup("Create folder Path ?"))
-					$c4Fo_database.create()
-					This:C1470.activate_btns()
-				End if 
-			End if 
-		End if 
-	End if 
-	
-	
-	
-Function show()
-	var $c4Fo_database : 4D:C1709.Folder
-	$c4Fo_database:=This:C1470.get_path_calculated()
-	If ($c4Fo_database#Null:C1517)
-		If ($c4Fo_database.exists)
-			SHOW ON DISK:C922($c4Fo_database.platformPath)
-		End if 
-	End if 
-	
-Function ogBoxes()
-	var $vJ_widget : Object
-	var $c4Fo_database : 4D:C1709.Folder
-	var $c4E : 4D:C1709.Entity
-	$c4Fo_database:=This:C1470.get_path_calculated()
-	If ($c4Fo_database#Null:C1517)
-		If ($c4Fo_database.exists)
-			$c4E:=Form:C1466.c4E
-			$vJ_widget:=New object:C1471
-			$vJ_widget.t_root_path:=$c4Fo_database.path
-			$vJ_widget.t_sub_path:=""
-			$vJ_widget.t_root:=""
-			$vJ_widget.t_process:="_path_"+String:C10($c4E.UID)
-			$vJ_widget.t_pref_name:="Path"
-			$vJ_widget.is_editing:=True:C214
-			$vJ_widget.t_title:="Path: "+$c4E.label
-			wob_open($vJ_widget)
-		End if 
-	End if 
-	
+	$c4E:=Form:C1466.c4E
+	$vT_path:=$c4E.path
+	$vT_path:=Folder:C1567($vT_path; fk platform path:K87:2).path
+	$c4E.isMyPath:=($vT_path=(Folder:C1567(fk database folder:K87:14).path))
+	This:C1470.sem_folder_upd()
 	
 	

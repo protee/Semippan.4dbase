@@ -164,8 +164,6 @@ Function _resize()
 		$vJ_sem_widget.bind_to("t_"+$vT_tag; $vJ_biz)
 		$vJ_sem_widget.resize()
 	End for each 
-	
-	
 	// *
 	// *****
 	

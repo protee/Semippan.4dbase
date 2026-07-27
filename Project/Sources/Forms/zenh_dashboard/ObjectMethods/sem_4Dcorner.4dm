@@ -6,7 +6,8 @@ $vL_event_code:=Form event code:C388
 Case of 
 	: ($vL_event_code=-On Load:K2:1)
 		$vJ_widget:=Self:C308->
-		$vJ_widget.t_tip:="File OfficialComponents.json"
+		$vJ_widget.t_label:="POSIX file – OfficialComponents.json"
+		$vJ_widget.t_tip:=""
 		$vJ_widget.set_widget_name()
 		
 End case 

@@ -143,13 +143,6 @@ Use ($vJ_widgets)
 	$vJ_pattern.l_stroke:=2
 	$vJ_pattern.l_opacity:=85
 	
-	// ***** sem_file – File chooser 
-	// * j_value: value
-	$vJ_widget:=New shared object:C1526
-	$vJ_widgets.j_file:=$vJ_widget
-	$vJ_widget.is_editing:=True:C214
-	
-	$vJ_widget.t_tip:=""
 	
 	
 End use 

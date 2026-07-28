@@ -66,7 +66,7 @@
 				"waz_banner": {
 					"type": "subform",
 					"top": 0,
-					"left": 690,
+					"left": 650,
 					"width": 120,
 					"height": 70,
 					"dataSourceTypeHint": "object",
@@ -133,8 +133,8 @@
 					"text": "Tab control",
 					"top": 72,
 					"left": 10,
-					"width": 813,
-					"height": 760,
+					"width": 773,
+					"height": 795,
 					"method": "ObjectMethods/oat_tabs.4dm",
 					"events": [
 						"onLoad",
@@ -155,9 +155,9 @@
 				"zen_SLOKAS": {
 					"type": "subform",
 					"top": 5,
-					"left": 830,
+					"left": 790,
 					"width": 240,
-					"height": 405,
+					"height": 440,
 					"dataSourceTypeHint": "object",
 					"detailForm": "zen_sublist",
 					"deletableInList": false,
@@ -177,7 +177,7 @@
 				"btn_adds": {
 					"type": "pictureButton",
 					"top": 212,
-					"left": 1045,
+					"left": 1005,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Add Orwells and Fragments from text",
@@ -195,7 +195,7 @@
 				"btn_orwells": {
 					"type": "pictureButton",
 					"top": 236,
-					"left": 1045,
+					"left": 1005,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Add from existing Orwells",
@@ -212,8 +212,8 @@
 				},
 				"sem_veda_prefs": {
 					"type": "subform",
-					"top": 450,
-					"left": 830,
+					"top": 485,
+					"left": 790,
 					"width": 240,
 					"height": 382,
 					"dataSourceTypeHint": "object",
@@ -234,8 +234,8 @@
 				},
 				"bt_animate": {
 					"type": "pictureButton",
-					"top": 423,
-					"left": 1046,
+					"top": 453,
+					"left": 1006,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Animate",
@@ -257,8 +257,8 @@
 				},
 				"bt_copy": {
 					"type": "pictureButton",
-					"top": 366,
-					"left": 1045,
+					"top": 401,
+					"left": 1005,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Copy Product's text",
@@ -276,8 +276,8 @@
 				"Text": {
 					"type": "text",
 					"text": "Run at open",
-					"top": 427,
-					"left": 912,
+					"top": 457,
+					"left": 872,
 					"width": 91,
 					"height": 16,
 					"sizingX": "move",
@@ -286,8 +286,8 @@
 				},
 				"zen_isRun": {
 					"type": "subform",
-					"top": 427,
-					"left": 1011,
+					"top": 457,
+					"left": 971,
 					"width": 30,
 					"height": 16,
 					"dataSourceTypeHint": "object",
@@ -302,6 +302,28 @@
 						"onLoad",
 						"onDataChange"
 					],
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"bt_square": {
+					"type": "pictureButton",
+					"top": 453,
+					"left": 790,
+					"width": 24,
+					"height": 24,
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_square.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "",
 					"sizingX": "move",
 					"sizingY": "move"
 				}
@@ -323,8 +345,8 @@
 					"type": "subform",
 					"top": 106,
 					"left": 20,
-					"width": 790,
-					"height": 715,
+					"width": 750,
+					"height": 750,
 					"dataSourceTypeHint": "object",
 					"detailForm": "sem_veda",
 					"deletableInList": false,
@@ -372,7 +394,7 @@
 					"type": "input",
 					"top": 206,
 					"left": 20,
-					"width": 779,
+					"width": 739,
 					"height": 615,
 					"dataSource": "Form:C1466.c4E.infos",
 					"stroke": "#000E60",
@@ -393,7 +415,7 @@
 					"dataSource": "Form:C1466.c4E.subtitle",
 					"top": 128,
 					"left": 74,
-					"width": 649,
+					"width": 619,
 					"height": 17,
 					"sizingX": "grow"
 				},
@@ -412,7 +434,7 @@
 					"dataSource": "Form:C1466.c4E.mantra",
 					"top": 153,
 					"left": 74,
-					"width": 649,
+					"width": 619,
 					"height": 17,
 					"sizingX": "grow"
 				},
@@ -431,7 +453,7 @@
 					"dataSource": "Form:C1466.c4E.tagline",
 					"top": 178,
 					"left": 74,
-					"width": 649,
+					"width": 619,
 					"height": 17,
 					"sizingX": "grow"
 				},
@@ -448,7 +470,7 @@
 				"field_logo": {
 					"type": "input",
 					"top": 95,
-					"left": 739,
+					"left": 709,
 					"width": 64,
 					"height": 64,
 					"dataSource": "Form:C1466.c4E.logo",
@@ -465,7 +487,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2235,
+	"geometryStamp": 2305,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

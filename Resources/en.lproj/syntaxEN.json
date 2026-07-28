@@ -1,5 +1,16 @@
 {
 	"_method_": {
+		"panel_combinations_P": {
+			"Syntax": "**panel_combinations_P**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
 		"sem_woc_popColorsGrid": {
 			"Syntax": "**sem_woc_popColorsGrid**() : Variant",
 			"Params": [
@@ -22,17 +33,6 @@
 			],
 			"Summary": ""
 		},
-		"panel_combinations": {
-			"Syntax": "**panel_combinations**() : Variant",
-			"Params": [
-				[
-					"",
-					"Variant",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
 		"sem_woc_popPatternsGrid": {
 			"Syntax": "**sem_woc_popPatternsGrid**() : Variant",
 			"Params": [
@@ -46,6 +46,17 @@
 		},
 		"panel_kaviyam": {
 			"Syntax": "**panel_kaviyam**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"panel_D4corner_P": {
+			"Syntax": "**panel_D4corner_P**() : Variant",
 			"Params": [
 				[
 					"",
@@ -544,38 +555,23 @@
 				"Summary": ""
 			}
 		},
-		"ZEN__TABLES_SEARCH": {
+		"SETS_RECORD": {
 			"new()": {
-				"Syntax": "**.new**( *vT_table* : Text; *vL_table* : Integer; *is_local* : Boolean; *vL_winRef* : Integer )",
-				"Params": [
-					[
-						"vT_table",
-						"Text",
-						"->"
-					],
-					[
-						"vL_table",
-						"Integer",
-						"->"
-					],
-					[
-						"is_local",
-						"Boolean",
-						"->"
-					],
-					[
-						"vL_winRef",
-						"Integer",
-						"->"
-					]
-				],
+				"Syntax": "**.new**()",
+				"Params": [],
 				"Summary": ""
 			}
 		},
 		"ZENH_INFOS": {
 			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
+				"Syntax": "**.new**( *is_record* : Boolean )",
+				"Params": [
+					[
+						"is_record",
+						"Boolean",
+						"->"
+					]
+				],
 				"Summary": ""
 			}
 		},
@@ -635,13 +631,6 @@
 				"Summary": ""
 			}
 		},
-		"SETS_RECORD": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
-				"Summary": ""
-			}
-		},
 		"ZEN__DELETE": {
 			"new()": {
 				"Syntax": "**.new**( *is_msg* : Boolean )",
@@ -685,6 +674,20 @@
 				"Summary": ""
 			}
 		},
+		"sem_options": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"_test_png": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
 		"SLOKAS_LIST": {
 			"new()": {
 				"Syntax": "**.new**( *vT_LB* : Text )",
@@ -718,14 +721,35 @@
 				"Summary": ""
 			}
 		},
-		"sem_options": {
+		"ZEN__TABLES_SEARCH": {
 			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
+				"Syntax": "**.new**( *vT_table* : Text; *vL_table* : Integer; *is_local* : Boolean; *vL_winRef* : Integer )",
+				"Params": [
+					[
+						"vT_table",
+						"Text",
+						"->"
+					],
+					[
+						"vL_table",
+						"Integer",
+						"->"
+					],
+					[
+						"is_local",
+						"Boolean",
+						"->"
+					],
+					[
+						"vL_winRef",
+						"Integer",
+						"->"
+					]
+				],
 				"Summary": ""
 			}
 		},
-		"_test_png": {
+		"PANEL_D4corner": {
 			"new()": {
 				"Syntax": "**.new**()",
 				"Params": [],
@@ -1335,29 +1359,28 @@
 		"_inheritedFrom_": "ZENH_EXTRAS"
 	},
 	"PRODUCTS_RECORD": {
+		"sem_folder_upd()": {
+			"Syntax": "**.sem_folder_upd**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"do_build()": {
+			"Syntax": "**.do_build**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"do_copy1()": {
+			"Syntax": "**.do_copy1**()",
+			"Params": [],
+			"Summary": ""
+		},
 		"pitch_export()": {
 			"Syntax": "**.pitch_export**()",
 			"Params": [],
 			"Summary": ""
 		},
-		"lb_label()": {
-			"Syntax": "**.lb_label**( *c4Fi_component* : 4D.File )->vT_answer : Text",
-			"Params": [
-				[
-					"c4Fi_component",
-					"4D.File",
-					"->"
-				],
-				[
-					"vT_answer",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"do_copy1()": {
-			"Syntax": "**.do_copy1**()",
+		"do_copy2()": {
+			"Syntax": "**.do_copy2**()",
 			"Params": [],
 			"Summary": ""
 		},
@@ -1366,13 +1389,29 @@
 			"Params": [],
 			"Summary": ""
 		},
+		"is_signed()": {
+			"Syntax": "**.is_signed**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"get_build_path()": {
+			"Syntax": "**.get_build_path**()->c4Fo_build : 4D.Folder",
+			"Params": [
+				[
+					"c4Fo_build",
+					"4D.Folder",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
 		"do_copy()": {
 			"Syntax": "**.do_copy**()",
 			"Params": [],
 			"Summary": ""
 		},
-		"ogBoxes()": {
-			"Syntax": "**.ogBoxes**()",
+		"form_events()": {
+			"Syntax": "**.form_events**()",
 			"Params": [],
 			"Summary": ""
 		},
@@ -1392,25 +1431,25 @@
 			],
 			"Summary": ""
 		},
-		"on_path_drop()": {
-			"Syntax": "**.on_path_drop**()->vL_answer : Integer",
+		"comp_is_signed()": {
+			"Syntax": "**.comp_is_signed**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"lb_label()": {
+			"Syntax": "**.lb_label**( *c4Fi_component* : 4D.File )->vT_answer : Text",
 			"Params": [
 				[
-					"vL_answer",
-					"Integer",
+					"c4Fi_component",
+					"4D.File",
+					"->"
+				],
+				[
+					"vT_answer",
+					"Text",
 					"<-"
 				]
 			],
-			"Summary": ""
-		},
-		"show()": {
-			"Syntax": "**.show**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"pathExist()": {
-			"Syntax": "**.pathExist**()",
-			"Params": [],
 			"Summary": ""
 		},
 		"get_path()": {
@@ -1424,23 +1463,13 @@
 			],
 			"Summary": ""
 		},
-		"folderCreate()": {
-			"Syntax": "**.folderCreate**()",
-			"Params": [],
-			"Summary": ""
-		},
 		"do_touched()": {
 			"Syntax": "**.do_touched**()",
 			"Params": [],
 			"Summary": ""
 		},
-		"comp_find()": {
-			"Syntax": "**.comp_find**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"comp_is_signed()": {
-			"Syntax": "**.comp_is_signed**()",
+		"is_myPath_upd()": {
+			"Syntax": "**.is_myPath_upd**()",
 			"Params": [],
 			"Summary": ""
 		},
@@ -1471,16 +1500,6 @@
 			],
 			"Summary": ""
 		},
-		"activate_btns()": {
-			"Syntax": "**.activate_btns**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
-			"Params": [],
-			"Summary": ""
-		},
 		"lb_icn()": {
 			"Syntax": "**.lb_icn**( *c4Fi_component* : 4D.File )->vO_icon : Picture",
 			"Params": [
@@ -1497,13 +1516,18 @@
 			],
 			"Summary": ""
 		},
+		"record_load_upd()": {
+			"Syntax": "**.record_load_upd**()",
+			"Params": [],
+			"Summary": ""
+		},
 		"gnanam()": {
 			"Syntax": "**.gnanam**()",
 			"Params": [],
 			"Summary": ""
 		},
-		"record_load_upd()": {
-			"Syntax": "**.record_load_upd**()",
+		"do_app_wox()": {
+			"Syntax": "**.do_app_wox**()",
 			"Params": [],
 			"Summary": ""
 		},
@@ -1661,6 +1685,22 @@
 		}
 	},
 	"ZENH_PALETTE": {
+		"palette_get()": {
+			"Syntax": "**.palette_get**( *is_record* : Boolean )->vJ_palette : Object",
+			"Params": [
+				[
+					"is_record",
+					"Boolean",
+					"->"
+				],
+				[
+					"vJ_palette",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
 		"palette_build()": {
 			"Syntax": "**.palette_build**( *vJ_palette* : Object )",
 			"Params": [
@@ -1673,27 +1713,16 @@
 			"Summary": ""
 		},
 		"palette_do()": {
-			"Syntax": "**.palette_do**( *vJ_palette* : Object )->isOk : Boolean",
+			"Syntax": "**.palette_do**( *is_record* : Boolean )->isOk : Boolean",
 			"Params": [
 				[
-					"vJ_palette",
-					"Object",
+					"is_record",
+					"Boolean",
 					"->"
 				],
 				[
 					"isOk",
 					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"palette_get()": {
-			"Syntax": "**.palette_get**()->vJ_palette : Object",
-			"Params": [
-				[
-					"vJ_palette",
-					"Object",
 					"<-"
 				]
 			],
@@ -1751,42 +1780,32 @@
 		"_inheritedFrom_": "ZEN__RECORD"
 	},
 	"ZEN__TABLES_LIST": {
-		"get_icon_img()": {
-			"Syntax": "**.get_icon_img**( *is_value* : Boolean; *vL_colorsRow* : Integer; *vL_shape* : Integer; *vL_size* : Integer )->vO_img : Picture",
-			"Params": [
-				[
-					"is_value",
-					"Boolean",
-					"->"
-				],
-				[
-					"vL_colorsRow",
-					"Integer",
-					"->"
-				],
-				[
-					"vL_shape",
-					"Integer",
-					"->"
-				],
-				[
-					"vL_size",
-					"Integer",
-					"->"
-				],
-				[
-					"vO_img",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
 		"lb_font_style()": {
 			"Syntax": "**.lb_font_style**( *vT_function* : Text )",
 			"Params": [
 				[
 					"vT_function",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"meta_style()": {
+			"Syntax": "**.meta_style**( *vJ_meta* : Object; *vL_style* : Integer; *vT_column* : Text )",
+			"Params": [
+				[
+					"vJ_meta",
+					"Object",
+					"->"
+				],
+				[
+					"vL_style",
+					"Integer",
+					"->"
+				],
+				[
+					"vT_column",
 					"Text",
 					"->"
 				]
@@ -1815,8 +1834,8 @@
 			],
 			"Summary": ""
 		},
-		"meta_line_colors()": {
-			"Syntax": "**.meta_line_colors**( *vJ_meta* : Object; *vL_colors* : Integer )",
+		"meta_colors()": {
+			"Syntax": "**.meta_colors**( *vJ_meta* : Object; *vL_colors* : Integer; *vT_column* : Text )",
 			"Params": [
 				[
 					"vJ_meta",
@@ -1827,33 +1846,42 @@
 					"vL_colors",
 					"Integer",
 					"->"
+				],
+				[
+					"vT_column",
+					"Text",
+					"->"
 				]
 			],
 			"Summary": ""
 		},
-		"lb_initialize()": {
-			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
+		"get_icon_img()": {
+			"Syntax": "**.get_icon_img**( *is_value* : Boolean; *vL_colorsRow* : Integer; *vL_shape* : Integer; *vL_size* : Integer )->vO_img : Picture",
 			"Params": [
 				[
-					"vJ_data",
-					"Object",
+					"is_value",
+					"Boolean",
 					"->"
 				],
 				[
-					"is_local",
-					"Boolean",
+					"vL_colorsRow",
+					"Integer",
 					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_meta_info_set()": {
-			"Syntax": "**.lb_meta_info_set**( *vT_function* : Text )",
-			"Params": [
+				],
 				[
-					"vT_function",
-					"Text",
+					"vL_shape",
+					"Integer",
 					"->"
+				],
+				[
+					"vL_size",
+					"Integer",
+					"->"
+				],
+				[
+					"vO_img",
+					"Picture",
+					"<-"
 				]
 			],
 			"Summary": ""
@@ -1889,6 +1917,54 @@
 			],
 			"Summary": ""
 		},
+		"meta_row()": {
+			"Syntax": "**.meta_row**( *vJ_meta* : Object; *is_unselectable* : Boolean; *is_disabled* : Boolean )",
+			"Params": [
+				[
+					"vJ_meta",
+					"Object",
+					"->"
+				],
+				[
+					"is_unselectable",
+					"Boolean",
+					"->"
+				],
+				[
+					"is_disabled",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_initialize()": {
+			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
+			"Params": [
+				[
+					"vJ_data",
+					"Object",
+					"->"
+				],
+				[
+					"is_local",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_meta_info_set()": {
+			"Syntax": "**.lb_meta_info_set**( *vT_function* : Text )",
+			"Params": [
+				[
+					"vT_function",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
 		"get_columns()": {
 			"Syntax": "**.get_columns**( *vT_ordaPath* : Text )->vC_indices : Collection",
 			"Params": [
@@ -1901,27 +1977,6 @@
 					"vC_indices",
 					"Collection",
 					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"meta_cell_colors()": {
-			"Syntax": "**.meta_cell_colors**( *vJ_meta_cell* : Object; *vT_column* : Text; *vL_colors* : Integer )",
-			"Params": [
-				[
-					"vJ_meta_cell",
-					"Object",
-					"->"
-				],
-				[
-					"vT_column",
-					"Text",
-					"->"
-				],
-				[
-					"vL_colors",
-					"Integer",
-					"->"
 				]
 			],
 			"Summary": ""
@@ -3280,8 +3335,8 @@
 			],
 			"Summary": ""
 		},
-		"packs_record()": {
-			"Syntax": "**.packs_record**( *vJ_record* : Object; *vJ_meta* : Object )",
+		"banks_record()": {
+			"Syntax": "**.banks_record**( *vJ_record* : Object; *vJ_meta* : Object )",
 			"Params": [
 				[
 					"vJ_record",
@@ -3312,8 +3367,8 @@
 			],
 			"Summary": ""
 		},
-		"banks_record()": {
-			"Syntax": "**.banks_record**( *vJ_record* : Object; *vJ_meta* : Object )",
+		"packs_record()": {
+			"Syntax": "**.packs_record**( *vJ_record* : Object; *vJ_meta* : Object )",
 			"Params": [
 				[
 					"vJ_record",
@@ -3328,22 +3383,49 @@
 			],
 			"Summary": ""
 		},
-		"meta_cell_colors()": {
-			"Syntax": "**.meta_cell_colors**( *vJ_meta_cell* : Object; *vT_column* : Text; *vL_colors* : Integer )",
+		"relate_table()": {
+			"Syntax": "**.relate_table**( *vT_table* : Text )",
 			"Params": [
 				[
-					"vJ_meta_cell",
+					"vT_table",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"packs_colors_record()": {
+			"Syntax": "**.packs_colors_record**( *vJ_record* : Object; *vJ_meta* : Object )",
+			"Params": [
+				[
+					"vJ_record",
 					"Object",
 					"->"
 				],
 				[
-					"vT_column",
-					"Text",
+					"vJ_meta",
+					"Object",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"meta_colors()": {
+			"Syntax": "**.meta_colors**( *vJ_meta* : Object; *vL_colors* : Integer; *vT_column* : Text )",
+			"Params": [
+				[
+					"vJ_meta",
+					"Object",
 					"->"
 				],
 				[
 					"vL_colors",
 					"Integer",
+					"->"
+				],
+				[
+					"vT_column",
+					"Text",
 					"->"
 				]
 			],
@@ -3472,33 +3554,6 @@
 				[
 					"c4E_entity",
 					"4D.Entity",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"relate_table()": {
-			"Syntax": "**.relate_table**( *vT_table* : Text )",
-			"Params": [
-				[
-					"vT_table",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"packs_colors_record()": {
-			"Syntax": "**.packs_colors_record**( *vJ_record* : Object; *vJ_meta* : Object )",
-			"Params": [
-				[
-					"vJ_record",
-					"Object",
-					"->"
-				],
-				[
-					"vJ_meta",
-					"Object",
 					"->"
 				]
 			],
@@ -3692,23 +3747,8 @@
 		"_inheritedFrom_": "ZEN__RECORD"
 	},
 	"PATHS_RECORD": {
-		"ogBoxes()": {
-			"Syntax": "**.ogBoxes**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"folderCreate()": {
-			"Syntax": "**.folderCreate**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"pathExist()": {
-			"Syntax": "**.pathExist**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"tools()": {
-			"Syntax": "**.tools**()",
+		"sem_folder_upd()": {
+			"Syntax": "**.sem_folder_upd**()",
 			"Params": [],
 			"Summary": ""
 		},
@@ -3730,6 +3770,11 @@
 		},
 		"do_touched()": {
 			"Syntax": "**.do_touched**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"is_myPath_upd()": {
+			"Syntax": "**.is_myPath_upd**()",
 			"Params": [],
 			"Summary": ""
 		},
@@ -3771,30 +3816,9 @@
 			],
 			"Summary": ""
 		},
-		"activate_btns()": {
-			"Syntax": "**.activate_btns**()",
-			"Params": [],
-			"Summary": ""
-		},
 		"form_events()": {
 			"Syntax": "**.form_events**()",
 			"Params": [],
-			"Summary": ""
-		},
-		"show()": {
-			"Syntax": "**.show**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"on_path_drop()": {
-			"Syntax": "**.on_path_drop**()->vL_answer : Integer",
-			"Params": [
-				[
-					"vL_answer",
-					"Integer",
-					"<-"
-				]
-			],
 			"Summary": ""
 		},
 		"record_load_upd()": {
@@ -3956,79 +3980,74 @@
 		},
 		"_inheritedFrom_": "ZEN__TABLES_LIST"
 	},
-	"ZEN__TABLES_SEARCH": {
-		"is_search()": {
-			"Syntax": "**.is_search**( *vC_aj_search_in* : Collection )->is_search : Boolean",
+	"SETS_RECORD": {
+		"redraw_colors1()": {
+			"Syntax": "**.redraw_colors1**( *vC_al_colors1* : Collection )",
 			"Params": [
 				[
-					"vC_aj_search_in",
+					"vC_al_colors1",
 					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw_colors()": {
+			"Syntax": "**.redraw_colors**( *vC_al_colors* : Collection )",
+			"Params": [
+				[
+					"vC_al_colors",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"do_touched()": {
+			"Syntax": "**.do_touched**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"redraw()": {
+			"Syntax": "**.redraw**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"form_events()": {
+			"Syntax": "**.form_events**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"record_save()": {
+			"Syntax": "**.record_save**( *c4E_entity* : 4D.Entity )",
+			"Params": [
+				[
+					"c4E_entity",
+					"4D.Entity",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"record_touched()": {
+			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
+			"Params": [
+				[
+					"c4E_record",
+					"4D.Entity",
 					"->"
 				],
 				[
-					"is_search",
+					"is_touched",
 					"Boolean",
 					"<-"
 				]
 			],
 			"Summary": ""
 		},
-		"clear_search()": {
-			"Syntax": "**.clear_search**( *vC_aj_search_in* : Collection )->vC_aj_search : Collection",
+		"record_checkout()": {
+			"Syntax": "**.record_checkout**()->isOk : Boolean",
 			"Params": [
-				[
-					"vC_aj_search_in",
-					"Collection",
-					"->"
-				],
-				[
-					"vC_aj_search",
-					"Collection",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"get_widgets()": {
-			"Syntax": "**.get_widgets**( *vC_aj_search_in* : Collection )->vC_aj_search : Collection",
-			"Params": [
-				[
-					"vC_aj_search_in",
-					"Collection",
-					"->"
-				],
-				[
-					"vC_aj_search",
-					"Collection",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"set_widgets()": {
-			"Syntax": "**.set_widgets**( *vC_aj_search_in* : Collection )->vC_aj_search : Collection",
-			"Params": [
-				[
-					"vC_aj_search_in",
-					"Collection",
-					"->"
-				],
-				[
-					"vC_aj_search",
-					"Collection",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"search_form()": {
-			"Syntax": "**.search_form**( *vT_form* : Text )->isOk : Boolean",
-			"Params": [
-				[
-					"vT_form",
-					"Text",
-					"->"
-				],
 				[
 					"isOk",
 					"Boolean",
@@ -4037,12 +4056,12 @@
 			],
 			"Summary": ""
 		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
+		"record_load_upd()": {
+			"Syntax": "**.record_load_upd**()",
 			"Params": [],
 			"Summary": ""
 		},
-		"_inheritedFrom_": "ZEN__WIDGETS"
+		"_inheritedFrom_": "ZEN__RECORD"
 	},
 	"ZENH_INFOS": {},
 	"MEDIA_LIST": {
@@ -4247,89 +4266,6 @@
 	"sem_output": {
 		"_inheritedFrom_": "ZEN__WIDGETS"
 	},
-	"SETS_RECORD": {
-		"redraw_colors1()": {
-			"Syntax": "**.redraw_colors1**( *vC_al_colors1* : Collection )",
-			"Params": [
-				[
-					"vC_al_colors1",
-					"Collection",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"redraw_colors()": {
-			"Syntax": "**.redraw_colors**( *vC_al_colors* : Collection )",
-			"Params": [
-				[
-					"vC_al_colors",
-					"Collection",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"do_touched()": {
-			"Syntax": "**.do_touched**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"redraw()": {
-			"Syntax": "**.redraw**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"record_save()": {
-			"Syntax": "**.record_save**( *c4E_entity* : 4D.Entity )",
-			"Params": [
-				[
-					"c4E_entity",
-					"4D.Entity",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"record_touched()": {
-			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
-			"Params": [
-				[
-					"c4E_record",
-					"4D.Entity",
-					"->"
-				],
-				[
-					"is_touched",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"record_checkout()": {
-			"Syntax": "**.record_checkout**()->isOk : Boolean",
-			"Params": [
-				[
-					"isOk",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"record_load_upd()": {
-			"Syntax": "**.record_load_upd**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "ZEN__RECORD"
-	},
 	"ZEN__DELETE": {},
 	"sem_picture": {
 		"_inheritedFrom_": "ZEN__WIDGETS"
@@ -4363,6 +4299,109 @@
 			"Summary": ""
 		},
 		"_inheritedFrom_": "ZENH_TABLES_FILTERS"
+	},
+	"sem_options": {
+		"_inheritedFrom_": "ZEN__WIDGETS"
+	},
+	"_test_png": {
+		"woc_sources_upd()": {
+			"Syntax": "**.woc_sources_upd**( *vL_value* : Integer )",
+			"Params": [
+				[
+					"vL_value",
+					"Integer",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw_picture4()": {
+			"Syntax": "**.redraw_picture4**( *vO_picture* : Picture )",
+			"Params": [
+				[
+					"vO_picture",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw_picture()": {
+			"Syntax": "**.redraw_picture**( *vO_picture* : Picture )",
+			"Params": [
+				[
+					"vO_picture",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw_picture3()": {
+			"Syntax": "**.redraw_picture3**( *vO_picture* : Picture )",
+			"Params": [
+				[
+					"vO_picture",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw_picture2()": {
+			"Syntax": "**.redraw_picture2**( *vO_picture* : Picture )",
+			"Params": [
+				[
+					"vO_picture",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"form_events()": {
+			"Syntax": "**.form_events**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"redraw_woc_picture()": {
+			"Syntax": "**.redraw_woc_picture**( *vO_picture* : Picture )",
+			"Params": [
+				[
+					"vO_picture",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw_picture1()": {
+			"Syntax": "**.redraw_picture1**( *vO_picture* : Picture )",
+			"Params": [
+				[
+					"vO_picture",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw_picture5()": {
+			"Syntax": "**.redraw_picture5**( *vO_picture* : Picture )",
+			"Params": [
+				[
+					"vO_picture",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"initialize()": {
+			"Syntax": "**.initialize**()",
+			"Params": [],
+			"Summary": ""
+		}
 	},
 	"SLOKAS_LIST": {
 		"lb_label()": {
@@ -4596,61 +4635,83 @@
 			"Summary": ""
 		}
 	},
-	"sem_options": {
-		"_inheritedFrom_": "ZEN__WIDGETS"
-	},
-	"_test_png": {
-		"woc_sources_upd()": {
-			"Syntax": "**.woc_sources_upd**( *vL_value* : Integer )",
+	"ZEN__TABLES_SEARCH": {
+		"is_search()": {
+			"Syntax": "**.is_search**( *vC_aj_search_in* : Collection )->is_search : Boolean",
 			"Params": [
 				[
-					"vL_value",
-					"Integer",
+					"vC_aj_search_in",
+					"Collection",
 					"->"
+				],
+				[
+					"is_search",
+					"Boolean",
+					"<-"
 				]
 			],
 			"Summary": ""
 		},
-		"redraw_picture4()": {
-			"Syntax": "**.redraw_picture4**( *vO_picture* : Picture )",
+		"clear_search()": {
+			"Syntax": "**.clear_search**( *vC_aj_search_in* : Collection )->vC_aj_search : Collection",
 			"Params": [
 				[
-					"vO_picture",
-					"Picture",
+					"vC_aj_search_in",
+					"Collection",
 					"->"
+				],
+				[
+					"vC_aj_search",
+					"Collection",
+					"<-"
 				]
 			],
 			"Summary": ""
 		},
-		"redraw_picture()": {
-			"Syntax": "**.redraw_picture**( *vO_picture* : Picture )",
+		"get_widgets()": {
+			"Syntax": "**.get_widgets**( *vC_aj_search_in* : Collection )->vC_aj_search : Collection",
 			"Params": [
 				[
-					"vO_picture",
-					"Picture",
+					"vC_aj_search_in",
+					"Collection",
 					"->"
+				],
+				[
+					"vC_aj_search",
+					"Collection",
+					"<-"
 				]
 			],
 			"Summary": ""
 		},
-		"redraw_picture3()": {
-			"Syntax": "**.redraw_picture3**( *vO_picture* : Picture )",
+		"set_widgets()": {
+			"Syntax": "**.set_widgets**( *vC_aj_search_in* : Collection )->vC_aj_search : Collection",
 			"Params": [
 				[
-					"vO_picture",
-					"Picture",
+					"vC_aj_search_in",
+					"Collection",
 					"->"
+				],
+				[
+					"vC_aj_search",
+					"Collection",
+					"<-"
 				]
 			],
 			"Summary": ""
 		},
-		"redraw_picture2()": {
-			"Syntax": "**.redraw_picture2**( *vO_picture* : Picture )",
+		"search_form()": {
+			"Syntax": "**.search_form**( *vT_form* : Text )->isOk : Boolean",
 			"Params": [
 				[
-					"vO_picture",
-					"Picture",
+					"vT_form",
+					"Text",
 					"->"
+				],
+				[
+					"isOk",
+					"Boolean",
+					"<-"
 				]
 			],
 			"Summary": ""
@@ -4660,41 +4721,90 @@
 			"Params": [],
 			"Summary": ""
 		},
-		"redraw_woc_picture()": {
-			"Syntax": "**.redraw_woc_picture**( *vO_picture* : Picture )",
+		"_inheritedFrom_": "ZEN__WIDGETS"
+	},
+	"PANEL_D4corner": {
+		"progress_close()": {
+			"Syntax": "**.progress_close**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"D4corner_resize()": {
+			"Syntax": "**.D4corner_resize**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"progress_new()": {
+			"Syntax": "**.progress_new**()->vT_progress_uuid : Text",
 			"Params": [
 				[
-					"vO_picture",
+					"vT_progress_uuid",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"D4corner_redraw()": {
+			"Syntax": "**.D4corner_redraw**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"lb_get_state_icn()": {
+			"Syntax": "**.lb_get_state_icn**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vO_state : Picture",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vO_state",
 					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"record_load_upd()": {
+			"Syntax": "**.record_load_upd**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"lb_get_logo_icn()": {
+			"Syntax": "**.lb_get_logo_icn**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vO_logo : Picture",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vO_logo",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"progress_label()": {
+			"Syntax": "**.progress_label**( *vT_label* : Text )",
+			"Params": [
+				[
+					"vT_label",
+					"Text",
 					"->"
 				]
 			],
 			"Summary": ""
 		},
-		"redraw_picture1()": {
-			"Syntax": "**.redraw_picture1**( *vO_picture* : Picture )",
-			"Params": [
-				[
-					"vO_picture",
-					"Picture",
-					"->"
-				]
-			],
+		"form_init()": {
+			"Syntax": "**.form_init**()",
+			"Params": [],
 			"Summary": ""
 		},
-		"redraw_picture5()": {
-			"Syntax": "**.redraw_picture5**( *vO_picture* : Picture )",
-			"Params": [
-				[
-					"vO_picture",
-					"Picture",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"initialize()": {
-			"Syntax": "**.initialize**()",
+		"form_events()": {
+			"Syntax": "**.form_events**()",
 			"Params": [],
 			"Summary": ""
 		}

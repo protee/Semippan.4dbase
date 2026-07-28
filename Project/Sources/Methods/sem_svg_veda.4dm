@@ -186,7 +186,7 @@ If ($cE_KAVIYAM#Null:C1517) && ($cES_SLOKAS#Null:C1517)
 				$vL_colors:=$vL_colors#0 ? $vL_colors : $cE_PRODUCTS.colors
 				$vL_count+=1
 			Else 
-				$is_break:=$vL_count=1
+				$is_break:=False:C215  //$vL_count=1
 				$vL_count:=0
 			End if 
 			
@@ -314,15 +314,15 @@ If ($cE_KAVIYAM#Null:C1517) && ($cES_SLOKAS#Null:C1517)
 			$vT_product:=$is_pro_app ? $cE_PRODUCTS.app : $cE_PRODUCTS.label
 			$vL_colors:=$vL_colors#0 ? $vL_colors : $cE_PRODUCTS.colors
 			$vO_product:=$cE_PRODUCTS.logo
-			//$vL_font_style:=0
+			$vL_font_style:=0
 		Else 
 			$vT_product:=$cE_SLOKAS.label
 			//$vL_colors:=$cE_SLOKAS.colors
 			$vO_product:=$cE_SLOKAS.logo
-			//$vL_font_style:=Bold
+			$vL_font_style:=Bold:K14:2
 			//$vR_img_coef:=$vR_img_coef*0.75
 		End if 
-		$vL_font_style:=Num:C11($is_selected)
+		//$vL_font_style:=Num($is_selected)
 		woc_sp_colors_to_svg($vL_colors; ->$vT_product_stroke; ->$vT_product_fill)
 		$vT_color:=$is_pro_color_stroke ? $vT_product_stroke : $vT_product_fill
 		PICTURE PROPERTIES:C457($vO_product; $vL_w; $vL_h)

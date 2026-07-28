@@ -23,14 +23,14 @@
 				"Group Box": {
 					"type": "groupBox",
 					"text": "Colors",
-					"top": 165,
+					"top": 135,
 					"left": 244,
 					"width": 213,
 					"height": 103
 				},
 				"sem_metarect": {
 					"type": "subform",
-					"top": 48,
+					"top": 28,
 					"left": 241,
 					"width": 125,
 					"height": 100,
@@ -52,7 +52,7 @@
 				},
 				"sem_output": {
 					"type": "subform",
-					"top": 48,
+					"top": 28,
 					"left": 15,
 					"width": 215,
 					"height": 100,
@@ -74,7 +74,7 @@
 				},
 				"sem_picture": {
 					"type": "subform",
-					"top": 168,
+					"top": 138,
 					"left": 15,
 					"width": 215,
 					"height": 100,
@@ -96,7 +96,7 @@
 				},
 				"sem_text": {
 					"type": "subform",
-					"top": 48,
+					"top": 28,
 					"left": 377,
 					"width": 175,
 					"height": 100,
@@ -120,14 +120,14 @@
 				"Text": {
 					"type": "text",
 					"text": "Default values",
-					"top": 13,
+					"top": 5,
 					"left": 15,
 					"width": 451,
 					"height": 18
 				},
 				"woc_shape": {
 					"type": "subform",
-					"top": 188,
+					"top": 158,
 					"left": 266,
 					"width": 30,
 					"height": 30,
@@ -148,14 +148,14 @@
 				"Text1": {
 					"type": "text",
 					"text": "Glyph for widget",
-					"top": 194,
+					"top": 164,
 					"left": 311,
 					"width": 131,
 					"height": 18
 				},
 				"woc_display_shape": {
 					"type": "subform",
-					"top": 228,
+					"top": 198,
 					"left": 266,
 					"width": 30,
 					"height": 30,
@@ -176,17 +176,17 @@
 				"Text2": {
 					"type": "text",
 					"text": "Glyph for display",
-					"top": 234,
+					"top": 204,
 					"left": 311,
 					"width": 131,
 					"height": 18
 				},
 				"sem_4Dcorner": {
 					"type": "subform",
-					"top": 298,
+					"top": 360,
 					"left": 15,
-					"width": 440,
-					"height": 100,
+					"width": 620,
+					"height": 60,
 					"dataSourceTypeHint": "object",
 					"detailForm": "zen_file",
 					"deletableInList": false,
@@ -206,19 +206,19 @@
 				"ot_github": {
 					"type": "input",
 					"dataSource": "Form:C1466.c4E.j_biz.t_github",
-					"top": 411,
+					"top": 428,
 					"left": 70,
 					"width": 295,
-					"height": 20,
+					"height": 1,
 					"fontSize": 16,
 					"contextMenu": "none"
 				},
 				"Texte1": {
 					"type": "text",
-					"top": 414,
+					"top": 431,
 					"left": 15,
 					"width": 49,
-					"height": 14,
+					"height": 1,
 					"stroke": "#666666",
 					"class": "Geneva_10",
 					"text": "Github"
@@ -238,7 +238,7 @@
 	],
 	"width": 660,
 	"height": 460,
-	"geometryStamp": 669,
+	"geometryStamp": 725,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

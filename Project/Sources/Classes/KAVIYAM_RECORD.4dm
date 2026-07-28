@@ -9,13 +9,13 @@ Class constructor
 	//Super.form_modify($vC_at_objects_nc)
 	
 Function record_load_upd()
-	var $vJ_veda : Object
+	var $vJ_sem_veda : Object
 	var $c4E_entity : 4D:C1709.Entity
 	Super:C1706.record_load_upd()
 	This:C1470._is_deploy:=True:C214
 	This:C1470._is_run:=False:C215
-	$vJ_veda:=OBJECT Get value:C1743("sem_veda")
-	$vJ_veda.r_progress:=0
+	$vJ_sem_veda:=OBJECT Get value:C1743("sem_veda")
+	$vJ_sem_veda.r_progress:=0
 	$c4E_entity:=Form:C1466.c4E
 	If ($c4E_entity.isRun)
 		This:C1470.do_KAVIYAM_redraw()
@@ -57,10 +57,11 @@ Function form_events()
 	var $vL_event_code; $vL_timer; $vL_index : Integer
 	$vL_event_code:=Form event code:C388
 	
-	var $vJ_formEvent; $vJ_veda; $vJ_screens_form : Object
+	var $vJ_formEvent; $vJ_sem_veda; $vJ_screens_form : Object
 	var $vT_objectName : Text
 	var $is_init; $is_deploy; $is_end : Boolean
 	var $vR_progress; $vR_step : Real
+	var $c4E : 4D:C1709.Entity
 	$vJ_formEvent:=FORM Event:C1606
 	$vT_objectName:=$vJ_formEvent.objectName
 	
@@ -76,6 +77,9 @@ Function form_events()
 					
 				: ($vT_objectName="bt_animate")
 					This:C1470.do_animate()
+					
+				: ($vT_objectName="bt_square")
+					This:C1470.do_square()
 					
 			End case 
 			
@@ -97,8 +101,8 @@ Function form_events()
 					$is_deploy:=This:C1470._is_deploy
 					$is_init:=This:C1470._is_init
 					This:C1470._is_init:=False:C215
-					$vJ_veda:=OBJECT Get value:C1743("sem_veda")
-					$vR_progress:=$vJ_veda.r_progress
+					$vJ_sem_veda:=OBJECT Get value:C1743("sem_veda")
+					$vR_progress:=$vJ_sem_veda.r_progress
 					//$vR_step:=0.01  // From 0.01 to 0.09
 					$c4E:=Form:C1466.c4E
 					$vR_step:=$c4E.j_veda_prefs.l_speed/100  // From 0.01 to 0.09
@@ -111,7 +115,7 @@ Function form_events()
 					Else 
 						$vL_timer:=1
 					End if 
-					$vJ_veda.r_progress:=$vR_progress
+					$vJ_sem_veda.r_progress:=$vR_progress
 					This:C1470.KAVIYAM_redraw($is_init)
 				Else 
 					This:C1470.KAVIYAM_redraw()
@@ -138,17 +142,17 @@ Function form_events()
 	
 	
 Function do_animate()
-	var $vJ_veda : Object
+	var $vJ_sem_veda : Object
 	var $vR_progress : Real
 	var $vC_aj_values : Collection
 	$vC_aj_values:=New collection:C1472()
-	$vJ_veda:=OBJECT Get value:C1743("sem_veda")
-	$vR_progress:=$vJ_veda.r_progress
+	$vJ_sem_veda:=OBJECT Get value:C1743("sem_veda")
+	$vR_progress:=$vJ_sem_veda.r_progress
 	//If ($vR_progress=0)
 	//This._is_deploy:=True
 	//This.do_KAVIYAM_redraw()
 	//Else 
-	//$vJ_veda.r_progress:=0
+	//$vJ_sem_veda.r_progress:=0
 	//This.KAVIYAM_redraw(True)
 	//SET TIMER(0)
 	//End if 
@@ -167,26 +171,26 @@ Function KAVIYAM_redraw($is_init : Boolean)
 	//var $vJ_screens_form : Object
 	var $c4E : 4D:C1709.Entity
 	var $vL_index : Integer
-	var $vJ_screens_form; $vJ_SLOKAS; $vJ_veda : Object
+	var $vJ_screens_form; $vJ_SLOKAS; $vJ_sem_veda : Object
 	var $cES_SLOKAS : cs:C1710.SLOKASSelection
 	$vJ_screens_form:=Form:C1466._j_form
 	$vL_index:=Num:C11($vJ_screens_form.l_tab)
 	If ($vL_index=0)
-		$vJ_veda:=OBJECT Get value:C1743("sem_veda")
+		$vJ_sem_veda:=OBJECT Get value:C1743("sem_veda")
 		If ($is_init)
 			$c4E:=Form:C1466.c4E
 			$vJ_SLOKAS:=OBJECT Get value:C1743("zen_SLOKAS")
 			//$cES_SLOKAS:=$vJ_SLOKAS.lb_selected
 			//$cES_SLOKAS:=($cES_SLOKAS.length>0) ? $cES_SLOKAS : $vJ_SLOKAS.lb_selection  // Takes all active
 			$cES_SLOKAS:=$vJ_SLOKAS.lb_selection  //.query("isActive = true").orderBy("order")
-			$vJ_veda.cE_KAVIYAM:=$c4E
-			$vJ_veda.cES_SLOKAS:=$cES_SLOKAS
-			$vJ_veda.j_prefs:=$c4E.j_veda_prefs
-			$vJ_veda.is_contract:=Not:C34(This:C1470._is_deploy)
+			$vJ_sem_veda.cE_KAVIYAM:=$c4E
+			$vJ_sem_veda.cES_SLOKAS:=$cES_SLOKAS
+			$vJ_sem_veda.j_prefs:=$c4E.j_veda_prefs
+			$vJ_sem_veda.is_contract:=Not:C34(This:C1470._is_deploy)
 		End if 
-		$vJ_veda.is_links:=($vJ_veda.r_progress>=1)
-		$vJ_veda.resize()
-		$vJ_veda.redraw()
+		$vJ_sem_veda.is_links:=($vJ_sem_veda.r_progress>=1)
+		$vJ_sem_veda.resize()
+		$vJ_sem_veda.redraw()
 	End if 
 	
 	
@@ -203,7 +207,6 @@ Function _veda_chgt($vJ_widget : Object)
 	
 Function _vedaPrefs_chge($vJ_widget : Object)
 	This:C1470.do_KAVIYAM_redraw()
-	
 	
 	
 	// *****
@@ -228,6 +231,19 @@ Function do_copy()
 	End for each 
 	SET TEXT TO PASTEBOARD:C523($vT_answer)
 	wox_sounds_play_tick()
+	
+	
+Function do_square()
+	var $vL_width; $vL_height; $vL_wh : Integer
+	var $vJ_sem_veda : Object
+	$vJ_sem_veda:=OBJECT Get value:C1743("sem_veda")
+	$vJ_sem_veda.get_canvas_wh(->$vL_width; ->$vL_height)
+	$vL_wh:=wox_min($vL_width; $vL_height)
+	//$vL_wh:=Square root($vL_width*$vL_height)
+	$vL_width:=$vL_wh-$vL_width
+	$vL_height:=$vL_wh-$vL_height
+	RESIZE FORM WINDOW:C890($vL_width; $vL_height)
+	SET TIMER:C645(1)
 	// *
 	// *****
 	

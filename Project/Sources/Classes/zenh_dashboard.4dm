@@ -16,7 +16,7 @@ Function onInitialize($cE_ZEN_DASHBOARD : cs:C1710.ZEN_DASHBOARDEntity)  // Init
 		$cE_ZEN_DASHBOARD.j_biz:=$vJ_business
 		$vJ_business.l_display_shape:=-4  // Shape for display
 		$vJ_business.l_shape:=-1  // Shape for all
-		$vJ_business.t_OfficialComponents:=""
+		$vJ_business.t_4Dcorner:=""
 		//$vJ_business.t_github:=""
 	End if 
 	$vJ_app_widgets:=app__storage_widgets()

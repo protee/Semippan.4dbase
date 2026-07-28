@@ -28,7 +28,6 @@ End if
 // ***** Startup screen demo
 // *
 $vT_form:="m_start_screen"
-//$vL_form:=Plain form window
 $vL_form:=Plain form window:K39:10
 $vL_refwin:=Open form window:C675($vT_form; $vL_form; On the left:K39:2; At the top:K39:5)
 $vJ_form:=New object:C1471

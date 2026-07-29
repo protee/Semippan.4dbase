@@ -144,24 +144,23 @@ Function _resize()
 		$idx+=1
 	End for each 
 	
-	$vJ_biz:=$cE_ZEN_DASHBOARD.j_biz
+	$vJ_business:=$cE_ZEN_DASHBOARD.j_biz
 	$vC_at_tag:=New collection:C1472()
 	$vC_at_tag.push("shape"; "display_shape")
 	For each ($vT_tag; $vC_at_tag)
 		$vJ_woc_widget:=OBJECT Get value:C1743("woc_"+$vT_tag)
-		$vJ_woc_widget.bind_to("l_"+$vT_tag; $vJ_biz)
+		$vJ_woc_widget.bind_to("l_"+$vT_tag; $vJ_business)
 		$vJ_woc_widget.l_mode:=3  // Glyphs&Shapes
 		$vJ_woc_widget.l_colors:=0xAA021032  // [swo:33] – [swo:50]
 		$vJ_woc_widget.resize()
 	End for each 
 	
 	
-	$vJ_biz:=$cE_ZEN_DASHBOARD.j_biz
 	$vC_at_tag:=New collection:C1472()
 	$vC_at_tag.push("4Dcorner")
 	For each ($vT_tag; $vC_at_tag)
 		$vJ_sem_widget:=OBJECT Get value:C1743("sem_"+$vT_tag)
-		$vJ_sem_widget.bind_to("t_"+$vT_tag; $vJ_biz)
+		$vJ_sem_widget.bind_to("t_"+$vT_tag; $vJ_business)
 		$vJ_sem_widget.resize()
 	End for each 
 	// *

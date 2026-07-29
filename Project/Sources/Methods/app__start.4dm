@@ -41,6 +41,7 @@ If ($cE_zen_users#Null:C1517)
 	If (Not:C34($is_developer))
 		SET ABOUT:C316(zen_get_localized(k_rsct_menu; "about"); "Z_about")
 	End if 
+	wox_process_delay(10)
 	$vT_startup_screen:=zen__storage_prefs().t_startup_screen
 	CALL WORKER:C1389($vT_startup_screen; "zenh__worker")
 	

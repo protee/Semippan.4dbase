@@ -96,7 +96,7 @@ Function palette_get($is_record : Boolean)->$vJ_palette : Object
 	
 	//$vJ_palette.t_font_face:="Arial"
 	$vJ_palette.l_font_color:=k_MD_white
-	$vJ_palette.l_font_size:=12
+	$vJ_palette.l_font_size:=10
 	$vJ_palette.l_font_style:=Bold:K14:2
 	$vJ_palette.l_centered:=0
 	
@@ -213,8 +213,8 @@ Function _menu_modules($vC_aj_palette : Collection; $vt_path_icn : Text)
 			$vL_colors:=woc_sp_colors_from_sf($vL_color; 0)
 		End if 
 		$vJ_extra_btn.l_colors:=$vL_colors  // -> add circle and line
-		$vJ_extra_btn.r_font_size:=1.5
-		$vJ_extra_btn.l_font_style:=Bold:K14:2+Italic:K14:3
+		$vJ_extra_btn.r_font_size:=1.7
+		$vJ_extra_btn.l_font_style:=Italic:K14:3
 		$vJ_extra_btn.t_menu:=$vT_label
 		$vJ_extra_btn.fu_method:=Formula:C1597($vJ_this._modules($1; $2))
 		$vL_table_colors:=This:C1470._is_table_color ? $vL_colors : 0

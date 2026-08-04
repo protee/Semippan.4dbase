@@ -12,7 +12,7 @@ $vL_TEMPLATES_main:=$vJ_TEMPLATES_dcox.l_main
 
 // DCOX -> separated, or H | V, for LB or output
 $vC_al_colors:=New collection:C1472()
-$vC_at_bind:=sem_get_at_dcox()
+$vC_at_bind:=woc_dcox_at_get()
 $idx:=0
 For each ($vT_bind; $vC_at_bind)
 	$is_visible:=$idx=0 || $is_btn

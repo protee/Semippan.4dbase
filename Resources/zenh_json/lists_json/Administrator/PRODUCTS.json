@@ -409,5 +409,6 @@
 	"is_ogboxes": true,
 	"l_hpadding": 2,
 	"l_vpadding": 2,
-	"l_vPrevious": 19
+	"l_vPrevious": 19,
+	"t_extras": "PRODUCTS_EXTRAS"
 }

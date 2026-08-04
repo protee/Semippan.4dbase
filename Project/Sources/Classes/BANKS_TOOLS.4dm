@@ -163,7 +163,7 @@ Function _show_on_disk_menu($vT_prefix : Text)->$vT_refMenu : Text
 		//If ($vL_id=$vL_id_current)
 		//SET MENU ITEM MARK($vT_refMenu; -1; Char(18))
 		//DISABLE MENU ITEM($vT_refMenu; -1)
-		//End if 
+		//End if
 		If ($is_externalPath)
 			SET MENU ITEM STYLE:C425($vT_refMenu; -1; Bold:K14:2)
 		End if 
@@ -438,10 +438,10 @@ Function _export_menuBtn()
 				$cE_TEMPLATES:=$cE_MEDIA.MEDIA_TEMPLATES
 				If ($cE_TEMPLATES#Null:C1517)
 					$vJ_dcox:=$cE_TEMPLATES.j_dcox
-					$vC_al_colors:=sem_get_dcox_colors($vJ_dcox; $vC_al_colors)
+					$vC_al_colors:=woc_dcox_al_colors_get($vJ_dcox; $vC_al_colors)
 				End if 
 				$vJ_dcox:=$cE_MEDIA.j_dcox
-				$vC_al_colors:=sem_get_dcox_colors($vJ_dcox; $vC_al_colors)
+				$vC_al_colors:=woc_dcox_al_colors_get($vJ_dcox; $vC_al_colors)
 			End if 
 			$vL_colors:=$vC_al_colors[0]
 			woc_sp_colors_to_sf($vL_colors; ->$vL_stroke; ->$vL_fill)

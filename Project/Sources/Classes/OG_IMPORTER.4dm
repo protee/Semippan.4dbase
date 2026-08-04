@@ -343,7 +343,7 @@ Function templates_record($vJ_record : Object; $vJ_meta : Object)
 	$vJ_record.j_dcox:=$vJ_value
 	$vJ_value.l_main:=$vJ_record.colors
 	$vL_enablers:=$vJ_record.enablers
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	For each ($vT_bind; $vC_at_bind)
 		$vT_bind1:=Uppercase:C13(Substring:C12($vT_bind; 1; 1))+Substring:C12($vT_bind; 2)
 		$vJ_bind:=New object:C1471()
@@ -370,7 +370,7 @@ Function colors_record($vJ_record : Object; $vJ_meta : Object)
 	$vJ_value:=New object:C1471()
 	$vJ_record.j_dcox:=$vJ_value
 	$vL_enablers:=$vJ_record.enablers
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	For each ($vT_bind; $vC_at_bind)
 		$vT_bind1:=Uppercase:C13(Substring:C12($vT_bind; 1; 1))+Substring:C12($vT_bind; 2)
 		$vJ_bind:=New object:C1471()
@@ -394,7 +394,7 @@ Function packs_colors_record($vJ_record : Object; $vJ_meta : Object)
 	$vJ_value:=New object:C1471()
 	$vJ_record.j_dcox:=$vJ_value
 	$vL_enablers:=$vJ_record.enablers
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	For each ($vT_bind; $vC_at_bind)
 		$vT_bind1:=Uppercase:C13(Substring:C12($vT_bind; 1; 1))+Substring:C12($vT_bind; 2)
 		$vJ_bind:=New object:C1471()
@@ -504,7 +504,7 @@ Function sets_record($vJ_record : Object; $vJ_meta : Object)
 	$vJ_dcox:=New object:C1471()
 	$vJ_record.j_dcox:=$vJ_dcox
 	$vJ_dcox.l_main:=$vJ_record.colorsMain
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	For each ($vT_bind; $vC_at_bind)
 		$vT_bind1:=Uppercase:C13(Substring:C12($vT_bind; 1; 1))+Substring:C12($vT_bind; 2)
 		$vJ_bind:=New object:C1471()
@@ -548,13 +548,13 @@ Function media_record($vJ_record : Object; $vJ_meta : Object)
 	
 	//If ($vJ_record.ID=7707)
 	//TRACE
-	//End if 
+	//End if
 	$vJ_value:=New object:C1471()
 	$vJ_record.j_dcox:=$vJ_value
 	$vJ_value.l_main:=$vJ_record.colorsMain
 	$is_specific:=$vJ_record.isSpecificBkg
 	$vL_enablers:=$is_specific ? $vJ_record.enablers : 0
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	For each ($vT_bind; $vC_at_bind)
 		$vT_bind1:=Uppercase:C13(Substring:C12($vT_bind; 1; 1))+Substring:C12($vT_bind; 2)
 		$vJ_bind:=New object:C1471()
@@ -687,10 +687,10 @@ Function import_table($c4Fo_export : 4D:C1709.Folder; $vT_table : Text; $vJ_tabl
 						//If ($vT_field_name="WParea")
 						//If ($vT_field_value#"")
 						//$c4E_entity[$vT_property]:=WP Import document($c4Fo_export.file($vT_WParea_folder+"/"+$vT_field_value+".4wp").platformPath)
-						//End if 
-						//Else 
+						//End if
+						//Else
 						$c4E_entity[$vT_property]:=$vJ_record[$vT_property]
-						//End if 
+						//End if
 					Else 
 						$c4E_entity[$vT_property]:=$vJ_record[$vT_property]
 				End case 
@@ -723,7 +723,7 @@ Function meta_calculate($c4E_entity : 4D:C1709.Entity; $vJ_record : Object)->$vJ
 	//$vC_at_meta_fields:=This.get_at_meta_fields()
 	//For each ($vT_property; $vC_at_meta_fields)
 	//OB REMOVE($vJ_record; $vT_property)
-	//End for each 
+	//End for each
 	
 	// integrate all key_@ in meta
 	// And remove in vJ_records
@@ -924,7 +924,7 @@ Function _do_it_products_colors()->$isOk : Boolean
 						$vJ_value:=New object:C1471()
 						$cE_TEMPLATES.j_dcox:=$vJ_value
 						$vJ_value.l_main:=$vL_colors
-						$vC_at_bind:=sem_get_at_dcox()
+						$vC_at_bind:=woc_dcox_at_get()
 						$idx:=0
 						For each ($vT_bind; $vC_at_bind)
 							$vJ_bind:=New object:C1471()

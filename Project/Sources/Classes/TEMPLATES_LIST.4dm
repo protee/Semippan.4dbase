@@ -145,7 +145,7 @@ Function lb_dcox_img($cE_TEMPLATES : cs:C1710.TEMPLATESEntity)->$vO_picture : Pi
 	$vL_colors_in:=$cE_TEMPLATES.colors_in
 	$vJ_dcox:=$cE_TEMPLATES.j_dcox
 	$vL_colors_main:=$vJ_dcox.l_main
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$vJ_bind:=$vJ_dcox["j_"+$vT_bind]

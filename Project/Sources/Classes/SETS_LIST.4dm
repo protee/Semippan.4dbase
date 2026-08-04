@@ -21,7 +21,7 @@ Function lb_meta_info($c4E_entity : 4D:C1709.Entity)->$vJ_meta : Object
 	//$vL_colors:=$c4E_entity.colors
 	//If ($vL_colors=0)
 	//$vL_colors:=$c4E_entity.FRAGMENTS_ORWELLS.colors
-	//End if 
+	//End if
 	//woc_sp_colors_to_html($vL_colors; ->$vT_color_stroke; ->$vT_color_fill; True)
 	//$vJ_meta.stroke:=$vT_color_stroke
 	//$vJ_meta.fill:=$vT_color_fill
@@ -87,7 +87,7 @@ Function lb_dcox_img($cE_SETS : cs:C1710.SETSEntity)->$vO_picture : Picture
 	$vL_colors_in:=$vJ_DTO.l_colors_in
 	$vJ_dcox:=$cE_SETS.j_dcox
 	$vL_colors_main:=$vJ_dcox.l_main
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$cE_TEMPLATES:=$cE_SETS.SETS_TEMPLATES
@@ -136,6 +136,6 @@ Function lb_dcox_img($cE_SETS : cs:C1710.SETSEntity)->$vO_picture : Picture
 	//$vJ_widget.l_colors:=$vL_colors_out
 	//$vJ_widget.redraw()
 	//$idx+=1
-	//End for each 
+	//End for each
 	
 	

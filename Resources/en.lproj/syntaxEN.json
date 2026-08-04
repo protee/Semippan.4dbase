@@ -174,6 +174,26 @@
 				"Summary": ""
 			}
 		},
+		"COMBINATIONS_RECORD": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"KAVIYAM_LIST": {
+			"new()": {
+				"Syntax": "**.new**( *vT_LB* : Text )",
+				"Params": [
+					[
+						"vT_LB",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
 		"ZENH_PALETTE": {
 			"new()": {
 				"Syntax": "**.new**()",
@@ -316,13 +336,6 @@
 				"Summary": ""
 			}
 		},
-		"sem_veda": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
-				"Summary": ""
-			}
-		},
 		"PRODUCTS_FILTERS": {
 			"new()": {
 				"Syntax": "**.new**( *vT_table* : Text; *vL_table* : Integer; *is_local* : Boolean )",
@@ -346,23 +359,10 @@
 				"Summary": ""
 			}
 		},
-		"COMBINATIONS_RECORD": {
+		"sem_veda": {
 			"new()": {
 				"Syntax": "**.new**()",
 				"Params": [],
-				"Summary": ""
-			}
-		},
-		"KAVIYAM_LIST": {
-			"new()": {
-				"Syntax": "**.new**( *vT_LB* : Text )",
-				"Params": [
-					[
-						"vT_LB",
-						"Text",
-						"->"
-					]
-				],
 				"Summary": ""
 			}
 		},
@@ -380,6 +380,26 @@
 				"Summary": ""
 			}
 		},
+		"PRODUCTS_EXTRAS": {
+			"new()": {
+				"Syntax": "**.new**( *vL_winRef* : Integer )",
+				"Params": [
+					[
+						"vL_winRef",
+						"Integer",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"sem_options": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
 		"TEMPLATES_RECORD": {
 			"new()": {
 				"Syntax": "**.new**()",
@@ -391,19 +411,6 @@
 			"new()": {
 				"Syntax": "**.new**()",
 				"Params": [],
-				"Summary": ""
-			}
-		},
-		"CATEGORIES_LIST": {
-			"new()": {
-				"Syntax": "**.new**( *vT_LB* : Text )",
-				"Params": [
-					[
-						"vT_LB",
-						"Text",
-						"->"
-					]
-				],
 				"Summary": ""
 			}
 		},
@@ -588,6 +595,19 @@
 				"Summary": ""
 			}
 		},
+		"CATEGORIES_LIST": {
+			"new()": {
+				"Syntax": "**.new**( *vT_LB* : Text )",
+				"Params": [
+					[
+						"vT_LB",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
 		"PICTURES_FILTERS": {
 			"new()": {
 				"Syntax": "**.new**( *vT_table* : Text; *vL_table* : Integer; *is_local* : Boolean )",
@@ -671,13 +691,6 @@
 						"->"
 					]
 				],
-				"Summary": ""
-			}
-		},
-		"sem_options": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
 				"Summary": ""
 			}
 		},
@@ -1684,6 +1697,91 @@
 			"Summary": ""
 		}
 	},
+	"COMBINATIONS_RECORD": {
+		"combinations_redraw()": {
+			"Syntax": "**.combinations_redraw**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"do_touched()": {
+			"Syntax": "**.do_touched**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"record_checkout()": {
+			"Syntax": "**.record_checkout**()->isOk : Boolean",
+			"Params": [
+				[
+					"isOk",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"record_touched()": {
+			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
+			"Params": [
+				[
+					"c4E_record",
+					"4D.Entity",
+					"->"
+				],
+				[
+					"is_touched",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"form_events()": {
+			"Syntax": "**.form_events**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"record_load_upd()": {
+			"Syntax": "**.record_load_upd**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "ZEN__RECORD"
+	},
+	"KAVIYAM_LIST": {
+		"lb_meta_info()": {
+			"Syntax": "**.lb_meta_info**( *cE_KAVIYAM* : cs.sem.KAVIYAMEntity )->vJ_meta : Object",
+			"Params": [
+				[
+					"cE_KAVIYAM",
+					"cs.sem.KAVIYAMEntity",
+					"->"
+				],
+				[
+					"vJ_meta",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_initialize()": {
+			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
+			"Params": [
+				[
+					"vJ_data",
+					"Object",
+					"->"
+				],
+				[
+					"is_local",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "ZEN__TABLES_LIST"
+	},
 	"ZENH_PALETTE": {
 		"palette_get()": {
 			"Syntax": "**.palette_get**( *is_record* : Boolean )->vJ_palette : Object",
@@ -2523,24 +2621,6 @@
 	"sem_text": {
 		"_inheritedFrom_": "ZEN__WIDGETS"
 	},
-	"sem_veda": {
-		"cES_SLOKAS": {
-			"Syntax": "cES_SLOKAS : 4D.EntitySelection"
-		},
-		"j_links": {
-			"Syntax": "j_links : Object"
-		},
-		"is_contract": {
-			"Syntax": "is_contract : Boolean"
-		},
-		"is_editing": {
-			"Syntax": "is_editing : Boolean"
-		},
-		"l_value": {
-			"Syntax": "l_value : Integer"
-		},
-		"_inheritedFrom_": "ZEN__WIDGETS"
-	},
 	"PRODUCTS_FILTERS": {
 		"init_search()": {
 			"Syntax": "**.init_search**()->vC_aj_filters : Collection",
@@ -2571,90 +2651,23 @@
 		},
 		"_inheritedFrom_": "ZENH_TABLES_FILTERS"
 	},
-	"COMBINATIONS_RECORD": {
-		"combinations_redraw()": {
-			"Syntax": "**.combinations_redraw**()",
-			"Params": [],
-			"Summary": ""
+	"sem_veda": {
+		"cES_SLOKAS": {
+			"Syntax": "cES_SLOKAS : 4D.EntitySelection"
 		},
-		"do_touched()": {
-			"Syntax": "**.do_touched**()",
-			"Params": [],
-			"Summary": ""
+		"j_links": {
+			"Syntax": "j_links : Object"
 		},
-		"record_checkout()": {
-			"Syntax": "**.record_checkout**()->isOk : Boolean",
-			"Params": [
-				[
-					"isOk",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
+		"is_contract": {
+			"Syntax": "is_contract : Boolean"
 		},
-		"record_touched()": {
-			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
-			"Params": [
-				[
-					"c4E_record",
-					"4D.Entity",
-					"->"
-				],
-				[
-					"is_touched",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
+		"is_editing": {
+			"Syntax": "is_editing : Boolean"
 		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
-			"Params": [],
-			"Summary": ""
+		"l_value": {
+			"Syntax": "l_value : Integer"
 		},
-		"record_load_upd()": {
-			"Syntax": "**.record_load_upd**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "ZEN__RECORD"
-	},
-	"KAVIYAM_LIST": {
-		"lb_meta_info()": {
-			"Syntax": "**.lb_meta_info**( *cE_KAVIYAM* : cs.sem.KAVIYAMEntity )->vJ_meta : Object",
-			"Params": [
-				[
-					"cE_KAVIYAM",
-					"cs.sem.KAVIYAMEntity",
-					"->"
-				],
-				[
-					"vJ_meta",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_initialize()": {
-			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
-			"Params": [
-				[
-					"vJ_data",
-					"Object",
-					"->"
-				],
-				[
-					"is_local",
-					"Boolean",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "ZEN__TABLES_LIST"
+		"_inheritedFrom_": "ZEN__WIDGETS"
 	},
 	"PACKS_RECORD": {
 		"form_events()": {
@@ -2722,6 +2735,59 @@
 			"Params": [],
 			"Summary": ""
 		}
+	},
+	"PRODUCTS_EXTRAS": {
+		"extras_mng()": {
+			"Syntax": "**.extras_mng**( *vT_table* : Text; *vT_menu* : Text; *c4ES_selection_in* : 4D.EntitySelection; *c4ES_selected* : 4D.EntitySelection; *is_local* : Boolean )->c4ES_selection : 4D.EntitySelection",
+			"Params": [
+				[
+					"vT_table",
+					"Text",
+					"->"
+				],
+				[
+					"vT_menu",
+					"Text",
+					"->"
+				],
+				[
+					"c4ES_selection_in",
+					"4D.EntitySelection",
+					"->"
+				],
+				[
+					"c4ES_selected",
+					"4D.EntitySelection",
+					"->"
+				],
+				[
+					"is_local",
+					"Boolean",
+					"->"
+				],
+				[
+					"c4ES_selection",
+					"4D.EntitySelection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get_aj_extra_btns()": {
+			"Syntax": "**.get_aj_extra_btns**( *vC_aj_extra_btns* : Collection )",
+			"Params": [
+				[
+					"vC_aj_extra_btns",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "ZENH_EXTRAS"
+	},
+	"sem_options": {
+		"_inheritedFrom_": "ZEN__WIDGETS"
 	},
 	"TEMPLATES_RECORD": {
 		"do_touched()": {
@@ -2867,89 +2933,6 @@
 		"j_registered": {
 			"Syntax": "j_registered : Object"
 		}
-	},
-	"CATEGORIES_LIST": {
-		"lb_active_img()": {
-			"Syntax": "**.lb_active_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
-			"Params": [
-				[
-					"cE_categories",
-					"cs.sem.CATEGORIESEntity",
-					"->"
-				],
-				[
-					"vO_img",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_colors_img()": {
-			"Syntax": "**.lb_colors_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
-			"Params": [
-				[
-					"cE_categories",
-					"cs.sem.CATEGORIESEntity",
-					"->"
-				],
-				[
-					"vO_img",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_picts_count()": {
-			"Syntax": "**.lb_picts_count**( *cE_categories* : cs.sem.CATEGORIESEntity )->vL_count : Integer",
-			"Params": [
-				[
-					"cE_categories",
-					"cs.sem.CATEGORIESEntity",
-					"->"
-				],
-				[
-					"vL_count",
-					"Integer",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_meta_info()": {
-			"Syntax": "**.lb_meta_info**( *c4E_entity* : 4D.Entity )->vJ_meta : Object",
-			"Params": [
-				[
-					"c4E_entity",
-					"4D.Entity",
-					"->"
-				],
-				[
-					"vJ_meta",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_initialize()": {
-			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
-			"Params": [
-				[
-					"vJ_data",
-					"Object",
-					"->"
-				],
-				[
-					"is_local",
-					"Boolean",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "ZEN__TABLES_LIST"
 	},
 	"BANKS_LIST": {
 		"lb_initialize()": {
@@ -3188,6 +3171,11 @@
 			"Params": [],
 			"Summary": ""
 		},
+		"form_events()": {
+			"Syntax": "**.form_events**()",
+			"Params": [],
+			"Summary": ""
+		},
 		"do_KAVIYAM_redraw()": {
 			"Syntax": "**.do_KAVIYAM_redraw**()",
 			"Params": [],
@@ -3236,8 +3224,8 @@
 			"Params": [],
 			"Summary": ""
 		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
+		"do_square()": {
+			"Syntax": "**.do_square**()",
 			"Params": [],
 			"Summary": ""
 		},
@@ -4131,6 +4119,89 @@
 		},
 		"_inheritedFrom_": "ZEN__TABLES_LIST"
 	},
+	"CATEGORIES_LIST": {
+		"lb_active_img()": {
+			"Syntax": "**.lb_active_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
+			"Params": [
+				[
+					"cE_categories",
+					"cs.sem.CATEGORIESEntity",
+					"->"
+				],
+				[
+					"vO_img",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_colors_img()": {
+			"Syntax": "**.lb_colors_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
+			"Params": [
+				[
+					"cE_categories",
+					"cs.sem.CATEGORIESEntity",
+					"->"
+				],
+				[
+					"vO_img",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_picts_count()": {
+			"Syntax": "**.lb_picts_count**( *cE_categories* : cs.sem.CATEGORIESEntity )->vL_count : Integer",
+			"Params": [
+				[
+					"cE_categories",
+					"cs.sem.CATEGORIESEntity",
+					"->"
+				],
+				[
+					"vL_count",
+					"Integer",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_meta_info()": {
+			"Syntax": "**.lb_meta_info**( *c4E_entity* : 4D.Entity )->vJ_meta : Object",
+			"Params": [
+				[
+					"c4E_entity",
+					"4D.Entity",
+					"->"
+				],
+				[
+					"vJ_meta",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_initialize()": {
+			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
+			"Params": [
+				[
+					"vJ_data",
+					"Object",
+					"->"
+				],
+				[
+					"is_local",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "ZEN__TABLES_LIST"
+	},
 	"PICTURES_FILTERS": {
 		"init_search()": {
 			"Syntax": "**.init_search**()->vC_aj_filters : Collection",
@@ -4299,9 +4370,6 @@
 			"Summary": ""
 		},
 		"_inheritedFrom_": "ZENH_TABLES_FILTERS"
-	},
-	"sem_options": {
-		"_inheritedFrom_": "ZEN__WIDGETS"
 	},
 	"_test_png": {
 		"woc_sources_upd()": {

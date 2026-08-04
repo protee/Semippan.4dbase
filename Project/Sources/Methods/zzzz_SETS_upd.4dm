@@ -8,7 +8,7 @@ var $vJ_picture : Object
 var $vT_bind; $vT_bind1; $vT_property : Text
 
 If (waz_io_confirm_popup("ARE YOU SURE?"))
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	
 	$idx:=0
 	$cES_SETS:=ds:C1482.SETS.all()

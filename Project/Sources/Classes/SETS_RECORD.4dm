@@ -24,8 +24,8 @@ Function record_load_upd()
 	//$vJ_bind.l_add_stroke:=0
 	//$vJ_bind.l_fill:=0
 	//$vJ_bind.l_add_fill:=0
-	//End for each 
-	//End if 
+	//End for each
+	//End if
 	This:C1470.redraw()
 	
 	
@@ -69,12 +69,12 @@ Function form_events()
 			
 			
 		: ($vL_event_code=On Clicked:K2:4)
-			//Case of 
+			//Case of
 			//: ($vT_objectName="bt_orwells_rw")
 			
 			//If (Right click) && (Form.is_editing)
 			//This._btn_logo()
-			//End if 
+			//End if
 			
 			//: ($vT_objectName="bt_partner")
 			//This.partner_choose()
@@ -82,7 +82,7 @@ Function form_events()
 			//: ($vT_objectName="bt_print")
 			//This.print()
 			
-			//End case 
+			//End case
 			
 			
 			
@@ -126,7 +126,7 @@ Function _get_colors1($cE_SETS : cs:C1710.SETSEntity)->$vC_al_colors1 : Collecti
 	$is_btn:=$cE_SETS.type>0
 	$cE_TEMPLATES:=$cE_SETS.SETS_TEMPLATES
 	$vJ_dcox:=$cE_TEMPLATES.j_dcox
-	$vC_al_colors1:=sem_get_dcox_colors_first($vJ_dcox; $is_btn; $vL_colors_in)
+	$vC_al_colors1:=woc_dcox_al_colors_init($vJ_dcox; $is_btn; $vL_colors_in)
 	Form:C1466.al_colors1:=$vC_al_colors1
 	
 	
@@ -135,7 +135,7 @@ Function _get_colors($cE_SETS : cs:C1710.SETSEntity; $vC_al_colors_in : Collecti
 	
 	$vC_al_colors_in:=$vC_al_colors_in#Null:C1517 ? $vC_al_colors_in : Form:C1466.al_colors1
 	$vJ_dcox:=$cE_SETS.j_dcox
-	$vC_al_colors:=sem_get_dcox_colors($vJ_dcox; $vC_al_colors_in)
+	$vC_al_colors:=woc_dcox_al_colors_get($vJ_dcox; $vC_al_colors_in)
 	Form:C1466.al_colors:=$vC_al_colors
 	
 	
@@ -175,7 +175,7 @@ Function redraw_colors1($vC_al_colors1 : Collection)
 	
 	$vC_al_colors1:=$vC_al_colors1#Null:C1517 ? $vC_al_colors1 : Form:C1466.al_colors1
 	$tt:=$vC_al_colors1.length
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$vT_widget:="woc_"+$vT_bind+"1"
@@ -204,7 +204,7 @@ Function redraw_colors($vC_al_colors : Collection)
 	
 	$vC_al_colors:=$vC_al_colors#Null:C1517 ? $vC_al_colors : Form:C1466.al_colors
 	$tt:=$vC_al_colors.length
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$vT_widget:="woc_"+$vT_bind

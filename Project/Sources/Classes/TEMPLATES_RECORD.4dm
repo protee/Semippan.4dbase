@@ -19,7 +19,7 @@ Function record_load_upd()
 		$cE_TEMPLATES:=Form:C1466.c4E
 		$vJ_value:=$cE_TEMPLATES.j_dcox  // Get existing object
 		$vJ_value.l_main:=0xFEF5
-		$vC_at_bind:=sem_get_at_dcox()
+		$vC_at_bind:=woc_dcox_at_get()
 		For each ($vT_bind; $vC_at_bind)
 			$vJ_bind:=New object:C1471()
 			$vJ_value["j_"+$vT_bind]:=$vJ_bind
@@ -146,7 +146,7 @@ Function redraw_pictures()
 	$vL_colors_main:=$vJ_value.l_main
 	$vL_rxy:=10
 	$vR_coef:=0.9
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$vT_widget:="sets_picture_"+$vT_bind

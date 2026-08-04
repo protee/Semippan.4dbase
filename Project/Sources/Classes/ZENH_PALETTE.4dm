@@ -2,19 +2,22 @@ property _is_table_color; _is_infos; _is_dots : Boolean
 
 
 Class constructor
-	This:C1470._is_table_color:=False:C215
+	This:C1470._is_table_color:=True:C214
 	This:C1470._is_infos:=True:C214
 	This:C1470._is_dots:=True:C214
 	
 	
 Function palette_do($is_record : Boolean)->$isOk : Boolean
 	var $cs_ZENH_INFOS : cs:C1710.ZENH_INFOS
-	var $vJ_palette : Object
+	var $vJ_palette_menu : Object
+	var $vV_answer : Variant
 	If (Windows Ctrl down:C562) || (Macintosh control down:C544) || (Macintosh command down:C546) || (Right click:C712)
 		$cs_ZENH_INFOS:=cs:C1710.ZENH_INFOS.new($is_record)
 	Else 
-		$vJ_palette:=This:C1470.palette_get($is_record)
-		$isOk:=waz_io_palette($vJ_palette)
+		$vJ_palette_menu:=This:C1470.palette_menu_get($is_record)
+		//$isOk:=waz_io_palette($vJ_palette)
+		$vV_answer:=waz_io_palette($vJ_palette_menu)
+		$isOk:=$vV_answer#Null:C1517
 	End if 
 	
 	
@@ -86,66 +89,64 @@ Function _modules($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 	// *****
 	
 	
-Function palette_get($is_record : Boolean)->$vJ_palette : Object
+Function io_palette_get()->$vJ_io_palette : Object
 	var $vJ_pattern : Object
 	var $vL_curve : Integer
-	$vJ_palette:=New object:C1471
-	$vJ_palette.is_icn:=True:C214  // Mode icons
-	$vJ_palette.l_btn_wh:=30
-	$vJ_palette.l_padding:=10
-	$vJ_palette.r_dot_coef:=0.25
+	$vJ_io_palette:=New object:C1471
+	$vJ_io_palette.r_scale:=1.6  //1.8
+	$vJ_io_palette.l_padding:=10
+	$vJ_io_palette.r_angle_start:=-Pi:K30:1  ///3*2
+	$vJ_io_palette.r_angle_end:=Pi:K30:1/2
 	
-	//$vJ_palette.t_font_face:="Arial"
-	$vJ_palette.l_font_color:=k_MD_white
-	$vJ_palette.l_font_size:=10
-	$vJ_palette.l_font_style:=Bold:K14:2
-	$vJ_palette.l_centered:=0
+	//$vJ_io_palette.t_font_face:="Arial"
+	$vJ_io_palette.l_font_color:=0x0A00000A
+	$vJ_io_palette.l_font_size:=11
+	$vJ_io_palette.r_font_wh_ratio:=0.55
+	$vJ_io_palette.l_font_style:=0  //Bold
+	$vJ_io_palette.l_centered:=0
+	$vJ_io_palette.r_dot_coef:=0.25
 	
-	$vJ_palette.r_angle_start:=-Pi:K30:1  ///3*2
-	$vJ_palette.r_angle_end:=Pi:K30:1/2
-	//$vJ_palette.r_angle_start:=0
-	//$vJ_palette.r_angle_end:=-Pi/2
-	
-	$vJ_palette.r_scale:=1.4  //1.8
-	//$vJ_palette.l_centered:=-1  //
-	$vJ_palette.l_timer:=1
-	$vJ_palette.r_increment:=0.06
-	//$vL_curve:=wox_math_curve_idFromName("springPhysics")
-	//$vL_curve:=wox_math_curve_idFromName("elasticOut")
+	//$vJ_io_palette.l_icn_wh:=24
+	$vJ_io_palette.r_increment:=0.06
+	$vJ_io_palette.l_timer:=1
 	$vL_curve:=wox_math_curve_idFromName("expoIn")
-	$vJ_palette.l_curve:=$vL_curve
-	//$vJ_palette.is_close:=False
-	// *
-	// *****
+	$vJ_io_palette.l_curve:=$vL_curve
+	$vJ_io_palette.is_close:=True:C214
 	
 	// ***** Pattern object
 	// *
 	$vJ_pattern:=New object:C1471
-	$vJ_palette.j_pattern:=$vJ_pattern
+	$vJ_io_palette.j_pattern:=$vJ_pattern
 	$vJ_pattern.l_pattern:=23
 	$vJ_pattern.l_colors:=0xAA004005  // [swo:4] – [swo:5]
 	$vJ_pattern.l_rxy:=18
 	$vJ_pattern.l_stroke:=4
 	$vJ_pattern.l_opacity:=85
-	This:C1470.palette_build($vJ_palette)
 	// *
 	// *****
 	
 	
-Function palette_build($vJ_palette : Object)
+Function palette_menu_get($is_record : Boolean)->$vJ_palette_menu : Object
 	// j_extra_btn{t_label; t_btn_path ; t_menu ; fu_method ; {aj_menus[]}}
 	// aj_menus[] : { t_label ; t_pict ; t_menu }
 	// if no aj_menus -> .fu_method at root
-	var $vC_aj_palette : Collection
+	var $vC_aj_items : Collection
 	var $vJ_prefs : Object
 	var $vt_path_product; $vT_path_icons; $vt_path_tables; $vT_base_name : Text
 	
-	//$vt_path_btn:="tables/btn_"
+	$vJ_palette_menu:=New object:C1471()
+	$vJ_palette_menu.j_io_palette:=This:C1470.io_palette_get()
+	
+	//$vJ_palette_menu.fu_icon:=Formula(zen_SET_MENU_ITEM_ICON)
+	$vJ_palette_menu.fo_rsc:=Folder:C1567(fk resources folder:K87:11)
+	$vJ_palette_menu.l_icn_wh:=24
+	
+	$vC_aj_items:=New collection:C1472
+	$vJ_palette_menu.aj_items:=$vC_aj_items
+	
 	$vt_path_product:="pictures/icn_"
 	$vT_path_icons:="icons/icn_home_"
 	$vt_path_tables:="tables/icn_"
-	$vC_aj_palette:=New collection:C1472
-	$vJ_palette.aj_palette:=$vC_aj_palette
 	
 	// ***** Infos & zen_4DPop
 	// *
@@ -154,31 +155,30 @@ Function palette_build($vJ_palette : Object)
 		//This._menu_xxx($vC_aj_palette; $vt_path_tables; "zenPop"; "zen4DPop")
 		$vJ_prefs:=app__storage_prefs()
 		$vT_base_name:=$vJ_prefs.t_name+"© "+$vJ_prefs.t_version
-		$vC_aj_palette.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 1.8))
+		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 1.8))
 		//$vC_aj_palette.push(This._menu_item("zenPop"; "zen4DPop"; $vt_path_tables))
-		$vC_aj_palette.push(This:C1470._menu_item("Relations"; "relations"; $vT_path_icons))
-		$vC_aj_palette.push(This:C1470._menu_item("About"; "about"; $vT_path_icons))
-		$vC_aj_palette.push(This:C1470._menu_item("Documentation"; "doc"; $vT_path_icons))
-		
+		$vC_aj_items.push(This:C1470._menu_item("Relations"; "relations"; $vT_path_icons))
+		$vC_aj_items.push(This:C1470._menu_item("About"; "about"; $vT_path_icons))
+		$vC_aj_items.push(This:C1470._menu_item("Documentation"; "doc"; $vT_path_icons))
 	End if 
 	
 	// ***** Modules & Tables
-	// *
-	This:C1470._menu_modules($vC_aj_palette; $vt_path_tables)
+	This:C1470._menu_modules($vC_aj_items; $vt_path_tables)
 	// *
 	// *****
 	
-Function _menu_item($vT_label : Text; $vT_menu : Text; $vt_path_icn : Text; $vR_font_coef : Real)->$vJ_palette : Object
+Function _menu_item($vT_label : Text; $vT_menu : Text; $vt_path_icn : Text; $vR_font_coef : Real)->$vJ_item : Object
 	var $vJ_this : Object
 	$vJ_this:=This:C1470
-	$vJ_palette:=New object:C1471()
-	$vJ_palette.t_label:=$vT_label
-	$vJ_palette.t_menu:=$vT_menu
-	$vJ_palette.t_icn_path:=$vt_path_icn+$vT_menu
+	$vJ_item:=New object:C1471()
+	$vJ_item.t_label:=$vT_label
+	$vJ_item.t_menu:=$vT_menu
+	$vJ_item.t_icn_path:=$vt_path_icn+$vT_menu
 	If ($vR_font_coef#0)
-		$vJ_palette.r_font_size:=$vR_font_coef
+		$vJ_item.r_font_size:=$vR_font_coef
+		$vJ_item.r_width:=1/$vR_font_coef
 	End if 
-	$vJ_palette.fu_method:=Formula:C1597($vJ_this._actions($1; $2))
+	$vJ_item.fu_method:=Formula:C1597($vJ_this._actions($1; $2))
 	
 	
 	//Function _menu_xxx($vC_aj_palette : Collection; $vt_path_icn : Text; $vT_label; $vT_menu)
@@ -192,10 +192,10 @@ Function _menu_item($vT_label : Text; $vT_menu : Text; $vt_path_icn : Text; $vR_
 	
 	
 	
-Function _menu_modules($vC_aj_palette : Collection; $vt_path_icn : Text)
+Function _menu_modules($vC_aj_items : Collection; $vt_path_icn : Text)
 	var $vC_aj_TablesClass; $vC_aj_tables : Collection
 	var $idx; $vL_colors; $vL_color; $vL_table_colors : Integer
-	var $vJ_prefs; $vJ_module; $vJ_extra_btn; $vJ_this : Object
+	var $vJ_prefs; $vJ_module; $vJ_item; $vJ_this : Object
 	var $vT_refMenu_sub; $vT_label : Text
 	var $is_noDots : Boolean
 	
@@ -207,30 +207,30 @@ Function _menu_modules($vC_aj_palette : Collection; $vt_path_icn : Text)
 	For each ($vJ_module; $vC_aj_TablesClass)
 		//$vT_module:=$vJ_module.t_label
 		//$vL_color:=woc_sp_colors_to_s($vJ_module.l_colors)
-		$vJ_extra_btn:=New object:C1471()
-		$vC_aj_palette.push($vJ_extra_btn)
+		$vJ_item:=New object:C1471()
+		$vC_aj_items.push($vJ_item)
 		$vT_label:=$vJ_module.t_label
-		$vJ_extra_btn.t_label:=$vT_label
+		$vJ_item.t_label:=$vT_label
 		$vL_colors:=$vJ_module.l_colors
 		If ($is_noDots)
 			$vL_color:=woc_sp_colors_to_s($vJ_module.l_colors)
 			$vL_colors:=woc_sp_colors_from_sf($vL_color; 0)
 		End if 
-		$vJ_extra_btn.l_colors:=$vL_colors  // -> add circle and line
-		$vJ_extra_btn.r_font_size:=1.7
-		$vJ_extra_btn.l_font_style:=Italic:K14:3
-		$vJ_extra_btn.t_menu:=$vT_label
-		$vJ_extra_btn.fu_method:=Formula:C1597($vJ_this._modules($1; $2))
+		$vJ_item.l_colors:=$vL_colors  // -> add circle and line
+		$vJ_item.r_font_size:=1.5
+		$vJ_item.l_font_style:=Bold:K14:2+Italic:K14:3
+		$vJ_item.t_menu:=$vT_label
+		$vJ_item.fu_method:=Formula:C1597($vJ_this._modules($1; $2))
 		$vL_table_colors:=This:C1470._is_table_color ? $vL_colors : 0
 		$vC_aj_tables:=$vJ_module.aj_tables
-		$vT_refMenu_sub:=This:C1470._menu_tables($vC_aj_palette; $vC_aj_tables; $vt_path_icn; $vL_table_colors)
+		$vT_refMenu_sub:=This:C1470._menu_tables($vC_aj_items; $vC_aj_tables; $vt_path_icn; $vL_table_colors)
 		$idx+=1
 	End for each 
 	
 	
-Function _menu_tables($vC_aj_palette : Collection; $vC_aj_tables : Collection; $vt_path_icn : Text; $vL_colors : Integer)
+Function _menu_tables($vC_aj_items : Collection; $vC_aj_tables : Collection; $vt_path_icn : Text; $vL_colors : Integer)
 	var $vL_table : Integer
-	var $vJ_this; $vJ_tableClass; $vJ_extra_btn : Object
+	var $vJ_this; $vJ_tableClass; $vJ_item : Object
 	var $vT_table; $vT_menu : Text
 	$vJ_this:=This:C1470
 	For each ($vJ_tableClass; $vC_aj_tables)
@@ -238,13 +238,13 @@ Function _menu_tables($vC_aj_palette : Collection; $vC_aj_tables : Collection; $
 		$vL_table:=zen_get_tableNumber($vT_table)
 		If ($vL_table>0)
 			$vT_menu:=Lowercase:C14($vT_table)
-			$vJ_extra_btn:=New object:C1471
-			$vC_aj_palette.push($vJ_extra_btn)
-			$vJ_extra_btn.t_label:=$vT_table
-			$vJ_extra_btn.l_colors:=$vL_colors  // -> add circle and line
-			$vJ_extra_btn.t_menu:=$vT_menu
-			$vJ_extra_btn.t_icn_path:=$vt_path_icn+$vT_menu
-			$vJ_extra_btn.fu_method:=Formula:C1597($vJ_this._tables($1; $2))
+			$vJ_item:=New object:C1471
+			$vC_aj_items.push($vJ_item)
+			$vJ_item.t_label:=$vT_table
+			$vJ_item.l_colors:=$vL_colors  // -> add circle and line
+			$vJ_item.t_menu:=$vT_menu
+			$vJ_item.t_icn_path:=$vt_path_icn+$vT_menu
+			$vJ_item.fu_method:=Formula:C1597($vJ_this._tables($1; $2))
 		End if 
 	End for each 
 	

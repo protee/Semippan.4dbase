@@ -55,7 +55,7 @@ Function SETS_entity_save()
 		//If (Not($is_touched))
 		//$is_touched:=This.is_SETS_touched
 		//This.is_SETS_touched:=False
-		//End if 
+		//End if
 		If ($is_touched)
 			zen_entity_save($cE_SETS)
 		End if 
@@ -195,7 +195,7 @@ Function _get_colors1($cE_SETS : cs:C1710.SETSEntity)->$vC_al_colors1 : Collecti
 	$is_btn:=$cE_SETS.type>0
 	$cE_TEMPLATES:=$cE_SETS.SETS_TEMPLATES
 	$vJ_dcox:=$cE_TEMPLATES.j_dcox
-	$vC_al_colors1:=sem_get_dcox_colors_first($vJ_dcox; $is_btn; $vL_colors_in)
+	$vC_al_colors1:=woc_dcox_al_colors_init($vJ_dcox; $is_btn; $vL_colors_in)
 	Form:C1466.al_colors1:=$vC_al_colors1
 	
 	
@@ -204,7 +204,7 @@ Function _get_colors($cE_SETS : cs:C1710.SETSEntity; $vC_al_colors_in : Collecti
 	
 	$vC_al_colors_in:=$vC_al_colors_in#Null:C1517 ? $vC_al_colors_in : Form:C1466.al_colors1
 	$vJ_dcox:=$cE_SETS.j_dcox
-	$vC_al_colors:=sem_get_dcox_colors($vJ_dcox; $vC_al_colors_in)
+	$vC_al_colors:=woc_dcox_al_colors_get($vJ_dcox; $vC_al_colors_in)
 	Form:C1466.al_colors:=$vC_al_colors
 	// *
 	// *****
@@ -330,7 +330,7 @@ Function redraw_colors1($vC_al_colors1 : Collection)
 	
 	$vC_al_colors1:=$vC_al_colors1#Null:C1517 ? $vC_al_colors1 : Form:C1466.al_colors
 	$tt:=$vC_al_colors1.length
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$vT_widget:="sets_"+$vT_bind+"1"
@@ -390,7 +390,7 @@ Function redraw_colors($vC_al_colors : Collection)
 	
 	$vC_al_colors:=$vC_al_colors#Null:C1517 ? $vC_al_colors : Form:C1466.al_colors
 	$tt:=$vC_al_colors.length
-	$vC_at_bind:=sem_get_at_dcox()
+	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$vT_widget:="sets_"+$vT_bind
@@ -455,17 +455,17 @@ Function redraw_pict_dcox($cE_SETS : cs:C1710.SETSEntity)
 			$cE_TEMPLATES:=$cE_MEDIA.MEDIA_TEMPLATES
 			If ($cE_TEMPLATES#Null:C1517)
 				$vJ_dcox:=$cE_TEMPLATES.j_dcox
-				$vC_al_colors:=sem_get_dcox_colors($vJ_dcox; $vC_al_colors)
+				$vC_al_colors:=woc_dcox_al_colors_get($vJ_dcox; $vC_al_colors)
 			End if 
 			$vJ_dcox:=$cE_MEDIA.j_dcox
-			$vC_al_colors:=sem_get_dcox_colors($vJ_dcox; $vC_al_colors)
+			$vC_al_colors:=woc_dcox_al_colors_get($vJ_dcox; $vC_al_colors)
 		End if 
 		
 		$vO_img_picture:=$cE_MEDIA.isLinkedPicture ? $cE_MEDIA.MEDIA_PICTURES.picture : $cE_MEDIA.picture
 		
 		// DCOX -> separated, or H | V, for LB or output
 		$tt:=$vC_al_colors.length
-		$vC_at_bind:=sem_get_at_dcox()
+		$vC_at_bind:=woc_dcox_at_get()
 		$idx:=0
 		For each ($vT_bind; $vC_at_bind)
 			$vT_widget:="sets_picture_"+$vT_bind
@@ -522,9 +522,9 @@ Function _menuBtn_click($vJ_widget : Object)
 			//$cE_BANKS:=Form.c4E
 			//$cE_SETS:=Form.cE_SETS
 			//$cs_BANKS_menuBtn_code._export_menuBtn($cE_BANKS; $cE_SETS; $cES_MEDIA)
-			//Else 
+			//Else
 			//wox_sounds_play_beep()
-			//End if 
+			//End if
 	End case 
 	
 	

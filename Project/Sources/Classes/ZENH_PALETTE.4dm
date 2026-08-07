@@ -93,21 +93,20 @@ Function io_palette_get()->$vJ_io_palette : Object
 	var $vJ_pattern : Object
 	var $vL_curve : Integer
 	$vJ_io_palette:=New object:C1471
-	$vJ_io_palette.r_scale:=1.2
+	$vJ_io_palette.r_scale:=1.1
 	$vJ_io_palette.l_padding:=20
 	$vJ_io_palette.r_angle_start:=-Pi:K30:1  ///3*2
 	$vJ_io_palette.r_angle_end:=Pi:K30:1/2
 	
-	//$vJ_io_palette.t_font_face:="Arial"
+	$vJ_io_palette.t_font_face:=wox_font_face_default()
 	$vJ_io_palette.l_font_color:=0x0A00000A
-	$vJ_io_palette.l_font_size:=11
+	$vJ_io_palette.l_font_size:=12
 	$vJ_io_palette.r_font_wh_ratio:=0.55
 	$vJ_io_palette.l_font_style:=0  //Bold
 	$vJ_io_palette.l_centered:=0
-	$vJ_io_palette.r_dot_coef:=0.25
+	$vJ_io_palette.r_dot_coef:=0.4
 	
-	//$vJ_io_palette.l_icn_wh:=24
-	$vJ_io_palette.r_increment:=0.06
+	$vJ_io_palette.r_increment:=0.05
 	$vJ_io_palette.l_timer:=1
 	$vL_curve:=wox_math_curve_idFromName("expoIn")
 	$vJ_io_palette.l_curve:=$vL_curve
@@ -155,7 +154,7 @@ Function palette_menu_get($is_record : Boolean)->$vJ_palette_menu : Object
 		//This._menu_xxx($vC_aj_palette; $vt_path_tables; "zenPop"; "zen4DPop")
 		$vJ_prefs:=app__storage_prefs()
 		$vT_base_name:=$vJ_prefs.t_name+"© "+$vJ_prefs.t_version
-		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 1.8))
+		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 2))
 		//$vC_aj_palette.push(This._menu_item("zenPop"; "zen4DPop"; $vt_path_tables))
 		$vC_aj_items.push(This:C1470._menu_item("Relations"; "relations"; $vT_path_icons))
 		$vC_aj_items.push(This:C1470._menu_item("About"; "about"; $vT_path_icons))

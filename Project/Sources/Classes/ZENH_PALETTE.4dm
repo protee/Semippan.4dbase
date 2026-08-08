@@ -93,7 +93,7 @@ Function io_palette_get()->$vJ_io_palette : Object
 	var $vJ_pattern : Object
 	var $vL_curve : Integer
 	$vJ_io_palette:=New object:C1471
-	$vJ_io_palette.r_scale:=1.1
+	$vJ_io_palette.r_scale:=1.3
 	$vJ_io_palette.l_padding:=20
 	$vJ_io_palette.r_angle_start:=-Pi:K30:1  ///3*2
 	$vJ_io_palette.r_angle_end:=Pi:K30:1/2
@@ -106,9 +106,9 @@ Function io_palette_get()->$vJ_io_palette : Object
 	$vJ_io_palette.l_centered:=0
 	$vJ_io_palette.r_dot_coef:=0.4
 	
-	$vJ_io_palette.r_increment:=0.05
+	$vJ_io_palette.r_increment:=0.08
 	$vJ_io_palette.l_timer:=1
-	$vL_curve:=wox_math_curve_idFromName("expoIn")
+	$vL_curve:=wox_math_curve_idFromName("BackOut")
 	$vJ_io_palette.l_curve:=$vL_curve
 	$vJ_io_palette.is_close:=True:C214
 	

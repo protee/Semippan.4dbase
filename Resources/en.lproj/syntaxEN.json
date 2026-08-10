@@ -571,14 +571,8 @@
 		},
 		"ZENH_INFOS": {
 			"new()": {
-				"Syntax": "**.new**( *is_record* : Boolean )",
-				"Params": [
-					[
-						"is_record",
-						"Boolean",
-						"->"
-					]
-				],
+				"Syntax": "**.new**()",
+				"Params": [],
 				"Summary": ""
 			}
 		},
@@ -1783,8 +1777,8 @@
 		"_inheritedFrom_": "ZEN__TABLES_LIST"
 	},
 	"ZENH_PALETTE": {
-		"palette_get()": {
-			"Syntax": "**.palette_get**( *is_record* : Boolean )->vJ_palette : Object",
+		"palette_menu_get()": {
+			"Syntax": "**.palette_menu_get**( *is_record* : Boolean )->vJ_palette_menu : Object",
 			"Params": [
 				[
 					"is_record",
@@ -1792,20 +1786,20 @@
 					"->"
 				],
 				[
-					"vJ_palette",
+					"vJ_palette_menu",
 					"Object",
 					"<-"
 				]
 			],
 			"Summary": ""
 		},
-		"palette_build()": {
-			"Syntax": "**.palette_build**( *vJ_palette* : Object )",
+		"io_palette_get()": {
+			"Syntax": "**.io_palette_get**()->vJ_io_palette : Object",
 			"Params": [
 				[
-					"vJ_palette",
+					"vJ_io_palette",
 					"Object",
-					"->"
+					"<-"
 				]
 			],
 			"Summary": ""
@@ -3633,8 +3627,14 @@
 	},
 	"ZENH_HOME": {
 		"do()": {
-			"Syntax": "**.do**()",
-			"Params": [],
+			"Syntax": "**.do**()->isOk : Boolean",
+			"Params": [
+				[
+					"isOk",
+					"Boolean",
+					"<-"
+				]
+			],
 			"Summary": ""
 		}
 	},
@@ -4051,7 +4051,24 @@
 		},
 		"_inheritedFrom_": "ZEN__RECORD"
 	},
-	"ZENH_INFOS": {},
+	"ZENH_INFOS": {
+		"do_menu()": {
+			"Syntax": "**.do_menu**( *is_record* : Boolean )->isOk : Variant",
+			"Params": [
+				[
+					"is_record",
+					"Boolean",
+					"->"
+				],
+				[
+					"isOk",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	},
 	"MEDIA_LIST": {
 		"lb_preview_img()": {
 			"Syntax": "**.lb_preview_img**( *cE_MEDIA* : cs.sem.MEDIAEntity )->vO_picture : Picture",

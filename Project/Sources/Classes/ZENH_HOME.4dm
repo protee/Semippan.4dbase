@@ -2,13 +2,14 @@
 Class constructor
 	
 	
-Function do()
+Function do()->$isOk : Boolean
 	var $cs_ZENH_INFOS : cs:C1710.ZENH_INFOS
 	var $vJ_prefs : Object
 	var $vT_prefix_home; $vT_prefix_tables; $vT_refMenu; $vT_answerMenu : Text
 	
 	If (False:C215)
 		$cs_ZENH_INFOS:=cs:C1710.ZENH_INFOS.new()
+		$isOk:=$cs_ZENH_INFOS.do_menu()
 		
 	Else 
 		//$vT_refMenu:=This._menu_module(Right click)
@@ -23,8 +24,10 @@ Function do()
 		
 		$vT_answerMenu:=Dynamic pop up menu:C1006($vT_refMenu)
 		RELEASE MENU:C978($vT_refMenu)
-		This:C1470._answer($vT_answerMenu)
-		
+		$isOk:=$vT_answerMenu#""
+		If ($isOk)
+			This:C1470._answer($vT_answerMenu)
+		End if 
 	End if 
 	
 	

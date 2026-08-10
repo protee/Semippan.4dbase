@@ -1,12 +1,13 @@
 
 // Remove k_relations, z_@_clic
 
-Class constructor($is_record : Boolean)
+Class constructor()
+	
+Function do_menu($is_record : Boolean)->$isOk
 	var $vC_menu; $vC_at_answer; $vC_found : Collection
 	var $vJ_menu_answer; $vJ_prefs : Object
 	var $vT_subPath_icon; $vT_title : Text
 	var $vT_prefix; $vT_refMenu; $vT_answerMenu; $vT_action; $vT_param; $vT_param3 : Text
-	var $isOk : Boolean
 	
 	$vJ_prefs:=app__storage_prefs()
 	$vT_title:=$vJ_prefs.t_name+" "+$vJ_prefs.t_version

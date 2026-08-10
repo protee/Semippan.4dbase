@@ -6,7 +6,6 @@ Class constructor
 	This:C1470._is_infos:=True:C214
 	This:C1470._is_dots:=True:C214
 	
-	
 Function palette_do($is_record : Boolean)->$isOk : Boolean
 	var $cs_ZENH_INFOS : cs:C1710.ZENH_INFOS
 	var $vJ_palette_menu : Object
@@ -16,10 +15,13 @@ Function palette_do($is_record : Boolean)->$isOk : Boolean
 	Else 
 		$vJ_palette_menu:=This:C1470.palette_menu_get($is_record)
 		//$isOk:=waz_io_palette($vJ_palette)
+		wox_sounds_play("Glitch4")
 		$vV_answer:=waz_io_palette($vJ_palette_menu)
 		$isOk:=$vV_answer#Null:C1517
+		If (Not:C34($isOk))
+			wox_sounds_play("Drop")
+		End if 
 	End if 
-	
 	
 Function _actions($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 	// ***** Actions
@@ -96,11 +98,11 @@ Function io_palette_get()->$vJ_io_palette : Object
 	$vJ_io_palette.r_scale:=1.3
 	$vJ_io_palette.l_padding:=20
 	$vJ_io_palette.r_angle_start:=-Pi:K30:1  ///3*2
-	$vJ_io_palette.r_angle_end:=Pi:K30:1/2
+	$vJ_io_palette.r_angle_end:=0  //Pi/2
 	
-	$vJ_io_palette.t_font_face:=wox_font_face_default()
+	$vJ_io_palette.t_font_face:=wox_font_face_default("Calibri")
 	$vJ_io_palette.l_font_color:=0x0A00000A
-	$vJ_io_palette.l_font_size:=12
+	$vJ_io_palette.l_font_size:=14
 	$vJ_io_palette.r_font_wh_ratio:=0.55
 	$vJ_io_palette.l_font_style:=0  //Bold
 	$vJ_io_palette.l_centered:=0
@@ -108,7 +110,7 @@ Function io_palette_get()->$vJ_io_palette : Object
 	
 	$vJ_io_palette.r_increment:=0.08
 	$vJ_io_palette.l_timer:=1
-	$vL_curve:=wox_math_curve_idFromName("BackOut")
+	$vL_curve:=wox_math_curve_idFromName("Expo")
 	$vJ_io_palette.l_curve:=$vL_curve
 	$vJ_io_palette.is_close:=True:C214
 	

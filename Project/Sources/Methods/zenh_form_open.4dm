@@ -22,7 +22,7 @@ $vJ_form._j_params:=$vJ_form_params
 //wox_vJ_overload($vJ_form_prefs; $vJ_params.j_prefs)
 $vL_winRef:=x_window_open($vP_table; $vT_form; $vL_form; $vJ_form_params; $is_moveAtStart)
 wox_window_lock($vL_winRef)
-wox_sounds_play_list_open
+cs:C1710.wox.TUNES.me.play_list_open()
 SET WINDOW TITLE:C213($vT_title; $vL_winRef)
 
 If ($vP_table#Null:C1517)
@@ -35,5 +35,5 @@ x_get_window_wh($vL_winRef; ->$vL_width; ->$vL_height)  //; $vJ_params)
 wox_window_form_push_wh($vJ_screen_form; $vL_width; $vL_height)
 CLOSE WINDOW:C154($vL_winRef)
 wox_window_release($vL_winRef)
-wox_sounds_play_list_close
+cs:C1710.wox.TUNES.me.play_list_close()
 

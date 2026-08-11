@@ -523,7 +523,7 @@ Function _menuBtn_click($vJ_widget : Object)
 			//$cE_SETS:=Form.cE_SETS
 			//$cs_BANKS_menuBtn_code._export_menuBtn($cE_BANKS; $cE_SETS; $cES_MEDIA)
 			//Else
-			//wox_sounds_play_beep()
+			//cs.wox.TUNES.me.play_beep()
 			//End if
 	End case 
 	

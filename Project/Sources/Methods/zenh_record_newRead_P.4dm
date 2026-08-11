@@ -53,7 +53,7 @@ If (x_check_form_exists($vT_form; $vP_table))
 		$vJ_params.j_prefs:=$vJ_form_prefs
 		$vL_winRef:=x_window_open($vP_table; $vT_form; $vL_form; $vJ_form_prefs; $is_moveAtStart)
 		wox_window_lock($vL_winRef)
-		wox_sounds_play_list_open
+		cs:C1710.wox.TUNES.me.play_list_open()
 		
 		$vJ_params.l_winRef_record:=$vL_winRef
 		$is_editing:=$vJ_params.is_editing
@@ -122,10 +122,10 @@ If (x_check_form_exists($vT_form; $vP_table))
 		wox_window_form_push_wh($vJ_screen_form; $vL_width; $vL_height)
 		CLOSE WINDOW:C154($vL_winRef)
 		wox_window_release($vL_winRef)
-		wox_sounds_play_list_close
+		cs:C1710.wox.TUNES.me.play_list_close()
 	End if 
 Else 
-	wox_sounds_play_beep()
+	cs:C1710.wox.TUNES.me.play_beep()
 End if 
 POST OUTSIDE CALL:C329($vL_process_current)
 

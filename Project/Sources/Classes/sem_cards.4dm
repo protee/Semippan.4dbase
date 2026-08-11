@@ -164,7 +164,7 @@ Function _canvas_ui($vP_canvas : Pointer)
 					This:C1470._l_mouseX:=mouseX
 					This:C1470._l_mouseX_last:=-1
 				Else 
-					wox_sounds_play_edit()
+					cs:C1710.wox.TUNES.me.play_edit()
 				End if 
 				
 		End case 

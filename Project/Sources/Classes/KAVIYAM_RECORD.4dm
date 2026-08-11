@@ -230,7 +230,7 @@ Function do_copy()
 		$vT_answer+="Tagline: "+$cE_PRODUCTS.tagline+Char:C90(Carriage return:K15:38)+Char:C90(Carriage return:K15:38)
 	End for each 
 	SET TEXT TO PASTEBOARD:C523($vT_answer)
-	wox_sounds_play_tick()
+	cs:C1710.wox.TUNES.me.play_tick()
 	
 	
 Function do_square()

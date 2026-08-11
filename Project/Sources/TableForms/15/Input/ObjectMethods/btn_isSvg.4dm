@@ -1,5 +1,5 @@
 
-wox_sounds_play_beep()
+cs:C1710.wox.TUNES.me.play_beep()
 
 
 

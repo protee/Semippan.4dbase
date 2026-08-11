@@ -114,7 +114,7 @@ Function _do_PACK_PLAY($cES_PATHS : cs:C1710.PATHSSelection; $vJ_PACK_alColors :
 	End for each 
 	$vR_coef:=1
 	CALL FORM:C1391($vL_winRef; Formula:C1597($vJ_this.form_progress($1)); $vR_coef)
-	wox_sounds_play_done()
+	cs:C1710.wox.TUNES.me.play_done()
 	// *
 	// *****
 	
@@ -224,7 +224,7 @@ Function _do_BANK_PLAY($cES_PATHS : cs:C1710.PATHSSelection; $vJ_PACK_alColors :
 		End for each 
 		$vR_coef:=1
 		CALL FORM:C1391($vL_winRef; Formula:C1597($vJ_this.form_progress($1)); $vR_coef)
-		wox_sounds_play_done()
+		cs:C1710.wox.TUNES.me.play_done()
 	End if 
 	// *
 	// *****

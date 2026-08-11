@@ -314,7 +314,7 @@ Function _veda_previous()
 		$vJ_zen_kaviyam.redraw()
 		This:C1470.record_load_upd()
 	Else 
-		wox_sounds_play_edit()
+		cs:C1710.wox.TUNES.me.play_edit()
 	End if 
 	
 	
@@ -340,7 +340,7 @@ Function _veda_next()
 		$vJ_zen_kaviyam.redraw()
 		This:C1470.record_load_upd()
 	Else 
-		wox_sounds_play_edit()
+		cs:C1710.wox.TUNES.me.play_edit()
 	End if 
 	
 	
@@ -370,7 +370,7 @@ Function _previous()
 			This:C1470._l_veda_last:=$vL_value
 			This:C1470.sloka_display($vL_position)
 		Else 
-			//wox_sounds_play_edit()
+			//cs.wox.TUNES.me.play_edit()
 			This:C1470._expand()
 		End if 
 	Else 
@@ -405,7 +405,7 @@ Function _next()
 			This:C1470._l_veda_last:=$vL_value
 			This:C1470.sloka_display($vL_position)
 		Else 
-			//wox_sounds_play_edit()
+			//cs.wox.TUNES.me.play_edit()
 			This:C1470._expand()
 		End if 
 	Else 

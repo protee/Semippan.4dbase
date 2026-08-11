@@ -81,7 +81,7 @@ Function form_events()
 		: ($vL_event_code=On Clicked:K2:4)
 			Case of 
 				: ($vT_objectName="bt_test")
-					wox_sounds_play_tick()
+					cs:C1710.wox.TUNES.me.play_tick()
 					
 				: ($vT_objectName="btn_template")
 					This:C1470._btn_template()

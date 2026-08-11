@@ -401,7 +401,7 @@ Function search_form($vT_form : Text)->$isOk : Boolean
 		CLOSE WINDOW:C154($vL_winRef_record)
 		
 	Else 
-		wox_sounds_play_beep()
+		cs:C1710.wox.TUNES.me.play_beep()
 	End if 
 	// *
 	// *****

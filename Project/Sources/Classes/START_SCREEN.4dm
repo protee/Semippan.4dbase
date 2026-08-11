@@ -12,7 +12,11 @@ Function form_events($vL_event_code : Integer)
 	
 	Case of 
 		: ($vL_event_code=On Close Box:K2:21)
-			CANCEL:C270
+			If (Macintosh control down:C544 || Macintosh command down:C546)
+				CANCEL:C270
+			Else 
+				cs:C1710.wox.TUNES.me.play_glop_no()
+			End if 
 			
 		: ($vL_event_code=On Unload:K2:2)
 			KILL WORKER:C1390(Current process:C322)

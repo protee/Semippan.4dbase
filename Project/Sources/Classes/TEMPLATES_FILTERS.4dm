@@ -29,7 +29,7 @@ Function init_search()->$vC_aj_filters : Collection  // Filter's description
 	
 	
 Function _filters()
-	//wox_sounds_play_beep()
+	//cs.wox.TUNES.me.play_beep()
 	This:C1470.get_widgets()
 	CALL SUBFORM CONTAINER:C1086(k_OnDataChange)
 	

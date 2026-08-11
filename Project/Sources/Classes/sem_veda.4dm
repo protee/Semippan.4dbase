@@ -175,7 +175,7 @@ Function _canvas_ui($vP_canvas : Pointer)
 					This:C1470._redraw()
 				End if 
 			Else 
-				wox_sounds_play_edit()
+				cs:C1710.wox.TUNES.me.play_edit()
 			End if 
 		End if 
 	End if 

@@ -92,7 +92,7 @@ Function colorsFromPRO()
 		$cE_SLOKAS.colors:=$cE_PRODUCTS.colors
 		OBJECT Get value:C1743("woc_colors").redraw()
 	Else 
-		wox_sounds_play_glop_no()
+		cs:C1710.wox.TUNES.me.play_glop_no()
 	End if 
 	// *
 	// *****

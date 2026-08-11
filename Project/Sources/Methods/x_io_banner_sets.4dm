@@ -32,7 +32,7 @@ Case of
 			$is_touched:=True:C214
 			$is_display:=True:C214
 		Else 
-			wox_sounds_play_beep()
+			cs:C1710.wox.TUNES.me.play_beep()
 		End if 
 		
 End case 

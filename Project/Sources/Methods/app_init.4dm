@@ -35,7 +35,7 @@ $vT_host:="Sēmippān"
 wox_prefs_set_host_name("zenApp")
 Use ($vJ_prefs)
 	$vJ_prefs.t_name:=$vT_host
-	$vJ_prefs.t_version:="21.0.00"
+	$vJ_prefs.t_version:="21.1.00"
 	$vJ_prefs.t_app:="sem"
 	$vJ_prefs.l_make:=2  // HDI
 	$vJ_prefs.fo_rsc:=Folder:C1567(fk resources folder:K87:11)

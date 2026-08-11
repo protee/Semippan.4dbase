@@ -7,15 +7,15 @@
 		},
 		"wos_SvgWidgets": {
 			"github": "protee/wos_SvgWidgets",
-			"version": "latest"
+			"version": "~21.1.00"
 		},
 		"wod_DevTools": {
 			"github": "protee/wod_DevTools",
-			"version": "latest"
+			"version": "~21.1.00"
 		},
 		"wom_Make": {
 			"github": "protee/wom_Make",
-			"version": "latest"
+			"version": "~21.1.00"
 		},
 		"4DPop": {
 			"github": "vdelachaux/4DPop",

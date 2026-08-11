@@ -16,11 +16,11 @@ Function palette_do($is_record : Boolean)->$isOk : Boolean
 	Else 
 		$vJ_palette_menu:=This:C1470.palette_menu_get($is_record)
 		//$isOk:=waz_io_palette($vJ_palette)
-		wox_sounds_play("Glitch4")
+		cs:C1710.wox.TUNES.me.play_main_menuOut()
 		$vV_answer:=waz_io_palette($vJ_palette_menu)
 		$isOk:=$vV_answer#Null:C1517
 		If (Not:C34($isOk))
-			wox_sounds_play("Drop")
+			cs:C1710.wox.TUNES.me.play_main_menuIn()
 		End if 
 	End if 
 	
@@ -40,7 +40,8 @@ Function _actions($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 			app_relations_form()
 			
 		: ($vT_item="about")
-			BEEP:C151
+			$isOk:=False:C215
+			cs:C1710.wox.TUNES.me.play_edit()
 			
 		: ($vT_item="doc")
 			app_docBox_form()
@@ -93,8 +94,8 @@ Function _tables($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 	
 	
 Function _modules($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
-	$isOk:=True:C214
-	wox_sounds_play_confirm()
+	$isOk:=False:C215
+	cs:C1710.wox.TUNES.me.play_edit()
 	// *
 	// *****
 	
@@ -165,11 +166,10 @@ Function palette_menu_get($is_record : Boolean)->$vJ_palette_menu : Object
 		$vJ_prefs:=app__storage_prefs()
 		$vT_base_name:=$vJ_prefs.t_name+"© "+$vJ_prefs.t_version
 		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 2))
-		//$vC_aj_palette.push(This._menu_item("zenPop"; "zen4DPop"; $vt_path_tables))
-		$vC_aj_items.push(This:C1470._menu_item("Relations"; "relations"; $vT_path_icons))
-		$vC_aj_items.push(This:C1470._menu_item("About"; "about"; $vT_path_icons))
-		$vC_aj_items.push(This:C1470._menu_item("Documentation"; "doc"; $vT_path_icons))
 		$vC_aj_items.push(This:C1470._menu_item("ogToolsSuite ©"; "ogToolsSuite"; $vT_path_icons))
+		//$vC_aj_items.push(This._menu_item("About"; "about"; $vT_path_icons))
+		$vC_aj_items.push(This:C1470._menu_item("Documentation"; "doc"; $vT_path_icons))
+		$vC_aj_items.push(This:C1470._menu_item("Relations"; "relations"; $vT_path_icons))
 	End if 
 	
 	// ***** Modules & Tables

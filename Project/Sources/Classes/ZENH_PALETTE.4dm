@@ -16,11 +16,11 @@ Function palette_do($is_record : Boolean)->$isOk : Boolean
 	Else 
 		$vJ_palette_menu:=This:C1470.palette_menu_get($is_record)
 		//$isOk:=waz_io_palette($vJ_palette)
-		cs:C1710.wox.TUNES.me.play_main_menuOut()
+		cs:C1710.wox.TUNES.me.play_main_menuIn()
 		$vV_answer:=waz_io_palette($vJ_palette_menu)
 		$isOk:=$vV_answer#Null:C1517
 		If (Not:C34($isOk))
-			cs:C1710.wox.TUNES.me.play_main_menuIn()
+			cs:C1710.wox.TUNES.me.play_main_menuOut()
 		End if 
 	End if 
 	

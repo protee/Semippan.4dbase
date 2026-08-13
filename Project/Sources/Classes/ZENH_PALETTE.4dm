@@ -9,7 +9,7 @@ Class constructor
 Function palette_do($is_record : Boolean)->$isOk : Boolean
 	var $cs_ZENH_INFOS : cs:C1710.ZENH_INFOS
 	var $vJ_palette_menu : Object
-	var $vV_answer : Variant
+	var $vT_answer : Text
 	If (Windows Ctrl down:C562) || (Macintosh control down:C544) || (Macintosh command down:C546) || (Right click:C712)
 		$cs_ZENH_INFOS:=cs:C1710.ZENH_INFOS.new()
 		$isOk:=$cs_ZENH_INFOS.do_menu($is_record)
@@ -17,8 +17,7 @@ Function palette_do($is_record : Boolean)->$isOk : Boolean
 		$vJ_palette_menu:=This:C1470.palette_menu_get($is_record)
 		//$isOk:=waz_io_palette($vJ_palette)
 		cs:C1710.wox.TUNES.me.play_main_menuIn()
-		$vT_answer:=waz_io_palette($vJ_palette_menu)
-		$isOk:=$vT_answer#""
+		$isOk:=waz_io_palette($vJ_palette_menu; ->$vT_answer)
 		If (Not:C34($isOk))
 			cs:C1710.wox.TUNES.me.play_main_menuOut()
 		End if 

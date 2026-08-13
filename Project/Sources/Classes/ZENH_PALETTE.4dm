@@ -17,8 +17,8 @@ Function palette_do($is_record : Boolean)->$isOk : Boolean
 		$vJ_palette_menu:=This:C1470.palette_menu_get($is_record)
 		//$isOk:=waz_io_palette($vJ_palette)
 		cs:C1710.wox.TUNES.me.play_main_menuIn()
-		$vV_answer:=waz_io_palette($vJ_palette_menu)
-		$isOk:=$vV_answer#Null:C1517
+		$vT_answer:=waz_io_palette($vJ_palette_menu)
+		$isOk:=$vT_answer#""
 		If (Not:C34($isOk))
 			cs:C1710.wox.TUNES.me.play_main_menuOut()
 		End if 
@@ -161,11 +161,10 @@ Function palette_menu_get($is_record : Boolean)->$vJ_palette_menu : Object
 	// ***** Infos & zen_4DPop
 	// *
 	If (This:C1470._is_infos)
-		//This._menu_xxx($vC_aj_palette; $vt_path_tables; "Infos"; "infos")
-		//This._menu_xxx($vC_aj_palette; $vt_path_tables; "zenPop"; "zen4DPop")
 		$vJ_prefs:=app__storage_prefs()
 		$vT_base_name:=$vJ_prefs.t_name+"© "+$vJ_prefs.t_version
 		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 2))
+		//$vC_aj_items.push(This._menu_item())
 		$vC_aj_items.push(This:C1470._menu_item("ogToolsSuite ©"; "ogToolsSuite"; $vT_path_icons))
 		//$vC_aj_items.push(This._menu_item("About"; "about"; $vT_path_icons))
 		$vC_aj_items.push(This:C1470._menu_item("Documentation"; "doc"; $vT_path_icons))
@@ -215,8 +214,7 @@ Function _menu_modules($vC_aj_items : Collection; $vt_path_icn : Text)
 	$vJ_this:=This:C1470
 	$idx:=0
 	For each ($vJ_module; $vC_aj_TablesClass)
-		//$vT_module:=$vJ_module.t_label
-		//$vL_color:=woc_sp_colors_to_s($vJ_module.l_colors)
+		$vC_aj_items.push(This:C1470._menu_item())
 		$vJ_item:=New object:C1471()
 		$vC_aj_items.push($vJ_item)
 		$vT_label:=$vJ_module.t_label

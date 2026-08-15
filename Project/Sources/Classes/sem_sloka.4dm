@@ -271,7 +271,7 @@ Function _btn_app_clicked()
 		If ($vT_action="ogt")  // Security
 			wox_4Dpop_execute($vC_at_answer)  // Direct "xxx.@"
 		Else 
-			cs:C1710.wox.TUNES.me.play_glop_no()
+			cs:C1710.wox.SOUNDS.me.play_glop_no()
 		End if 
 	End if 
 	// *

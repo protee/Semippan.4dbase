@@ -224,7 +224,7 @@ Function do_copy()
 	$vT_answer+="Mantra: "+$cE_PRODUCTS.mantra+Char:C90(Carriage return:K15:38)
 	$vT_answer+="Tagline: "+$cE_PRODUCTS.tagline+Char:C90(Carriage return:K15:38)
 	SET TEXT TO PASTEBOARD:C523($vT_answer)
-	cs:C1710.wox.TUNES.me.play_tick()
+	cs:C1710.wox.SOUNDS.me.play_tick()
 	
 	
 Function do_copy1()
@@ -238,7 +238,7 @@ Function do_copy1()
 	$vT_answer+=$cE_PRODUCTS.mantra+Char:C90(Carriage return:K15:38)
 	$vT_answer+=$cE_PRODUCTS.tagline
 	SET TEXT TO PASTEBOARD:C523($vT_answer)
-	cs:C1710.wox.TUNES.me.play_tick()
+	cs:C1710.wox.SOUNDS.me.play_tick()
 	
 	
 Function do_copy2()
@@ -252,7 +252,7 @@ Function do_copy2()
 	$vT_answer+=This:C1470._add_dot($cE_PRODUCTS.mantra)
 	$vT_answer+=This:C1470._add_dot($cE_PRODUCTS.tagline; True:C214)
 	SET TEXT TO PASTEBOARD:C523($vT_answer)
-	cs:C1710.wox.TUNES.me.play_tick()
+	cs:C1710.wox.SOUNDS.me.play_tick()
 	
 	
 Function _add_dot($vT_text : Text; $is_last : Boolean)->$vT_answer : Text
@@ -303,7 +303,7 @@ Function pitch_export()
 			$c4Fi_pitch.setText(JSON Stringify:C1217($vJ_pitch))
 		End if 
 	Else 
-		cs:C1710.wox.TUNES.me.play_glop_no()
+		cs:C1710.wox.SOUNDS.me.play_glop_no()
 	End if 
 	
 	

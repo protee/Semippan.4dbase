@@ -15,7 +15,7 @@ Function form_events($vL_event_code : Integer)
 			If (Macintosh control down:C544 || Macintosh command down:C546)
 				CANCEL:C270
 			Else 
-				cs:C1710.wox.TUNES.me.play_glop_no()
+				cs:C1710.wox.SOUNDS.me.play_glop_no()
 			End if 
 			
 		: ($vL_event_code=On Unload:K2:2)

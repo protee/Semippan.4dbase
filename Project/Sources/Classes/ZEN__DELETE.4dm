@@ -171,13 +171,13 @@ Function _records_delete($vC_aj_delete : Collection; $vT_table : Text; $is_entit
 						//$is_toDelete:=$vJ_table.is_delete
 						//If ($is_oneEntity && ($idx=0))
 						//// Remove only record, not selection...
-						//Else 
+						//Else
 						$c4ES_notDeleted:=$c4ES_toDelete.drop(dk stop dropping on first error:K85:26)
 						$isOk:=($c4ES_notDeleted.length=0)
 						If (Not:C34($isOk))
 							break
 						End if 
-						//End if 
+						//End if
 						$idx+=1
 					End for each 
 					waz_progress_quit($vT_progress_uid)

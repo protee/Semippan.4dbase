@@ -3,7 +3,7 @@
 
 Class constructor()
 	
-Function do_menu($is_record : Boolean)->$isOk
+Function do_menu($is_record : Boolean)->$isOk : Boolean
 	var $vC_menu; $vC_at_answer; $vC_found : Collection
 	var $vJ_menu_answer; $vJ_prefs : Object
 	var $vT_subPath_icon; $vT_title : Text
@@ -72,8 +72,9 @@ Function _get_menu_vC($is_record : Boolean)->$vC_menu : Collection
 Function _ogDevTools_menu($vT_refMenu : Text; $vJ_menu : Object)
 	var $vT_prefix : Text
 	$vT_prefix:=$vJ_menu.t_menu
-	wox_4dPop_menu($vT_prefix; $vT_refMenu)
-	
+	//wox_4dPop_menu($vT_prefix; $vT_refMenu)
+	$is_inline:=True:C214
+	wox_4dPop_apps_menu($vT_prefix; ".xxx"; $vT_prefix+" ©"; $vT_refMenu; $is_inline)  //; True)
 	
 Function _ogDevTools($vC_at_answer : Collection)
 	wox_4Dpop_execute($vC_at_answer)

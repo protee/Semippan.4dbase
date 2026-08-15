@@ -10,6 +10,10 @@
 // *
 // *****
 
+property t_property; t_widget : Text
+property p_value : Pointer
+property l_border : Integer
+
 Class constructor($vT_widget : Text)
 	If ($vT_widget#"")
 		This:C1470.__vJ_params($vT_widget)

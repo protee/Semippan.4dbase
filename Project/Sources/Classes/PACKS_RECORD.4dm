@@ -328,7 +328,7 @@ Function _do_link_template()
 					$cE_MEDIA.UIDtemplate:=$vT_UID
 					zen_entity_save($cE_MEDIA)
 				End for each 
-				cs:C1710.wox.TUNES.me.play_done()
+				cs:C1710.wox.SOUNDS.me.play_done()
 				$vJ_zen_media.refresh()
 			End if 
 		Else 

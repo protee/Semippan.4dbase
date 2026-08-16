@@ -9,7 +9,7 @@ If (Count parameters:C259<3)
 End if 
 
 
-$vJ_prefs:=app__storage_prefs()
+$vJ_prefs:=sem__storage_prefs()
 
 // ***** FIRST INITIALIZE
 // *

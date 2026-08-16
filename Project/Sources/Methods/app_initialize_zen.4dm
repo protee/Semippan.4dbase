@@ -6,7 +6,7 @@ var $vT_localID : Text
 $vJ_prefs:=zen__storage_prefs()
 
 Use ($vJ_prefs)
-	$vJ_prefs.j_app:=app__storage_prefs()  // Host app to get rsc and more
+	$vJ_prefs.j_app:=sem__storage_prefs()  // Host app to get rsc and more
 	$vJ_prefs.is_pretty:=True:C214  // json's files  formatting
 	
 	//If (False)

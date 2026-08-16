@@ -90,7 +90,7 @@ Function _color_chgt($vJ_widget : Object)
 Function _color_source_rgb($vL_imgColor : Integer)
 	var $vC_al_source : Collection
 	var $vL_source_rgb : Integer
-	$vC_al_source:=app__storage_menuBtns().m_imgColor.al_source_rgb
+	$vC_al_source:=sem__storage_menuBtns().m_imgColor.al_source_rgb
 	$vL_source_rgb:=$vC_al_source[$vL_imgColor]
 	If ($vL_source_rgb#-1)
 		This:C1470.woc_sources_upd($vL_source_rgb)  // Update widgets source
@@ -104,7 +104,7 @@ Function _get_color_source_rgb($vL_imgColor : Integer)->$vL_source_rgb : Integer
 	//If ($vL_color_source_rgb=-1)
 	$vJ_widget:=OBJECT Get value:C1743("woc_colour")
 	$vL_source_rgb:=$vJ_widget.l_color
-	//End if 
+	//End if
 	
 Function _do_convert1()
 	var $vL_width; $vL_height : Integer

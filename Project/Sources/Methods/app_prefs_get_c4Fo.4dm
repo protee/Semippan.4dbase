@@ -12,4 +12,4 @@
 // 09/04/2023   OG   Initial version.
 
 #DECLARE($is_root : Boolean)->$vJ_path : Object
-$vJ_path:=wox_prefs_get_c4Fo(app__storage_prefs; $is_root)
+$vJ_path:=wox_prefs_get_c4Fo(sem__storage_prefs; $is_root)

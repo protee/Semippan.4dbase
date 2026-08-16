@@ -38,7 +38,7 @@ Case of
 End case 
 
 If ($is_display)
-	$vC_al_onOff_colors:=app__storage_stuff.al_onOff_colors
+	$vC_al_onOff_colors:=sem__storage_stuff.al_onOff_colors
 	$vL_colors:=$vC_al_onOff_colors[Num:C11($is_active)]
 	$vT_label:=$is_active ? "✓" : ""  //"╳╳✖✕✗"
 	$vJ_widget.l_colors:=$vL_colors

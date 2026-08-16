@@ -160,7 +160,7 @@ Function palette_menu_get($is_record : Boolean)->$vJ_palette_menu : Object
 	// ***** Infos & zen_4DPop
 	// *
 	If (This:C1470._is_infos)
-		$vJ_prefs:=app__storage_prefs()
+		$vJ_prefs:=sem__storage_prefs()
 		$vT_base_name:=$vJ_prefs.t_name+"© "+$vJ_prefs.t_version
 		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 2))
 		//$vC_aj_items.push(This._menu_item())

@@ -10,7 +10,7 @@ READ ONLY:C145(*)
 MESSAGES OFF:C175
 
 // ***** Get the program name
-$vJ_prefs_app:=app__storage_prefs()
+$vJ_prefs_app:=sem__storage_prefs()
 $vT_program_name:=$vJ_prefs_app.t_name
 
 // ***** Get the file and menu

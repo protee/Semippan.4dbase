@@ -83,8 +83,8 @@ Function _records_delete($vC_aj_delete : Collection; $vT_table : Text; $is_entit
 	
 	$is_transaction:=Not:C34(Active transaction:C1387)
 	
-	$vJ_j_io_red:=OB Copy:C1225(app__storage_stuff.j_io_red)
-	$vJ_j_io_orange:=OB Copy:C1225(app__storage_stuff.j_io_orange)
+	$vJ_j_io_red:=OB Copy:C1225(sem__storage_stuff.j_io_red)
+	$vJ_j_io_orange:=OB Copy:C1225(sem__storage_stuff.j_io_orange)
 	
 	$vL_delete_count:=$vC_aj_delete.length
 	$is_deletable:=False:C215

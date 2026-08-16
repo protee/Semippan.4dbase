@@ -2,7 +2,7 @@
 
 var $vJ_params; $vJ_prefs : Object
 var $vT_title : Text
-$vJ_prefs:=app__storage_prefs()
+$vJ_prefs:=sem__storage_prefs()
 $vT_title:=$vJ_prefs.t_name+" "+$vJ_prefs.t_version
 $vJ_params:=New object:C1471
 $vJ_params.t_root_path:="/RESOURCES/_HELP"

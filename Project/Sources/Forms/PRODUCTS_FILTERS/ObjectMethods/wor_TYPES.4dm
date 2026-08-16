@@ -10,8 +10,8 @@ Case of
 		$vJ_widget.t_label:=""
 		$vJ_widget.is_editing:=True:C214
 		$vJ_widget.l_click_mode:=2
-		$vJ_widget.t_table:=Table name:C256(->[TYPES_R:32])
-		$vJ_widget.j_menu:=app__storage_menuBtns().m_4d_types
+		$vJ_widget.t_table:=Table name:C256(->[TYPES:32])
+		$vJ_widget.j_menu:=sem__storage_menuBtns().m_4d_types
 		
 		$vJ_widget.resize()
 		//$vJ_widget.redraw()

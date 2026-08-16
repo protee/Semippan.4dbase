@@ -31,7 +31,7 @@ var $vO_product : Picture
 // *****
 // *
 $vJ_veda_prefs:=$vJ_widget.j_prefs
-$vJ_veda_prefs:=$vJ_veda_prefs#Null:C1517 ? $vJ_veda_prefs : app__storage_widgets().j_veda_prefs.j_value
+$vJ_veda_prefs:=$vJ_veda_prefs#Null:C1517 ? $vJ_veda_prefs : sem__storage_widgets().j_veda_prefs.j_value
 
 $vL_wheel_colors:=$vJ_veda_prefs.l_wheel_colors
 $vL_wheel_stroke:=$vJ_veda_prefs.l_wheel_stroke
@@ -283,7 +283,7 @@ If ($cE_KAVIYAM#Null:C1517) && ($cES_SLOKAS#Null:C1517)
 	End if 
 	
 	
-	// ***** PRODUCTS 
+	// ***** PRODUCTS
 	// *
 	$vR_img_selected_coef:=1.4  //1.8
 	$vR_txt_selected_coef:=1.2

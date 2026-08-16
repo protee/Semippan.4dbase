@@ -66,7 +66,7 @@ Function lb_dcox_icon($cE_SETS : cs:C1710.SETSEntity; $vT_bind : Text)->$vO_img 
 	$vJ_bind:=$vJ_dcox["j_"+$vT_bind]
 	$vL_colors_in:=woc_dcoxWidget_get_colors($vL_colors_main; $vJ_bind; $vL_colors_in)
 	$vL_enablers:=3  //woc_dcoxWidget_get_enablers($vJ_bind)
-	$vL_shape:=app__storage_prefs().l_display_shape
+	$vL_shape:=sem__storage_prefs().l_display_shape
 	$vL_size:=26
 	$vO_img:=woc_sp_shape_get($vL_size; $vL_size; $vL_colors_in; $vL_shape; $vL_enablers)
 	

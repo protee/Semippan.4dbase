@@ -2,7 +2,7 @@
 
 
 If (wok__registered("wom").first()#Null:C1517)
-	EXECUTE METHOD:C1007("wom_configurate_vJ"; *; app__storage_prefs())
+	EXECUTE METHOD:C1007("wom_configurate_vJ"; *; sem__storage_prefs())
 End if 
 
 

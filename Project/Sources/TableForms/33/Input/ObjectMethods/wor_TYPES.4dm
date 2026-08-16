@@ -7,10 +7,10 @@ var $vT_table : Text
 Case of 
 	: ($vL_event_code=On Load:K2:1)
 		$vJ_widget:=Self:C308->
-		$vT_table:=Table name:C256(->[TYPES_R:32])
+		$vT_table:=Table name:C256(->[TYPES:32])
 		$vJ_widget.t_label:=$vT_table
 		$vJ_widget.t_table:=$vT_table
-		$vJ_widget.j_menu:=app__storage_menuBtns().m_4d_types
+		$vJ_widget.j_menu:=sem__storage_menuBtns().m_4d_types
 		
 		$vJ_widget.bind_to_c4E("UIDtype")
 		$vJ_widget.resize()

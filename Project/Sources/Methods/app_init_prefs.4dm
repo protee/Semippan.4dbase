@@ -12,7 +12,7 @@
 // 09/04/2023   OG   Initial version.
 
 var $vJ_prefs : Object
-$vJ_prefs:=app__storage_prefs
+$vJ_prefs:=sem__storage_prefs
 
 Use ($vJ_prefs)
 	

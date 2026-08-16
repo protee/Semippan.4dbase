@@ -10,7 +10,7 @@ var $vJ_module; $vJ_relate; $vJ_table : Object
 // *
 $vJ_relate:=zen__storage_widgets().j_relate
 Use ($vJ_relate)
-	$vJ_relate.t_base_name:=app__storage_prefs.t_name
+	$vJ_relate.t_base_name:=sem__storage_prefs.t_name
 	//$vJ_relate.l_bkg_color:=k_MDcolorBlack
 	$vJ_relate.l_modules_mdx:=13
 	$vJ_relate.l_tables_mdx:=5

@@ -6,7 +6,7 @@ $vL_event_code:=Form event code:C388
 Case of 
 	: ($vL_event_code=On Load:K2:1)
 		$vJ_widget:=Self:C308->
-		$vJ_widget.j_menu:=app__storage_menuBtns().m_outputMime
+		$vJ_widget.j_menu:=sem__storage_menuBtns().m_outputMime
 		$vJ_widget.is_palette:=True:C214
 		$vJ_io_palette:=New object:C1471()
 		$vJ_widget.j_io_palette:=$vJ_io_palette

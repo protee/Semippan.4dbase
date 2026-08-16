@@ -47,7 +47,7 @@ Function _records_parse($vT_menu : Text; $c4ES_selection_in : 4D:C1709.EntitySel
 	var $vT_prefix; $vT_refMenu; $vT_answerMenu; $vT_subtitle : Text
 	$cES_PICTURES_in:=zen_choice_selection($c4ES_selection_in; $c4ES_selected)
 	If ($cES_PICTURES_in#Null:C1517)
-		$vJ_menu:=app__storage_menuBtns()["m_"+$vT_menu]
+		$vJ_menu:=sem__storage_menuBtns()["m_"+$vT_menu]
 		$vT_prefix:="menuBtn"
 		$vT_refMenu:=waz_menuBtn_menu($vT_prefix; $vJ_menu)
 		$vT_answerMenu:=Dynamic pop up menu:C1006($vT_refMenu)

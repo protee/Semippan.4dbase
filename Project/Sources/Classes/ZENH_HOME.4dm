@@ -16,7 +16,7 @@ Function do()->$isOk : Boolean
 		$vT_prefix_home:="home"
 		$vT_prefix_tables:="table"
 		$vT_refMenu:=Create menu:C408
-		$vJ_prefs:=app__storage_prefs()
+		$vJ_prefs:=sem__storage_prefs()
 		wox_4dPop_menu_header($vT_prefix_home; $vJ_prefs; $vT_refMenu)
 		This:C1470._menu_module($vT_prefix_tables; False:C215; $vT_refMenu; True:C214)
 		APPEND MENU ITEM:C411($vT_refMenu; "-")
@@ -86,9 +86,9 @@ Function _menu_tables($vT_prefix : Text; $vC_aj_tables : Collection; $is_local :
 	//APPEND MENU ITEM($vT_refMenu_answer; "Tables"; *)
 	//If ($is_local)
 	//zen_SET_MENU_ITEM_ICON($vT_refMenu_answer; -1; $vT_path_icons+k_png_ext)
-	//Else 
+	//Else
 	//SET MENU ITEM ICON($vT_refMenu_answer; -1; $vT_path_icons+k_png_ext)
-	//End if 
+	//End if
 	//DISABLE MENU ITEM($vT_refMenu_answer; -1)
 	//APPEND MENU ITEM($vT_refMenu_answer; "-")
 	
@@ -156,7 +156,7 @@ Function _release_notes()
 	var $cE_zen_dashboard : cs:C1710.ZEN_DASHBOARDEntity
 	var $vJ_prefs; $vJ_wox_prefs : Object
 	var $vT_version_last : Text
-	$vJ_prefs:=app__storage_prefs()
+	$vJ_prefs:=sem__storage_prefs()
 	$is_edit:=Not:C34(Is compiled mode:C492) && Not:C34(Shift down:C543)
 	$cE_zen_dashboard:=ds:C1482.ZEN_DASHBOARD.all().first()
 	$vT_version_last:=$cE_zen_dashboard.version_previous
@@ -168,7 +168,7 @@ Function _agreement()
 	var $vJ_prefs; $vJ_wox_prefs : Object
 	var $vT_version_last : Text
 	var $cE_zen_dashboard : cs:C1710.ZEN_DASHBOARDEntity
-	$vJ_prefs:=app__storage_prefs()
+	$vJ_prefs:=sem__storage_prefs()
 	$is_edit:=Not:C34(Is compiled mode:C492) && Not:C34(Shift down:C543)
 	$cE_zen_dashboard:=ds:C1482.ZEN_DASHBOARD.all().first()
 	$vT_version_last:=$cE_zen_dashboard.version_previous

@@ -4053,7 +4053,7 @@
 	},
 	"ZENH_INFOS": {
 		"do_menu()": {
-			"Syntax": "**.do_menu**( *is_record* : Boolean )->isOk : Variant",
+			"Syntax": "**.do_menu**( *is_record* : Boolean )->isOk : Boolean",
 			"Params": [
 				[
 					"is_record",
@@ -4062,7 +4062,7 @@
 				],
 				[
 					"isOk",
-					"Variant",
+					"Boolean",
 					"<-"
 				]
 			],
@@ -4718,6 +4718,18 @@
 				]
 			],
 			"Summary": ""
+		},
+		"l_border": {
+			"Syntax": "l_border : Integer"
+		},
+		"p_value": {
+			"Syntax": "p_value : Pointer"
+		},
+		"t_widget": {
+			"Syntax": "t_widget : Text"
+		},
+		"t_property": {
+			"Syntax": "t_property : Text"
 		}
 	},
 	"ZEN__TABLES_SEARCH": {

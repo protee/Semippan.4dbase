@@ -19,7 +19,7 @@ Function onInitialize($cE_ZEN_DASHBOARD : cs:C1710.ZEN_DASHBOARDEntity)  // Init
 		$vJ_business.t_4Dcorner:=""
 		//$vJ_business.t_github:=""
 	End if 
-	$vJ_app_widgets:=app__storage_widgets()
+	$vJ_app_widgets:=sem__storage_widgets()
 	$vJ_woc_widgets:=woc__storage_widgets()
 	This:C1470.init_business_prop("output"; $vJ_business; $vJ_app_widgets)  // Output
 	This:C1470.init_business_prop("metarect"; $vJ_business; $vJ_woc_widgets)  // Metarect
@@ -34,7 +34,7 @@ Function onValidate($cE_ZEN_DASHBOARD : cs:C1710.ZEN_DASHBOARDEntity)  // Copy E
 	var $vT_tag : Text
 	This:C1470.onInitialize($cE_ZEN_DASHBOARD)
 	$vJ_business:=$cE_ZEN_DASHBOARD.j_biz
-	$vJ_app_widgets:=app__storage_widgets()
+	$vJ_app_widgets:=sem__storage_widgets()
 	$vJ_woc_widgets:=woc__storage_widgets()
 	This:C1470.set_business_prop("output"; $vJ_business; $vJ_app_widgets)  // Output
 	This:C1470.set_business_prop("metarect"; $vJ_business; $vJ_woc_widgets)  // Metarect
@@ -50,7 +50,7 @@ Function onValidate($cE_ZEN_DASHBOARD : cs:C1710.ZEN_DASHBOARDEntity)  // Copy E
 		End use 
 	End for each 
 	
-	$vJ_prefs:=app__storage_prefs()
+	$vJ_prefs:=sem__storage_prefs()
 	Use ($vJ_prefs)
 		$vJ_prefs.l_display_shape:=$vJ_business.l_display_shape
 	End use 
@@ -200,7 +200,7 @@ Function biz_app_bind_to($vT_tag : Text)->$vJ_value : Object
 	$vT_property:="j_"+$vT_tag
 	$vJ_value:=$vJ_biz[$vT_property]
 	If ($vJ_value=Null:C1517)
-		$vJ_value:=OB Copy:C1225(app__storage_widgets()[$vT_property].j_value)
+		$vJ_value:=OB Copy:C1225(sem__storage_widgets()[$vT_property].j_value)
 		$vJ_biz[$vT_property]:=$vJ_value
 	End if 
 	

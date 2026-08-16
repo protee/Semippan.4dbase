@@ -15,7 +15,7 @@ var $vO_icon : Picture
 
 // ***** Parameters
 // *
-$vJ_widget:=$vJ_widget#Null:C1517 ? $vJ_widget : app__storage_widgets().j_cards
+$vJ_widget:=$vJ_widget#Null:C1517 ? $vJ_widget : sem__storage_widgets().j_cards
 $vR_ratio:=$vJ_widget.r_ratio  // w/h
 $vR_scale:=$vJ_widget.r_scale
 $vR_radius:=$vJ_widget.r_radius

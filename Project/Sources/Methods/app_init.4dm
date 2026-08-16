@@ -29,7 +29,7 @@
 var $vJ_prefs : Object
 var $vT_host : Text
 
-$vJ_prefs:=app__storage_prefs()
+$vJ_prefs:=sem__storage_prefs()
 $vT_host:="Sēmippān"
 
 wox_prefs_set_host_name("zenApp")

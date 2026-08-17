@@ -184,7 +184,7 @@ Function palette_menu_get($is_record : Boolean)->$vJ_palette_menu : Object
 		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 2))
 		//$vC_aj_items.push(This._menu_item())
 		$vC_aj_items.push(This:C1470._menu_item("ogToolsSuite ©"; "ogToolsSuite"; $vT_path_icons))
-		$vC_aj_items.push(This:C1470._menu_item("syntaxEN ©"; "syntaxEN"; $vT_path_icons))
+		//$vC_aj_items.push(This._menu_item("syntaxEN ©"; "syntaxEN"; $vT_path_icons))
 		//$vC_aj_items.push(This._menu_item("About"; "about"; $vT_path_icons))
 		$vC_aj_items.push(This:C1470._menu_item("Documentation"; "doc"; $vT_path_icons))
 		$vC_aj_items.push(This:C1470._menu_item("Relations"; "relations"; $vT_path_icons))

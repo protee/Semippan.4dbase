@@ -55,7 +55,7 @@ Function _actions($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 			var $vT_syntaxEN : Text
 			$vT_prefix:=$vT_item  //"syntaxEN"
 			$is_inline:=False:C215
-			$vT_refMenu:=cs:C1710.wox.CORE_MNG.me.get_menu_apps($vT_prefix; $vT_prefix+" ©")
+			$vT_refMenu:=cs:C1710.wox.syntaxEN.me.get_menu_apps($vT_prefix; $vT_prefix+" ©")
 			$vT_answerMenu:=Dynamic pop up menu:C1006($vT_refMenu)
 			RELEASE MENU:C978($vT_refMenu)
 			$isOk:=(""#$vT_answerMenu)

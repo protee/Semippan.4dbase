@@ -88,7 +88,7 @@ Function _syntaxEN_menu($vT_refMenu : Text; $vJ_menu : Object)
 	var $vT_prefix : Text
 	$vT_prefix:=$vJ_menu.t_menu
 	$is_inline:=False:C215
-	cs:C1710.wox.CORE_MNG.me.get_menu_apps($vT_prefix; $vT_prefix+" ©"; $vT_refMenu; $is_inline)
+	cs:C1710.wox.syntaxEN.me.get_menu_apps($vT_prefix; $vT_prefix+" ©"; $vT_refMenu; $is_inline)
 	
 Function _syntaxEN($vC_at_answer : Collection)
 	//wox_4Dpop_execute($vC_at_answer)

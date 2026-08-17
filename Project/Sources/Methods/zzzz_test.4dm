@@ -14,5 +14,5 @@ $vJ_prefs:=sem__storage_prefs()
 $vJ_stuff:=sem__storage_stuff()
 $vJ_widgets:=sem__storage_widgets()
 
-$cs_CORE:=cs:C1710.wox.CORE_MNG.new()
+$cs_CORE:=cs:C1710.wox.syntaxEN.new()
 

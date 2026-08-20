@@ -23,7 +23,7 @@ Function do_menu($is_record : Boolean)->$isOk : Boolean
 		$vT_action:=$vC_at_answer.shift()
 		$vT_param:=$vC_at_answer[0]
 		Case of 
-			: ($vT_action=$vT_prefix) && ($vT_param="xxx")  // home.xxx.sem.
+			: ($vT_action=$vT_prefix) && ($vT_param="xxx")  // home + xxx.app.
 				$vT_param3:=$vC_at_answer[2]
 				Case of 
 					: ($vT_param3="releases")
@@ -31,6 +31,10 @@ Function do_menu($is_record : Boolean)->$isOk : Boolean
 						
 					: ($vT_param3="license")
 						This:C1470._do_license()
+						
+					: ($vT_param3="syntaxEN")
+						$vT_param3:=$vC_at_answer.shift()  // Remove "xxx"
+						This:C1470._syntaxEN($vC_at_answer)
 				End case 
 				
 			: ($vT_action="ogToolsSuite")
@@ -92,7 +96,7 @@ Function _syntaxEN_menu($vT_refMenu : Text; $vJ_menu : Object)
 	
 Function _syntaxEN($vC_at_answer : Collection)
 	//wox_4Dpop_execute($vC_at_answer)
-	var $vT_syntaxEN : Text
+	var $vT_syntaxEN; $vT_app; $vT_dummy : Text
 	$vT_app:=$vC_at_answer.shift()
 	$vT_dummy:=$vC_at_answer.shift()
 	$vT_syntaxEN:=$vC_at_answer.join(".")

@@ -4719,17 +4719,41 @@
 			],
 			"Summary": ""
 		},
-		"l_border": {
-			"Syntax": "l_border : Integer"
+		"d_value": {
+			"Syntax": "d_value : Date"
 		},
 		"p_value": {
 			"Syntax": "p_value : Pointer"
 		},
-		"t_widget": {
-			"Syntax": "t_widget : Text"
+		"t_UID": {
+			"Syntax": "t_UID : Text"
+		},
+		"l_value": {
+			"Syntax": "l_value : Integer"
+		},
+		"t_value": {
+			"Syntax": "t_value : Text"
 		},
 		"t_property": {
 			"Syntax": "t_property : Text"
+		},
+		"l_border": {
+			"Syntax": "l_border : Integer"
+		},
+		"t_internal": {
+			"Syntax": "t_internal : Text"
+		},
+		"h_value": {
+			"Syntax": "h_value : Time"
+		},
+		"is_editing": {
+			"Syntax": "is_editing : Boolean"
+		},
+		"j_value": {
+			"Syntax": "j_value : Object"
+		},
+		"t_widget": {
+			"Syntax": "t_widget : Text"
 		}
 	},
 	"ZEN__TABLES_SEARCH": {

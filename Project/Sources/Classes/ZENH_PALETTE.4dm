@@ -52,10 +52,10 @@ Function _actions($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 			//zen_4DPop()
 			
 		: ($vT_item="syntaxEN")
-			var $vT_syntaxEN : Text
+			var $vT_syntaxEN; $vT_app; $vT_dummy : Text
 			$vT_prefix:=$vT_item  //"syntaxEN"
 			$is_inline:=False:C215
-			$vT_refMenu:=cs:C1710.wox.syntaxEN.me.get_menu_apps($vT_prefix; $vT_prefix+" ©")
+			$vT_refMenu:=cs:C1710.wox.syntaxEN.me.get_menu_apps($vT_prefix+"."; True:C214; $vT_prefix+" ©")
 			$vT_answerMenu:=Dynamic pop up menu:C1006($vT_refMenu)
 			RELEASE MENU:C978($vT_refMenu)
 			$isOk:=(""#$vT_answerMenu)
@@ -63,9 +63,15 @@ Function _actions($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 				$vC_at_answer:=Split string:C1554($vT_answerMenu; ".")
 				$vT_action:=$vC_at_answer.shift()
 				If ($vT_action=$vT_prefix)
+					$vT_app:=$vC_at_answer.shift()
+					$vT_dummy:=$vC_at_answer.shift()
 					$vT_syntaxEN:=$vC_at_answer.join(".")
-					SET TEXT TO PASTEBOARD:C523($vT_syntaxEN)
-					cs:C1710.wox.SOUNDS.me.play_glop()
+					If ($vT_syntaxEN="")
+						wox_syntaxEN_mng($vT_app)
+					Else 
+						SET TEXT TO PASTEBOARD:C523($vT_syntaxEN)
+						cs:C1710.wox.SOUNDS.me.play_glop()
+					End if 
 				End if 
 			End if 
 			
@@ -75,7 +81,7 @@ Function _actions($vJ_palette_item : Object; $vT_item : Text)->$isOk : Boolean
 			var $vC_at_answer : Collection
 			var $is_inline : Boolean
 			$vT_prefix:=$vT_item  //"ogToolsSuite"
-			$vT_refMenu:=wox_4dPop_apps_menu($vT_prefix; ".xxx")
+			$vT_refMenu:=wox_4dPop_apps_menu($vT_prefix+".xxx.")
 			$vT_answerMenu:=Dynamic pop up menu:C1006($vT_refMenu)
 			RELEASE MENU:C978($vT_refMenu)
 			$isOk:=(""#$vT_answerMenu)
@@ -184,7 +190,7 @@ Function palette_menu_get($is_record : Boolean)->$vJ_palette_menu : Object
 		$vC_aj_items.push(This:C1470._menu_item($vT_base_name; "product"; $vt_path_product; 2))
 		//$vC_aj_items.push(This._menu_item())
 		$vC_aj_items.push(This:C1470._menu_item("ogToolsSuite ©"; "ogToolsSuite"; $vT_path_icons))
-		//$vC_aj_items.push(This._menu_item("syntaxEN ©"; "syntaxEN"; $vT_path_icons))
+		$vC_aj_items.push(This:C1470._menu_item("syntaxEN ©"; "syntaxEN"; $vT_path_icons))
 		//$vC_aj_items.push(This._menu_item("About"; "about"; $vT_path_icons))
 		$vC_aj_items.push(This:C1470._menu_item("Documentation"; "doc"; $vT_path_icons))
 		$vC_aj_items.push(This:C1470._menu_item("Relations"; "relations"; $vT_path_icons))

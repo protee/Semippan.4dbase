@@ -9,7 +9,6 @@
 // 15/08/2024 | OG  | Updated
 // *
 // *****
-
 property t_property; t_widget; t_value; t_UID; t_internal : Text
 property p_value : Pointer
 property l_border; l_value : Integer
@@ -26,6 +25,7 @@ Class constructor($vT_widget : Text)
 	This:C1470.p_value:=Null:C1517
 	This:C1470.l_border:=Border None:K42:27
 	This:C1470.t_widget:=""
+	
 	
 	
 Function __vJ_params($vT_widget : Text)

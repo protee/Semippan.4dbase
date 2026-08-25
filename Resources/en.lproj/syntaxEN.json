@@ -4722,26 +4722,29 @@
 		"d_value": {
 			"Syntax": "d_value : Date"
 		},
-		"p_value": {
-			"Syntax": "p_value : Pointer"
-		},
-		"t_UID": {
-			"Syntax": "t_UID : Text"
-		},
-		"l_value": {
-			"Syntax": "l_value : Integer"
-		},
-		"t_value": {
-			"Syntax": "t_value : Text"
+		"is_new": {
+			"Syntax": "is_new : Boolean"
 		},
 		"t_property": {
 			"Syntax": "t_property : Text"
 		},
+		"t_internal": {
+			"Syntax": "t_internal : Text"
+		},
 		"l_border": {
 			"Syntax": "l_border : Integer"
 		},
-		"t_internal": {
-			"Syntax": "t_internal : Text"
+		"t_value": {
+			"Syntax": "t_value : Text"
+		},
+		"l_value": {
+			"Syntax": "l_value : Integer"
+		},
+		"t_UID": {
+			"Syntax": "t_UID : Text"
+		},
+		"p_value": {
+			"Syntax": "p_value : Pointer"
 		},
 		"h_value": {
 			"Syntax": "h_value : Time"

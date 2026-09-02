@@ -33,6 +33,11 @@
 			],
 			"Summary": ""
 		},
+		"sem_woc_empty": {
+			"Syntax": "**sem_woc_empty**()",
+			"Params": [],
+			"Summary": ""
+		},
 		"sem_woc_popPatternsGrid": {
 			"Syntax": "**sem_woc_popPatternsGrid**() : Variant",
 			"Params": [

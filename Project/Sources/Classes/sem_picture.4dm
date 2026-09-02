@@ -74,7 +74,6 @@ Function _data_chgt($vT_objectName : Text)
 	CALL SUBFORM CONTAINER:C1086(k_OnDataChange)
 	
 	
-	
 Function _btn_clear()
 	//var $vj_value : Object
 	//$vj_value:=This.j_value

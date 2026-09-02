@@ -133,7 +133,7 @@ Function io_palette_get()->$vJ_io_palette : Object
 	$vJ_io_palette.r_angle_start:=-Pi:K30:1  ///3*2
 	$vJ_io_palette.r_angle_end:=0  //Pi/2
 	
-	$vJ_io_palette.t_font_face:=wox_font_face_default("Calibri")
+	$vJ_io_palette.t_font_face:=wox_font_face_default()  //"Calibri")
 	$vJ_io_palette.l_font_color:=0x0A00000A
 	$vJ_io_palette.l_font_size:=14
 	$vJ_io_palette.r_font_wh_ratio:=0.55

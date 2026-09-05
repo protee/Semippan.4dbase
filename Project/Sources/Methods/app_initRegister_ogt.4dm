@@ -63,7 +63,6 @@ $isOk:=wob_initRegister()
 $isOk:=wos_initRegister()
 $isOk:=zen_initRegister()  // zen_Nucleus init
 
-wox_font_face_default("Calibri")
 
 // ***** Define a specific path for the sound's file prefs from this host
 // *
@@ -71,7 +70,7 @@ $vJ_wox_prefs:=wox__storage_prefs()
 $c4Fo_prefs_zen:=zen__prefs_get_c4Fo()
 Use ($vJ_wox_prefs)
 	$vJ_wox_prefs.fo_sounds_prefs:=$c4Fo_prefs_zen
-	$vJ_wox_prefs.t_font_face:="Arial Unicode MS"
+	$vJ_wox_prefs.t_font_face:=wox_font_face_exists("Calibri")
 End use 
 
 

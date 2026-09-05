@@ -866,7 +866,7 @@ password (hashed)]]></comment>
 			</field_extra>
 		</field>
 		<field name="prefixCode" uuid="1BC42198571946FD8CF98E7085190D56" type="10" limiting_length="5" never_null="true" id="9"/>
-		<field name="version" uuid="E8FAC0BF55F0490B968826F16BF76E9A" type="10" limiting_length="7" never_null="true" id="10"/>
+		<field name="tag" uuid="E8FAC0BF55F0490B968826F16BF76E9A" type="10" limiting_length="15" never_null="true" id="10"/>
 		<field name="path" uuid="DE21DC49214D47FCA8BCD122E37F3721" type="10" limiting_length="255" never_null="true" id="11"/>
 		<field name="isMyPath" uuid="10BEC41B4FAA4170AD33DBC325E7087A" type="1" never_null="true" id="12"/>
 		<field name="isComponent" uuid="2B8B1E60C49948C7BEB6B0DAD76B3489" type="1" never_null="true" id="13"/>

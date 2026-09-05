@@ -243,8 +243,8 @@
 				},
 				"bt_copy": {
 					"type": "pictureButton",
-					"top": 114,
-					"left": 728,
+					"top": 181,
+					"left": 733,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Copy Product's text",
@@ -261,31 +261,13 @@
 				},
 				"bt_pitch": {
 					"type": "pictureButton",
-					"top": 144,
-					"left": 776,
+					"top": 113,
+					"left": 733,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Save pitch into database",
 					"rowCount": 4,
 					"picture": "/RESOURCES/buttons/btn_pitch.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					],
-					"sizingX": "fixed",
-					"sizingY": "fixed"
-				},
-				"bt_copy1": {
-					"type": "pictureButton",
-					"top": 114,
-					"left": 752,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Copy Product's text short",
-					"rowCount": 4,
-					"picture": "/RESOURCES/buttons/btn_copy.png",
 					"switchWhenRollover": true,
 					"switchBackWhenReleased": true,
 					"useLastFrameAsDisabled": true,
@@ -313,60 +295,6 @@
 						"onLoad",
 						"onDataChange"
 					]
-				},
-				"bt_build": {
-					"type": "pictureButton",
-					"top": 181,
-					"left": 728,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Show Build folder",
-					"rowCount": 4,
-					"picture": "/RESOURCES/buttons/btn_build.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					],
-					"sizingX": "fixed",
-					"sizingY": "fixed"
-				},
-				"bt_app_wox": {
-					"type": "pictureButton",
-					"top": 181,
-					"left": 752,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Show app_wox folder",
-					"rowCount": 4,
-					"picture": "/RESOURCES/buttons/btn_app_wox.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					],
-					"sizingX": "fixed",
-					"sizingY": "fixed"
-				},
-				"bt_copy2": {
-					"type": "pictureButton",
-					"top": 114,
-					"left": 776,
-					"width": 24,
-					"height": 24,
-					"tooltip": "Copy Product's text Github",
-					"rowCount": 4,
-					"picture": "/RESOURCES/buttons/btn_copy.png",
-					"switchWhenRollover": true,
-					"switchBackWhenReleased": true,
-					"useLastFrameAsDisabled": true,
-					"events": [
-						"onClick"
-					],
-					"sizingX": "fixed",
-					"sizingY": "fixed"
 				},
 				"Text": {
 					"type": "text",
@@ -497,6 +425,24 @@
 					"class": "Geneva_10",
 					"text": "Component",
 					"textAlign": "right"
+				},
+				"Texte10": {
+					"type": "text",
+					"top": 82,
+					"left": 30,
+					"width": 39,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "Tag"
+				},
+				"field_name8": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.tag",
+					"top": 82,
+					"left": 74,
+					"width": 114,
+					"height": 17
 				}
 			},
 			"entryOrder": [
@@ -514,7 +460,8 @@
 				"zen_isCorner",
 				"zen_isCorner1",
 				"zen_isCorner2",
-				"zen_isComponent"
+				"zen_isComponent",
+				"field_name8"
 			]
 		},
 		{
@@ -585,24 +532,6 @@
 					"stroke": "#666666",
 					"class": "Geneva_10",
 					"text": "Prefix"
-				},
-				"field_name3": {
-					"type": "input",
-					"dataSource": "Form:C1466.c4E.version",
-					"top": 244,
-					"left": 226,
-					"width": 64,
-					"height": 17
-				},
-				"Texte4": {
-					"type": "text",
-					"top": 244,
-					"left": 162,
-					"width": 59,
-					"height": 14,
-					"stroke": "#666666",
-					"class": "Geneva_10",
-					"text": "Version"
 				},
 				"field_isMyPath": {
 					"type": "checkbox",
@@ -774,12 +703,83 @@
 						"onDrop",
 						"onDragOver"
 					]
+				},
+				"bt_build": {
+					"type": "pictureButton",
+					"top": 261,
+					"left": 277,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Show Build folder",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_build.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"bt_app_wox": {
+					"type": "pictureButton",
+					"top": 261,
+					"left": 301,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Show app_wox folder",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_app_wox.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"bt_github": {
+					"type": "pictureButton",
+					"top": 79,
+					"left": 198,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Github actions",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_github.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"bt_cleanup": {
+					"type": "pictureButton",
+					"top": 79,
+					"left": 228,
+					"width": 24,
+					"height": 24,
+					"tooltip": "Clean up",
+					"rowCount": 4,
+					"picture": "/RESOURCES/buttons/btn_cleanup.png",
+					"switchWhenRollover": true,
+					"switchBackWhenReleased": true,
+					"useLastFrameAsDisabled": true,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "fixed",
+					"sizingY": "fixed"
 				}
 			},
 			"entryOrder": [
 				"field_name1",
 				"field_name2",
-				"field_name3",
 				"field_isMyPath",
 				"myPath",
 				"zen_PATHS",
@@ -882,7 +882,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2522,
+	"geometryStamp": 2603,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

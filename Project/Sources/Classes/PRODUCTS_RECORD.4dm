@@ -65,18 +65,6 @@ Function form_events()
 				: ($vT_objectName="field_isMyPath")
 					This:C1470.sem_folder_upd()
 					
-					//: ($vT_objectName="btn_pathExist")
-					//This.pathExist()
-					
-					//: ($vT_objectName="bt_show")
-					//This.show()
-					
-					//: ($vT_objectName="bt_gnanam")
-					//This.gnanam()
-					
-					//: ($vT_objectName="bt_ogBoxes")
-					//This.ogBoxes()
-					
 				: ($vT_objectName="field_logo")
 					If (Right click:C712) && (Form:C1466.is_editing)
 						This:C1470._field_logo()
@@ -85,11 +73,11 @@ Function form_events()
 				: ($vT_objectName="bt_copy")
 					This:C1470.do_copy()
 					
-				: ($vT_objectName="bt_copy1")
-					This:C1470.do_copy1()
+				: ($vT_objectName="bt_github")
+					This:C1470.do_github()
 					
-				: ($vT_objectName="bt_copy2")
-					This:C1470.do_copy2()
+				: ($vT_objectName="bt_cleanup")
+					This:C1470.do_cleanup()
 					
 				: ($vT_objectName="bt_build")
 					This:C1470.do_build()
@@ -153,6 +141,7 @@ Function sem_folder_upd()
 	var $isOk : Boolean
 	var $c4E : 4D:C1709.Entity
 	var $vJ_sem_folder : Object
+	var $vT_myPath : Text
 	
 	$c4E:=Form:C1466.c4E
 	$isOk:=Not:C34($c4E.isMyPath) && Form:C1466.is_editing
@@ -215,6 +204,23 @@ Function _field_logo()
 	// *****
 	// *
 Function do_copy()
+	var $vC_at_label : Collection
+	var $vL_value : Integer
+	$vC_at_label:=New collection:C1472("Normal"; "Short"; "Github")
+	$vL_value:=-1
+	If (x_choice_generic_vL(->$vL_value; $vC_at_label; "Product Text"))
+		Case of 
+			: $vL_value=0
+				This:C1470.do_copy1()
+			: $vL_value=1
+				This:C1470.do_copy2()
+			: $vL_value=2
+				This:C1470.do_copy3()
+		End case 
+	End if 
+	
+	
+Function do_copy1()  // Product text
 	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
 	var $vT_answer : Text
 	$vT_answer:=""
@@ -227,7 +233,7 @@ Function do_copy()
 	cs:C1710.wox.SOUNDS.me.play_tick()
 	
 	
-Function do_copy1()
+Function do_copy2()  // Product text short
 	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
 	var $vT_answer : Text
 	$vT_answer:=""
@@ -241,7 +247,7 @@ Function do_copy1()
 	cs:C1710.wox.SOUNDS.me.play_tick()
 	
 	
-Function do_copy2()
+Function do_copy3()  // Product text github
 	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
 	var $vT_answer : Text
 	$vT_answer:=""
@@ -456,8 +462,173 @@ Function comp_is_signed()
 	
 	// *****
 	// *
+Function do_github()
+	var $vC_at_label : Collection
+	var $vL_value : Integer
+	var $c4Fo_build; $c4Fo_boundle : 4D:C1709.Folder
+	var $isOk : Boolean
+	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
+	var $vT_repo; $vT_tag : Text
+	$cE_PRODUCTS:=Form:C1466.c4E
+	$vT_repo:=$cE_PRODUCTS.label
+	$c4Fo_build:=This:C1470.get_build_path()
+	$isOk:=($c4Fo_build#Null:C1517) && ($c4Fo_build.exists)
+	If ($isOk)
+		$c4Fo_boundle:=$c4Fo_build.folder($vT_repo+".4dbase")
+		$vT_tag:=This:C1470.getInfoPlistVersion($c4Fo_boundle; $cE_PRODUCTS)
+		$isOk:=$vT_tag#""
+		If ($isOk)
+			$vC_at_label:=New collection:C1472("Release info "+$vT_tag; "Upload release "+$vT_tag)
+			$vL_value:=-1
+			If (x_choice_generic_vL(->$vL_value; $vC_at_label; "Github action"))
+				Case of 
+					: $vL_value=0
+						This:C1470.do_github1($vT_tag)
+					: $vL_value=1
+						This:C1470.do_github2($vT_tag)
+				End case 
+			End if 
+		End if 
+	End if 
 	
+	
+Function do_github1($vT_tag : Text)  // Get release info
+	var $cs__github : cs:C1710._GITHUB
+	var $vJ_releaseInfo : Object
+	var $vT_repo : Text
+	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
+	var $c4Fo_build; $c4Fo_boundle : 4D:C1709.Folder
+	var $isOk : Boolean
+	
+	$cE_PRODUCTS:=Form:C1466.c4E
+	$vT_repo:=$cE_PRODUCTS.label
+	$c4Fo_build:=This:C1470.get_build_path()
+	$isOk:=($c4Fo_build#Null:C1517) && ($c4Fo_build.exists)
+	If ($isOk)
+		$c4Fo_boundle:=$c4Fo_build.folder($vT_repo+".4dbase")
+		If ($vT_tag#"")
+			If (This:C1470.do_github_check($vT_repo; $vT_tag))
+				$cs__github:=cs:C1710._GITHUB.new()
+				$vJ_releaseInfo:=$cs__github.getReleaseInfo($vT_repo; $vT_tag)
+				If ($vJ_releaseInfo#Null:C1517)
+					wox_json_form($vJ_releaseInfo)
+				End if 
+			End if 
+		End if 
+	End if 
+	
+	
+Function do_github2($vT_tag : Text)
+	var $c4Fi_asset_zip : 4D:C1709.File
+	var $c4Fo_build; $c4Fo_boundle : 4D:C1709.Folder
+	var $isOk : Boolean
+	var $cs__github : cs:C1710._GITHUB
+	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
+	var $vT_repo : Text
+	$cE_PRODUCTS:=Form:C1466.c4E
+	$vT_repo:=$cE_PRODUCTS.label
+	$c4Fo_build:=This:C1470.get_build_path()
+	$isOk:=($c4Fo_build#Null:C1517) && ($c4Fo_build.exists)
+	If ($isOk)
+		$c4Fo_boundle:=$c4Fo_build.folder($vT_repo+".4dbase")
+		$isOk:=$vT_tag#""
+		If ($isOk)
+			If (This:C1470.do_github_check($vT_repo; $vT_tag))
+				$c4Fi_asset_zip:=$c4Fo_build.folder("../"+$vT_repo).file($vT_repo+".zip")
+				If ($c4Fi_asset_zip.exists)
+					$cs__github:=cs:C1710._GITHUB.new()
+					$isOk:=$cs__github.uploadNewAsset($vT_repo; $vT_tag; $c4Fi_asset_zip)
+					cs:C1710.wox.SOUNDS.me.play_glop()
+				Else 
+					waz_io_alert_popup("No build file at: "+$c4Fi_asset_zip.path)
+				End if 
+			End if 
+		End if 
+	End if 
+	
+	
+Function do_github_check($vT_repo : Text; $vT_tag : Text)->$isOk : Boolean
+	$isOk:=($vT_repo#"") && ($vT_tag#"")
+	If (Not:C34($isOk))
+		waz_io_alert_popup("Repo and tag must not be empty!")
+	End if 
+	
+	
+Function getInfoPlistVersion($c4Fo_bundle : 4D:C1709.Folder; $cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vT_bundle_tag : Text
+	var $c4Fi_infoPlist : 4D:C1709.File
+	var $isOk : Boolean
+	var $vJ_info : Object
+	var $vT_tag : Text
+	$isOk:=$c4Fo_bundle.exists
+	If ($isOk)
+		$c4Fi_infoPlist:=$c4Fo_bundle.file("Contents/Info.plist")
+		$isOk:=($c4Fi_infoPlist.exists)
+		If ($isOk)
+			$vJ_info:=$c4Fi_infoPlist.getAppInfo()
+			$vT_bundle_tag:=$vJ_info.CFBundleVersion
+			$vT_tag:=$cE_PRODUCTS.tag
+			If ($vT_bundle_tag#$vT_tag)
+				If (waz_io_confirm_popup("Tag Info.plist # PRODUCT, copy?"))
+					$cE_PRODUCTS.tag:=$vT_bundle_tag
+					$vT_bundle_tag:=""  // DO NOTHING
+				End if 
+			End if 
+		Else 
+			waz_io_alert_popup("Info.plist inex: "+$c4Fi_infoPlist.path)
+		End if 
+	Else 
+		waz_io_alert_popup("Bundle inex: "+$c4Fo_bundle.path)
+	End if 
 	// *
 	// *****
+	
+	
+Function do_cleanup()
+	// SRC into "*OLD"
+	var $c4Fi_SRC; $c4Fi_gato; $c4Fi_OLD_SRC : 4D:C1709.File
+	var $c4Fo_database; $c4Fo_root; $c4Fo_OLD; $c4Fo_build; $c4Fo_bundle; $c4Fo_gato : 4D:C1709.Folder
+	var $c4Fo_gato_bundle : 4D:C1709.Folder
+	var $isOk : Boolean
+	var $vC_fi_SRC : Collection
+	var $vT_repo; $vT_bundle; $vT_name : Text
+	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
+	$c4Fo_database:=This:C1470.get_path()
+	If ($c4Fo_database.exists)
+		$c4Fo_root:=$c4Fo_database.folder("../")
+		$c4Fo_OLD:=$c4Fo_root.folder("*OLD")
+		If ($c4Fo_OLD.exists)
+			$cE_PRODUCTS:=Form:C1466.c4E
+			$vT_repo:=$cE_PRODUCTS.label
+			$vC_fi_SRC:=$c4Fo_root.files()
+			$vC_fi_SRC:=$vC_fi_SRC.query("fullName = :1"; "@"+$vT_repo+"@ SRC.zip")
+			For each ($c4Fi_SRC; $vC_fi_SRC)
+				$vT_name:=$c4Fi_SRC.fullName
+				$c4Fi_OLD_SRC:=$c4Fo_OLD.file($vT_name)
+				If ($c4Fi_OLD_SRC.exists)
+					$c4Fi_OLD_SRC.delete()
+				End if 
+				$c4Fi_SRC.moveTo($c4Fo_OLD)
+			End for each 
+		End if 
+	End if 
+	
+	// Bundle into "4D v21 Gato"
+	$c4Fo_build:=This:C1470.get_build_path()
+	$isOk:=($c4Fo_build#Null:C1517) && ($c4Fo_build.exists)
+	If ($isOk)
+		$vT_bundle:=$vT_repo+".4dbase"
+		$c4Fo_bundle:=$c4Fo_build.folder($vT_bundle)
+		$c4Fi_gato:=$c4Fo_build.file("4D v21 Gato")
+		If ($c4Fi_gato.exists)
+			$c4Fo_gato:=$c4Fi_gato.original
+		End if 
+		If ($c4Fo_bundle.exists) && ($c4Fo_gato.exists)
+			$c4Fo_gato_bundle:=$c4Fo_gato.folder($vT_bundle)
+			If ($c4Fo_gato_bundle.exists)
+				$c4Fo_gato_bundle.delete(Delete with contents:K24:24)
+			End if 
+			$c4Fo_bundle.moveTo($c4Fo_gato)
+		End if 
+	End if 
 	
 	

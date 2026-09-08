@@ -1,13 +1,12 @@
 //%attributes = {}
 
 var $c4Fu_query : 4D:C1709.Function
-var $c4Fi_toto : 4D:C1709.File
 var $vC_cs_host; $vC_cs_components; $vC_at_spaces; $vC_at_spaces1 : Collection
 var $cs_sem_output : cs:C1710.sem_output
 var $cC_wox_TranslateAPI : cs:C1710.wox.TranslateAPI
 var $vJ_wox; $vJ_cs : Object
 
-$c4Fi_toto:=File:C1566("")
+//$c4Fi_toto:=File("")
 
 //var $c4CS_wox : 4D.ClassStore
 //$c4CS_wox:=cs.wox

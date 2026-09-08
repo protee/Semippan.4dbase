@@ -1,4 +1,4 @@
-//%attributes = {"shared":true}
+//%attributes = {}
 var $isOk : Boolean
 var $vJ_pref_file; $vJ_prefs; $vJ_form : Object
 var $vT_form : Text
@@ -16,3 +16,4 @@ $vJ_form.j_prefs:=$vJ_prefs
 
 $isOk:=zenh_form_open(Null:C1517; $vT_form; "Panel 4Dcorner"; $vJ_form)
 wox_prefs_save($vJ_pref_file; $vJ_prefs)
+wox_worker_kill_id()

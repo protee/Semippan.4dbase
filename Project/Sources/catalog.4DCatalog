@@ -879,6 +879,7 @@ password (hashed)]]></comment>
 		<field name="isCorner" uuid="DD2D71D8866D464689785A40D48C8EB6" type="1" never_null="true" id="20"/>
 		<field name="isFree" uuid="71A1ADB09EC9430793CA888E0F0E2D10" type="1" id="21"/>
 		<field name="isSRC" uuid="B939CEA6FEC1404899D2125D8C290F00" type="1" id="22"/>
+		<field name="isGithub" uuid="4AE37AE20A9D451A8B6922FEDC8485DE" type="1" never_null="true" id="23"/>
 		<primary_key field_name="UID" field_uuid="674957F3B3654A329DAAF8BCC87C4197"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="24">

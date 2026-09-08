@@ -458,6 +458,19 @@
 		{
 			"is_line": false,
 			"is_active": true,
+			"t_label": "GITHUB",
+			"t_method": "panel_github",
+			"t_icon": "tables/icn_github.png",
+			"l_color": 12632256,
+			"t_table": "",
+			"t_property": "",
+			"t_propertyValue": "",
+			"t_modifier": "",
+			"t_shortcut": ""
+		},
+		{
+			"is_line": false,
+			"is_active": true,
 			"t_label": "D4 CORNER",
 			"t_method": "panel_D4corner",
 			"t_icon": "[md:76] blue 600",

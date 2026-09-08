@@ -299,8 +299,8 @@
 				"Text": {
 					"type": "text",
 					"text": "4D Corner",
-					"top": 25,
-					"left": 522,
+					"top": 5,
+					"left": 612,
 					"width": 71,
 					"height": 16,
 					"sizingX": "move",
@@ -310,8 +310,8 @@
 				},
 				"zen_isCorner": {
 					"type": "subform",
-					"top": 26,
-					"left": 601,
+					"top": 6,
+					"left": 691,
 					"width": 24,
 					"height": 14,
 					"dataSourceTypeHint": "object",
@@ -333,7 +333,7 @@
 					"type": "text",
 					"text": "Free",
 					"top": 5,
-					"left": 645,
+					"left": 525,
 					"width": 41,
 					"height": 16,
 					"sizingX": "move",
@@ -344,7 +344,7 @@
 				"zen_isCorner1": {
 					"type": "subform",
 					"top": 6,
-					"left": 694,
+					"left": 574,
 					"width": 24,
 					"height": 14,
 					"dataSourceTypeHint": "object",
@@ -366,7 +366,7 @@
 					"type": "text",
 					"text": "SRC",
 					"top": 25,
-					"left": 645,
+					"left": 525,
 					"width": 41,
 					"height": 16,
 					"sizingX": "move",
@@ -377,7 +377,7 @@
 				"zen_isCorner2": {
 					"type": "subform",
 					"top": 26,
-					"left": 694,
+					"left": 574,
 					"width": 24,
 					"height": 14,
 					"dataSourceTypeHint": "object",
@@ -398,7 +398,7 @@
 				"zen_isComponent": {
 					"type": "subform",
 					"top": 6,
-					"left": 601,
+					"left": 481,
 					"width": 24,
 					"height": 14,
 					"dataSourceTypeHint": "object",
@@ -418,7 +418,7 @@
 				"Texte5": {
 					"type": "text",
 					"top": 5,
-					"left": 514,
+					"left": 394,
 					"width": 79,
 					"height": 14,
 					"stroke": "#455A64",
@@ -443,6 +443,39 @@
 					"left": 74,
 					"width": 114,
 					"height": 17
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Github",
+					"top": 25,
+					"left": 612,
+					"width": 71,
+					"height": 16,
+					"sizingX": "move",
+					"textAlign": "right",
+					"sizingY": "fixed",
+					"stroke": "#455A64"
+				},
+				"zen_isGithub": {
+					"type": "subform",
+					"top": 26,
+					"left": 691,
+					"width": 24,
+					"height": 14,
+					"dataSourceTypeHint": "object",
+					"detailForm": "waz_switch",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/zen_isGithub.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "move",
+					"sizingY": "fixed"
 				}
 			},
 			"entryOrder": [
@@ -461,7 +494,8 @@
 				"zen_isCorner1",
 				"zen_isCorner2",
 				"zen_isComponent",
-				"field_name8"
+				"field_name8",
+				"zen_isGithub"
 			]
 		},
 		{
@@ -882,7 +916,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2603,
+	"geometryStamp": 2647,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -293,11 +293,12 @@
 		<field name="j_text" uuid="ED8C01996BEA44F0A5FDCD04A6D8EF46" type="21" blob_switch_size="2147483647" id="18"/>
 		<field name="j_options" uuid="1AE7F5524B04406FBA2CFFDBF4D3D30C" type="21" blob_switch_size="2147483647" id="19"/>
 		<field name="j_dcox" uuid="1484BF220829456ABD831AF9E8C75C29" type="21" blob_switch_size="2147483647" id="20"/>
+		<field name="j_export" uuid="79EF048B005C48E889BAE3271FB51F41" type="21" blob_switch_size="2147483647" id="21"/>
 		<primary_key field_name="UID" field_uuid="1AD81D7EDCAC4A6EB15A2751A7532519"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="20">
+			<editor_table_info displayable_fields_count="22">
 				<color red="181" green="145" blue="209" alpha="255"/>
-				<coordinates left="1237.7029418945" top="176.4712219238" width="168.56799316406" height="480.81408691406"/>
+				<coordinates left="1237.7029418945" top="176.4712219238" width="168.56799316406" height="503.93518066406"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

@@ -18,7 +18,7 @@ Function record_load_upd()
 	If (Form:C1466.is_new)
 		$cE_TEMPLATES:=Form:C1466.c4E
 		$vJ_value:=$cE_TEMPLATES.j_dcox  // Get existing object
-		$vJ_value.l_main:=0xFEF5
+		$vJ_value.l_colors:=0xFEF5
 		$vC_at_bind:=woc_dcox_at_get()
 		For each ($vT_bind; $vC_at_bind)
 			$vJ_bind:=New object:C1471()
@@ -143,7 +143,7 @@ Function redraw_pictures()
 	$vL_colors_in:=$cE_TEMPLATES.colors_in
 	$vJ_widget:=OBJECT Get value:C1743("woc_dcox")
 	$vJ_value:=$vJ_widget.j_value
-	$vL_colors_main:=$vJ_value.l_main
+	$vL_colors_main:=$vJ_value.l_colors
 	$vL_rxy:=10
 	$vR_coef:=0.9
 	$vC_at_bind:=woc_dcox_at_get()

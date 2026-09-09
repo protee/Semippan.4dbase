@@ -19,27 +19,27 @@ Class constructor
 	
 	// *****
 	// *
-Function newReleaseNewAsset($vT_repo : Text; $vT_tag : Text; $vT_releaseName : Text; $vT_releaseNotes : Text; $c4Fi_asset_zip : 4D:C1709.File)->$isOk : Boolean
+Function newReleaseNewAsset($vT_repo : Text; $vT_tag : Text; $c4Fi_asset_zip : 4D:C1709.File; $is_silent : Boolean; $vT_releaseName : Text; $vT_releaseNotes : Text)->$isOk : Boolean
 	var $vR_releaseID : Real
 	var $vJ_releaseInfo : Object
-	$vJ_releaseInfo:=This:C1470.newRelease($vT_repo; $vT_tag; $vT_releaseName; $vT_releaseNotes)
+	$vJ_releaseInfo:=This:C1470.newRelease($vT_repo; $vT_tag; $is_silent; $vT_releaseName; $vT_releaseNotes)
 	$isOk:=($vJ_releaseInfo#Null:C1517)
 	If ($isOk)
 		$vR_releaseID:=$vJ_releaseInfo.id
-		This:C1470.uploadAsset($vT_repo; $c4Fi_asset_zip; $vR_releaseID)
+		This:C1470.uploadAsset($vT_repo; $vR_releaseID; $c4Fi_asset_zip; $is_silent)
 	End if 
 	
 	
-Function uploadNewAsset($vT_repo : Text; $vT_tag : Text; $c4Fi_asset_zip : 4D:C1709.File)->$isOk : Boolean
+Function uploadNewAsset($vT_repo : Text; $vT_tag : Text; $c4Fi_asset_zip : 4D:C1709.File; $is_silent : Boolean)->$isOk : Boolean
 	var $vJ_releaseInfo : Object
 	var $vR_releaseID : Real
 	$vJ_releaseInfo:=This:C1470.getReleaseInfo($vT_repo; $vT_tag)
 	$isOk:=($vJ_releaseInfo#Null:C1517)
 	If ($isOk)
 		$vR_releaseID:=$vJ_releaseInfo.id
-		$isOk:=(This:C1470.findAndDeleteAsset($vT_repo; $vJ_releaseInfo; $c4Fi_asset_zip))
+		$isOk:=(This:C1470.findAndDeleteAsset($vT_repo; $vJ_releaseInfo; $c4Fi_asset_zip; $is_silent))
 		If ($isOk)
-			This:C1470.uploadAsset($vT_repo; $c4Fi_asset_zip; $vR_releaseID)
+			This:C1470.uploadAsset($vT_repo; $vR_releaseID; $c4Fi_asset_zip; $is_silent)
 		End if 
 	End if 
 	// *
@@ -48,7 +48,7 @@ Function uploadNewAsset($vT_repo : Text; $vT_tag : Text; $c4Fi_asset_zip : 4D:C1
 	
 	// *****
 	// *
-Function errorMng($c4HR_request : 4D:C1709.HTTPRequest; $vL_ok : Integer)->$isOk : Boolean
+Function errorMng($c4HR_request : 4D:C1709.HTTPRequest; $is_silent : Boolean; $vL_ok : Integer)->$isOk : Boolean
 	var $vL_statut : Integer
 	var $vJ_response : Object
 	$vL_ok:=$vL_ok#0 ? $vL_ok : 200
@@ -58,10 +58,14 @@ Function errorMng($c4HR_request : 4D:C1709.HTTPRequest; $vL_ok : Integer)->$isOk
 		$vL_statut:=$vJ_response.status
 		$isOk:=($vL_statut=$vL_ok)
 		If (Not:C34($isOk))
-			waz_io_alert_popup("Error "+String:C10($vL_statut)+", "+$vJ_response.body.message+"!")
+			If (Not:C34($is_silent))
+				waz_io_alert_popup("Error "+String:C10($vL_statut)+", "+$vJ_response.body.message+"!")
+			End if 
 		End if 
 	Else 
-		waz_io_alert_popup("Error Null!")
+		If (Not:C34($is_silent))
+			waz_io_alert_popup("Error Null!")
+		End if 
 	End if 
 	
 	
@@ -85,7 +89,7 @@ Function getReleaseInfo($vT_repo : Text; $vT_tag : Text)->$vJ_releaseInfo : Obje
 	End if 
 	
 	
-Function getRepoTags($vT_repo : Text)->$vC_at_tags : Collection
+Function getRepoTags($vT_repo : Text; $is_silent : Boolean)->$vC_at_tags : Collection
 	var $c4HR_request : 4D:C1709.HTTPRequest
 	var $vJ_options : Object
 	var $vT_owner; $vT_token; $vT_url : Text
@@ -97,13 +101,13 @@ Function getRepoTags($vT_repo : Text)->$vC_at_tags : Collection
 	$vJ_options.headers:=New object:C1471("Authorization"; "Bearer "+$vT_token; "Accept"; "application/vnd.github+json")
 	$vT_url:="https://api.github.com/repos/"+$vT_owner+"/"+$vT_repo+"/tags"
 	$c4HR_request:=4D:C1709.HTTPRequest.new($vT_url; $vJ_options).wait()
-	If (This:C1470.errorMng($c4HR_request))
+	If (This:C1470.errorMng($c4HR_request; $is_silent))
 		$vC_at_tags:=$c4HR_request.response.body.extract("name")  // array response should come back as a Collection
 	End if 
 	
 	
 	
-Function newRelease($vT_repo : Text; $vT_tag : Text; $vT_releaseName : Text; $vT_releaseNotes : Text)->$vJ_releaseInfo : Object
+Function newRelease($vT_repo : Text; $vT_tag : Text; $is_silent : Boolean; $vT_releaseName : Text; $vT_releaseNotes : Text)->$vJ_releaseInfo : Object
 	$vT_owner:=This:C1470.t_owner
 	$vT_token:=This:C1470.t_token
 	
@@ -126,12 +130,12 @@ Function newRelease($vT_repo : Text; $vT_tag : Text; $vT_releaseName : Text; $vT
 	$vJ_options.body:=$vJ_body
 	$vT_url:="https://api.github.com/repos/"+$vT_owner+"/"+$vT_repo+"/releases"
 	$c4HR_request:=4D:C1709.HTTPRequest.new($vT_url; $vJ_options).wait()
-	If (This:C1470.errorMng($c4HR_request; 201))
+	If (This:C1470.errorMng($c4HR_request; $is_silent; 201))
 		$vJ_releaseInfo:=$c4HR_request.response.body
 	End if 
 	
 	
-Function findAndDeleteAsset($vT_repo : Text; $vJ_releaseInfo : Object; $c4Fi_asset_zip : 4D:C1709.File)->$isOk : Boolean
+Function findAndDeleteAsset($vT_repo : Text; $vJ_releaseInfo : Object; $c4Fi_asset_zip : 4D:C1709.File; $is_silent : Boolean)->$isOk : Boolean
 	var $c4HR_request : 4D:C1709.HTTPRequest
 	var $vJ_asset; $vJ_delOptions : Object
 	var $vT_owner; $vT_token; $vT_filename; $vT_url : Text
@@ -154,11 +158,15 @@ Function findAndDeleteAsset($vT_repo : Text; $vJ_releaseInfo : Object; $c4Fi_ass
 		$vJ_delOptions.headers:=New object:C1471("Authorization"; "Bearer "+$vT_token; "Accept"; "application/vnd.github+json")
 		$vT_url:="https://api.github.com/repos/"+$vT_owner+"/"+$vT_repo+"/releases/assets/"+String:C10($vR_assetID)
 		$c4HR_request:=4D:C1709.HTTPRequest.new($vT_url; $vJ_delOptions).wait()
-		$isOk:=This:C1470.errorMng($c4HR_request; 204)
+		$isOk:=This:C1470.errorMng($c4HR_request; $is_silent; 204)
 	End if 
 	
 	
-Function uploadAsset($vT_repo : Text; $c4Fi_asset_zip : 4D:C1709.File; $vR_releaseID : Real)
+Function uploadAsset($vT_repo : Text; $vR_releaseID : Real; $c4Fi_asset_zip : 4D:C1709.File; $is_silent : Boolean)
+	var $vJ_uploadResult; $vJ_upOptions : Object
+	var $vX_asset : Blob
+	var $vT_owner; $vT_token; $vT_filename; $vT_url : Text
+	var $c4HR_request : 4D:C1709.HTTPRequest
 	$vT_owner:=This:C1470.t_owner
 	$vT_token:=This:C1470.t_token
 	
@@ -170,11 +178,6 @@ Function uploadAsset($vT_repo : Text; $c4Fi_asset_zip : 4D:C1709.File; $vR_relea
 	$vJ_upOptions.body:=$vX_asset
 	$vT_url:="https://uploads.github.com/repos/"+$vT_owner+"/"+$vT_repo+"/releases/"+String:C10($vR_releaseID)+"/assets?name="+$vT_filename
 	$c4HR_request:=4D:C1709.HTTPRequest.new($vT_url; $vJ_upOptions).wait()
-	
-	var $vJ_uploadResult; $vJ_upOptions : Object
-	var $vX_asset : Blob
-	var $vT_owner; $vT_token; $vT_filename; $vT_url : Text
-	var $c4HR_request : 4D:C1709.HTTPRequest
 	$vJ_uploadResult:=$c4HR_request.response.body
 	// $uploadResult.browser_download_url now holds the public link
 	// *
@@ -264,10 +267,12 @@ Function get_path($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$c4Fo_database : 4D:C
 	
 	
 Function get_build_path($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$c4Fo_build : 4D:C1709.Folder
-	var $c4Fo_database : 4D:C1709.Folder
+	var $c4Fo_database; $c4Fo_parent : 4D:C1709.Folder
 	$c4Fo_database:=This:C1470.get_path($cE_PRODUCTS)
 	If ($c4Fo_database.exists)
-		$c4Fo_build:=$c4Fo_database.parent.folder($cE_PRODUCTS.label+"_Build/Components/")
+		$c4Fo_parent:=$c4Fo_database.parent
+		$c4Fo_parent:=$c4Fo_parent#Null:C1517 ? $c4Fo_parent : Folder:C1567($c4Fo_database.platformPath; fk platform path:K87:2).parent
+		$c4Fo_build:=$c4Fo_parent.folder($cE_PRODUCTS.label+"_Build/Components/")
 	End if 
 	
 	

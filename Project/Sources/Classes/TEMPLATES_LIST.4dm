@@ -60,7 +60,7 @@ Function lb_colors_in_img($cE_TEMPLATES : cs:C1710.TEMPLATESEntity)->$vO_img : P
 Function lb_colors_main_img($cE_TEMPLATES : cs:C1710.TEMPLATESEntity)->$vO_img : Picture
 	var $vL_colors; $vL_size : Integer
 	var $vL_shape : Integer
-	$vL_colors:=$cE_TEMPLATES.j_dcox.l_main
+	$vL_colors:=$cE_TEMPLATES.j_dcox.l_colors
 	$vL_shape:=sem__storage_prefs().l_display_shape
 	$vL_size:=30
 	$vO_img:=woc_sp_shape_get($vL_size; $vL_size; $vL_colors; $vL_shape; 3)
@@ -80,7 +80,7 @@ Function lb_dcox_icon($cE_TEMPLATES : cs:C1710.TEMPLATESEntity; $vT_bind : Text)
 	var $vJ_dcox; $vJ_bind : Object
 	$vL_colors_in:=$cE_TEMPLATES.colors_in
 	$vJ_dcox:=$cE_TEMPLATES.j_dcox
-	$vL_colors_main:=$vJ_dcox.l_main
+	$vL_colors_main:=$vJ_dcox.l_colors
 	$vJ_bind:=$vJ_dcox["j_"+$vT_bind]
 	$vL_colors_out:=woc_dcoxWidget_get_colors($vL_colors_main; $vJ_bind; $vL_colors_in)
 	$vL_enablers:=woc_dcoxWidget_get_enablers($vJ_bind)
@@ -116,7 +116,7 @@ Function lb_dcox_x_img($cE_TEMPLATES : cs:C1710.TEMPLATESEntity; $vT_bind : Text
 	var $vT_wb : Text
 	$vL_colors_in:=$cE_TEMPLATES.colors_in
 	$vJ_dcox:=$cE_TEMPLATES.j_dcox
-	$vL_colors_main:=$vJ_dcox.l_main
+	$vL_colors_main:=$vJ_dcox.l_colors
 	$vJ_bind:=$vJ_dcox["j_"+$vT_bind]
 	$vL_colors_out:=woc_dcoxWidget_get_colors($vL_colors_main; $vJ_bind; $vL_colors_in)
 	
@@ -144,7 +144,7 @@ Function lb_dcox_img($cE_TEMPLATES : cs:C1710.TEMPLATESEntity)->$vO_picture : Pi
 	var $vT_bind; $vT_wb : Text
 	$vL_colors_in:=$cE_TEMPLATES.colors_in
 	$vJ_dcox:=$cE_TEMPLATES.j_dcox
-	$vL_colors_main:=$vJ_dcox.l_main
+	$vL_colors_main:=$vJ_dcox.l_colors
 	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)

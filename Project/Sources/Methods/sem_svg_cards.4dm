@@ -22,7 +22,7 @@ $vR_radius:=$vJ_widget.r_radius
 $vL_curve:=$vJ_widget.l_curve  //6
 $vL_cards_curve:=$vJ_widget.l_cards_curve  //10
 $vL_type:=$vJ_widget.l_type
-$vT_font_face:=wox_font_face_get($vJ_widget)
+$vT_font_face:=wox_font_face_widget($vJ_widget)
 
 $vJ_pattern:=$vJ_widget.j_pattern
 $vL_opacity:=$vJ_pattern.l_opacity

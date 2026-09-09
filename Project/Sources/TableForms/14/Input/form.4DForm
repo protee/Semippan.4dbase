@@ -43,7 +43,7 @@
 					"type": "groupBox",
 					"top": 301,
 					"left": 10,
-					"width": 760,
+					"width": 515,
 					"height": 93,
 					"sizingY": "move",
 					"stroke": "#666666",
@@ -53,7 +53,7 @@
 				"og_picture": {
 					"type": "groupBox",
 					"top": 331,
-					"left": 555,
+					"left": 535,
 					"width": 130,
 					"height": 50,
 					"sizingY": "fixed",
@@ -63,7 +63,7 @@
 				"Rectangle": {
 					"type": "rectangle",
 					"top": 344,
-					"left": 556,
+					"left": 536,
 					"width": 128,
 					"height": 35,
 					"borderRadius": 3,
@@ -272,7 +272,7 @@
 				"woc_default": {
 					"type": "subform",
 					"top": 349,
-					"left": 563,
+					"left": 543,
 					"width": 24,
 					"height": 24,
 					"sizingY": "fixed",
@@ -292,7 +292,7 @@
 				"woc_click": {
 					"type": "subform",
 					"top": 349,
-					"left": 593,
+					"left": 573,
 					"width": 24,
 					"height": 24,
 					"sizingY": "fixed",
@@ -312,7 +312,7 @@
 				"woc_over": {
 					"type": "subform",
 					"top": 349,
-					"left": 623,
+					"left": 603,
 					"width": 24,
 					"height": 24,
 					"sizingY": "fixed",
@@ -332,7 +332,7 @@
 				"woc_disabled": {
 					"type": "subform",
 					"top": 349,
-					"left": 653,
+					"left": 633,
 					"width": 24,
 					"height": 24,
 					"sizingY": "fixed",
@@ -399,7 +399,7 @@
 					"type": "groupBox",
 					"top": 241,
 					"left": 10,
-					"width": 673,
+					"width": 515,
 					"height": 50,
 					"sizingY": "move",
 					"stroke": "#666666",
@@ -409,7 +409,7 @@
 				"sets_Rectangle1": {
 					"type": "rectangle",
 					"top": 254,
-					"left": 556,
+					"left": 536,
 					"width": 127,
 					"height": 35,
 					"borderRadius": 3,
@@ -452,7 +452,7 @@
 				"woc_default1": {
 					"type": "subform",
 					"top": 260,
-					"left": 562,
+					"left": 542,
 					"width": 24,
 					"height": 24,
 					"sizingY": "move",
@@ -473,7 +473,7 @@
 				"woc_click1": {
 					"type": "subform",
 					"top": 260,
-					"left": 592,
+					"left": 572,
 					"width": 24,
 					"height": 24,
 					"sizingY": "move",
@@ -494,7 +494,7 @@
 				"woc_over1": {
 					"type": "subform",
 					"top": 260,
-					"left": 622,
+					"left": 602,
 					"width": 24,
 					"height": 24,
 					"sizingY": "move",
@@ -515,7 +515,7 @@
 				"woc_disabled1": {
 					"type": "subform",
 					"top": 260,
-					"left": 652,
+					"left": 632,
 					"width": 24,
 					"height": 24,
 					"sizingY": "move",
@@ -527,6 +527,27 @@
 					"printFrame": "variable",
 					"borderStyle": "dotted",
 					"method": "ObjectMethods/woc_disabled1.4dm",
+					"events": [
+						"onLoad",
+						"onDataChange"
+					],
+					"sizingX": "fixed"
+				},
+				"sets_export": {
+					"type": "subform",
+					"top": 326,
+					"left": 670,
+					"width": 100,
+					"height": 55,
+					"sizingY": "move",
+					"dataSourceTypeHint": "object",
+					"detailForm": "woc_dcoxWidget",
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"borderStyle": "dotted",
+					"method": "ObjectMethods/sets_export.4dm",
 					"events": [
 						"onLoad",
 						"onDataChange"
@@ -554,11 +575,12 @@
 				"woc_default1",
 				"woc_click1",
 				"woc_over1",
-				"woc_disabled1"
+				"woc_disabled1",
+				"sets_export"
 			]
 		}
 	],
-	"geometryStamp": 1094,
+	"geometryStamp": 1138,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

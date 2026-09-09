@@ -2,14 +2,16 @@
 property cE_PACKS : cs:C1710.PACKSEntity
 property cE_BANKS : cs:C1710.BANKSEntity
 property cE_SETS : cs:C1710.SETSEntity
-property j_zen_MEDIA : Object
+property j_zen_MEDIA; j_woc_export : Object
 
-Class constructor($cE_PACKS : cs:C1710.PACKSEntity; $cE_BANKS : cs:C1710.BANKSEntity; $cE_SETS : cs:C1710.SETSEntity; $vJ_zen_MEDIA : Object)
+
+Class constructor($cE_PACKS : cs:C1710.PACKSEntity; $cE_BANKS : cs:C1710.BANKSEntity; $cE_SETS : cs:C1710.SETSEntity; $vJ_zen_MEDIA : Object; $vJ_woc_export : Object)
 	var $cES_MEDIA : cs:C1710.MEDIASelection
 	This:C1470.cE_PACKS:=$cE_PACKS  // Might be Null. For ajColors calculation
 	This:C1470.cE_BANKS:=$cE_BANKS
 	This:C1470.cE_SETS:=$cE_SETS
 	This:C1470.j_zen_MEDIA:=$vJ_zen_MEDIA
+	This:C1470.j_woc_export:=$vJ_woc_export
 	$cES_MEDIA:=$vJ_zen_media.lb_selection
 	
 	
@@ -287,12 +289,14 @@ Function _colors_to_pp($vL_output : Integer)
 	var $cES_MEDIA : cs:C1710.MEDIASelection
 	var $cE_SETS : cs:C1710.SETSEntity
 	var $cE_TEMPLATES : cs:C1710.TEMPLATESEntity
-	var $vJ_SETS_dcox; $vJ_MEDIA_dcox; $vJ_TEMPLATES_dcox; $vJ_bind : Object
+	var $vJ_SETS_dcox; $vJ_MEDIA_dcox; $vJ_TEMPLATES_dcox; $vJ_bind; $vJ_woc_export : Object
 	var $cE_PACKS : cs:C1710.PACKSEntity
 	
 	$cE_PACKS:=This:C1470.cE_PACKS
 	$cE_BANKS:=This:C1470.cE_BANKS
 	$cE_SETS:=This:C1470.cE_SETS
+	$vJ_woc_export:=This:C1470.j_woc_export  // l_in to l_out _calculate_upd()
+	//$vL_colors_out:=woc_dcoxWidget_get_colors($vJ_woc_export.j_main.l_colors; $vJ_woc_export.j_value; $vL_colors_out)
 	
 	$vT_bind:="default"
 	$vL_colors_in:=($cE_PACKS#Null:C1517) ? woc_sp_colors_from_alColorsIdx($cE_PACKS.j_alColors; $cE_BANKS.colorsIdx) : 0
@@ -304,7 +308,7 @@ Function _colors_to_pp($vL_output : Integer)
 	End if 
 	
 	$vJ_SETS_dcox:=$cE_SETS.j_dcox
-	$vL_SETS_main:=$vJ_SETS_dcox.l_main
+	$vL_SETS_main:=$vJ_SETS_dcox.l_colors
 	$vJ_bind:=$vJ_SETS_dcox["j_"+$vT_bind]
 	$vL_colors_in:=woc_dcoxWidget_get_colors($vL_SETS_main; $vJ_bind; $vL_colors_in)
 	
@@ -313,16 +317,21 @@ Function _colors_to_pp($vL_output : Integer)
 	For each ($cE_MEDIA; $cES_MEDIA)
 		$vL_colors_out:=$vL_colors_in
 		$vJ_MEDIA_dcox:=$cE_MEDIA.j_dcox
-		$vL_MEDIA_main:=$vJ_MEDIA_dcox.l_main
+		$vL_MEDIA_main:=$vJ_MEDIA_dcox.l_colors
 		$cE_TEMPLATES:=$cE_MEDIA.MEDIA_TEMPLATES
 		$vJ_TEMPLATES_dcox:=$cE_TEMPLATES#Null:C1517 ? $cE_TEMPLATES.j_dcox : Null:C1517
 		If ($vJ_TEMPLATES_dcox#Null:C1517)
-			$vL_TEMPLATES_main:=$vJ_TEMPLATES_dcox.l_main
+			$vL_TEMPLATES_main:=$vJ_TEMPLATES_dcox.l_colors
 			$vJ_bind:=$vJ_TEMPLATES_dcox["j_"+$vT_bind]
 			$vL_colors_out:=woc_dcoxWidget_get_colors($vL_TEMPLATES_main; $vJ_bind; $vL_colors_out)
 		End if 
 		$vJ_bind:=$vJ_MEDIA_dcox["j_"+$vT_bind]
 		$vL_colors_out:=woc_dcoxWidget_get_colors($vL_MEDIA_main; $vJ_bind; $vL_colors_out)
+		
+		// ***** Last transform based on woc_export
+		// *
+		$vL_colors_out:=woc_dcoxWidget_get_colors($vJ_woc_export.j_main.l_colors; $vJ_woc_export.j_value; $vL_colors_out)
+		
 		woc_sp_colors_to_sf($vL_colors_out; ->$vL_stroke; ->$vL_fill)
 		
 		Case of 

@@ -341,7 +341,7 @@ Function templates_record($vJ_record : Object; $vJ_meta : Object)
 	var $vL_enablers : Integer
 	$vJ_value:=New object:C1471()
 	$vJ_record.j_dcox:=$vJ_value
-	$vJ_value.l_main:=$vJ_record.colors
+	$vJ_value.l_colors:=$vJ_record.colors
 	$vL_enablers:=$vJ_record.enablers
 	$vC_at_bind:=woc_dcox_at_get()
 	For each ($vT_bind; $vC_at_bind)
@@ -503,7 +503,7 @@ Function sets_record($vJ_record : Object; $vJ_meta : Object)
 	
 	$vJ_dcox:=New object:C1471()
 	$vJ_record.j_dcox:=$vJ_dcox
-	$vJ_dcox.l_main:=$vJ_record.colorsMain
+	$vJ_dcox.l_colors:=$vJ_record.colorsMain
 	$vC_at_bind:=woc_dcox_at_get()
 	For each ($vT_bind; $vC_at_bind)
 		$vT_bind1:=Uppercase:C13(Substring:C12($vT_bind; 1; 1))+Substring:C12($vT_bind; 2)
@@ -551,7 +551,7 @@ Function media_record($vJ_record : Object; $vJ_meta : Object)
 	//End if
 	$vJ_value:=New object:C1471()
 	$vJ_record.j_dcox:=$vJ_value
-	$vJ_value.l_main:=$vJ_record.colorsMain
+	$vJ_value.l_colors:=$vJ_record.colorsMain
 	$is_specific:=$vJ_record.isSpecificBkg
 	$vL_enablers:=$is_specific ? $vJ_record.enablers : 0
 	$vC_at_bind:=woc_dcox_at_get()
@@ -913,7 +913,7 @@ Function _do_it_products_colors()->$isOk : Boolean
 					$cE_PRODUCTS:=$cE_PATHS.PATHS_PRODUCTS
 					$vT_product:=$cE_PRODUCTS.label
 					$vL_colors:=$cE_PRODUCTS.colors
-					$cES_TEMPLATES:=ds:C1482.TEMPLATES.query("label = :1 AND j_dcox.l_main = :2"; $vT_product; $vL_colors)
+					$cES_TEMPLATES:=ds:C1482.TEMPLATES.query("label = :1 AND j_dcox.l_colors = :2"; $vT_product; $vL_colors)
 					If ($cES_TEMPLATES.length>0)
 						$cE_TEMPLATES:=$cES_TEMPLATES[0]
 					Else 
@@ -923,7 +923,7 @@ Function _do_it_products_colors()->$isOk : Boolean
 						$cE_TEMPLATES.shape:=2  // Circle
 						$vJ_value:=New object:C1471()
 						$cE_TEMPLATES.j_dcox:=$vJ_value
-						$vJ_value.l_main:=$vL_colors
+						$vJ_value.l_colors:=$vL_colors
 						$vC_at_bind:=woc_dcox_at_get()
 						$idx:=0
 						For each ($vT_bind; $vC_at_bind)

@@ -14,7 +14,7 @@ Function record_load_upd()
 	//If ($is_new)
 	//$c4E:=Form.c4E
 	//$vJ_dcox:=$c4E.j_dcox  // Already existing j_dcox
-	//$vJ_dcox.l_main:=0xFEF5
+	//$vJ_dcox.l_colors:=0xFEF5
 	//$vC_at_bind:=sem_get_at_dcox()
 	//For each ($vT_bind; $vC_at_bind)
 	//$vJ_bind:=New object()
@@ -69,28 +69,6 @@ Function form_events()
 			
 			
 		: ($vL_event_code=On Clicked:K2:4)
-			//Case of
-			//: ($vT_objectName="bt_orwells_rw")
-			
-			//If (Right click) && (Form.is_editing)
-			//This._btn_logo()
-			//End if
-			
-			//: ($vT_objectName="bt_partner")
-			//This.partner_choose()
-			
-			//: ($vT_objectName="bt_print")
-			//This.print()
-			
-			//End case
-			
-			
-			
-			//: ($vL_event_code=On Double Clicked)
-			
-			//: ($vL_event_code=On Data Change)
-			
-			//: ($vL_event_code=On Double Clicked)
 			
 	End case 
 	// *
@@ -151,6 +129,8 @@ Function _template_chgt($vJ_widget : Object)
 	$vJ_widget.resize()  // To affect sub object to already binded j_dcox
 	$vJ_widget.redraw()
 	
+	This:C1470._setsExportUpd($cE_SETS)
+	
 	This:C1470.redraw_colors1($vC_al_colors1)
 	$vC_al_colors:=This:C1470._get_colors($cE_SETS; $vC_al_colors1)
 	This:C1470.redraw_colors($vC_al_colors)
@@ -163,7 +143,7 @@ Function _dcox_chgt()
 	$cE_SETS:=Form:C1466.c4E
 	$vC_al_colors:=This:C1470._get_colors($cE_SETS)
 	This:C1470.redraw_colors($vC_al_colors)
-	
+	This:C1470._setsExportUpd($cE_SETS)
 	
 	
 Function redraw_colors1($vC_al_colors1 : Collection)
@@ -220,5 +200,24 @@ Function redraw_colors($vC_al_colors : Collection)
 	End for each 
 	// *
 	// *****
+	
+	
+Function _setsExportUpd($cE_SETS : cs:C1710.SETSEntity)
+	var $vJ_widget; $vJ_export : Object
+	var $vC_al_colors1 : Collection
+	$vJ_widget:=OBJECT Get value:C1743("sets_export")
+	$vC_al_colors1:=Form:C1466.al_colors1
+	$vJ_widget.l_in:=$vC_al_colors1[0]
+	$vJ_widget.is_editing:=Form:C1466.is_editing
+	//$vJ_widget.j_main:=$vJ_dcox  // For l_main
+	$vJ_widget.j_main:=$cE_SETS.j_dcox  // For l_main
+	$vJ_export:=$cE_SETS.j_export
+	If ($vJ_export=Null:C1517)
+		$vJ_export:=woc__storage_widgets().j_dcoxWidget.j_value
+		$cE_SETS.j_export:=$vJ_export
+	End if 
+	$vJ_widget.j_value:=$vJ_export
+	$vJ_widget.resize()
+	$vJ_widget.redraw()
 	
 	

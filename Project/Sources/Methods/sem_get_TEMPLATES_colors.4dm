@@ -8,7 +8,7 @@ var $vJ_TEMPLATES_dcox; $vJ_bind : Object
 var $vT_bind : Text
 
 $vJ_TEMPLATES_dcox:=$cE_TEMPLATES#Null:C1517 ? $cE_TEMPLATES.j_dcox : Null:C1517
-$vL_TEMPLATES_main:=$vJ_TEMPLATES_dcox.l_main
+$vL_TEMPLATES_main:=$vJ_TEMPLATES_dcox.l_colors
 
 // DCOX -> separated, or H | V, for LB or output
 $vC_al_colors:=New collection:C1472()

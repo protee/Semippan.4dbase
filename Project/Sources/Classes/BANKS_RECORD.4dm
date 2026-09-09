@@ -229,8 +229,7 @@ Function _lb_sets_c4E($vJ_zen_sets : Object)->$cE_SETS : cs:C1710.SETSEntity
 Function _lb_sets_event($vJ_zen_sets : Object; $vL_event : Integer)
 	var $is_selected; $is_editing : Boolean
 	var $cE_SETS : cs:C1710.SETSEntity
-	var $vJ_widget; $vJ_isActive : Object
-	var $vT_decox : Text
+	var $vJ_widget; $vJ_isActive; $vJ_dcox : Object
 	var $vC_al_colors1; $vC_al_colors : Collection
 	
 	//$vJ_zen_sets:=$vJ_zen_sets#Null ? $vJ_zen_sets : OBJECT Get value("zen_sets")
@@ -288,14 +287,18 @@ Function _lb_sets_event($vJ_zen_sets : Object; $vL_event : Integer)
 		$vC_al_colors1:=This:C1470._get_colors1($cE_SETS)
 		This:C1470.redraw_colors1($vC_al_colors1)
 		
+		$vJ_dcox:=$cE_SETS.j_dcox
 		$vJ_widget:=OBJECT Get value:C1743("sets_dcox")
 		$vJ_widget.al_in:=$vC_al_colors1
 		$vJ_widget.is_editing:=$is_editing
-		$vJ_widget.j_value:=$cE_SETS.j_dcox
-		$vJ_widget.resize($vT_decox)
+		$vJ_widget.j_value:=$vJ_dcox
+		$vJ_widget.resize()
 		$vJ_widget.redraw()
 		
+		// l_in ; Out where ?
+		
 		$vC_al_colors:=This:C1470._get_colors($cE_SETS; $vC_al_colors1)
+		This:C1470._setsExportUpd($cE_SETS)
 		This:C1470.redraw_colors($vC_al_colors)
 		This:C1470.redraw_pict_dcox()
 		This:C1470.lb_media_refresh($cE_SETS)
@@ -372,8 +375,33 @@ Function _sets_dcox_chgt()
 	$cE_SETS:=Form:C1466.cE_SETS
 	$vC_al_colors:=This:C1470._get_colors($cE_SETS)
 	This:C1470.redraw_colors($vC_al_colors)
+	This:C1470._setsExportUpd($cE_SETS)
 	This:C1470.redraw_pict_dcox($cE_SETS)
 	This:C1470.lb_media_refresh($cE_SETS)
+	
+	
+Function _setsExportUpd($cE_SETS : cs:C1710.SETSEntity)
+	var $vJ_widget; $vJ_export : Object
+	var $vC_al_colors1 : Collection
+	$vJ_widget:=OBJECT Get value:C1743("sets_export")
+	$vC_al_colors1:=Form:C1466.al_colors1
+	$vJ_widget.l_in:=$vC_al_colors1[0]
+	$vJ_widget.is_editing:=Form:C1466.is_editing
+	//$vJ_widget.j_main:=$vJ_dcox  // For l_main
+	$vJ_widget.j_main:=$cE_SETS.j_dcox  // For l_main
+	$vJ_export:=$cE_SETS.j_export
+	If ($vJ_export=Null:C1517)
+		$vJ_export:=OB Copy:C1225(woc__storage_widgets().j_dcoxWidget.j_value)
+		$vJ_export.l_stroke:=2
+		$vJ_export.l_fill:=2
+		$cE_SETS.j_export:=$vJ_export
+	End if 
+	$vJ_widget.j_value:=$vJ_export
+	$vJ_widget.resize()
+	$vJ_widget.redraw()
+	
+Function _getExportWidget()->$vJ_woc_export : Object
+	$vJ_woc_export:=OBJECT Get value:C1743("sets_export")
 	// *
 	// *****
 	
@@ -535,13 +563,14 @@ Function _media_tools()
 	var $cs_BANKS_TOOLS : cs:C1710.BANKS_TOOLS
 	var $cE_BANKS : cs:C1710.BANKSEntity
 	var $cE_SETS : cs:C1710.SETSEntity
-	var $vJ_zen_media : Object
+	var $vJ_zen_media; $vJ_woc_export : Object
 	var $cE_PACKS : cs:C1710.PACKSEntity
 	$cE_PACKS:=This:C1470.get_cE_PACKS()
 	$cE_BANKS:=Form:C1466.c4E
 	$cE_SETS:=Form:C1466.cE_SETS
 	$vJ_zen_media:=OBJECT Get value:C1743("zen_media")
-	$cs_BANKS_TOOLS:=cs:C1710.BANKS_TOOLS.new($cE_PACKS; $cE_BANKS; $cE_SETS; $vJ_zen_MEDIA)
+	$vJ_woc_export:=This:C1470._getExportWidget()
+	$cs_BANKS_TOOLS:=cs:C1710.BANKS_TOOLS.new($cE_PACKS; $cE_BANKS; $cE_SETS; $vJ_zen_MEDIA; $vJ_woc_export)
 	$cs_BANKS_TOOLS.do_choose_menu()
 	
 	

@@ -15,7 +15,7 @@ Function record_load_upd()
 	//$cE_MEDIA:=Form.c4E
 	////$cE_MEDIA.colorsSVG:=woc_sp_colors_from_sf(k_MDcolorTransparent; k_MDcolorTransparent)
 	//$vJ_value:=$cE_MEDIA.j_dcox
-	//$vJ_value.l_main:=0xFEF5
+	//$vJ_value.l_colors:=0xFEF5
 	//$vC_at_bind:=sem_get_at_dcox()
 	//For each ($vT_bind; $vC_at_bind)
 	//$vJ_bind:=New object()

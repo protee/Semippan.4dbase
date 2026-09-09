@@ -2,11 +2,19 @@
 property j_repos : Object  // Cache for repos
 property t_progress_uuid : Text
 property t_github : Text
+property al_colors : Collection
+
 
 Class constructor
+	var $vC_al_colors : Collection
 	zen_startup_screen_get_menuBar()
 	wox_prefs_windows_load()
+	$vC_al_colors:=New collection:C1472()  // Colors for state lines
+	$vC_al_colors.push(0xAA004001; 0xAA01B020; 0xAA05605D; 0xAA02F034; 0xAA041047)
+	This:C1470.al_colors:=$vC_al_colors
 	This:C1470.form_init()
+	// *
+	// *****
 	
 	
 	// *****
@@ -112,7 +120,7 @@ Function loadReposCache($cES_PRODUCTS : cs:C1710.PRODUCTSSelection; $is_recache 
 			End if 
 			
 			$vO_logo:=$cE_PRODUCTS.logo
-			$vJ_repo.o_logo:=$vO_logo
+			//$vJ_repo.o_logo:=$vO_logo
 			//If (Not($is_recache))
 			//$vT_path_logo:="https://www.protee.org/images/"+$vT_repo+"/"+$vT_repo+".png"
 			//$vL_httpStatus:=HTTP Get($vT_path_logo; $vO_logo)
@@ -124,12 +132,12 @@ Function loadReposCache($cES_PRODUCTS : cs:C1710.PRODUCTSSelection; $is_recache 
 			
 			$vT_tag:=$cs__github.getInfoPlistVersion($cE_PRODUCTS)
 			$vJ_repo.t_tag:=$vT_tag
-			$vC_at_tags:=$cs__github.getRepoTags($vT_repo)
+			$vC_at_tags:=$cs__github.getRepoTags($vT_repo; True:C214)
 			$vJ_repo.at_tag:=$vC_at_tags
 			
 			If ($vC_at_tags#Null:C1517)
 				$idx:=$vC_at_tags.indexOf($vT_tag)
-				$vT_gtag:=$idx>=0 ? "->"+$vT_tag : "---"
+				$vT_gtag:=$idx>=0 ? $vT_tag : "---"
 			End if 
 			$vJ_repo.t_gtag:=$vT_gtag
 			
@@ -176,11 +184,6 @@ Function lb_get_gtag($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vT_gtag : Text
 	$vJ_repos:=This:C1470.j_repos  // Cache
 	$vJ_repo:=$vJ_repos[$vT_repo]
 	If ($vJ_repo#Null:C1517)
-		//$vC_at_tags:=$vJ_repo.at_tag
-		//$vT_tag:=$vJ_repo.t_tag  // Bundle
-		//$idx:=$vC_at_tags.indexOf($vT_tag)
-		//$vT_answer:=$idx>=0 ? "->"+$vT_tag : ""
-		
 		$vT_gtag:=$vJ_repo.t_gtag
 	End if 
 	
@@ -211,6 +214,33 @@ Function lb_get_state_icn($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vO_state : P
 	$vL_state:=$vJ_repo.l_state
 	$c4Fi_icon:=Folder:C1567(fk resources folder:K87:11).file("github/icn_state"+String:C10($vL_state)+k_png_ext)
 	READ PICTURE FILE:C678($c4Fi_icon.platformPath; $vO_state)
+	
+	
+Function lb_meta_info($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vJ_meta : Object
+	var $vC_al_colors : Collection
+	var $vL_state; $vL_colors : Integer
+	var $vJ_repo; $vJ_repos : Object
+	var $vT_stroke; $vT_fill; $vT_repo : Text
+	
+	$vJ_meta:=New object:C1471()
+	$vT_repo:=$cE_PRODUCTS.label
+	$vJ_repos:=This:C1470.j_repos  // Cache
+	$vJ_repo:=$vJ_repos[$vT_repo]
+	$vL_state:=$vJ_repo.l_state
+	$vC_al_colors:=This:C1470.al_colors
+	//$vL_state:=2
+	$vL_colors:=$vC_al_colors[$vL_state]
+	woc_sp_colors_to_html($vL_colors; ->$vT_stroke; ->$vT_fill; True:C214)
+	$vJ_meta.stroke:=$vT_stroke
+	$vJ_meta.fill:=$vT_fill
+	
+	//$vJ_meta_cell:=New object
+	//$vJ_meta.cell:=$vJ_meta_cell
+	//$vJ_meta_cell_values:=New object
+	//$vJ_meta_cell.lbm_text:=$vJ_meta_cell_values
+	
+	//$vJ_meta_cell_values.fill:=$vT_fill
+	//$vJ_meta_cell_values.stroke:=$vT_stroke
 	// *
 	// *****
 	
@@ -219,10 +249,20 @@ Function lb_get_state_icn($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vO_state : P
 	// *****
 	// *
 Function progress_new()->$vT_progress_uuid : Text
+	var $vJ_progress; $vJ_asset : Object
 	$vT_progress_uuid:=This:C1470.t_progress_uuid
 	If ($vT_progress_uuid="")
 		$vT_progress_uuid:=waz_progress_new()
 		This:C1470.t_progress_uuid:=$vT_progress_uuid
+		$vJ_progress:=waz_progress_get_vJ($vT_progress_uuid)
+		$vJ_asset:=$vJ_progress.j_asset
+		Use ($vJ_asset)
+			$vJ_asset.l_colors:=0xAA003000
+			$vJ_asset.l_shape_colors:=0xAA003000
+			$vJ_asset.l_icon_color:=k_MD_white
+			$vJ_asset.r_icon_coef:=0.9
+			$vJ_asset.l_stroke:=0
+		End use 
 		SET TIMER:C645(30)
 	End if 
 	
@@ -265,11 +305,11 @@ Function _do_github()
 	var $cES_PRODUCTS_in; $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
 	var $tt; $vL_state : Integer
 	var $vJ_repos; $vJ_repo : Object
-	var $vT_repo; $vT_tag; $vT_releaseName; $vT_releaseNotes : Text
+	var $vT_repo; $vT_tag : Text
 	var $vO_logo : Picture
 	$cES_PRODUCTS_in:=Form:C1466.lb_selection
 	$cES_PRODUCTS:=Form:C1466.lb_selected
-	$cES_PRODUCTS:=zen_choice_selection($cES_PRODUCTS_in; $cES_PRODUCTS)
+	$cES_PRODUCTS:=zen_choice_selection($cES_PRODUCTS_in; $cES_PRODUCTS; "Upload to github")
 	If ($cES_PRODUCTS#Null:C1517)
 		$tt:=$cES_PRODUCTS.length
 		$cs__github:=cs:C1710._GITHUB.new()
@@ -308,7 +348,7 @@ Function _do_github()
 								This:C1470.progress_logo($vO_logo)
 								$c4Fi_asset_zip:=$c4Fo_build.folder("../"+$vT_repo).file($vT_repo+".zip")
 								If ($c4Fi_asset_zip.exists)
-									$isOk:=$cs__github.newReleaseNewAsset($vT_repo; $vT_tag; $vT_releaseName; $vT_releaseNotes; $c4Fi_asset_zip)
+									$isOk:=$cs__github.newReleaseNewAsset($vT_repo; $vT_tag; $c4Fi_asset_zip; True:C214)  // true; $vT_releaseName; $vT_releaseNotes
 									If ($isOk)
 										$vJ_repo.l_state:=4  // OK
 										cs:C1710.wox.SOUNDS.me.play_glop()
@@ -338,7 +378,7 @@ Function _do_cleanup()
 	
 	$cES_PRODUCTS_in:=Form:C1466.lb_selection
 	$cES_PRODUCTS:=Form:C1466.lb_selected
-	$cES_PRODUCTS:=zen_choice_selection($cES_PRODUCTS_in; $cES_PRODUCTS)
+	$cES_PRODUCTS:=zen_choice_selection($cES_PRODUCTS_in; $cES_PRODUCTS; "Clean-up files on disk")
 	If ($cES_PRODUCTS#Null:C1517)
 		$tt:=$cES_PRODUCTS.length
 		$cs__github:=cs:C1710._GITHUB.new()

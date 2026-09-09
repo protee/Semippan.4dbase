@@ -57,12 +57,12 @@ Function lb_dcox_icon($cE_SETS : cs:C1710.SETSEntity; $vT_bind : Text)->$vO_img 
 	$cE_TEMPLATES:=$cE_SETS.SETS_TEMPLATES
 	If ($cE_TEMPLATES#Null:C1517)
 		$vJ_dcox:=$cE_TEMPLATES.j_dcox
-		$vL_colors_main:=$vJ_dcox.l_main
+		$vL_colors_main:=$vJ_dcox.l_colors
 		$vJ_bind:=$vJ_dcox["j_"+$vT_bind]
 		$vL_colors_in:=woc_dcoxWidget_get_colors($vL_colors_main; $vJ_bind; $vL_colors_in)
 	End if 
 	$vJ_dcox:=$cE_SETS.j_dcox
-	$vL_colors_main:=$vJ_dcox.l_main
+	$vL_colors_main:=$vJ_dcox.l_colors
 	$vJ_bind:=$vJ_dcox["j_"+$vT_bind]
 	$vL_colors_in:=woc_dcoxWidget_get_colors($vL_colors_main; $vJ_bind; $vL_colors_in)
 	$vL_enablers:=3  //woc_dcoxWidget_get_enablers($vJ_bind)
@@ -86,19 +86,19 @@ Function lb_dcox_img($cE_SETS : cs:C1710.SETSEntity)->$vO_picture : Picture
 	$vJ_DTO:=Form:C1466.j_DTO
 	$vL_colors_in:=$vJ_DTO.l_colors_in
 	$vJ_dcox:=$cE_SETS.j_dcox
-	$vL_colors_main:=$vJ_dcox.l_main
+	$vL_colors_main:=$vJ_dcox.l_colors
 	$vC_at_bind:=woc_dcox_at_get()
 	$idx:=0
 	For each ($vT_bind; $vC_at_bind)
 		$cE_TEMPLATES:=$cE_SETS.SETS_TEMPLATES
 		If ($cE_TEMPLATES#Null:C1517)
 			$vJ_dcox:=$cE_TEMPLATES.j_dcox
-			$vL_colors_main:=$vJ_dcox.l_main
+			$vL_colors_main:=$vJ_dcox.l_colors
 			$vJ_bind:=$vJ_dcox["j_"+$vT_bind]
 			$vL_colors_in:=woc_dcoxWidget_get_colors($vL_colors_main; $vJ_bind; $vL_colors_in)
 		End if 
 		$vJ_dcox:=$cE_SETS.j_dcox
-		$vL_colors_main:=$vJ_dcox.l_main
+		$vL_colors_main:=$vJ_dcox.l_colors
 		$vJ_bind:=$vJ_dcox["j_"+$vT_bind]
 		$vL_colors_in:=woc_dcoxWidget_get_colors($vL_colors_main; $vJ_bind; $vL_colors_in)
 		
@@ -125,7 +125,7 @@ Function lb_dcox_img($cE_SETS : cs:C1710.SETSEntity)->$vO_picture : Picture
 	//var $vT_bind : Text
 	//$vJ_dcox:=$cE_sets.j_dcox
 	
-	//$vL_colors_main:=$vJ_dcox.l_main
+	//$vL_colors_main:=$vJ_dcox.l_colors
 	//$vC_at_bind:=sem_get_at_dcox()
 	//$idx:=0
 	//For each ($vT_bind; $vC_at_bind)

@@ -484,7 +484,7 @@ Function do_githubNewRelease($vT_tag : Text)
 				$c4Fi_asset_zip:=$c4Fo_build.folder("../"+$vT_repo).file($vT_repo+".zip")
 				If ($c4Fi_asset_zip.exists)
 					$cs__github:=cs:C1710._GITHUB.new()
-					$isOk:=$cs__github.newReleaseNewAsset($vT_repo; $vT_tag; $vT_releaseName; $vT_releaseNotes; $c4Fi_asset_zip)
+					$isOk:=$cs__github.newReleaseNewAsset($vT_repo; $vT_tag; $c4Fi_asset_zip)  // ; False; $vT_releaseName; $vT_releaseNotes
 					cs:C1710.wox.SOUNDS.me.play_glop()
 				Else 
 					waz_io_alert_popup("No build file at: "+$c4Fi_asset_zip.path)

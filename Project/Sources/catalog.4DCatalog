@@ -264,6 +264,7 @@
 		<field name="colorsSVG" uuid="B20D16BD39734C2CBE2DAF77278162FF" type="4" never_null="true" id="21"/>
 		<field name="sourcePNG" uuid="A0CACB47638B4127AA83FD1DAA886A59" type="4" never_null="true" id="22"/>
 		<field name="targetPNG" uuid="5056FB9BAE654278B56CBF488DCC91A2" type="4" never_null="true" id="23"/>
+		<field name="text_size" uuid="CBC694C85629496FBC6804693EBD34A6" type="4" never_null="true" id="24"/>
 		<primary_key field_name="UID" field_uuid="E03A16C5FDC14611B59624772BAA2AF9"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="24">

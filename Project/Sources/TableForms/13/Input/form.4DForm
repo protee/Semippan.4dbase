@@ -561,7 +561,7 @@
 				"woc_colorText": {
 					"type": "subform",
 					"top": 154,
-					"left": 65,
+					"left": 155,
 					"width": 30,
 					"height": 30,
 					"sizingY": "fixed",
@@ -582,8 +582,8 @@
 				"Texte1": {
 					"type": "text",
 					"top": 162,
-					"left": 20,
-					"width": 41,
+					"left": 116,
+					"width": 35,
 					"height": 14,
 					"stroke": "#666666",
 					"class": "Geneva_10",
@@ -1049,11 +1049,33 @@
 						"onClick"
 					],
 					"sizingY": "fixed"
+				},
+				"field_name7": {
+					"type": "input",
+					"dataSource": "Form:C1466.c4E.text_size",
+					"top": 162,
+					"left": 65,
+					"width": 40,
+					"height": 17,
+					"dataSourceTypeHint": "integer",
+					"textAlign": "center",
+					"sizingY": "fixed"
+				},
+				"Texte2": {
+					"type": "text",
+					"top": 162,
+					"left": 20,
+					"width": 41,
+					"height": 14,
+					"stroke": "#666666",
+					"class": "Geneva_10",
+					"text": "size ±",
+					"sizingY": "fixed"
 				}
 			}
 		}
 	],
-	"geometryStamp": 2181,
+	"geometryStamp": 2209,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

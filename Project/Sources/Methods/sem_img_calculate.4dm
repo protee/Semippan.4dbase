@@ -3,7 +3,7 @@
 #DECLARE($cE_SETS : cs:C1710.SETSEntity; $cE_MEDIA : cs:C1710.MEDIAEntity; $vO_img_picture : Picture; $vL_colors : Integer; $vL_brightness : Integer; $is_grey_scale : Boolean; $is_img_offset : Boolean)->$vO_picture : Picture
 var $is_MEDIA; $is_set_shape : Boolean
 var $vL_text_color; $vL_index; $vL_space; $vL_shape; $vL_img_offset_x; $vL_img_offset_y; $vL_text_style; $vL_width; $vL_heigth; $vL_stroke; $vL_media_tl; $vL_media_tr; $vL_media_br; $vL_media_bl : Integer
-var $vL_MEDIA_sourcePNG; $vL_MEDIA_targetPNG; $vL_target_rgb : Integer
+var $vL_MEDIA_sourcePNG; $vL_MEDIA_targetPNG; $vL_target_rgb; $vL_MEDIA_text_size : Integer
 var $vL_MEDIA_shape; $vL_MEDIA_size; $vL_MEDIA_angle; $vL_MEDIA_brightness; $vL_MEDIA_colorsSVG; $vL_angle : Integer
 var $vJ_options; $vJ_metarect; $vJ_picture; $vJ_text; $vJ_MEDIA_metarect : Object
 var $vR_text_coef; $vR_img_coef; $vR_size; $vR_img_brightness; $vR_radius_tl; $vR_radius_tr; $vR_radius_coef; $vR_radius_br; $vR_radius_bl; $vR_offset_x; $vR_offset_y : Real
@@ -22,6 +22,7 @@ If ($is_MEDIA)
 		$vL_MEDIA_shape:=$cE_MEDIA.shape
 	End if 
 	$vL_MEDIA_size:=$cE_MEDIA.size
+	$vL_MEDIA_text_size:=$cE_MEDIA.text_size
 	$vL_MEDIA_angle:=$cE_MEDIA.angle
 	$vL_MEDIA_brightness:=$cE_MEDIA.brightness
 	$vL_MEDIA_colorsSVG:=$cE_MEDIA.colorsSVG
@@ -57,14 +58,13 @@ $vL_img_offset_y:=$vL_img_offset_x
 
 // TXT
 $vT_text_font:=$vJ_text.t_face
-$vR_text_coef:=$vJ_text.l_size/100
-
 $vL_text_style:=$vJ_text.l_style
-$vR_img_coef:=($vJ_picture.l_size+$vL_MEDIA_size)/100
+$vR_text_coef:=($vJ_text.l_size+$vL_MEDIA_text_size)/100
 
+$vR_size:=$cE_SETS.size/100
+$vR_img_coef:=($vJ_picture.l_size+$vL_MEDIA_size)/100
 $vL_width:=$cE_SETS.width
 $vL_heigth:=$cE_SETS.height
-$vR_size:=$cE_SETS.size/100
 $vL_angle:=$vJ_picture.l_angle+$vL_MEDIA_angle
 $vL_stroke:=$cE_SETS.stroke
 $vR_img_brightness:=1+(($vL_brightness+$vL_MEDIA_brightness)/100)

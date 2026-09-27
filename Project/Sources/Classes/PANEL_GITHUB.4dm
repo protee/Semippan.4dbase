@@ -85,11 +85,6 @@ Function record_load_upd()
 	var $vT_github : Text
 	var $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
 	
-	$cE_ZEN_DASHBOARD:=ds:C1482.ZEN_DASHBOARD.all().first()
-	$vJ_biz:=$cE_ZEN_DASHBOARD.j_biz
-	$vT_github:=$vJ_biz.t_github
-	This:C1470.t_github:=$vT_github
-	
 	$cES_PRODUCTS:=ds:C1482.PRODUCTS.query("isGithub = :1"; True:C214)
 	$cES_PRODUCTS:=$cES_PRODUCTS.orderBy("label")
 	This:C1470.loadReposCache($cES_PRODUCTS)
@@ -131,9 +126,12 @@ Function loadReposCache($cES_PRODUCTS : cs:C1710.PRODUCTSSelection; $is_recache 
 			This:C1470.progress_logo($vO_logo)
 			
 			$vT_tag:=$cs__github.getInfoPlistVersion($cE_PRODUCTS)
+			$is_bundle:=$vT_tag#""
 			$vJ_repo.t_tag:=$vT_tag
-			$vC_at_tags:=$cs__github.getRepoTags($vT_repo; True:C214)
-			$vJ_repo.at_tag:=$vC_at_tags
+			If ($is_bundle)
+				$vC_at_tags:=$cs__github.getRepoTags($vT_repo; True:C214)
+				$vJ_repo.at_tag:=$vC_at_tags
+			End if 
 			
 			If ($vC_at_tags#Null:C1517)
 				$idx:=$vC_at_tags.indexOf($vT_tag)
@@ -142,7 +140,7 @@ Function loadReposCache($cES_PRODUCTS : cs:C1710.PRODUCTSSelection; $is_recache 
 			$vJ_repo.t_gtag:=$vT_gtag
 			
 			Case of 
-				: $vT_tag=""  // No bundle
+				: Not:C34($is_bundle)  // No bundle
 					$vL_state:=0
 					
 				: $vC_at_tags=Null:C1517  // Error
@@ -216,6 +214,23 @@ Function lb_get_state_icn($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vO_state : P
 	READ PICTURE FILE:C678($c4Fi_icon.platformPath; $vO_state)
 	
 	
+Function lb_get_sel_icn($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vO_icon : Picture
+	var $vL_colorsRow; $vL_size; $vL_colors : Integer
+	var $c4ES_selected : 4D:C1709.EntitySelection
+	var $is_selected : Boolean
+	var $vO_img : Picture
+	
+	$c4ES_selected:=Form:C1466.lb_selected
+	//$is_selected:=($c4ES_selected.indexOf($cE_PRODUCTS)>=0)
+	$is_selected:=$c4ES_selected.contains($cE_PRODUCTS)
+	//$is_selected:=True
+	$vL_colorsRow:=k_MDcolorsIdx_green
+	$vO_icon:=woc_sp_shape_toggle($is_selected; $vL_colorsRow; 9; 14)  // Wrapper !
+	//$vL_size:=12
+	//$vL_colors:=$is_selected ? woc_sp_colors_from_row($vL_colorsRow; 7; 3) : woc_sp_colors_from_row(k_MDcolorsIdx_grey; 5; 1)
+	//$vO_img:=woc_sp_shape_get($vL_size; $vL_size; $vL_colors; 2)
+	
+	
 Function lb_meta_info($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vJ_meta : Object
 	var $vC_al_colors : Collection
 	var $vL_state; $vL_colors : Integer
@@ -234,12 +249,14 @@ Function lb_meta_info($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vJ_meta : Object
 	$vJ_meta.stroke:=$vT_stroke
 	$vJ_meta.fill:=$vT_fill
 	
-	//$vJ_meta_cell:=New object
-	//$vJ_meta.cell:=$vJ_meta_cell
-	//$vJ_meta_cell_values:=New object
-	//$vJ_meta_cell.lbm_text:=$vJ_meta_cell_values
+	$vJ_meta_cell:=New object:C1471
+	$vJ_meta.cell:=$vJ_meta_cell
+	$vJ_meta_cell_values:=New object:C1471
+	$vJ_meta_cell.lb_state_icn:=$vJ_meta_cell_values
+	$vJ_meta_cell_values.fill:="#ffffff"
+	$vJ_meta_cell.lb_sel_icn:=$vJ_meta_cell_values
+	$vJ_meta_cell_values.fill:="#ffffff"
 	
-	//$vJ_meta_cell_values.fill:=$vT_fill
 	//$vJ_meta_cell_values.stroke:=$vT_stroke
 	// *
 	// *****

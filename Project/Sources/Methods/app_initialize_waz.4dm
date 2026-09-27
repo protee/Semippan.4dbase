@@ -102,5 +102,13 @@ Use ($vJ_widgets_waz)
 	$vJ_widget.l_click:=1  // Click label on
 	
 End use 
+
+$vJ_widget:=$vJ_widgets_waz.j_cards
+Use ($vJ_widget)
+	$vJ_widget.r_ratio:=1
+	$vJ_widget.r_magnifier:=0.7
+	$vJ_widget.r_scale:=0.3
+	$vJ_widget.r_scale_y:=0.25  // Offset in % r_scale
+End use 
 // *
 // *****

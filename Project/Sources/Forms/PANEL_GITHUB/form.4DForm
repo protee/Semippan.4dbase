@@ -43,7 +43,7 @@
 					"type": "listbox",
 					"top": 10,
 					"left": 10,
-					"width": 649,
+					"width": 679,
 					"height": 535,
 					"sizingX": "fixed",
 					"sizingY": "grow",
@@ -61,7 +61,7 @@
 					"currentItemPositionSource": "Form:C1466.lb_position",
 					"selectedItemsSource": "Form:C1466.lb_selected",
 					"metaSource": "Form:C1466.fc.lb_meta_info(This:C1470)",
-					"hideSystemHighlight": false,
+					"hideSystemHighlight": true,
 					"headerHeight": "1em",
 					"rowHeight": "64px",
 					"columns": [
@@ -281,13 +281,50 @@
 							"resizable": false,
 							"horizontalPadding": 4,
 							"verticalPadding": 4
+						},
+						{
+							"name": "lb_sel_icn",
+							"width": 30,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "left",
+							"verticalAlign": "middle",
+							"events": [
+								"onClick",
+								"onDoubleClick",
+								"onDataChange",
+								"onBeforeDataEntry"
+							],
+							"header": {
+								"name": "lbh_selected",
+								"text": "Sel",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Pied7",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"dataSource": "Form:C1466.fc.lb_get_sel_icn(This:C1470)",
+							"enterable": false,
+							"dataSourceTypeHint": "picture",
+							"pictureFormat": "truncatedCenter",
+							"resizable": false,
+							"horizontalPadding": 4,
+							"verticalPadding": 4
 						}
 					]
 				},
 				"bt_github": {
 					"type": "pictureButton",
 					"top": 57,
-					"left": 665,
+					"left": 695,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Github actions",
@@ -305,7 +342,7 @@
 				"bt_cleanup": {
 					"type": "pictureButton",
 					"top": 84,
-					"left": 665,
+					"left": 695,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Clean up",
@@ -323,7 +360,7 @@
 				"bt_refresh": {
 					"type": "pictureButton",
 					"top": 8,
-					"left": 665,
+					"left": 695,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Refresh",
@@ -341,7 +378,7 @@
 			}
 		}
 	],
-	"geometryStamp": 266,
+	"geometryStamp": 274,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

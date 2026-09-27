@@ -234,8 +234,8 @@
 				},
 				"bt_save": {
 					"type": "pictureButton",
-					"top": 355,
-					"left": 255,
+					"top": 338,
+					"left": 238,
 					"width": 24,
 					"height": 24,
 					"tooltip": "Save",
@@ -308,7 +308,7 @@
 					"width": 820,
 					"height": 100,
 					"dataSourceTypeHint": "object",
-					"detailForm": "sem_cards",
+					"detailForm": "waz_cards",
 					"deletableInList": false,
 					"doubleClickInRowAction": "editSubrecord",
 					"selectionMode": "multiple",
@@ -348,7 +348,7 @@
 			}
 		}
 	],
-	"geometryStamp": 2639,
+	"geometryStamp": 2641,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

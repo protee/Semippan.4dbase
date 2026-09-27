@@ -207,9 +207,9 @@
 					"type": "input",
 					"dataSource": "Form:C1466.c4E.j_biz.t_github",
 					"top": 428,
-					"left": 70,
-					"width": 295,
-					"height": 1,
+					"left": 110,
+					"width": 165,
+					"height": 21,
 					"fontSize": 16,
 					"contextMenu": "none"
 				},
@@ -217,11 +217,11 @@
 					"type": "text",
 					"top": 431,
 					"left": 15,
-					"width": 49,
-					"height": 1,
+					"width": 109,
+					"height": 17,
 					"stroke": "#666666",
 					"class": "Geneva_10",
-					"text": "Github"
+					"text": "Github owner"
 				}
 			},
 			"entryOrder": [
@@ -238,7 +238,7 @@
 	],
 	"width": 660,
 	"height": 460,
-	"geometryStamp": 725,
+	"geometryStamp": 764,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -80,7 +80,7 @@ Function record_load_upd()
 	$vJ_biz:=$cE_ZEN_DASHBOARD.j_biz
 	$vT_D4corner:=$vJ_biz.t_4Dcorner
 	$vT_github:=$vJ_biz.t_github
-	This:C1470.t_github:=$vT_github
+	This:C1470.t_github:="https://github.com/"+$vT_github+"/"
 	$c4Fi_D4corner:=Try(File:C1566($vT_D4corner))
 	This:C1470.fi_D4corner:=$c4Fi_D4corner
 	

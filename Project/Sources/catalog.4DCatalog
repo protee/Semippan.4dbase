@@ -6,7 +6,7 @@
 		<field name="UID" uuid="2C15E477DBF84E83862C78DF466C2DB8" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
 		<field name="createdOn" uuid="BF181C589BCD432796CA1C168AFD213C" type="8" never_null="true" id="2"/>
 		<field name="expireOn" uuid="945E84ED580145909C61ED9DD95B0AC2" type="8" never_null="true" id="3"/>
-		<field name="tableNumber" uuid="5C2A6F6201904A5EBC8F6BFF1B22232D" type="4" never_null="true" id="4"/>
+		<field name="table" uuid="5C2A6F6201904A5EBC8F6BFF1B22232D" type="10" limiting_length="50" never_null="true" id="4"/>
 		<field name="UIDuser" uuid="46A267A44B5F4F14865B9F485AFA709F" type="10" store_as_UUID="true" id="5"/>
 		<field name="name" uuid="C6FFC47037F64EEE81CAEBA5E34F1642" type="10" limiting_length="80" never_null="true" id="6"/>
 		<field name="content" uuid="5355681DE7EB4D8D9BF361B6596D6A70" type="18" never_null="true" id="7"/>
@@ -23,7 +23,9 @@
 		<field name="UID" uuid="D7CD0695004B49A0A557C5FE8C1947E1" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
 		<field name="createdOn" uuid="D75CD5DE9B344B049DD44D994454C491" type="8" never_null="true" id="2"/>
 		<field name="expireOn" uuid="2D7B83D505824B07907DC0D339FCE801" type="8" never_null="true" id="3"/>
-		<field name="tableNumber" uuid="37270CD23F2D4786868FDE72B52E7792" type="4" never_null="true" id="4"/>
+		<field name="table" uuid="37270CD23F2D4786868FDE72B52E7792" type="10" limiting_length="50" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
 		<field name="UIDuser" uuid="8A87E5805A524299A04C7C581174F004" type="10" store_as_UUID="true" id="5"/>
 		<field name="name" uuid="B26617AD5C5C4322891552145061D20A" type="10" limiting_length="80" never_null="true" id="6"/>
 		<field name="content" uuid="7AD8A9E91A9D423B92BDCFD9DEBA496F" type="18" never_null="true" id="7"/>
@@ -41,7 +43,9 @@
 		<field name="UID" uuid="BCEF5682AF9745ADB89001387643420B" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
 		<field name="createdOn" uuid="A6F50766D5894DEEA84FCAB8231FA78C" type="8" never_null="true" id="2"/>
 		<field name="expireOn" uuid="2517F3C56C8E4CB8B7EC07C072579B35" type="8" never_null="true" id="3"/>
-		<field name="tableNumber" uuid="427D6D1E58B8418594F88768A6CEE080" type="4" never_null="true" id="4"/>
+		<field name="table" uuid="427D6D1E58B8418594F88768A6CEE080" type="10" limiting_length="50" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
 		<field name="UIDuser" uuid="9499BB8E98214E6D8761BB0405948209" type="10" store_as_UUID="true" id="5"/>
 		<field name="name" uuid="F23D8E9FEE5D4834A473173E16653382" type="10" limiting_length="80" never_null="true" id="6"/>
 		<field name="content" uuid="1F989C9D6BCA49D59343F6ECF7B68A97" type="21" blob_switch_size="2147483647" never_null="true" id="7"/>
@@ -109,7 +113,9 @@
 	<table name="ZEN_POPUPS" uuid="4EDFD20F4F534DFFA141BF06358FD44B" id="6" prevent_journaling="true">
 		<field name="UID" uuid="D02E7AF8E9094570888FFDFCA913FBDB" type="10" unique="true" autogenerate="true" store_as_UUID="true" never_null="true" id="1"/>
 		<field name="isTable_NC" uuid="CF652B0F1BFD498AAC456CC83DAC99DE" type="4" never_null="true" id="2"/>
-		<field name="tableNum" uuid="258A33156D5743F78D526BCC29807C30" type="4" never_null="true" id="3"/>
+		<field name="table" uuid="258A33156D5743F78D526BCC29807C30" type="10" limiting_length="50" never_null="true" id="3">
+			<field_extra multi_line="false"/>
+		</field>
 		<field name="key" uuid="04E69B264F01450ABD6146B764937E0B" type="10" limiting_length="35" unique="true" autogenerate="true" never_null="true" id="4"/>
 		<field name="label" uuid="263B6EBA5CBF47888D5403CBF897F42B" type="10" limiting_length="80" never_null="true" id="5"/>
 		<field name="isDev" uuid="6BD7C53BD68A44D2BEB58246201E2BC9" type="1" never_null="true" id="6"/>
@@ -705,7 +711,7 @@ DE]]></comment>
 		<field name="settings" uuid="982DA15D688243B8BC003CF1A8ED4A75" type="10" never_null="true" id="4"/>
 		<field name="view" uuid="A01A415ABBB54375B18B84D8909849E8" type="10" limiting_length="255" never_null="true" id="5"/>
 		<field name="profile" uuid="DB917C0B1B564AD598DF13559C57760B" type="10" limiting_length="35" never_null="true" id="6"/>
-		<field name="tableNumber" uuid="87B10EE7001747018A7FAD93C2D7A257" type="4" never_null="true" id="7"/>
+		<field name="table" uuid="87B10EE7001747018A7FAD93C2D7A257" type="10" limiting_length="50" never_null="true" id="7"/>
 		<primary_key field_name="UID" field_uuid="82ECFDBB57274DDB9D4706750837B63B"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="8">
@@ -903,7 +909,9 @@ password (hashed)]]></comment>
 		<field name="isExports" uuid="57E7CFEB583349EF83AA7C8C2E31B44C" type="1" never_null="true" id="10"/>
 		<field name="isPrints" uuid="318B6F9D31C14C45811F4CB17A042954" type="1" never_null="true" id="11"/>
 		<field name="isPopups" uuid="55EF4230A1A148C4B7402AAEB906AF62" type="1" never_null="true" id="12"/>
-		<field name="tables" uuid="5AD923CEFAEF45C5A701D23171D62F9E" type="21" blob_switch_size="2147483647" never_null="true" id="13"/>
+		<field name="tables" uuid="5AD923CEFAEF45C5A701D23171D62F9E" type="21" blob_switch_size="2147483647" never_null="true" id="13">
+			<field_extra multi_line="false"/>
+		</field>
 		<field name="isActive" uuid="5AFC5843B72B42C9A415D90C4AB2B8B0" type="1" never_null="true" id="14"/>
 		<primary_key field_name="UID" field_uuid="4E13DD139EFE42DFA78B52483B3AB017"/>
 		<table_extra>

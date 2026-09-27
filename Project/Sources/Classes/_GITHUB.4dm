@@ -5,12 +5,25 @@ Class constructor
 	var $vT_owner; $vT_token : Text
 	var $c4Fi_github : 4D:C1709.File
 	var $vJ_github : Object
-	$c4Fi_github:=Folder:C1567(fk data folder:K87:12).file("github.json")
+	$cE_ZEN_DASHBOARD:=ds:C1482.ZEN_DASHBOARD.all().first()
+	$vJ_biz:=$cE_ZEN_DASHBOARD.j_biz
+	$vT_owner:=$vJ_biz.t_github
+	
+	//$c4Fi_github:=Folder(fk data folder).file("github.json")
+	//If ($c4Fi_github.exists)
+	//$vJ_github:=JSON Parse($c4Fi_github.getText())
+	//$vT_owner:=$vJ_github.owner
+	//$vT_token:=$vJ_github.token
+	//End if 
+	
+	$vT_system:=System folder:C487(User preferences_user:K41:4)
+	$c4Fo_prefs4D:=Folder:C1567($vT_system; fk platform path:K87:2).folder("4D")
+	$c4Fi_github:=$c4Fo_prefs4D.file("github.json")
 	If ($c4Fi_github.exists)
 		$vJ_github:=JSON Parse:C1218($c4Fi_github.getText())
-		$vT_owner:=$vJ_github.owner
 		$vT_token:=$vJ_github.token
 	End if 
+	
 	This:C1470.t_owner:=$vT_owner
 	This:C1470.t_token:=$vT_token
 	// *

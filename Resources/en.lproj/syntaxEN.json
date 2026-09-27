@@ -215,33 +215,6 @@
 				"Summary": ""
 			}
 		},
-		"SLOKAS_RECORD": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
-				"Summary": ""
-			}
-		},
-		"ZEN__TABLES_LIST": {
-			"new()": {
-				"Syntax": "**.new**( *vT_LB* : Text )",
-				"Params": [
-					[
-						"vT_LB",
-						"Text",
-						"->"
-					]
-				],
-				"Summary": ""
-			}
-		},
-		"ZENH_PALETTE": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
-				"Summary": ""
-			}
-		},
 		"zenh_dashboard": {
 			"new()": {
 				"Syntax": "**.new**()",
@@ -318,7 +291,7 @@
 		},
 		"BANKS_TOOLS": {
 			"new()": {
-				"Syntax": "**.new**( *cE_PACKS* : cs.sem.PACKSEntity; *cE_BANKS* : cs.sem.BANKSEntity; *cE_SETS* : cs.sem.SETSEntity; *vJ_zen_MEDIA* : Object )",
+				"Syntax": "**.new**( *cE_PACKS* : cs.sem.PACKSEntity; *cE_BANKS* : cs.sem.BANKSEntity; *cE_SETS* : cs.sem.SETSEntity; *vJ_zen_MEDIA* : Object; *vJ_woc_export* : Object )",
 				"Params": [
 					[
 						"cE_PACKS",
@@ -337,6 +310,11 @@
 					],
 					[
 						"vJ_zen_MEDIA",
+						"Object",
+						"->"
+					],
+					[
+						"vJ_woc_export",
 						"Object",
 						"->"
 					]
@@ -458,19 +436,6 @@
 				"Summary": ""
 			}
 		},
-		"CATEGORIES_LIST": {
-			"new()": {
-				"Syntax": "**.new**( *vT_LB* : Text )",
-				"Params": [
-					[
-						"vT_LB",
-						"Text",
-						"->"
-					]
-				],
-				"Summary": ""
-			}
-		},
 		"sem_veda_prefs": {
 			"new()": {
 				"Syntax": "**.new**()",
@@ -573,6 +538,19 @@
 				"Summary": ""
 			}
 		},
+		"CATEGORIES_LIST": {
+			"new()": {
+				"Syntax": "**.new**( *vT_LB* : Text )",
+				"Params": [
+					[
+						"vT_LB",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
 		"PICTURES_FILTERS": {
 			"new()": {
 				"Syntax": "**.new**( *vT_table* : Text; *vL_table* : Integer; *is_local* : Boolean )",
@@ -610,6 +588,53 @@
 			}
 		},
 		"sem_output": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"SLOKAS_LIST": {
+			"new()": {
+				"Syntax": "**.new**( *vT_LB* : Text )",
+				"Params": [
+					[
+						"vT_LB",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"PANEL_GITHUB": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"ZEN__WIDGETS": {
+			"new()": {
+				"Syntax": "**.new**( *vT_widget* : Text )",
+				"Params": [
+					[
+						"vT_widget",
+						"Text",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"ZENH_INFOS": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"_GITHUB": {
 			"new()": {
 				"Syntax": "**.new**()",
 				"Params": [],
@@ -661,13 +686,6 @@
 				"Summary": ""
 			}
 		},
-		"BANKS_RECORD": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
-				"Summary": ""
-			}
-		},
 		"MEDIA_LIST": {
 			"new()": {
 				"Syntax": "**.new**( *vT_LB* : Text )",
@@ -678,20 +696,6 @@
 						"->"
 					]
 				],
-				"Summary": ""
-			}
-		},
-		"_GITHUB": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
-				"Summary": ""
-			}
-		},
-		"ZENH_INFOS": {
-			"new()": {
-				"Syntax": "**.new**()",
-				"Params": [],
 				"Summary": ""
 			}
 		},
@@ -718,14 +722,21 @@
 				"Summary": ""
 			}
 		},
-		"_test_png": {
+		"BANKS_RECORD": {
 			"new()": {
 				"Syntax": "**.new**()",
 				"Params": [],
 				"Summary": ""
 			}
 		},
-		"SLOKAS_LIST": {
+		"SLOKAS_RECORD": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"ZEN__TABLES_LIST": {
 			"new()": {
 				"Syntax": "**.new**( *vT_LB* : Text )",
 				"Params": [
@@ -738,30 +749,17 @@
 				"Summary": ""
 			}
 		},
-		"PANEL_GITHUB": {
+		"ZENH_PALETTE": {
 			"new()": {
 				"Syntax": "**.new**()",
 				"Params": [],
 				"Summary": ""
 			}
 		},
-		"sem_cards": {
+		"_test_png": {
 			"new()": {
 				"Syntax": "**.new**()",
 				"Params": [],
-				"Summary": ""
-			}
-		},
-		"ZEN__WIDGETS": {
-			"new()": {
-				"Syntax": "**.new**( *vT_widget* : Text )",
-				"Params": [
-					[
-						"vT_widget",
-						"Text",
-						"->"
-					]
-				],
 				"Summary": ""
 			}
 		},
@@ -1731,329 +1729,6 @@
 		},
 		"_inheritedFrom_": "ZEN__TABLES_LIST"
 	},
-	"SLOKAS_RECORD": {
-		"colorsFromPRO()": {
-			"Syntax": "**.colorsFromPRO**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"do_touched()": {
-			"Syntax": "**.do_touched**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"record_checkout()": {
-			"Syntax": "**.record_checkout**()->isOk : Boolean",
-			"Params": [
-				[
-					"isOk",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"record_touched()": {
-			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
-			"Params": [
-				[
-					"c4E_record",
-					"4D.Entity",
-					"->"
-				],
-				[
-					"is_touched",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"record_load_upd()": {
-			"Syntax": "**.record_load_upd**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "ZEN__RECORD"
-	},
-	"ZEN__TABLES_LIST": {
-		"lb_font_style()": {
-			"Syntax": "**.lb_font_style**( *vT_function* : Text )",
-			"Params": [
-				[
-					"vT_function",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"meta_style()": {
-			"Syntax": "**.meta_style**( *vJ_meta* : Object; *vL_style* : Integer; *vT_column* : Text )",
-			"Params": [
-				[
-					"vJ_meta",
-					"Object",
-					"->"
-				],
-				[
-					"vL_style",
-					"Integer",
-					"->"
-				],
-				[
-					"vT_column",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_font_color()": {
-			"Syntax": "**.lb_font_color**( *vT_function* : Text )",
-			"Params": [
-				[
-					"vT_function",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_bkg_color()": {
-			"Syntax": "**.lb_bkg_color**( *vT_function* : Text )",
-			"Params": [
-				[
-					"vT_function",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"meta_colors()": {
-			"Syntax": "**.meta_colors**( *vJ_meta* : Object; *vL_colors* : Integer; *vT_column* : Text )",
-			"Params": [
-				[
-					"vJ_meta",
-					"Object",
-					"->"
-				],
-				[
-					"vL_colors",
-					"Integer",
-					"->"
-				],
-				[
-					"vT_column",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"get_icon_img()": {
-			"Syntax": "**.get_icon_img**( *is_value* : Boolean; *vL_colorsRow* : Integer; *vL_shape* : Integer; *vL_size* : Integer )->vO_img : Picture",
-			"Params": [
-				[
-					"is_value",
-					"Boolean",
-					"->"
-				],
-				[
-					"vL_colorsRow",
-					"Integer",
-					"->"
-				],
-				[
-					"vL_shape",
-					"Integer",
-					"->"
-				],
-				[
-					"vL_size",
-					"Integer",
-					"->"
-				],
-				[
-					"vO_img",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_isNokOk_img()": {
-			"Syntax": "**.lb_isNokOk_img**( *is_value* : Boolean; *vL_colorsRow* : Integer; *vL_shape* : Integer; *vL_size* : Integer )->vO_img : Picture",
-			"Params": [
-				[
-					"is_value",
-					"Boolean",
-					"->"
-				],
-				[
-					"vL_colorsRow",
-					"Integer",
-					"->"
-				],
-				[
-					"vL_shape",
-					"Integer",
-					"->"
-				],
-				[
-					"vL_size",
-					"Integer",
-					"->"
-				],
-				[
-					"vO_img",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"meta_row()": {
-			"Syntax": "**.meta_row**( *vJ_meta* : Object; *is_unselectable* : Boolean; *is_disabled* : Boolean )",
-			"Params": [
-				[
-					"vJ_meta",
-					"Object",
-					"->"
-				],
-				[
-					"is_unselectable",
-					"Boolean",
-					"->"
-				],
-				[
-					"is_disabled",
-					"Boolean",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_initialize()": {
-			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
-			"Params": [
-				[
-					"vJ_data",
-					"Object",
-					"->"
-				],
-				[
-					"is_local",
-					"Boolean",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_meta_info_set()": {
-			"Syntax": "**.lb_meta_info_set**( *vT_function* : Text )",
-			"Params": [
-				[
-					"vT_function",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"get_columns()": {
-			"Syntax": "**.get_columns**( *vT_ordaPath* : Text )->vC_indices : Collection",
-			"Params": [
-				[
-					"vT_ordaPath",
-					"Text",
-					"->"
-				],
-				[
-					"vC_indices",
-					"Collection",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"get_column()": {
-			"Syntax": "**.get_column**( *vT_ordaPath* : Text )->vT_column : Text",
-			"Params": [
-				[
-					"vT_ordaPath",
-					"Text",
-					"->"
-				],
-				[
-					"vT_column",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"is_local": {
-			"Syntax": "is_local : Boolean"
-		},
-		"j_data": {
-			"Syntax": "j_data : Object"
-		},
-		"t_LB": {
-			"Syntax": "t_LB : Text"
-		}
-	},
-	"ZENH_PALETTE": {
-		"palette_menu_get()": {
-			"Syntax": "**.palette_menu_get**( *is_record* : Boolean )->vJ_palette_menu : Object",
-			"Params": [
-				[
-					"is_record",
-					"Boolean",
-					"->"
-				],
-				[
-					"vJ_palette_menu",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"io_palette_get()": {
-			"Syntax": "**.io_palette_get**()->vJ_io_palette : Object",
-			"Params": [
-				[
-					"vJ_io_palette",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"palette_do()": {
-			"Syntax": "**.palette_do**( *is_record* : Boolean )->isOk : Boolean",
-			"Params": [
-				[
-					"is_record",
-					"Boolean",
-					"->"
-				],
-				[
-					"isOk",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		}
-	},
 	"zenh_dashboard": {
 		"biz_woc_bind_to()": {
 			"Syntax": "**.biz_woc_bind_to**( *vT_tag* : Text )->vJ_value : Object",
@@ -2383,6 +2058,9 @@
 			"Syntax": "**.do_choose_menu**()",
 			"Params": [],
 			"Summary": ""
+		},
+		"j_woc_export": {
+			"Syntax": "j_woc_export : Object"
 		},
 		"j_zen_MEDIA": {
 			"Syntax": "j_zen_MEDIA : Object"
@@ -2854,8 +2532,14 @@
 			"Summary": ""
 		},
 		"do_animate()": {
-			"Syntax": "**.do_animate**()",
-			"Params": [],
+			"Syntax": "**.do_animate**( *is_deploy* : Boolean )",
+			"Params": [
+				[
+					"is_deploy",
+					"Boolean",
+					"->"
+				]
+			],
 			"Summary": ""
 		},
 		"record_load_upd()": {
@@ -3235,89 +2919,6 @@
 			"Params": [],
 			"Summary": ""
 		}
-	},
-	"CATEGORIES_LIST": {
-		"lb_active_img()": {
-			"Syntax": "**.lb_active_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
-			"Params": [
-				[
-					"cE_categories",
-					"cs.sem.CATEGORIESEntity",
-					"->"
-				],
-				[
-					"vO_img",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_colors_img()": {
-			"Syntax": "**.lb_colors_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
-			"Params": [
-				[
-					"cE_categories",
-					"cs.sem.CATEGORIESEntity",
-					"->"
-				],
-				[
-					"vO_img",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_picts_count()": {
-			"Syntax": "**.lb_picts_count**( *cE_categories* : cs.sem.CATEGORIESEntity )->vL_count : Integer",
-			"Params": [
-				[
-					"cE_categories",
-					"cs.sem.CATEGORIESEntity",
-					"->"
-				],
-				[
-					"vL_count",
-					"Integer",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_meta_info()": {
-			"Syntax": "**.lb_meta_info**( *c4E_entity* : 4D.Entity )->vJ_meta : Object",
-			"Params": [
-				[
-					"c4E_entity",
-					"4D.Entity",
-					"->"
-				],
-				[
-					"vJ_meta",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_initialize()": {
-			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
-			"Params": [
-				[
-					"vJ_data",
-					"Object",
-					"->"
-				],
-				[
-					"is_local",
-					"Boolean",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "ZEN__TABLES_LIST"
 	},
 	"sem_veda_prefs": {
 		"_inheritedFrom_": "ZEN__WIDGETS"
@@ -4137,6 +3738,89 @@
 		},
 		"_inheritedFrom_": "ZEN__RECORD"
 	},
+	"CATEGORIES_LIST": {
+		"lb_active_img()": {
+			"Syntax": "**.lb_active_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
+			"Params": [
+				[
+					"cE_categories",
+					"cs.sem.CATEGORIESEntity",
+					"->"
+				],
+				[
+					"vO_img",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_colors_img()": {
+			"Syntax": "**.lb_colors_img**( *cE_categories* : cs.sem.CATEGORIESEntity )->vO_img : Picture",
+			"Params": [
+				[
+					"cE_categories",
+					"cs.sem.CATEGORIESEntity",
+					"->"
+				],
+				[
+					"vO_img",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_picts_count()": {
+			"Syntax": "**.lb_picts_count**( *cE_categories* : cs.sem.CATEGORIESEntity )->vL_count : Integer",
+			"Params": [
+				[
+					"cE_categories",
+					"cs.sem.CATEGORIESEntity",
+					"->"
+				],
+				[
+					"vL_count",
+					"Integer",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_meta_info()": {
+			"Syntax": "**.lb_meta_info**( *c4E_entity* : 4D.Entity )->vJ_meta : Object",
+			"Params": [
+				[
+					"c4E_entity",
+					"4D.Entity",
+					"->"
+				],
+				[
+					"vJ_meta",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_initialize()": {
+			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
+			"Params": [
+				[
+					"vJ_data",
+					"Object",
+					"->"
+				],
+				[
+					"is_local",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "ZEN__TABLES_LIST"
+	},
 	"PICTURES_FILTERS": {
 		"init_search()": {
 			"Syntax": "**.init_search**()->vC_aj_filters : Collection",
@@ -4272,389 +3956,17 @@
 	"sem_output": {
 		"_inheritedFrom_": "ZEN__WIDGETS"
 	},
-	"ZEN__DELETE": {},
-	"_MENU": {
-		"choiceMenu_vT()": {
-			"Syntax": "**.choiceMenu_vT**( *vC_aj_menu_items* : Collection; *vT_header* : Text; *vT_value* : Text )->vT_answer : Text",
+	"SLOKAS_LIST": {
+		"lb_label()": {
+			"Syntax": "**.lb_label**( *cE_SLOKAS* : cs.sem.SLOKASEntity )->vT_label : Text",
 			"Params": [
 				[
-					"vC_aj_menu_items",
-					"Collection",
-					"->"
-				],
-				[
-					"vT_header",
-					"Text",
-					"->"
-				],
-				[
-					"vT_value",
-					"Text",
-					"->"
-				],
-				[
-					"vT_answer",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"getMenuItem()": {
-			"Syntax": "**.getMenuItem**( *vT_label* : Text; *vT_menu* : Text; *vT_subpath* : Text )->vJ_item : Object",
-			"Params": [
-				[
-					"vT_label",
-					"Text",
-					"->"
-				],
-				[
-					"vT_menu",
-					"Text",
-					"->"
-				],
-				[
-					"vT_subpath",
-					"Text",
-					"->"
-				],
-				[
-					"vJ_item",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"choiceMenu()": {
-			"Syntax": "**.choiceMenu**( *vT_prefix* : Text; *vT_header* : Text; *vC_aj_menu_items* : Collection; *vT_value* : Text; *vT_refMenu* : Text; *is_inline* : Boolean )->vT_refMenu_answer : Text",
-			"Params": [
-				[
-					"vT_prefix",
-					"Text",
-					"->"
-				],
-				[
-					"vT_header",
-					"Text",
-					"->"
-				],
-				[
-					"vC_aj_menu_items",
-					"Collection",
-					"->"
-				],
-				[
-					"vT_value",
-					"Text",
-					"->"
-				],
-				[
-					"vT_refMenu",
-					"Text",
-					"->"
-				],
-				[
-					"is_inline",
-					"Boolean",
-					"->"
-				],
-				[
-					"vT_refMenu_answer",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"pushMenuItem()": {
-			"Syntax": "**.pushMenuItem**( *vC_aj_items* : Collection; *vT_label* : Text; *vT_menu* : Text; *vT_path_icn* : Text )",
-			"Params": [
-				[
-					"vC_aj_items",
-					"Collection",
+					"cE_SLOKAS",
+					"cs.sem.SLOKASEntity",
 					"->"
 				],
 				[
 					"vT_label",
-					"Text",
-					"->"
-				],
-				[
-					"vT_menu",
-					"Text",
-					"->"
-				],
-				[
-					"vT_path_icn",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"headerMenu()": {
-			"Syntax": "**.headerMenu**( *vT_refMenu* : Text; *vT_label* : Text; *vT_path_menu* : Text )",
-			"Params": [
-				[
-					"vT_refMenu",
-					"Text",
-					"->"
-				],
-				[
-					"vT_label",
-					"Text",
-					"->"
-				],
-				[
-					"vT_path_menu",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"getTranslated()": {
-			"Syntax": "**.getTranslated**( *vT_label* : Text; *vL_label* : Integer )->vT_answer : Text",
-			"Params": [
-				[
-					"vT_label",
-					"Text",
-					"->"
-				],
-				[
-					"vL_label",
-					"Integer",
-					"->"
-				],
-				[
-					"vT_answer",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"choiceMenu_vL()": {
-			"Syntax": "**.choiceMenu_vL**( *vP_vL_value* : Pointer; *vC_aj_menu_items* : Collection; *vT_header* : Text )->isOk : Boolean",
-			"Params": [
-				[
-					"vP_vL_value",
-					"Pointer",
-					"->"
-				],
-				[
-					"vC_aj_menu_items",
-					"Collection",
-					"->"
-				],
-				[
-					"vT_header",
-					"Text",
-					"->"
-				],
-				[
-					"isOk",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"setPathAttached()": {
-			"Syntax": "**.setPathAttached**( *vT_path_attached* : Text )",
-			"Params": [
-				[
-					"vT_path_attached",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"setPath()": {
-			"Syntax": "**.setPath**( *vT_path* : Text )",
-			"Params": [
-				[
-					"vT_path",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"t_path_attached": {
-			"Syntax": "t_path_attached : Text"
-		},
-		"t_path": {
-			"Syntax": "t_path : Text"
-		}
-	},
-	"sem_picture": {
-		"_inheritedFrom_": "ZEN__WIDGETS"
-	},
-	"sem_menuBtn": {
-		"_inheritedFrom_": "ZEN__WIDGETS"
-	},
-	"BANKS_RECORD": {
-		"redraw_pict_dcox()": {
-			"Syntax": "**.redraw_pict_dcox**( *cE_SETS* : cs.sem.SETSEntity )",
-			"Params": [
-				[
-					"cE_SETS",
-					"cs.sem.SETSEntity",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"do_touched()": {
-			"Syntax": "**.do_touched**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"lb_media_redraw()": {
-			"Syntax": "**.lb_media_redraw**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"redraw_colors1()": {
-			"Syntax": "**.redraw_colors1**( *vC_al_colors1* : Collection )",
-			"Params": [
-				[
-					"vC_al_colors1",
-					"Collection",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"record_save()": {
-			"Syntax": "**.record_save**( *c4E_entity* : 4D.Entity )",
-			"Params": [
-				[
-					"c4E_entity",
-					"4D.Entity",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"record_checkout()": {
-			"Syntax": "**.record_checkout**()->isOk : Boolean",
-			"Params": [
-				[
-					"isOk",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"al_colorsIdx_set()": {
-			"Syntax": "**.al_colorsIdx_set**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"redraw_colors()": {
-			"Syntax": "**.redraw_colors**( *vC_al_colors* : Collection )",
-			"Params": [
-				[
-					"vC_al_colors",
-					"Collection",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"get_cE_PACKS()": {
-			"Syntax": "**.get_cE_PACKS**()->cE_PACKS : cs.sem.PACKSEntity",
-			"Params": [
-				[
-					"cE_PACKS",
-					"cs.sem.PACKSEntity",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"SETS_entity_save()": {
-			"Syntax": "**.SETS_entity_save**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"record_touched()": {
-			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
-			"Params": [
-				[
-					"c4E_record",
-					"4D.Entity",
-					"->"
-				],
-				[
-					"is_touched",
-					"Boolean",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_media_refresh()": {
-			"Syntax": "**.lb_media_refresh**( *cE_SETS* : cs.sem.SETSEntity )",
-			"Params": [
-				[
-					"cE_SETS",
-					"cs.sem.SETSEntity",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"record_load_upd()": {
-			"Syntax": "**.record_load_upd**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"is_SETS_touched": {
-			"Syntax": "is_SETS_touched : Boolean"
-		},
-		"is_touched": {
-			"Syntax": "is_touched : Boolean"
-		},
-		"_inheritedFrom_": "ZEN__RECORD"
-	},
-	"MEDIA_LIST": {
-		"lb_preview_img()": {
-			"Syntax": "**.lb_preview_img**( *cE_MEDIA* : cs.sem.MEDIAEntity )->vO_picture : Picture",
-			"Params": [
-				[
-					"cE_MEDIA",
-					"cs.sem.MEDIAEntity",
-					"->"
-				],
-				[
-					"vO_picture",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_fileName()": {
-			"Syntax": "**.lb_fileName**( *cE_MEDIA* : cs.sem.MEDIAEntity )->vT_answer : Text",
-			"Params": [
-				[
-					"cE_MEDIA",
-					"cs.sem.MEDIAEntity",
-					"->"
-				],
-				[
-					"vT_answer",
 					"Text",
 					"<-"
 				]
@@ -4662,11 +3974,11 @@
 			"Summary": ""
 		},
 		"lb_meta_info()": {
-			"Syntax": "**.lb_meta_info**( *c4E_entity* : 4D.Entity )->vJ_meta : Object",
+			"Syntax": "**.lb_meta_info**( *cE_SLOKAS* : cs.sem.SLOKASEntity )->vJ_meta : Object",
 			"Params": [
 				[
-					"c4E_entity",
-					"4D.Entity",
+					"cE_SLOKAS",
+					"cs.sem.SLOKASEntity",
 					"->"
 				],
 				[
@@ -4694,6 +4006,410 @@
 			"Summary": ""
 		},
 		"_inheritedFrom_": "ZEN__TABLES_LIST"
+	},
+	"PANEL_GITHUB": {
+		"progress_logo()": {
+			"Syntax": "**.progress_logo**( *vO_logo* : Picture )",
+			"Params": [
+				[
+					"vO_logo",
+					"Picture",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"progress_title()": {
+			"Syntax": "**.progress_title**( *vT_title* : Text; *vT_subtitle* : Text )",
+			"Params": [
+				[
+					"vT_title",
+					"Text",
+					"->"
+				],
+				[
+					"vT_subtitle",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"progress_new()": {
+			"Syntax": "**.progress_new**()->vT_progress_uuid : Text",
+			"Params": [
+				[
+					"vT_progress_uuid",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"progress_close()": {
+			"Syntax": "**.progress_close**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"lb_meta_info()": {
+			"Syntax": "**.lb_meta_info**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vJ_meta : Object",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vJ_meta",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_get_sel_icn()": {
+			"Syntax": "**.lb_get_sel_icn**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vO_icon : Picture",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vO_icon",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_get_state_icn()": {
+			"Syntax": "**.lb_get_state_icn**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vO_state : Picture",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vO_state",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"record_load_upd()": {
+			"Syntax": "**.record_load_upd**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"lb_get_logo_icn()": {
+			"Syntax": "**.lb_get_logo_icn**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vO_logo : Picture",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vO_logo",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_get_gtag()": {
+			"Syntax": "**.lb_get_gtag**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vT_gtag : Text",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vT_gtag",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_get_tag()": {
+			"Syntax": "**.lb_get_tag**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vT_answer : Text",
+			"Params": [
+				[
+					"cE_PRODUCTS",
+					"cs.sem.PRODUCTSEntity",
+					"->"
+				],
+				[
+					"vT_answer",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"loadReposCache()": {
+			"Syntax": "**.loadReposCache**( *cES_PRODUCTS* : cs.sem.PRODUCTSSelection; *is_recache* : Boolean )",
+			"Params": [
+				[
+					"cES_PRODUCTS",
+					"cs.sem.PRODUCTSSelection",
+					"->"
+				],
+				[
+					"is_recache",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"form_init()": {
+			"Syntax": "**.form_init**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"form_events()": {
+			"Syntax": "**.form_events**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"al_colors": {
+			"Syntax": "al_colors : Collection"
+		},
+		"t_github": {
+			"Syntax": "t_github : Text"
+		},
+		"t_progress_uuid": {
+			"Syntax": "t_progress_uuid : Text"
+		},
+		"j_repos": {
+			"Syntax": "j_repos : Object"
+		}
+	},
+	"ZEN__WIDGETS": {
+		"bind_to()": {
+			"Syntax": "**.bind_to**( *vT_property* : Text; *vJ_value* : Object )",
+			"Params": [
+				[
+					"vT_property",
+					"Text",
+					"->"
+				],
+				[
+					"vJ_value",
+					"Object",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"bind_to_c4E()": {
+			"Syntax": "**.bind_to_c4E**( *vT_property* : Text; *vV_default* : Variant )",
+			"Params": [
+				[
+					"vT_property",
+					"Text",
+					"->"
+				],
+				[
+					"vV_default",
+					"Variant",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"resize()": {
+			"Syntax": "**.resize**( *vT_widget* : Text )",
+			"Params": [
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"unload()": {
+			"Syntax": "**.unload**( *vT_widget* : Text )",
+			"Params": [
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"set_widget_name()": {
+			"Syntax": "**.set_widget_name**( *vT_widget* : Text )",
+			"Params": [
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"get_object_wh()": {
+			"Syntax": "**.get_object_wh**( *vT_object* : Text; *vP_width* : Pointer; *vP_height* : Pointer; *vT_widget* : Text )",
+			"Params": [
+				[
+					"vT_object",
+					"Text",
+					"->"
+				],
+				[
+					"vP_width",
+					"Pointer",
+					"->"
+				],
+				[
+					"vP_height",
+					"Pointer",
+					"->"
+				],
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"bind_to_c4E_vJ()": {
+			"Syntax": "**.bind_to_c4E_vJ**( *vT_field* : Text; *vJ_default* : Object )",
+			"Params": [
+				[
+					"vT_field",
+					"Text",
+					"->"
+				],
+				[
+					"vJ_default",
+					"Object",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"update()": {
+			"Syntax": "**.update**( *vT_widget* : Text )",
+			"Params": [
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"redraw()": {
+			"Syntax": "**.redraw**( *vT_widget* : Text )",
+			"Params": [
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"get_canvas_wh()": {
+			"Syntax": "**.get_canvas_wh**( *vP_width* : Pointer; *vP_height* : Pointer; *vT_widget* : Text )",
+			"Params": [
+				[
+					"vP_width",
+					"Pointer",
+					"->"
+				],
+				[
+					"vP_height",
+					"Pointer",
+					"->"
+				],
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"load()": {
+			"Syntax": "**.load**( *vT_widget* : Text )",
+			"Params": [
+				[
+					"vT_widget",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"d_value": {
+			"Syntax": "d_value : Date"
+		},
+		"is_new": {
+			"Syntax": "is_new : Boolean"
+		},
+		"t_property": {
+			"Syntax": "t_property : Text"
+		},
+		"t_internal": {
+			"Syntax": "t_internal : Text"
+		},
+		"l_border": {
+			"Syntax": "l_border : Integer"
+		},
+		"t_value": {
+			"Syntax": "t_value : Text"
+		},
+		"l_value": {
+			"Syntax": "l_value : Integer"
+		},
+		"t_UID": {
+			"Syntax": "t_UID : Text"
+		},
+		"p_value": {
+			"Syntax": "p_value : Pointer"
+		},
+		"h_value": {
+			"Syntax": "h_value : Time"
+		},
+		"is_editing": {
+			"Syntax": "is_editing : Boolean"
+		},
+		"j_value": {
+			"Syntax": "j_value : Object"
+		},
+		"t_widget": {
+			"Syntax": "t_widget : Text"
+		}
+	},
+	"ZENH_INFOS": {
+		"do_menu()": {
+			"Syntax": "**.do_menu**( *is_record* : Boolean )->isOk : Boolean",
+			"Params": [
+				[
+					"is_record",
+					"Boolean",
+					"->"
+				],
+				[
+					"isOk",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
 	},
 	"_GITHUB": {
 		"deleteBundleCacheTag()": {
@@ -5037,13 +4753,185 @@
 			"Syntax": "t_owner : Text"
 		}
 	},
-	"ZENH_INFOS": {
-		"do_menu()": {
-			"Syntax": "**.do_menu**( *is_record* : Boolean )->isOk : Boolean",
+	"ZEN__DELETE": {},
+	"_MENU": {
+		"choiceMenu_vT()": {
+			"Syntax": "**.choiceMenu_vT**( *vC_aj_menu_items* : Collection; *vT_header* : Text; *vT_value* : Text )->vT_answer : Text",
 			"Params": [
 				[
-					"is_record",
+					"vC_aj_menu_items",
+					"Collection",
+					"->"
+				],
+				[
+					"vT_header",
+					"Text",
+					"->"
+				],
+				[
+					"vT_value",
+					"Text",
+					"->"
+				],
+				[
+					"vT_answer",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getMenuItem()": {
+			"Syntax": "**.getMenuItem**( *vT_label* : Text; *vT_menu* : Text; *vT_subpath* : Text )->vJ_item : Object",
+			"Params": [
+				[
+					"vT_label",
+					"Text",
+					"->"
+				],
+				[
+					"vT_menu",
+					"Text",
+					"->"
+				],
+				[
+					"vT_subpath",
+					"Text",
+					"->"
+				],
+				[
+					"vJ_item",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"choiceMenu()": {
+			"Syntax": "**.choiceMenu**( *vT_prefix* : Text; *vT_header* : Text; *vC_aj_menu_items* : Collection; *vT_value* : Text; *vT_refMenu* : Text; *is_inline* : Boolean )->vT_refMenu_answer : Text",
+			"Params": [
+				[
+					"vT_prefix",
+					"Text",
+					"->"
+				],
+				[
+					"vT_header",
+					"Text",
+					"->"
+				],
+				[
+					"vC_aj_menu_items",
+					"Collection",
+					"->"
+				],
+				[
+					"vT_value",
+					"Text",
+					"->"
+				],
+				[
+					"vT_refMenu",
+					"Text",
+					"->"
+				],
+				[
+					"is_inline",
 					"Boolean",
+					"->"
+				],
+				[
+					"vT_refMenu_answer",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"pushMenuItem()": {
+			"Syntax": "**.pushMenuItem**( *vC_aj_items* : Collection; *vT_label* : Text; *vT_menu* : Text; *vT_path_icn* : Text )",
+			"Params": [
+				[
+					"vC_aj_items",
+					"Collection",
+					"->"
+				],
+				[
+					"vT_label",
+					"Text",
+					"->"
+				],
+				[
+					"vT_menu",
+					"Text",
+					"->"
+				],
+				[
+					"vT_path_icn",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"headerMenu()": {
+			"Syntax": "**.headerMenu**( *vT_refMenu* : Text; *vT_label* : Text; *vT_path_menu* : Text )",
+			"Params": [
+				[
+					"vT_refMenu",
+					"Text",
+					"->"
+				],
+				[
+					"vT_label",
+					"Text",
+					"->"
+				],
+				[
+					"vT_path_menu",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"getTranslated()": {
+			"Syntax": "**.getTranslated**( *vT_label* : Text; *vL_label* : Integer )->vT_answer : Text",
+			"Params": [
+				[
+					"vT_label",
+					"Text",
+					"->"
+				],
+				[
+					"vL_label",
+					"Integer",
+					"->"
+				],
+				[
+					"vT_answer",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"choiceMenu_vL()": {
+			"Syntax": "**.choiceMenu_vL**( *vP_vL_value* : Pointer; *vC_aj_menu_items* : Collection; *vT_header* : Text )->isOk : Boolean",
+			"Params": [
+				[
+					"vP_vL_value",
+					"Pointer",
+					"->"
+				],
+				[
+					"vC_aj_menu_items",
+					"Collection",
+					"->"
+				],
+				[
+					"vT_header",
+					"Text",
 					"->"
 				],
 				[
@@ -5053,7 +4941,108 @@
 				]
 			],
 			"Summary": ""
+		},
+		"setPathAttached()": {
+			"Syntax": "**.setPathAttached**( *vT_path_attached* : Text )",
+			"Params": [
+				[
+					"vT_path_attached",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setPath()": {
+			"Syntax": "**.setPath**( *vT_path* : Text )",
+			"Params": [
+				[
+					"vT_path",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"t_path_attached": {
+			"Syntax": "t_path_attached : Text"
+		},
+		"t_path": {
+			"Syntax": "t_path : Text"
 		}
+	},
+	"sem_picture": {
+		"_inheritedFrom_": "ZEN__WIDGETS"
+	},
+	"sem_menuBtn": {
+		"_inheritedFrom_": "ZEN__WIDGETS"
+	},
+	"MEDIA_LIST": {
+		"lb_preview_img()": {
+			"Syntax": "**.lb_preview_img**( *cE_MEDIA* : cs.sem.MEDIAEntity )->vO_picture : Picture",
+			"Params": [
+				[
+					"cE_MEDIA",
+					"cs.sem.MEDIAEntity",
+					"->"
+				],
+				[
+					"vO_picture",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_fileName()": {
+			"Syntax": "**.lb_fileName**( *cE_MEDIA* : cs.sem.MEDIAEntity )->vT_answer : Text",
+			"Params": [
+				[
+					"cE_MEDIA",
+					"cs.sem.MEDIAEntity",
+					"->"
+				],
+				[
+					"vT_answer",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_meta_info()": {
+			"Syntax": "**.lb_meta_info**( *c4E_entity* : 4D.Entity )->vJ_meta : Object",
+			"Params": [
+				[
+					"c4E_entity",
+					"4D.Entity",
+					"->"
+				],
+				[
+					"vJ_meta",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_initialize()": {
+			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
+			"Params": [
+				[
+					"vJ_data",
+					"Object",
+					"->"
+				],
+				[
+					"is_local",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "ZEN__TABLES_LIST"
 	},
 	"TEMPLATES_FILTERS": {
 		"init_search()": {
@@ -5084,6 +5073,461 @@
 			"Summary": ""
 		},
 		"_inheritedFrom_": "ZENH_TABLES_FILTERS"
+	},
+	"BANKS_RECORD": {
+		"redraw_pict_dcox()": {
+			"Syntax": "**.redraw_pict_dcox**( *cE_SETS* : cs.sem.SETSEntity )",
+			"Params": [
+				[
+					"cE_SETS",
+					"cs.sem.SETSEntity",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_media_refresh()": {
+			"Syntax": "**.lb_media_refresh**( *cE_SETS* : cs.sem.SETSEntity )",
+			"Params": [
+				[
+					"cE_SETS",
+					"cs.sem.SETSEntity",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"form_events()": {
+			"Syntax": "**.form_events**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"redraw_colors1()": {
+			"Syntax": "**.redraw_colors1**( *vC_al_colors1* : Collection )",
+			"Params": [
+				[
+					"vC_al_colors1",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"record_save()": {
+			"Syntax": "**.record_save**( *c4E_entity* : 4D.Entity )",
+			"Params": [
+				[
+					"c4E_entity",
+					"4D.Entity",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"record_checkout()": {
+			"Syntax": "**.record_checkout**()->isOk : Boolean",
+			"Params": [
+				[
+					"isOk",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"al_colorsIdx_set()": {
+			"Syntax": "**.al_colorsIdx_set**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"redraw_colors()": {
+			"Syntax": "**.redraw_colors**( *vC_al_colors* : Collection )",
+			"Params": [
+				[
+					"vC_al_colors",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"get_cE_PACKS()": {
+			"Syntax": "**.get_cE_PACKS**()->cE_PACKS : cs.sem.PACKSEntity",
+			"Params": [
+				[
+					"cE_PACKS",
+					"cs.sem.PACKSEntity",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_media_redraw()": {
+			"Syntax": "**.lb_media_redraw**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"do_touched()": {
+			"Syntax": "**.do_touched**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"SETS_entity_save()": {
+			"Syntax": "**.SETS_entity_save**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"record_touched()": {
+			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
+			"Params": [
+				[
+					"c4E_record",
+					"4D.Entity",
+					"->"
+				],
+				[
+					"is_touched",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"record_load_upd()": {
+			"Syntax": "**.record_load_upd**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"is_SETS_touched": {
+			"Syntax": "is_SETS_touched : Boolean"
+		},
+		"is_touched": {
+			"Syntax": "is_touched : Boolean"
+		},
+		"_inheritedFrom_": "ZEN__RECORD"
+	},
+	"SLOKAS_RECORD": {
+		"colorsFromPRO()": {
+			"Syntax": "**.colorsFromPRO**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"do_touched()": {
+			"Syntax": "**.do_touched**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"record_checkout()": {
+			"Syntax": "**.record_checkout**()->isOk : Boolean",
+			"Params": [
+				[
+					"isOk",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"record_touched()": {
+			"Syntax": "**.record_touched**( *c4E_record* : 4D.Entity )->is_touched : Boolean",
+			"Params": [
+				[
+					"c4E_record",
+					"4D.Entity",
+					"->"
+				],
+				[
+					"is_touched",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"form_events()": {
+			"Syntax": "**.form_events**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"record_load_upd()": {
+			"Syntax": "**.record_load_upd**()",
+			"Params": [],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "ZEN__RECORD"
+	},
+	"ZEN__TABLES_LIST": {
+		"lb_font_style()": {
+			"Syntax": "**.lb_font_style**( *vT_function* : Text )",
+			"Params": [
+				[
+					"vT_function",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"meta_style()": {
+			"Syntax": "**.meta_style**( *vJ_meta* : Object; *vL_style* : Integer; *vT_column* : Text )",
+			"Params": [
+				[
+					"vJ_meta",
+					"Object",
+					"->"
+				],
+				[
+					"vL_style",
+					"Integer",
+					"->"
+				],
+				[
+					"vT_column",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_font_color()": {
+			"Syntax": "**.lb_font_color**( *vT_function* : Text )",
+			"Params": [
+				[
+					"vT_function",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_bkg_color()": {
+			"Syntax": "**.lb_bkg_color**( *vT_function* : Text )",
+			"Params": [
+				[
+					"vT_function",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"meta_colors()": {
+			"Syntax": "**.meta_colors**( *vJ_meta* : Object; *vL_colors* : Integer; *vT_column* : Text )",
+			"Params": [
+				[
+					"vJ_meta",
+					"Object",
+					"->"
+				],
+				[
+					"vL_colors",
+					"Integer",
+					"->"
+				],
+				[
+					"vT_column",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"get_icon_img()": {
+			"Syntax": "**.get_icon_img**( *is_value* : Boolean; *vL_colorsRow* : Integer; *vL_shape* : Integer; *vL_size* : Integer )->vO_img : Picture",
+			"Params": [
+				[
+					"is_value",
+					"Boolean",
+					"->"
+				],
+				[
+					"vL_colorsRow",
+					"Integer",
+					"->"
+				],
+				[
+					"vL_shape",
+					"Integer",
+					"->"
+				],
+				[
+					"vL_size",
+					"Integer",
+					"->"
+				],
+				[
+					"vO_img",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_isNokOk_img()": {
+			"Syntax": "**.lb_isNokOk_img**( *is_value* : Boolean; *vL_colorsRow* : Integer; *vL_shape* : Integer; *vL_size* : Integer )->vO_img : Picture",
+			"Params": [
+				[
+					"is_value",
+					"Boolean",
+					"->"
+				],
+				[
+					"vL_colorsRow",
+					"Integer",
+					"->"
+				],
+				[
+					"vL_shape",
+					"Integer",
+					"->"
+				],
+				[
+					"vL_size",
+					"Integer",
+					"->"
+				],
+				[
+					"vO_img",
+					"Picture",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"meta_row()": {
+			"Syntax": "**.meta_row**( *vJ_meta* : Object; *is_unselectable* : Boolean; *is_disabled* : Boolean )",
+			"Params": [
+				[
+					"vJ_meta",
+					"Object",
+					"->"
+				],
+				[
+					"is_unselectable",
+					"Boolean",
+					"->"
+				],
+				[
+					"is_disabled",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_initialize()": {
+			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
+			"Params": [
+				[
+					"vJ_data",
+					"Object",
+					"->"
+				],
+				[
+					"is_local",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"lb_meta_info_set()": {
+			"Syntax": "**.lb_meta_info_set**( *vT_function* : Text )",
+			"Params": [
+				[
+					"vT_function",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"get_columns()": {
+			"Syntax": "**.get_columns**( *vT_ordaPath* : Text )->vC_indices : Collection",
+			"Params": [
+				[
+					"vT_ordaPath",
+					"Text",
+					"->"
+				],
+				[
+					"vC_indices",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get_column()": {
+			"Syntax": "**.get_column**( *vT_ordaPath* : Text )->vT_column : Text",
+			"Params": [
+				[
+					"vT_ordaPath",
+					"Text",
+					"->"
+				],
+				[
+					"vT_column",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"is_local": {
+			"Syntax": "is_local : Boolean"
+		},
+		"j_data": {
+			"Syntax": "j_data : Object"
+		},
+		"t_LB": {
+			"Syntax": "t_LB : Text"
+		}
+	},
+	"ZENH_PALETTE": {
+		"palette_menu_get()": {
+			"Syntax": "**.palette_menu_get**( *is_record* : Boolean )->vJ_palette_menu : Object",
+			"Params": [
+				[
+					"is_record",
+					"Boolean",
+					"->"
+				],
+				[
+					"vJ_palette_menu",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"io_palette_get()": {
+			"Syntax": "**.io_palette_get**()->vJ_io_palette : Object",
+			"Params": [
+				[
+					"vJ_io_palette",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"palette_do()": {
+			"Syntax": "**.palette_do**( *is_record* : Boolean )->isOk : Boolean",
+			"Params": [
+				[
+					"is_record",
+					"Boolean",
+					"->"
+				],
+				[
+					"isOk",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
 	},
 	"_test_png": {
 		"woc_sources_upd()": {
@@ -5183,426 +5627,6 @@
 			"Syntax": "**.initialize**()",
 			"Params": [],
 			"Summary": ""
-		}
-	},
-	"SLOKAS_LIST": {
-		"lb_label()": {
-			"Syntax": "**.lb_label**( *cE_SLOKAS* : cs.sem.SLOKASEntity )->vT_label : Text",
-			"Params": [
-				[
-					"cE_SLOKAS",
-					"cs.sem.SLOKASEntity",
-					"->"
-				],
-				[
-					"vT_label",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_meta_info()": {
-			"Syntax": "**.lb_meta_info**( *cE_SLOKAS* : cs.sem.SLOKASEntity )->vJ_meta : Object",
-			"Params": [
-				[
-					"cE_SLOKAS",
-					"cs.sem.SLOKASEntity",
-					"->"
-				],
-				[
-					"vJ_meta",
-					"Object",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_initialize()": {
-			"Syntax": "**.lb_initialize**( *vJ_data* : Object; *is_local* : Boolean )",
-			"Params": [
-				[
-					"vJ_data",
-					"Object",
-					"->"
-				],
-				[
-					"is_local",
-					"Boolean",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"_inheritedFrom_": "ZEN__TABLES_LIST"
-	},
-	"PANEL_GITHUB": {
-		"progress_close()": {
-			"Syntax": "**.progress_close**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"progress_title()": {
-			"Syntax": "**.progress_title**( *vT_title* : Text; *vT_subtitle* : Text )",
-			"Params": [
-				[
-					"vT_title",
-					"Text",
-					"->"
-				],
-				[
-					"vT_subtitle",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"progress_logo()": {
-			"Syntax": "**.progress_logo**( *vO_logo* : Picture )",
-			"Params": [
-				[
-					"vO_logo",
-					"Picture",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"progress_new()": {
-			"Syntax": "**.progress_new**()->vT_progress_uuid : Text",
-			"Params": [
-				[
-					"vT_progress_uuid",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_get_state_icn()": {
-			"Syntax": "**.lb_get_state_icn**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vO_state : Picture",
-			"Params": [
-				[
-					"cE_PRODUCTS",
-					"cs.sem.PRODUCTSEntity",
-					"->"
-				],
-				[
-					"vO_state",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"record_load_upd()": {
-			"Syntax": "**.record_load_upd**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"lb_get_logo_icn()": {
-			"Syntax": "**.lb_get_logo_icn**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vO_logo : Picture",
-			"Params": [
-				[
-					"cE_PRODUCTS",
-					"cs.sem.PRODUCTSEntity",
-					"->"
-				],
-				[
-					"vO_logo",
-					"Picture",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_get_gtag()": {
-			"Syntax": "**.lb_get_gtag**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vT_gtag : Text",
-			"Params": [
-				[
-					"cE_PRODUCTS",
-					"cs.sem.PRODUCTSEntity",
-					"->"
-				],
-				[
-					"vT_gtag",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"lb_get_tag()": {
-			"Syntax": "**.lb_get_tag**( *cE_PRODUCTS* : cs.sem.PRODUCTSEntity )->vT_answer : Text",
-			"Params": [
-				[
-					"cE_PRODUCTS",
-					"cs.sem.PRODUCTSEntity",
-					"->"
-				],
-				[
-					"vT_answer",
-					"Text",
-					"<-"
-				]
-			],
-			"Summary": ""
-		},
-		"loadReposCache()": {
-			"Syntax": "**.loadReposCache**( *cES_PRODUCTS* : cs.sem.PRODUCTSSelection; *is_recache* : Boolean )",
-			"Params": [
-				[
-					"cES_PRODUCTS",
-					"cs.sem.PRODUCTSSelection",
-					"->"
-				],
-				[
-					"is_recache",
-					"Boolean",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"form_init()": {
-			"Syntax": "**.form_init**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"form_events()": {
-			"Syntax": "**.form_events**()",
-			"Params": [],
-			"Summary": ""
-		},
-		"t_github": {
-			"Syntax": "t_github : Text"
-		},
-		"t_progress_uuid": {
-			"Syntax": "t_progress_uuid : Text"
-		},
-		"j_repos": {
-			"Syntax": "j_repos : Object"
-		}
-	},
-	"sem_cards": {
-		"r_increment": {
-			"Syntax": "r_increment : Real"
-		},
-		"r_min": {
-			"Syntax": "r_min : Real"
-		},
-		"is_editing": {
-			"Syntax": "is_editing : Boolean"
-		},
-		"aj_cards": {
-			"Syntax": "aj_cards : Collection"
-		},
-		"l_value": {
-			"Syntax": "l_value : Integer"
-		},
-		"_inheritedFrom_": "ZEN__WIDGETS"
-	},
-	"ZEN__WIDGETS": {
-		"bind_to()": {
-			"Syntax": "**.bind_to**( *vT_property* : Text; *vJ_value* : Object )",
-			"Params": [
-				[
-					"vT_property",
-					"Text",
-					"->"
-				],
-				[
-					"vJ_value",
-					"Object",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"bind_to_c4E()": {
-			"Syntax": "**.bind_to_c4E**( *vT_property* : Text; *vV_default* : Variant )",
-			"Params": [
-				[
-					"vT_property",
-					"Text",
-					"->"
-				],
-				[
-					"vV_default",
-					"Variant",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"resize()": {
-			"Syntax": "**.resize**( *vT_widget* : Text )",
-			"Params": [
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"unload()": {
-			"Syntax": "**.unload**( *vT_widget* : Text )",
-			"Params": [
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"set_widget_name()": {
-			"Syntax": "**.set_widget_name**( *vT_widget* : Text )",
-			"Params": [
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"get_object_wh()": {
-			"Syntax": "**.get_object_wh**( *vT_object* : Text; *vP_width* : Pointer; *vP_height* : Pointer; *vT_widget* : Text )",
-			"Params": [
-				[
-					"vT_object",
-					"Text",
-					"->"
-				],
-				[
-					"vP_width",
-					"Pointer",
-					"->"
-				],
-				[
-					"vP_height",
-					"Pointer",
-					"->"
-				],
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"bind_to_c4E_vJ()": {
-			"Syntax": "**.bind_to_c4E_vJ**( *vT_field* : Text; *vJ_default* : Object )",
-			"Params": [
-				[
-					"vT_field",
-					"Text",
-					"->"
-				],
-				[
-					"vJ_default",
-					"Object",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"update()": {
-			"Syntax": "**.update**( *vT_widget* : Text )",
-			"Params": [
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"redraw()": {
-			"Syntax": "**.redraw**( *vT_widget* : Text )",
-			"Params": [
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"get_canvas_wh()": {
-			"Syntax": "**.get_canvas_wh**( *vP_width* : Pointer; *vP_height* : Pointer; *vT_widget* : Text )",
-			"Params": [
-				[
-					"vP_width",
-					"Pointer",
-					"->"
-				],
-				[
-					"vP_height",
-					"Pointer",
-					"->"
-				],
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"load()": {
-			"Syntax": "**.load**( *vT_widget* : Text )",
-			"Params": [
-				[
-					"vT_widget",
-					"Text",
-					"->"
-				]
-			],
-			"Summary": ""
-		},
-		"d_value": {
-			"Syntax": "d_value : Date"
-		},
-		"is_new": {
-			"Syntax": "is_new : Boolean"
-		},
-		"t_property": {
-			"Syntax": "t_property : Text"
-		},
-		"t_internal": {
-			"Syntax": "t_internal : Text"
-		},
-		"l_border": {
-			"Syntax": "l_border : Integer"
-		},
-		"t_value": {
-			"Syntax": "t_value : Text"
-		},
-		"l_value": {
-			"Syntax": "l_value : Integer"
-		},
-		"t_UID": {
-			"Syntax": "t_UID : Text"
-		},
-		"p_value": {
-			"Syntax": "p_value : Pointer"
-		},
-		"h_value": {
-			"Syntax": "h_value : Time"
-		},
-		"is_editing": {
-			"Syntax": "is_editing : Boolean"
-		},
-		"j_value": {
-			"Syntax": "j_value : Object"
-		},
-		"t_widget": {
-			"Syntax": "t_widget : Text"
 		}
 	},
 	"ZEN__TABLES_SEARCH": {

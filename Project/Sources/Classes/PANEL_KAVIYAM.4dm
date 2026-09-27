@@ -16,6 +16,7 @@ Function form_events()
 	var $vT_objectName : Text
 	var $is_deploy; $is_init; $is_end : Boolean
 	var $vR_progress; $vR_step : Real
+	var $cE_KAVIYAM : cs:C1710.KAVIYAMEntity
 	
 	$vL_event_code:=Form event code:C388
 	$vJ_formEvent:=FORM Event:C1606
@@ -156,17 +157,21 @@ Function cards_init($cE_KAVIYAM : cs:C1710.KAVIYAMEntity)
 	var $vC_aj_cards : Collection
 	var $cE_SLOKAS : cs:C1710.SLOKASEntity
 	var $cES_SLOKAS : cs:C1710.SLOKASSelection
-	var $vJ_card; $vJ_sem_cards : Object
+	var $vJ_sem_cards; $vJ_prefs; $vJ_asset : Object
 	var $is_product; $is_pro_app : Boolean
 	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
-	var $vL_colors : Integer
+	var $vL_colors; $vL_width; $vL_height : Integer
 	var $vO_product : Picture
 	var $vT_product : Text
 	$cES_SLOKAS:=$cE_KAVIYAM.KAVIYAM_SLOKAS.orderBy("order")
 	$vC_aj_cards:=New collection:C1472()
+	$vJ_prefs:=waz__storage_prefs()
+	$vJ_asset:=OB Copy:C1225($vJ_prefs.j_asset_done)
+	$vJ_asset.r_icon_coef:=1
+	$vJ_sem_cards:=OBJECT Get value:C1743("sem_cards")
 	For each ($cE_SLOKAS; $cES_SLOKAS)
-		$vJ_card:=New object:C1471()
-		$vC_aj_cards.push($vJ_card)
+		//$vJ_card:=New object()
+		//$vC_aj_cards.push($vJ_card)
 		$cE_PRODUCTS:=$cE_SLOKAS.SLOKAS_PRODUCTS
 		$vL_colors:=$cE_SLOKAS.colors
 		$is_product:=$cE_PRODUCTS#Null:C1517
@@ -178,24 +183,50 @@ Function cards_init($cE_KAVIYAM : cs:C1710.KAVIYAMEntity)
 			$vT_product:=$cE_SLOKAS.label
 			$vO_product:=$cE_SLOKAS.logo
 		End if 
-		$vJ_card.l_colors:=$vL_colors
-		$vJ_card.o_icon:=$vO_product
+		//$vJ_card.l_colors:=$vL_colors
+		$vL_width:=128
+		$vL_height:=$vL_width
+		$vJ_asset.v_icon:=$vO_product
+		$vJ_asset.l_shape_colors:=$vL_colors
+		$vJ_asset.l_icon_color:=woc_sp_colors_to_s($vL_colors)
+		$vO_product:=waz_asset_get_picture($vL_width; $vL_height; $vJ_asset)
+		//$vJ_card.o_icon:=$vO_product
+		$vJ_sem_cards.pushCard($vC_aj_cards; $vT_product; $vL_colors; $vO_product)
 	End for each 
-	$vJ_sem_cards:=OBJECT Get value:C1743("sem_cards")
+	$vJ_sem_cards.l_timer:=1
+	$vJ_sem_cards.r_ratio:=1
+	$vJ_sem_cards.r_magnifier:=0.7
+	$vJ_sem_cards.r_scale_max:=0.7
+	$vJ_sem_cards.r_scale_min:=0.2
+	$vJ_sem_cards.r_scale_y:=0.15  // Offset in % r_scale
+	$vJ_sem_cards.r_min:=0.2  // Coef [0.7-1]
+	$vJ_sem_cards.is_width_max:=False:C215
 	$vJ_sem_cards.aj_cards:=$vC_aj_cards
 	$vJ_sem_cards.l_value:=-1
 	$vJ_sem_cards.redraw()
 	
 	
-Function do_animate()
+Function do_animate($is_deploy : Boolean)
 	var $vJ_veda : Object
 	var $vR_progress : Real
 	var $vC_aj_values : Collection
+	var $is_deployed; $isOk : Boolean
 	$vC_aj_values:=New collection:C1472()
 	$vJ_veda:=OBJECT Get value:C1743("sem_veda")
 	$vR_progress:=$vJ_veda.r_progress
-	This:C1470._is_deploy:=($vR_progress<=0)
-	This:C1470.do_KAVIYAM_redraw()
+	$is_deployed:=$vR_progress>0
+	If (Count parameters:C259>=1)
+		$isOk:=$is_deployed#$is_deploy
+		If ($isOk)
+			This:C1470._is_deploy:=Not:C34($is_deployed)
+		End if 
+	Else 
+		$isOk:=True:C214
+		This:C1470._is_deploy:=($vR_progress<=0)
+	End if 
+	If ($isOk)
+		This:C1470.do_KAVIYAM_redraw()
+	End if 
 	
 	
 Function do_KAVIYAM_redraw()
@@ -457,6 +488,7 @@ Function _cards_chgt($vJ_widget : Object)
 	var $vL_value : Integer
 	$vL_value:=$vJ_widget.l_value
 	This:C1470._veda_set($vL_value)
+	This:C1470.do_animate(True:C214)
 	
 	
 Function _cards_set($vL_value : Integer)
@@ -516,7 +548,7 @@ Function sloka_resize($is_init : Boolean)
 	
 Function sloka_redraw()
 	var $cE_KAVIYAM : cs:C1710.KAVIYAMEntity
-	var $vJ_woc_card_bkg; $vJ_veda_prefs; $vJ_sem_sloka : Object
+	var $vJ_veda_prefs; $vJ_sem_sloka : Object
 	$vJ_sem_sloka:=OBJECT Get value:C1743("sem_sloka")
 	//$vJ_woc_card_bkg.redraw()
 	$cE_KAVIYAM:=Form:C1466.cE_KAVIYAM

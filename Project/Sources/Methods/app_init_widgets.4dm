@@ -97,38 +97,6 @@ Use ($vJ_widgets)
 	$vJ_widget.cES_SLOKAS:=Null:C1517  // ES to Products
 	
 	
-	// ***** sem_cards – Dock display 
-	// * j_value: value
-	$vJ_widget:=New shared object:C1526
-	$vJ_widgets.j_cards:=$vJ_widget
-	$vJ_widget.is_editing:=True:C214
-	
-	$vJ_widget.r_ratio:=0.648  // CARD 59x91 mm
-	$vJ_widget.r_scale:=0.6  // Scale coef
-	$vJ_widget.r_radius:=0.25  // Radius based on width
-	$vJ_widget.r_increment:=0.05  // Increment On Timer
-	$vJ_widget.r_min:=0.7  // Coef [0.7-1]
-	//$vL_curve:=wox_math_curve_idFromName("springPhysics")
-	//$vL_curve:=wox_math_curve_idFromName("elasticOut")
-	$vL_curve:=wox_math_curve_idFromName("expoIn")
-	$vJ_widget.l_curve:=$vL_curve
-	$vJ_widget.l_cards_curve:=$vL_curve
-	$vJ_widget.l_type:=0  // Icons ; Circle ; Rect
-	
-	
-	//$vJ_widget.l_opacity:=100  // Cards opacity
-	//$vJ_widget.l_pattern:=12
-	//$vJ_widget.l_stroke:=2
-	
-	$vJ_pattern:=New shared object:C1526()  // Default idle pattern
-	$vJ_widget.j_pattern:=$vJ_pattern
-	$vJ_pattern.l_pattern:=12
-	$vJ_pattern.l_rxy:=4
-	$vJ_pattern.l_stroke:=2
-	$vJ_pattern.l_opacity:=85
-	
-	$vJ_widget.aj_cards:=Null:C1517  // Cards coll {t_text, l_colors, o_icon}
-	
 	
 	// ***** sem_sloka – Sloka display 
 	// * j_value: value

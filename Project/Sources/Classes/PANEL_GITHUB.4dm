@@ -22,8 +22,9 @@ Class constructor
 Function form_events()
 	var $vL_event_code : Integer
 	var $vJ_formEvent : Object
-	var $vT_objectName : Text
+	var $vT_objectName; $vT_LB : Text
 	var $cES_PRODUCTS_in; $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
+	$vT_LB:="LB_GITHUB"
 	
 	$vL_event_code:=Form event code:C388
 	$vJ_formEvent:=FORM Event:C1606
@@ -35,6 +36,12 @@ Function form_events()
 			
 		: ($vL_event_code=On Close Box:K2:21)
 			CANCEL:C270
+			
+			
+		: ($vT_objectName=$vT_LB)
+			If (($vL_event_code=On Clicked:K2:4) || ($vL_event_code=On Selection Change:K2:29))
+				This:C1470.buttons_enable()
+			End if 
 			
 		: ($vL_event_code=On Clicked:K2:4)
 			Case of 
@@ -80,15 +87,14 @@ Function form_init()
 	
 	
 Function record_load_upd()
-	var $cE_ZEN_DASHBOARD : cs:C1710.ZEN_DASHBOARDEntity
-	var $vJ_biz : Object
-	var $vT_github : Text
 	var $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
 	
 	$cES_PRODUCTS:=ds:C1482.PRODUCTS.query("isGithub = :1"; True:C214)
 	$cES_PRODUCTS:=$cES_PRODUCTS.orderBy("label")
 	This:C1470.loadReposCache($cES_PRODUCTS)
 	Form:C1466.lb_selection:=$cES_PRODUCTS
+	Form:C1466.lb_selected:=ds:C1482.PRODUCTS.newSelection()
+	This:C1470.buttons_enable()
 	
 	
 Function loadReposCache($cES_PRODUCTS : cs:C1710.PRODUCTSSelection; $is_recache : Boolean)
@@ -99,6 +105,7 @@ Function loadReposCache($cES_PRODUCTS : cs:C1710.PRODUCTSSelection; $is_recache 
 	var $vJ_repos; $vJ_repo : Object
 	var $vO_logo : Picture
 	var $vT_repo; $vT_tag; $vT_gtag : Text
+	var $is_bundle : Boolean
 	
 	$cES_PRODUCTS:=$cES_PRODUCTS#Null:C1517 ? $cES_PRODUCTS : Form:C1466.lb_selection
 	$cs__github:=cs:C1710._GITHUB.new()
@@ -215,10 +222,9 @@ Function lb_get_state_icn($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vO_state : P
 	
 	
 Function lb_get_sel_icn($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vO_icon : Picture
-	var $vL_colorsRow; $vL_size; $vL_colors : Integer
+	var $vL_colorsRow : Integer
 	var $c4ES_selected : 4D:C1709.EntitySelection
 	var $is_selected : Boolean
-	var $vO_img : Picture
 	
 	$c4ES_selected:=Form:C1466.lb_selected
 	//$is_selected:=($c4ES_selected.indexOf($cE_PRODUCTS)>=0)
@@ -234,7 +240,7 @@ Function lb_get_sel_icn($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vO_icon : Pict
 Function lb_meta_info($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vJ_meta : Object
 	var $vC_al_colors : Collection
 	var $vL_state; $vL_colors : Integer
-	var $vJ_repo; $vJ_repos : Object
+	var $vJ_repo; $vJ_repos; $vJ_meta_cell; $vJ_meta_cell_values : Object
 	var $vT_stroke; $vT_fill; $vT_repo : Text
 	
 	$vJ_meta:=New object:C1471()
@@ -258,6 +264,19 @@ Function lb_meta_info($cE_PRODUCTS : cs:C1710.PRODUCTSEntity)->$vJ_meta : Object
 	$vJ_meta_cell_values.fill:="#ffffff"
 	
 	//$vJ_meta_cell_values.stroke:=$vT_stroke
+	
+	
+Function buttons_enable()
+	var $is_enabled : Boolean
+	var $vC_at_tags : Collection
+	var $cES_PRODUCTS_sel : cs:C1710.PRODUCTSSelection
+	var $vT_tag : Text
+	$cES_PRODUCTS_sel:=Form:C1466.lb_selected
+	$is_enabled:=$cES_PRODUCTS_sel.length#0
+	$vC_at_tags:=New collection:C1472("bt_github"; "bt_cleanup")
+	For each ($vT_tag; $vC_at_tags)
+		OBJECT SET ENABLED:C1123(*; $vT_tag; $is_enabled)
+	End for each 
 	// *
 	// *****
 	
@@ -319,14 +338,12 @@ Function _do_github()
 	var $isOk : Boolean
 	var $cs__github : cs:C1710._GITHUB
 	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
-	var $cES_PRODUCTS_in; $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
+	var $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
 	var $tt; $vL_state : Integer
 	var $vJ_repos; $vJ_repo : Object
 	var $vT_repo; $vT_tag : Text
 	var $vO_logo : Picture
-	$cES_PRODUCTS_in:=Form:C1466.lb_selection
-	$cES_PRODUCTS:=Form:C1466.lb_selected
-	$cES_PRODUCTS:=zen_choice_selection($cES_PRODUCTS_in; $cES_PRODUCTS; "Upload to github")
+	$cES_PRODUCTS:=This:C1470.choice_selection("Upload to github")
 	If ($cES_PRODUCTS#Null:C1517)
 		$tt:=$cES_PRODUCTS.length
 		$cs__github:=cs:C1710._GITHUB.new()
@@ -387,15 +404,13 @@ Function _do_cleanup()
 	var $isOk : Boolean
 	var $cs__github : cs:C1710._GITHUB
 	var $cE_PRODUCTS : cs:C1710.PRODUCTSEntity
-	var $cES_PRODUCTS_in; $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
+	var $cES_PRODUCTS : cs:C1710.PRODUCTSSelection
 	var $tt; $vL_state : Integer
 	var $vJ_repos; $vJ_repo : Object
 	var $vT_repo; $vT_tag : Text
 	var $vO_logo : Picture
 	
-	$cES_PRODUCTS_in:=Form:C1466.lb_selection
-	$cES_PRODUCTS:=Form:C1466.lb_selected
-	$cES_PRODUCTS:=zen_choice_selection($cES_PRODUCTS_in; $cES_PRODUCTS; "Clean-up files on disk")
+	$cES_PRODUCTS:=This:C1470.choice_selection("Clean-up files on disk")
 	If ($cES_PRODUCTS#Null:C1517)
 		$tt:=$cES_PRODUCTS.length
 		$cs__github:=cs:C1710._GITHUB.new()
@@ -421,6 +436,21 @@ Function _do_cleanup()
 		End for each 
 		This:C1470.loadReposCache($cES_PRODUCTS; True:C214)
 		Form:C1466.lb_selection:=Form:C1466.lb_selection
+	End if 
+	
+	
+Function choice_selection($vT_title : Text)->$cES_PRODUCTS : cs:C1710.PRODUCTSSelection
+	var $cES_PRODUCTS_sel; $cES_PRODUCTS_in : cs:C1710.PRODUCTSSelection
+	var $tt : Integer
+	$cES_PRODUCTS_sel:=Form:C1466.lb_selected
+	$tt:=$cES_PRODUCTS_sel.length
+	If ($tt#0)
+		If (waz_io_confirm_popup($vT_title+" for "+wox_str_pluralise($tt; "file")+"?"))
+			$cES_PRODUCTS:=$cES_PRODUCTS_sel
+		End if 
+	Else 
+		$cES_PRODUCTS_in:=Form:C1466.lb_selection
+		$cES_PRODUCTS:=zen_choice_selection($cES_PRODUCTS_in; $cES_PRODUCTS_sel; $vT_title)
 	End if 
 	// *
 	// *****

@@ -194,6 +194,7 @@ Function cards_init($cE_KAVIYAM : cs:C1710.KAVIYAMEntity)
 		$vJ_sem_cards.pushCard($vC_aj_cards; $vT_product; $vL_colors; $vO_product)
 	End for each 
 	$vJ_sem_cards.l_timer:=1
+	$vJ_sem_cards.r_increment:=0.05
 	$vJ_sem_cards.r_ratio:=1
 	$vJ_sem_cards.r_magnifier:=0.7
 	$vJ_sem_cards.r_scale_max:=0.7
@@ -500,8 +501,8 @@ Function _cards_set($vL_value : Integer)
 Function cards_resize()
 	var $vJ_sem_cards : Object
 	$vJ_sem_cards:=OBJECT Get value:C1743("sem_cards")
-	$vJ_sem_cards.redraw()
 	$vJ_sem_cards.resize()
+	$vJ_sem_cards.redraw()
 	
 	
 Function _bit_to_position($vL_value : Integer)->$vL_position : Integer
